@@ -1,0 +1,232 @@
+$FONT = "Bitstream Vera Sans-8#Center#XFT" 
+$MTFONT = "cure#Left#XFT"
+PDecor {
+
+Decor = "DEFAULT" {
+	Title {
+		Height = "17"
+		Pad = "3 0 0 0"
+
+		Focused = "Image title.png#Tiled"
+		Unfocused = "Image title-un.png#Tiled"
+
+		Tab {
+			Focused = "Image title.png"
+			FocusedSelected = "Image title.png"
+			Unfocused = "Image title-un.png"
+			UnfocusedSelected = "Image title-un.png"
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "$FONT"
+		}
+		FontColor {
+			Focused = "#dfdfdf"
+			FocusedSelected = "#ffffff"
+			Unfocused = "#adaead"
+			UnfocusedSelected = "#bdbebd"
+		}
+		Buttons {
+			Right {
+				Focused = "Image right.png"
+				Unfocused = "Image right.png"
+				Pressed = "Image right.png"
+				Button = "1" { Actions = "NoAction" }
+			}
+			Right {
+				Focused = "Image close.png"
+				Unfocused = "Image close.png"
+				Pressed = "Image close-pr.png"
+				Button = "1" { Actions = "Close" }
+				Button = "3" { Actions = "Kill" }
+			}
+#			Right {
+#				Focused = "Image max.png"
+#				Unfocused = "Image max.png"
+#				Pressed = "Image max-pr.png"
+#				Button = "1" { Actions = "Toggle Maximized 1 1" }
+#			}
+			Right {
+				Focused = "Image ri.png"
+				Unfocused = "Image ri.png"
+				Pressed = "Image ri.png"
+				Button = "1" { Actions = "NoAction" }
+			}
+			Left {
+				Focused = "Image left.png"
+				Unfocused = "Image left.png"
+				Pressed = "Image left.png"
+				Button = "1" { Actions = "NoAction" }
+			}
+			Left {
+				Focused = "Image min.png"
+				Unfocused = "Image min.png"
+				Pressed = "Image min-pr.png"
+				Button = "1" { Actions = "Set Iconified" }
+			}
+			Left {
+				Focused = "Image lf.png"
+				Unfocused = "Image lf.png"
+				Pressed = "Image lf.png"
+				Button = "1" { Actions = "NoAction" }
+			}
+		}
+		Border {
+			Focused {
+				TopLeft = "EMPTY"
+				Top = "EMPTY"
+				TopRight = "EMPTY"
+				Left = "Image sdlf.png"
+				Right = "Image sdri.png"
+				BottomLeft = "Image btsd.png"
+				Bottom = "Image bt.png"
+				BottomRight = "Image btsd.png"
+			}
+			Unfocused {
+				TopLeft = "EMPTY"
+				Top = "EMPTY"
+				TopRight = "EMPTY"
+				Left = "Image sdlf.png"
+				Right = "Image sdri.png"
+				BottomLeft = "Image btsd.png"
+				Bottom = "Image bt.png"
+				BottomRight = "Image btsd.png"
+			}
+		}
+	}
+}
+
+Decor = "MENU" {
+	Title {
+		Height = "17"
+		Pad = "3 0 0 0"
+
+		Focused = "Image title.png#Tiled"
+		Unfocused = "Image title-un.png#Tiled"
+
+		Tab {
+			Focused = "Image title.png"
+			FocusedSelected = "Image title.png"
+			Unfocused = "Image title-un.png"
+			UnfocusedSelected = "Image title-un.png"
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "$FONT"
+		}
+		FontColor {
+			Focused = "#dfdfdf"
+			FocusedSelected = "#ffffff"
+			Unfocused = "#adaead"
+			UnfocusedSelected = "#bdbebd"
+		}
+		Buttons {
+			Right {
+				Focused = "Image right.png"
+				Unfocused = "Image right.png"
+				Pressed = "Image right.png"
+				Button = "1" { Actions = "NoAction" }
+			}
+#			Right {
+#				Focused = "Image ri.png"
+#				Unfocused = "Image ri.png"
+#				Pressed = "Image ri.png"
+#				Button = "1" { Actions = "NoAction" }
+#			}
+			Left {
+				Focused = "Image left.png"
+				Unfocused = "Image left.png"
+				Pressed = "Image left.png"
+				Button = "1" { Actions = "NoAction" }
+			}
+#			Left {
+#				Focused = "Image lf.png"
+#				Unfocused = "Image lf.png"
+#				Pressed = "Image lf.png"
+#				Button = "1" { Actions = "NoAction" }
+#			}
+		}
+		Border {
+			Focused {
+				TopLeft = "EMPTY"
+				Top = "EMPTY"
+				TopRight = "EMPTY"
+				Left = "Image sdlf.png"
+				Right = "Image sdri.png"
+				BottomLeft = "Image btsd.png"
+				Bottom = "Image bt.png"
+				BottomRight = "Image btsd.png"
+			}
+			Unfocused {
+				TopLeft = "EMPTY"
+				Top = "EMPTY"
+				TopRight = "EMPTY"
+				Left = "Image sdlf.png"
+				Right = "Image sdri.png"
+				BottomLeft = "Image btsd.png"
+				Bottom = "Image bt.png"
+				BottomRight = "Image btsd.png"
+			}
+		}
+	}
+}
+
+#Decor = "STATUSWINDOW" {}
+
+# Decor = "CMDDIALOG" {}
+}
+
+Harbour {
+	Texture = "SolidRaised #000000 #000000 #000000 0 0"
+}
+
+Menu {
+	Focused {
+		Font = "$MTFONT"
+		Background = "Solid #eeeeee"
+		Item = "EMPTY"
+		Text = "#2c2c2c"
+		Separator = "Solid #000000 0x1"
+		Arrow = "Solid #000000 3x3"
+	}
+	Unfocused {
+		Font = "$MTFONT"
+		Background = "Solid #eeeeee"
+		Item = "EMPTY"
+		Text = "#2c2c2c"
+		Separator = "Solid #000000 0x1"
+		Arrow = "Solid #000000 3x3"
+	}
+	Selected {
+		Font = "$MTFONT"
+		Background = "Solid #415d83"
+		Item = "EMPTY"
+		Text = "#eeeeee"
+		Arrow = "Solid #ffffff 3x3"
+	}
+	Pad = "3 0 2 2"
+}
+
+CmdDialog {
+	Font = "$FONT"
+	Texture = "Solid #888888"
+	Text = "#2c2c2c"
+	Pad = "4 4 4 4"
+}
+
+Status {
+	Font = "$FONT"
+	Texture = "Solid #e9e9e9"
+	Text = "#404040"
+	Pad = "4 4 4 4"
+}
+
+Root {
+	Command = "false"
+}

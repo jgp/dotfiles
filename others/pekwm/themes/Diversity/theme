@@ -1,0 +1,567 @@
+// +------------------------------------------------------------------------+
+// | Theme Name:        DIVERSITY|05                                        |
+// | Porter:            stonedbeaver <stonedbeaver@gmail.com>               |
+// |                    http://stonedbeaver.net                             |
+// | Original Author:   davulb http://davulb.deviantart.com/                |
+// |                    http://davulb.nilsbyte.de/)                         |
+// | Last Modified:     2005-06-04                                          |
+// | Pekwm Version:     0.1.4pre2 and comptatible                           |
+// | Changes:           See ChangeLog for details                           |
+// +------------------------------------------------------------------------+ 
+
+// Fonts:
+// $TAB_FO         = "Verdana-10#Left#XFT"     // Focused titlebar font
+// $TAB_FS         = "Verdana-10#Left#XFT"     // Focused-Selected titlebar font
+// $TAB_UN         = "Verdana-10#Left#XFT"     // Unfocused titlebar font
+// $TAB_US         = "Verdana-10#Left#XFT"     // Unfocused-Selected titlebar font
+// $MENU_FONT      = "Arial-10#LEFT#XFT"       // Font for menu items
+// $STATUS_FONT    = "Arial-8#CENTER#XFT"      // Status window font
+// $CMD_FONT       = "Arial-10#LEFT#XFT"       // CMDDIALOG font
+
+// i prefere artwiz font-package from aleczapka
+// http://artwizaleczapka.sourceforge.net/
+$TAB_FO         = "nu.de#LEFT"             // Focused titlebar font
+$TAB_FS         = "nu.de#LEFT"             // Focused-Selected titlebar font
+$TAB_UN         = "nu.de#LEFT"             // Unfocused titlebar font
+$TAB_US         = "nu.de#LEFT"             // Unfocused-Selected titlebar fnt
+$MENU_FONT      = "nu.de#LEFT"             // Font for menu items
+$STATUS_FONT    = "nu.de#CENTER"           // Status window font
+$CMD_FONT       = "nu.de#LEFT"             // CMDDIALOG font
+
+PDecor {
+
+Decor = "DEFAULT" {
+  Title {
+    Height = "18"
+    Pad = "2 2 2 2"
+    
+    Focused = "Image title.png"
+    Unfocused = "Image title.png"
+
+    WidthMin = "0"
+    WidthMax = "100"
+    WidthSymetric = "True"
+
+    Tab {
+      Focused = "Image title.png"
+      FocusedSelected = "Image title.png"
+      Unfocused = "Image title.png"
+      UnfocusedSelected = "Image title.png"
+    }
+
+    Separator {
+      Focused = "Image sep.png"
+      Unfocused = "Image sep-un.png"
+    }
+
+    Font {
+      Focused = "$TAB_FO"
+      FocusedSelected = "$TAB_FS"
+      Unfocused = "$TAB_UN"
+      UnfocusedSelected = "$TAB_US"
+    }
+
+    FontColor {
+      Focused = "#ffffff"
+      FocusedSelected = "#bfe0ff"
+      Unfocused = "#ffffff"
+      UnfocusedSelected = "#ffffff"
+    }
+
+    Buttons {
+      // Use these as you need. Remove what you don't need.
+      // If you aren't using any buttons, Just remove everything,
+      // But keep the Buttons {} section.
+      
+      // close button
+      Right {
+        Focused = "Image btn.png"
+        Unfocused = "Image btn-un.png"
+        Pressed = "Image btn-un.png"
+        Button = "1" { Actions = "Close" }
+      }
+
+      // maximize button
+      Right {
+        Focused = "Image btn.png"
+        Unfocused = "Image btn-un.png"
+        Pressed = "Image btn-un.png"
+        Button = "1" { Actions = "Toggle Maximized 1 1" }
+      }
+
+      // iconify button
+      Right {
+        Focused = "Image btn.png"
+        Unfocused = "Image btn-un.png"
+        Pressed = "Image btn-un.png"
+        Button = "1" { Actions = "Set Iconified" }
+      }
+
+      // menu button, deactivated by default
+      //Left {
+      //  Focused = "Image btn-mnu.png"
+      //  Unfocused = "Image btn-mnu-un.png"
+      //  Pressed = "Image btn-mnu-un.png"
+      //  Button = "1" { Actions = "ShowMenu Window" }
+      //}
+    }
+
+    Border {
+      Focused {
+        TopLeft = "Solid #15191d 1x1"
+        Top = "Solid #15191d 1x1"
+        TopRight = "Solid #15191d 1x1"
+        Left = "Solid #15191d 1x1"
+        Right = "Solid #15191d 1x1"
+        BottomLeft = "Solid #15191d 1x1"
+        Bottom = "Solid #15191d 1x1"
+        BottomRight = "Solid #15191d 1x1"
+      }
+      Unfocused {
+        TopLeft = "Solid #15191d 1x1"
+        Top = "Solid #15191d 1x1"
+        TopRight = "Solid #15191d 1x1"
+        Left = "Solid #15191d 1x1"
+        Right = "Solid #15191d 1x1"
+        BottomLeft = "Solid #15191d 1x1"
+        Bottom = "Solid #15191d 1x1"
+        BottomRight = "Solid #15191d 1x1"
+      }
+    }
+  }
+} // Decor->DEFAULT{}
+
+Decor = "TITLEBARLESS" {
+  Title {
+    Height = "0"
+    Pad = "0 0 0 0"
+    
+    Focused = "EMPTY"
+    Unfocused = "EMPTY"
+    
+    Tab {
+      Focused = "EMPTY"
+      FocusedSelected = "EMPTY"
+      Unfocused = "EMPTY"
+      UnfocusedSelected = "EMPTY"
+    }
+
+    Separator {
+      Focused = "EMPTY"
+      Unfocused = "EMPTY"
+    }
+    
+    Font {
+      Focused = "EMPTY"
+      FocusedSelected = "EMPTY"
+      Unfocused = "EMPTY"
+      UnfocusedSelected = "EMPTY"
+    }
+    
+    FontColor {
+      Focused = "EMPTY"
+      FocusedSelected = "EMPTY"
+      Unfocused = "EMPTY"
+      UnfocusedSelected = "EMPTY"
+    }
+
+    Buttons {
+    }
+
+    Border {
+      Focused {
+        TopLeft = "Solid #15191d 1x1"
+        Top = "Solid #15191d 1x1"
+        TopRight = "Solid #15191d 1x1"
+        Left = "Solid #15191d 1x1"
+        Right = "Solid #15191d 1x1"
+        BottomLeft = "Solid #15191d 1x1"
+        Bottom = "Solid #15191d 1x1"
+        BottomRight = "Solid #15191d 1x1"
+      }
+      Unfocused {
+        TopLeft = "Solid #15191d 1x1"
+        Top = "Solid #15191d 1x1"
+        TopRight = "Solid #15191d 1x1"
+        Left = "Solid #15191d 1x1"
+        Right = "Solid #15191d 1x1"
+        BottomLeft = "Solid #15191d 1x1"
+        Bottom = "Solid #15191d 1x1"
+        BottomRight = "Solid #15191d 1x1"
+      }
+    }
+  }
+} // Decor->TITLEBARLESS{}
+
+Decor = "BORDERLESS" {
+  Title {
+    Height = "18"
+    Pad = "2 2 2 2"
+    
+    Focused = "Image title.png"
+    Unfocused = "Image title.png"
+
+    WidthMin = "0"
+    WidthMax = "100"
+    WidthSymetric = "True"
+
+    Tab {
+      Focused = "Image title.png"
+      FocusedSelected = "Image title.png"
+      Unfocused = "Image title.png"
+      UnfocusedSelected = "Image title.png"
+    }
+
+    Separator {
+      Focused = "Image sep.png"
+      Unfocused = "Image sep-un.png"
+    }
+
+    Font {
+      Focused = "$TAB_FO"
+      FocusedSelected = "$TAB_FS"
+      Unfocused = "$TAB_UN"
+      UnfocusedSelected = "$TAB_US"
+    }
+
+    FontColor {
+      Focused = "#ffffff"
+      FocusedSelected = "#bfe0ff"
+      Unfocused = "#ffffff"
+      UnfocusedSelected = "#ffffff"
+    }
+
+    Buttons {
+      // Use these as you need. Remove what you don't need.
+      // If you aren't using any buttons, Just remove everything,
+      // But keep the Buttons {} section.
+      
+      // close button
+      Right {
+        Focused = "Image btn.png"
+        Unfocused = "Image btn-un.png"
+        Pressed = "Image btn-un.png"
+        Button = "1" { Actions = "Close" }
+      }
+
+      // maximize button
+      Right {
+        Focused = "Image btn.png"
+        Unfocused = "Image btn-un.png"
+        Pressed = "Image btn-un.png"
+        Button = "1" { Actions = "Toggle Maximized 1 1" }
+      }
+
+      // iconify button
+      Right {
+        Focused = "Image btn.png"
+        Unfocused = "Image btn-un.png"
+        Pressed = "Image btn-un.png"
+        Button = "1" { Actions = "Set Iconified" }
+      }
+
+      // menu button, deactivated by default
+      //Left {
+      //  Focused = "Image btn-mnu.png"
+      //  Unfocused = "Image btn-mnu-un.png"
+      //  Pressed = "Image btn-mnu-un.png"
+      //  Button = "1" { Actions = "ShowMenu Window" }
+      //}
+    }
+
+    Border {
+      Focused {
+        TopLeft = "EMPTY"
+        Top = "EMPTY"
+        TopRight = "EMPTY"
+        Left = "EMPTY"
+        Right = "EMPTY"
+        BottomLeft = "EMPTY"
+        Bottom = "EMPTY"
+        BottomRight = "EMPTY"
+      }
+      Unfocused {
+        TopLeft = "EMPTY"
+        Top = "EMPTY"
+        TopRight = "EMPTY"
+        Left = "EMPTY"
+        Right = "EMPTY"
+        BottomLeft = "EMPTY"
+        Bottom = "EMPTY"
+        BottomRight = "EMPTY"
+      }
+    }
+  }
+} // Decor->BORDERLESS{}
+
+Decor = "MENU" {
+  Title {
+    Height = "18"
+    Pad = "2 2 2 2"
+
+    Focused = "EMPTY"
+    Unfocused = "EMPTY"
+
+    Tab {
+      Focused = "Image title.png"
+      FocusedSelected = "Image title.png"
+      Unfocused = "Image title.png"
+      UnfocusedSelected = "Image title.png"
+    }
+
+    Seperator {
+      Focused = "EMPTY"
+      Unfocused = "EMPTY"
+    }
+
+    Font {
+      Focused = "$TAB_FO"
+      FocusedSelected = "$TAB_FS"
+      Unfocused = "$TAB_UN"
+      UnfocusedSelected = "$TAB_US"
+    }
+
+    FontColor {
+      Focused = "#bfe0ff"
+      FocusedSelected = "#bfe0ff"
+      Unfocused = "#ffffff"
+      UnfocusedSelected = "#ffffff"
+    }
+
+    Buttons {
+    }
+    
+    Border {
+      Focused {
+        TopLeft = "Solid #15191d 1x1"
+        Top = "Solid #15191d 1x1"
+        TopRight = "Solid #15191d 1x1"
+        Left = "Solid #15191d 1x1"
+        Right = "Solid #15191d 1x1"
+        BottomLeft = "Solid #15191d 1x1"
+        Bottom = "Solid #15191d 1x1"
+        BottomRight = "Solid #15191d 1x1"
+      }
+      Unfocused {
+        TopLeft = "Solid #15191d 1x1"
+        Top = "Solid #15191d 1x1"
+        TopRight = "Solid #15191d 1x1"
+        Left = "Solid #15191d 1x1"
+        Right = "Solid #15191d 1x1"
+        BottomLeft = "Solid #15191d 1x1"
+        Bottom = "Solid #15191d 1x1"
+        BottomRight = "Solid #15191d 1x1"
+      }
+    }
+  }
+} // Decor->MENU{}
+
+Decor = "STATUSWINDOW" {
+  Title {
+    Height = "0"
+    Pad = "0 0 0 0"
+    
+    Focused = "EMPTY"
+    Unfocused = "EMPTY"
+    
+    Tab {
+      Focused = "EMPTY"
+      FocusedSelected = "EMPTY"
+      Unfocused = "EMPTY"
+      UnfocusedSelected = "EMPTY"
+    }
+
+    Separator {
+      Focused = "EMPTY"
+      Unfocused = "EMPTY"
+    }
+    
+    Font {
+      Focused = "EMPTY"
+      FocusedSelected = "EMPTY"
+      Unfocused = "EMPTY"
+      UnfocusedSelected = "EMPTY"           
+    }
+    
+    FontColor {
+      Focused = "EMPTY"
+      FocusedSelected = "EMPTY"
+      Unfocused = "EMPTY"
+      UnfocusedSelected = "EMPTY"
+    }
+
+    Buttons {
+    }
+
+    Border {
+      Focused {
+        TopLeft = "Solid #15191d 1x1"
+        Top = "Solid #15191d 1x1"
+        TopRight = "Solid #15191d 1x1"
+        Left = "Solid #15191d 1x1"
+        Right = "Solid #15191d 1x1"
+        BottomLeft = "Solid #15191d 1x1"
+        Bottom = "Solid #15191d 1x1"
+        BottomRight = "Solid #15191d 1x1"
+      }
+      Unfocused {
+        TopLeft = "Solid #15191d 1x1"
+        Top = "Solid #15191d 1x1"
+        TopRight = "Solid #15191d 1x1"
+        Left = "Solid #15191d 1x1"
+        Right = "Solid #15191d 1x1"
+        BottomLeft = "Solid #15191d 1x1"
+        Bottom = "Solid #15191d 1x1"
+        BottomRight = "Solid #15191d 1x1"
+      }
+    }
+  }
+} // Decor->STATUSWINDOW{}
+
+Decor = "CMDDIALOG"
+  Title {
+    Height = "18"
+    Pad = "2 2 2 2"
+    
+    Focused = "Image title.png"
+    Unfocused = "Image title.png"
+
+    Tab {
+      Focused = "Image title.png"
+      FocusedSelected = "Image title.png"
+      Unfocused = "Image title.png"
+      UnfocusedSelected = "Image title.png"
+    }
+
+    Separator {
+      Focused = "Image sep.png"
+      Unfocused = "Image sep-un.png"
+    }
+
+    Font {
+      Focused = "$TAB_FO"
+      FocusedSelected = "$TAB_FS"
+      Unfocused = "$TAB_UN"
+      UnfocusedSelected = "$TAB_US"
+    }
+
+    FontColor {
+      Focused = "#ffffff"
+      FocusedSelected = "#bfe0ff"
+      Unfocused = "#ffffff"
+      UnfocusedSelected = "#ffffff"
+    }
+
+    Buttons {
+      // Use these as you need. Remove what you don't need.
+      // If you aren't using any buttons, Just remove everything,
+      // But keep the Buttons {} section.
+      
+      // close button
+      Right {
+        Focused = "Image btn.png"
+        Unfocused = "Image btn-un.png"
+        Pressed = "Image btn-un.png"
+        Button = "1" { Actions = "Close" }
+      }
+
+      // maximize button
+      Right {
+        Focused = "Image btn.png"
+        Unfocused = "Image btn-un.png"
+        Pressed = "Image btn-un.png"
+        Button = "1" { Actions = "Toggle Maximized 1 1" }
+      }
+
+      // iconify button
+      Right {
+        Focused = "Image btn.png"
+        Unfocused = "Image btn-un.png"
+        Pressed = "Image btn-un.png"
+        Button = "1" { Actions = "Set Iconified" }
+      }
+
+      // menu button, deactivated by default
+      //Left {
+      //  Focused = "Image btn-mnu.png"
+      //  Unfocused = "Image btn-mnu-un.png"
+      //  Pressed = "Image btn-mnu-un.png"
+      //  Button = "1" { Actions = "ShowMenu Window" }
+      //}
+    }
+
+    Border {
+      Focused {
+        TopLeft = "Solid #15191d 1x1"
+        Top = "Solid #15191d 1x1"
+        TopRight = "Solid #15191d 1x1"
+        Left = "Solid #15191d 1x1"
+        Right = "Solid #15191d 1x1"
+        BottomLeft = "Solid #15191d 1x1"
+        Bottom = "Solid #15191d 1x1"
+        BottomRight = "Solid #15191d 1x1"
+      }
+      Unfocused {
+        TopLeft = "Solid #15191d 1x1"
+        Top = "Solid #15191d 1x1"
+        TopRight = "Solid #15191d 1x1"
+        Left = "Solid #15191d 1x1"
+        Right = "Solid #15191d 1x1"
+        BottomLeft = "Solid #15191d 1x1"
+        Bottom = "Solid #15191d 1x1"
+        BottomRight = "Solid #15191d 1x1"
+      }
+    }
+  }
+} // Decor->CMDDIALOG{}
+
+} // PDecor{}
+
+Harbour {
+    Texture = "Solid #1a1f23 #1a1f23 #1a1f23 #1a1f23 0 0"
+}
+
+Menu {
+  Focused {
+    Font = "$MENU_FONT"
+    Background = "Solid #f9fcff"
+    Item = "EMPTY"
+    Text = "#343b41"
+    Separator = "Solid #1a1f23 0x1"
+    Arrow = "Solid #1a1f23 3x3"
+  }
+  Unfocused {
+    Font = "$MENU_FONT"
+    Background = "Solid #1a1f23"
+    Item = "EMPTY"
+    Text = "#f9fcff"
+    Separator = "Solid #f9fcff 0x1"
+    Arrow = "Solid #f9fcff 3x3"
+  }
+  Selected {
+    Font = "$MENU_FONT"
+    Background = "Solid #bfe0ff"
+    Item = "EMPTY"
+    Text = "#343b41"
+    Arrow = "Solid #1a1f23 3x3"
+  }
+  Pad = "2 2 2 2"
+}
+
+CmdDialog {
+  Font = "$CMD_FONT"
+  Texture = "Solid #f9fcff"
+  Text = "#343b41"
+  Pad = "0 0 0 0"
+}
+
+Status {
+  Font = "$STATUS_FONT"
+  Texture = "Solid #f9fcff"
+  Text = "#343b41"
+  Pad = "0 0 0 0"
+}
+
+Root {
+ Command = "false"
+}

@@ -1,0 +1,102 @@
+require "time"
+require "rubygems"
+require "yaml"
+require "easyruby"
+require "wirble"
+require "what_methods"
+
+# TODO: add to easyruby
+class Hash
+  def inspect
+    output = Array.new
+    self.each do |key, value|
+      output.push("#{key.inspect} => #{value.inspect}")
+    end
+    return "{#{output.join(", ")}}"
+  end
+end
+
+# http://pablotron.org/software/wirble/
+Wirble.init
+# Wirble.colorize
+
+# setup logger to console in Rails
+require 'logger'
+if ENV.include?('RAILS_ENV') && !Object.const_defined?('RAILS_DEFAULT_LOGGER')
+  Object.const_set('RAILS_DEFAULT_LOGGER', Logger.new(STDOUT))
+end
+
+def ri(*names)
+  system(%{ri #{names.map {|name| name.to_s}.join(" ")}})
+end
+
+# ANSI COLORS
+C = {
+	'B' => "\033[0;30m", # black
+	'R' => "\033[0;31m", # red
+	'G' => "\033[0;32m", # green
+	'Y' => "\033[0;33m", # yellow
+	'N' => "\033[0;34m", # navy blue
+	'M' => "\033[0;35m", # magenta
+	'C' => "\033[0;36m", # cyan
+	'W' => "\033[0;37m"  # white
+}
+
+# empahsized (bolded) colors
+E = {
+	'B' => "\033[1;30m", # black
+	'R' => "\033[1;31m", # red
+	'G' => "\033[1;32m", # green
+	'Y' => "\033[1;33m", # yellow
+	'N' => "\033[1;34m", # navy blue
+	'M' => "\033[1;35m", # magenta
+	'C' => "\033[1;36m", # cyan
+	'W' => "\033[1;37m"  # white
+}
+
+# background colors
+B = {
+	'B' => "\033[40m", # black
+	'R' => "\033[41m", # red
+	'G' => "\033[42m", # green
+	'Y' => "\033[43m", # yellow
+	'N' => "\033[44m", # navy blue
+	'M' => "\033[45m", # magenta
+	'C' => "\033[46m", # cyan
+	'W' => "\033[47m"  # white
+}
+
+# CONFIGURATION
+IRB.conf[:IRB_NAME] = "irb"   	 
+IRB.conf[:MATH_MODE] = false
+IRB.conf[:USE_TRACER] = false 	
+IRB.conf[:USE_LOADER] = false
+IRB.conf[:IGNORE_SIGINT] = true 	
+IRB.conf[:IGNORE_EOF] = false
+IRB.conf[:INSPECT_MODE] = nil 	
+IRB.conf[:IRB_RC] = nil
+IRB.conf[:BACK_TRACE_LIMIT] = 16 	
+IRB.conf[:USE_READLINE] = nil 	
+IRB.conf[:PROMPT_MODE] = :MY_PROMPT #:DEFAULT 	
+IRB.conf[:PROMPT][:MY_PROMPT] = { # name of prompt mode
+  # normal prompt
+  :PROMPT_I => 
+  "#{E['R']}%n) #{E['W']}>>> #{C['W']}%l",
+
+  # prompt for continuing strings
+  :PROMPT_S => 
+  "#{E['R']}... #{C['W']}",    
+
+  # prompt for continuing statement
+  :PROMPT_C => 
+  "#{E['W']}... #{C['W']}",    
+
+  # return prompt
+  :RETURN   => 
+  "#{E['W']}=>#{C['G']} %s#{C['W']}\n"
+}
+IRB.conf[:DEBUG_LEVEL] = 0 	
+IRB.conf[:VERBOSE] = true
+
+# http://poignantguide.net/ruby/expansion-pak-1.html
+# http://www.rubycentral.com/book/irb.html

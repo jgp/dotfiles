@@ -1,0 +1,313 @@
+##  OpusOS Blue (Square)
+# - Original by Ross 'b0se' Harvey: http://b0se.deviantart.com | http://www.Opusworks.org
+# - Pekwm-cvs Port by hewbert: http://www.hewbert.com
+# - Re-Ported to Pekwm-dev by SystemX: <pyavitz@gmail.com>
+
+## Menu Title
+# tab - FocusedSelected
+$COLOR_TAB_FS="#8da2c6"
+$COLOR_TAB_FS_LIGHT="#c9e8ff"
+$COLOR_TAB_FS_DARK="#363f45"
+# tab - Focused
+$COLOR_TAB_F="#d1e0ff"
+$COLOR_TAB_F_LIGHT="#2c3c5c"
+$COLOR_TAB_F_DARK="#2c3c5c"
+# tab - UnfocusedSelected
+$COLOR_TAB_US="#e2e2e2"
+$COLOR_TAB_US_LIGHT="#c9c9c9"
+$COLOR_TAB_US_DARK="#000000"
+# tab - Unfocused
+$COLOR_TAB_U="#e5e5e5"
+$COLOR_TAB_U_LIGHT="#e5e5e5"
+$COLOR_TAB_U_DARK="#e5e5e5"
+
+# Menu - Selected
+$COLOR_MENU_FS="#7590AE"
+$COLOR_MENU_FS_LIGHT="#000000"
+$COLOR_MENU_FS_DARK="#000000"
+
+PDecor {              
+Decor = "DEFAULT" {
+	Title {
+	Height = "22"
+	Pad = "3 0 0 3"
+
+		Focused = "Image title-foc.png"
+		Unfocused = "Image title-foc.png"
+
+		# titlebar pixmap
+		Tab {
+		Focused = "Image title-foc.png"
+		FocusedSelected = "Image title-foc.png"
+		Unfocused = "Image title-foc.png"
+		UnfocusedSelected = "Image title-foc.png"
+		}
+
+		# separator for grouped windows
+		Separator {
+		Focused = "Image sep-fo.png"
+		Unfocused = "Image sep-un.png"
+		}
+
+		# titlebar font
+    		Font {
+			Focused="Child's Play-11#CENTER#1 #XFT" 
+			Unfocused="Child's Play-11#CENTER#1 #XFT"
+		}
+		
+		FontColor {
+                        Focused = "#ffffff #000000"
+                        FocusedSelected = "#ffffff #000000"
+                        Unfocused = "#c9c9c9 #c9c9c9"
+                        UnfocusedSelected = "#c9c9c9 #c9c9c9"
+		}		
+	
+		Buttons {
+			Left {
+			Focused = "Image button-menu-focused.png"
+			Unfocused = "Image button-menu-unfocused.png"
+			Pressed = "Image button-menu-pressed.png"
+			Button = "1" { Actions = "ShowMenu Window" }
+			}
+			Right {
+			Focused = "Image btn-close-fo.png"
+			Unfocused = "Image btn-close-un.png"
+			Pressed = "Image btn-close-pr.png"
+			Button = "1" { Actions = "Close" }
+			}
+                        Right {
+			Focused = "Image btn-max-fo.png"
+			Unfocused = "Image btn-max-un.png"
+			Pressed = "Image btn-max-pr.png"
+			Button = "1" { Actions = "Toggle Maximized True True" }
+                        }
+                        Right {
+			Focused = "Image btn-min-fo.png"
+			Unfocused = "Image btn-min-un.png"
+			Pressed = "Image btn-min-pr.png"
+			Button = "1" { Actions = "Set Iconified" }
+                        }
+                        #Right {
+			#Focused = "Image title-decor-fo.png"
+			#Unfocused = "Image title-decor-un.png"
+			#Pressed = "Image title-decor-fo.png"
+			#Button = "1" { Actions = "empty" }
+                        #}
+		}
+		
+		Border {
+                        Focused {
+			TopLeft = "Image tl-sq-foc.png"
+			Top = "Image top-fo.png"
+			TopRight = "Image tr-sq-foc.png"
+			Left = "Image left-fo.png"
+			Right = "Image right-fo.png"
+			BottomLeft = "Image bl-fo.png"
+			BottomRight = "Image br-fo.png"
+			Bottom = "Image bottom-fo.png"
+                        }
+
+                        Unfocused {
+			TopLeft = "Image tl-sq-foc.png"
+			Top = "Image top-fo.png"
+			TopRight = "Image tr-sq-foc.png"
+			Left = "Image left-fo.png"
+			Right = "Image right-fo.png"
+			BottomLeft = "Image bl-fo.png"
+			BottomRight = "Image br-fo.png"
+			Bottom = "Image bottom-fo.png"
+                        }
+		}
+	}
+}
+
+##### Menus ####
+
+Decor ="Menu" {
+	Title {
+		# Menu - head height -
+		Height="22"
+		Pad="3 0 0 3"
+	
+		Focused = "Image title-foc.png"
+		Unfocused = "Image title-foc.png"
+		
+		#Tab {
+		#	Focused = "SolidRaised $COLOR_TAB_F $COLOR_TAB_F_LIGHT $COLOR_TAB_F_DARK 1 0"
+		#	FocusedSelected = "SolidRaised $COLOR_TAB_FS $COLOR_TAB_FS_LIGHT $COLOR_TAB_FS_DARK 1 0"
+		#	Unfocused = "SolidRaised $COLOR_TAB_U $COLOR_TAB_U_LIGHT $COLOR_TAB_U_DARK 1 0"
+		#	UnfocusedSelected = "SolidRaised $COLOR_TAB_US $COLOR_TAB_US_LIGHT $COLOR_TAB_US_DARK 1 0"
+		#}
+                #Separator {
+                #        Focused = "Empty"
+                #        Unfocused = "Empty"
+                #}
+
+                Font {
+                        Focused = "Arial-10:bold#Center#1 1#XFT"
+                }
+
+		FontColor {
+                        Focused = "#ffffff"
+                        FocusedSelected = "#ffffff"
+                        Unfocused = "#ffffff"
+                        UnfocusedSelected = "#ffffff"
+		}	
+                Border {
+                        Focused {
+			TopLeft = "Image tl-sq-foc.png"
+			Top = "Image top-fo.png"
+			TopRight = "Image tr-sq-foc.png"
+			Left = "Image left-fo.png"
+			Right = "Image right-fo.png"
+			BottomLeft = "Image bl-fo.png"
+			BottomRight = "Image br-fo.png"
+			Bottom = "Image bottom-fo.png"
+                        }
+
+                        Unfocused {
+			TopLeft = "Image tl-sq-foc.png"
+			Top = "Image top-fo.png"
+			TopRight = "Image tr-sq-foc.png"
+			Left = "Image left-fo.png"
+			Right = "Image right-fo.png"
+			BottomLeft = "Image bl-fo.png"
+			BottomRight = "Image br-fo.png"
+			Bottom = "Image bottom-fo.png"
+                        }
+                }
+        }
+}
+
+   Decor = "TITLEBARLESS" {
+	Title {
+		
+		Border {
+                        Focused {
+			TopLeft = "Image tl-sq-foc.png"
+			Top = "Image top-fo.png"
+			TopRight = "Image tr-sq-foc.png"
+			Left = "Image left-fo.png"
+			Right = "Image right-fo.png"
+			BottomLeft = "Image bl-fo.png"
+			BottomRight = "Image br-fo.png"
+			Bottom = "Image bottom-fo.png"
+                        }
+
+                        Unfocused {
+			TopLeft = "Image tl-sq-foc.png"
+			Top = "Image top-fo.png"
+			TopRight = "Image tr-sq-foc.png"
+			Left = "Image left-fo.png"
+			Right = "Image right-fo.png"
+			BottomLeft = "Image bl-fo.png"
+			BottomRight = "Image br-fo.png"
+			Bottom = "Image bottom-fo.png"
+			}
+		}
+
+	}
+
+} # END Decor TITLEBARLESS
+
+Decor = "STATUSWINDOW" {
+	Title {
+		Height = "0"
+		Pad = "0 0 0 0"
+		Focused = "Image title-foc.png"
+		Unfocused = "Image title-foc.png"
+		Tab {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "EMPTY"
+		}
+		FontColor {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+		Buttons {
+		}
+                Border {  
+                        Focused {
+			TopLeft = "Image tl-sq-foc.png"
+			Top = "Image top-fo.png"
+			TopRight = "Image tr-sq-foc.png"
+			Left = "Image left-fo.png"
+			Right = "Image right-fo.png"
+			BottomLeft = "Image bl-fo.png"
+			BottomRight = "Image br-fo.png"
+			Bottom = "Image bottom-fo.png"
+                        }
+
+                        Unfocused {
+			TopLeft = "Image tl-sq-foc.png"
+			Top = "Image top-fo.png"
+			TopRight = "Image tr-sq-foc.png"
+			Left = "Image left-fo.png"
+			Right = "Image right-fo.png"
+			BottomLeft = "Image bl-fo.png"
+			BottomRight = "Image br-fo.png"
+			Bottom = "Image bottom-fo.png"
+                        }
+                }
+	}
+} # END Decor STATUSWINDOW
+
+} # END PDecor
+
+# I don't use the harbour so....
+Harbour {
+        Texture = "SolidRaised #aaaaaa #eeeeee #666666 1 0"
+}
+
+Menu {
+        Focused {
+                Font = "Sans-8:bold#LEFT#0 0#XFT"
+                Background = "Solid #000000"
+                Item = "Solid #eeeeee"
+                Arrow = "Solid #000000 4x4"
+                Text = "#2c2c2c"
+        }
+        Unfocused {
+                Font = "Sans-8:bold#LEFT#0 0#XFT"
+                Background = "Solid #000000"
+                Item = "Solid #e2e2e2"
+                Arrow = "Solid #000000 4x4"
+                Text = "#2c2c2c"
+        }
+        Selected {
+                Font = "Sans-8:bold#LEFT#0 0#XFT"
+                Background = "Solid #000000"
+                Item = "SolidRaised $COLOR_MENU_FS $COLOR_MENU_FS_LIGHT $COLOR_MENU_FS_DARK 1 0"
+                Arrow = "Solid #FFFFFF 4x4"
+                Text = "#FFFFFF"
+        }
+
+        Pad = "4 4 4 4"
+}
+
+CmdDialog {
+        Font = "Sans-8:bold#CENTER#0 0#XFT"
+        Texture = "Image title-foc.png"
+        Text = "#ffffff"
+}
+
+Status {
+        Font = "Sans-8:bold#CENTER#0 0#XFT"
+        Texture = "Image title-foc.png"
+        Text = "#ffffff"
+}
+
+Root {
+/*      Command = "Esetroot -s ~/.pekwm/themes/OpusOS/GNANT.png" */
+}

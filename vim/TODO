@@ -1,0 +1,15 @@
+doplnovani parovych entit
+terminal ve vimmate
+sli by snippety ... treba je generovat
+odsazeni umi zvetsovat, ale nejak ne zmensovat (if foo\nend)
+
+def ${1:method}($2)
+  $3
+end
+
+do-end
+if, case, unless, class, module, def, attr_*
+rozbehat git, haml
+jabko-R
+
+look@satrapa

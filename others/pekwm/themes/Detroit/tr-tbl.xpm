@@ -1,0 +1,19 @@
+/* XPM */
+static char *tr-tbl.png[] = {
+/* columns rows colors chars-per-pixel */
+"5 5 8 1",
+"  c #555555",
+". c gray72",
+"X c #BCBCBC",
+"o c #CBCBCB",
+"O c #CECECE",
+"+ c gray84",
+"@ c gray88",
+"# c #F5F8FF",
+/* pixels */
+"     ",
+"@@@o ",
+"OOO. ",
+"X+O. ",
+" #O. "
+};

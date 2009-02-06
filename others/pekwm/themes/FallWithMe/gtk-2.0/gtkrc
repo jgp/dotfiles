@@ -1,0 +1,81 @@
+style "default"
+{
+	fg[PRELIGHT]    = "#202020"
+	
+	bg[ACTIVE]	    = "#d9d9d9"
+	
+	bg[INSENSITIVE] = "#d9d9d9"
+	bg[SELECTED]    = "#97adc3"
+	bg[NORMAL]      = "#f6f6f6"
+	bg[PRELIGHT]	= "#ffffff"
+	
+	base[NORMAL]            = "#fdfdfd"
+	base[ACTIVE]            = "#97adc3"
+	base[INSENSITIVE]       = "#fdfdfd"
+	base[PRELIGHT]          = "#eaeaea"
+	base[SELECTED]          = "#97adc3"
+	
+	text[SELECTED]  = "#ffffff"
+
+	GtkRange::trough_border = 0
+	GtkRange::slider_width = 15
+	GtkRange::stepper_size = 15
+
+	GtkScrollbar::min_slider_length = 25
+	GtkCheckButton::indicator_size = 10
+	GtkCheckMenuItem::indicator_size = 10
+	GtkRadioButton::indicator_size = 12
+	
+	GtkNotebook::tab_vborder = 2
+	GtkNotebook::tab_hborder = 2
+	xthickness = 2
+	ythickness = 2
+	
+	engine "mist"
+	{
+		
+	}
+}
+
+style "scrollbar"
+{
+    bg[NORMAL]              = "#f6f6f6"
+    bg[PRELIGHT]            = "#97adc3"
+}
+
+style "menuitem"
+{
+	ythickness = 2
+	xthickness = 2
+	bg[PRELIGHT]    = "#3e71aa"
+	bg[SELECTED]    = "#97adc3"
+	
+	fg[PRELIGHT]  = "#ffffff"
+	fg[SELECTED]  = "#ffffff"
+}
+
+style "notebook"
+{
+	ythickness = 3
+	xthickness = 3
+	bg[ACTIVE]              = "#d9d9d9"
+    bg[PRELIGHT]            = "#87a3bf"
+}
+
+
+style "menu" 
+{
+	ythickness = 2
+	xthickness = 2
+} 
+
+class "GtkWidget" 					style "default"
+class "GtkMenu" 					style "menu"
+class "GtkScrollbar"            	style "scrollbar"
+class "GtkNotebook"             	style "notebook"
+widget_class "*.GtkMenuItem.*" 		style "menuitem"
+widget_class "*.GtkImageMenuItem.*" style "menuitem"
+widget_class "*.GtkAccelMenuItem.*" style "menuitem"
+widget_class "*.GtkRadioMenuItem.*" style "menuitem"
+widget_class "*.GtkCheckMenuItem.*" style "menuitem"
+widget_class "*.GtkMenu.*" 			style "menuitem"

@@ -1,0 +1,252 @@
+/*
+
+ CDE, the pekwm-dev theme by ruabag (ruabag@gmail.com)
+
+ Theme is labeled for pekwm-dev-20050227.
+
+ In short that means it works attleast with the mentioned theme
+ snapshot. Usually it should work fine with newer pekwm-dev releases,
+ but if you notice it not working after an update, check in for a
+ new version of the theme.
+
+ Buttons and its use:
+ | Close/Menu |------Title bar-------| Iconify | Maximize |
+
+*/
+
+PDecor {
+
+Decor = "DEFAULT" {
+	Title {
+		Height = "11"
+		Pad = "0 0 5 5"
+
+		Focused = "Empty"
+		Unfocused = "Empty"
+
+		Tab {
+			Focused = "SolidRaised #b24d7a #dcadc2 #57253b 1 0"
+			FocusedSelected = "SolidRaised #b24d7a #dcadc2 #57253b 1 0"
+			Unfocused = "SolidRaised #aeb2c3 #dcdee5 #5d6069 1 0"
+			UnfocusedSelected = "SolidRaised #aeb2c3 #dcdee5 #5d6069 1 0"
+		}
+		Separator {
+			Focused = "Empty"
+			Unfocused = "Empty"
+		}
+		Font {
+			Focused = "Bitstream Vera Sans-7:Bold#Center#XFT"
+			UnFocused = "Bitstream Vera Sans-7:Bold#Center#XFT"
+			UnfocusedSelected = "Bitstream Vera Sans-7:Bold#Center#XFT"
+			FocusedSelected = "Bitstream Vera Sans-7:Bold#Center#XFT"
+		}
+		FontColor {
+			Focused = "#ffff00"
+			FocusedSelected = "#ffffff"
+			Unfocused = "#222222"
+			UnfocusedSelected = "#000000"
+		}
+		Buttons {
+		      Left {
+		              Button =  "1" { Actions = "Close" }
+			      Button = "3" { Actions = "ShowMenu Window" }
+
+			      Focused = "Image menu.png"
+			      Unfocused = "Image menu-un.png"
+        		      Pressed = "Image menu-pr.png"
+      		     }
+      		     Right { 
+		              Button = "1" { Actions = "Toggle Maximized" }
+
+        	     	      Focused = "Image max.png"
+        	     	      Unfocused = "Image max-un.png"
+        	     	      Pressed = "Image max-pr.png"
+      		     }
+      		     Right { 
+        	     	      Button = "1" { Actions = "Set Iconified" }
+
+        		      Focused = "Image min.png"
+        		      Unfocused = "Image min-un.png"
+        		      Pressed = "Image min-pr.png"
+		     }
+		}
+		Border {
+			Focused {
+				TopLeft = "Image bd-top-left.png"
+				Top = "Image bd-top.png"
+				TopRight = "Image bd-top-right.png"
+				Left = "Image bd-left.png"
+				Right = "Image bd-right.png"
+				BottomLeft = "Image bd-bottom-left.png"
+				Bottom = "Image bd-bottom.png"
+				BottomRight = "Image bd-bottom-right.png"
+			}
+			Unfocused {
+				TopLeft = "Image bd-top-left-un.png"
+				Top = "Image bd-top-un.png"
+				TopRight = "Image bd-top-right-un.png"
+				Left = "Image bd-left-un.png"
+				Right = "Image bd-right-un.png"
+				BottomLeft = "Image bd-bottom-left-un.png"
+				Bottom = "Image bd-bottom-un.png"
+				BottomRight = "Image bd-bottom-right-un.png"
+			}
+		}
+	}
+}
+
+Decor = "MENU" {
+	Title {
+		Height = "12"
+		Pad = "0 0 5 5"
+		Focused = "Empty"
+		Unfocused = "Empty"
+		Tab {
+			Focused = "SolidRaised #b24d7a #dcadc2 #57253b 1 0"
+			FocusedSelected = "SolidRaised #b24d7a #dcadc2 #57253b 1 0"
+			Unfocused = "SolidRaised #aeb2c3 #dcdee5 #5d6069 1 0"
+			UnfocusedSelected = "SolidRaised #aeb2c3 #dcdee5 #5d6069 1 0"
+		}
+		Separator {
+			Focused = "Empty"
+			Unfocused = "Empty"
+		}
+		Font {
+			Focused = "Bitstream Vera Sans-7:Bold#Center#XFT"
+			UnFocused = "Bitstream Vera Sans-7:Bold#Center#XFT"
+		}
+		FontColor {
+			Focused = "#ffff00"
+			FocusedSelected = "#ffffff"
+			Unfocused = "#222222"
+			UnfocusedSelected = "#000000"
+		}
+		Buttons {
+		}
+		Border {
+			Focused {
+				TopLeft = "Solid #444444 1x1"
+				Top = "Solid #444444 1x1"
+				TopRight = "Solid #444444 1x1"
+				Left = "Solid #444444 1x1"
+				Right = "Solid #444444 1x1"
+				BottomLeft = "Solid #444444 1x1"
+				Bottom = "Solid #444444 1x1"
+				BottomRight = "Solid #444444 1x1"
+			}
+			Unfocused {
+				TopLeft = "Solid #444444 1x1"
+				Top = "Solid #444444 1x1"
+				TopRight = "Solid #444444 1x1"
+				Left = "Solid #444444 1x1"
+				Right = "Solid #444444 1x1"
+				BottomLeft = "Solid #444444 1x1"
+				Bottom = "Solid #444444 1x1"
+				BottomRight = "Solid #444444 1x1"
+			}
+		}
+	}
+}
+
+Decor = "STATUSWINDOW" {
+	Title {
+		Height = "0"
+		Pad = "0 0 0 0"
+		Focused = "Empty"
+		Unfocused = "Empty"
+		Tab {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+		Separator {
+			Focused = "Empty"
+			Unfocused = "Empty"
+		}
+		Font {
+			Focused = "Bitstream Vera Sans-7:Bold#Center#XFT"
+			UnFocused = "Bitstream Vera Sans-7:Bold#Center#XFT"
+		}
+		FontColor {
+			Focused = "#000000"
+			FocusedSelected = "#000000"
+			Unfocused = "#ffffff"
+			UnfocusedSelected = "#ffffff"
+		}
+		Buttons {
+		}
+		Border {
+			Focused {
+				TopLeft = "Solid #444444 1x1"
+				Top = "Solid #444444 1x1"
+				TopRight = "Solid #444444 1x1"
+				Left = "Solid #444444 1x1"
+				Right = "Solid #444444 1x1"
+				BottomLeft = "Solid #444444 1x1"
+				Bottom = "Solid #444444 1x1"
+				BottomRight = "Solid #444444 1x1"
+			}
+			Unfocused {
+				TopLeft = "Solid #444444 1x1"
+				Top = "Solid #444444 1x1"
+				TopRight = "Solid #444444 1x1"
+				Left = "Solid #444444 1x1"
+				Right = "Solid #444444 1x1"
+				BottomLeft = "Solid #444444 1x1"
+				Bottom = "Solid #444444 1x1"
+				BottomRight = "Solid #444444 1x1"
+			}
+		}
+	}
+}
+
+} # PDecor ends
+
+Harbour {
+	Texture = "SolidRaised #bbbbbb #bbbbbb #505050 1 0"
+}
+
+Menu {
+	Focused {
+		Font = "Bitstream Vera Sans-7#XFT"
+		Background = "Empty"
+		Item = "Solid #aeb2c3 #dcdee5 #5d6069 1 0"
+		Text = "#000000"
+		Separator = "Solid #000000 1x1"
+		Arrow = "Solid #000000 3x3"
+	}
+	Unfocused {
+		Font = "Bitstream Vera Sans-7#XFT"
+		Background = "Empty"
+		Item = "Solid #aeb2c3 #dcdee5 #5d6069 1 0"
+		Text = "#000000"
+		Separator = "Solid #FFFFFF 1x1"
+		Arrow = "Solid #000000 3x3"
+	}
+	Selected {
+		Font = "Bitstream Vera Sans-7#XFT"
+		Background = "Empty"
+		Item = "SolidRaised #b24d7a #dcadc2 #57253b 1 0"
+		Text = "#ffffff"
+		Arrow = "Solid #FFFFFF 3x3"
+	}
+	Pad = "2 2 2 2"
+}
+
+CmdDialog {
+	Font = "Bitstream Vera Sans-7#XFT"
+	Texture = "Solid #bbbbbb"
+	Text = "#000000"
+}
+
+Status {
+	Font = "Bitstream Vera Sans-7#XFT"
+	Texture = "Solid #aeb2c3"
+	Text = "#111111"
+}
+
+Root {
+#	Command = "xsetroot -solid rgb:68/68/68"
+}
+

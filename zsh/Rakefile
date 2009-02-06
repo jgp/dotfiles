@@ -1,0 +1,20 @@
+require "pathname"
+
+desc "Build dotfiles and copy them to the $HOME directory"
+task :install => "zshrc-generated.sh" do |item|
+  cp "zshrc-generated.sh", File.join(ENV["HOME"], ".zshrc")
+end
+
+desc "Build all the files to the one big zshrc"
+file "zshrc-generated.sh" => (FileList["**/*.sh"] - ["zshrc-generated.sh"]) do
+  dirs = %w{setup functions aliases completion environment prompt}
+  files = dirs.map { |dir| Dir["#{dir}/*.sh"] }.flatten
+  File.open("zshrc-generated.sh", "w") do |output|
+    files.each do |file|
+      #filename = Pathname.new(file).relative_path_from(Pathname.new(Dir.pwd))
+      #output.puts("### #{filename.to_s.upcase} ###")
+      output.puts(File.read(file))
+      output.puts
+    end
+  end
+end

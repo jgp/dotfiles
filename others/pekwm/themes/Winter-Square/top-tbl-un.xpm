@@ -1,0 +1,15 @@
+/* XPM */
+static char *top-tbl-un.png[] = {
+/* columns rows colors chars-per-pixel */
+"1 7 2 1",
+"  c gray32",
+". c gray65",
+/* pixels */
+" ",
+".",
+".",
+".",
+".",
+".",
+" "
+};

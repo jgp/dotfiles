@@ -1,0 +1,5 @@
+2005-03-28	hewbert	<josh@hewbert.com>
+	* Fix the goddamn extracted directory name to indicate dev-%DATE
+
+2005-03-25	hewbert	<josh@hewbert.com>
+	* Initial release

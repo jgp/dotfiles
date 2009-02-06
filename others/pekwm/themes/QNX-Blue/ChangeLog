@@ -1,0 +1,4 @@
+2005-03-10  hewbert  <josh@hewbert.com>:
+	* Renamed extracted dirs (theme dirs) to indicate Pekwm Version.
+	* Changed root Command to valid comment (false)
+	* Created theme

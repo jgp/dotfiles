@@ -1,0 +1,345 @@
+$FONT = "Bitstream Vera Sans-8#Left#0 0#XFT"
+
+PDecor {
+
+Decor = "DEFAULT" {
+	Title { 
+		Height = "19"
+		Pad = "4 0 5 5"
+
+                WidthMin = "50"
+                WidthMax = "100"
+                WidthSymetric = "True"
+
+		Focused = "Image title.png"
+		Unfocused = "Image title.png"
+
+		Tab {
+			Focused = "Image title.png"
+			FocusedSelected = "Image title.png"
+			Unfocused = "Image title.png"
+			UnfocusedSelected = "Image title.png"
+		}
+		Separator {
+			Focused = "Image sep.png"
+			Unfocused = "Image sep.png"
+		}
+		Font {
+			Focused = "$FONT"
+			FocusedSelected = "$FONT"
+			Unfocused = "$FONT"
+			UnfocusedSelected = "$FONT"
+		}
+		FontColor {
+			Focused = "#95969a"
+			FocusedSelected = "#000000"
+			Unfocused = "#95969a"
+			UnfocusedSelected = "#626367"
+		}
+		Buttons {
+			Right {
+				Focused = "Image sep.png"
+				Unfocused = "Image sep.png"
+				Pressed = "Image sep.png"
+				Button = "1" { Actions = "NoAction" }
+			}
+			Left {
+				Focused = "Image sep.png"
+				Unfocused = "Image sep.png"
+				Pressed = "Image sep.png"
+				Button = "1" { Actions = "NoAction" }
+			}
+			Left {
+				Focused = "Image btn.png"
+				Unfocused = "Image btn.png"
+				Pressed = "Image btn.png"
+				Button = "1" { Actions = "Close" }
+			}
+			Right {
+				Focused = "Image btn.png"
+				Unfocused = "Image btn.png"
+				Pressed = "Image btn.png"
+				Button = "1" { Actions = "Set Iconified" }
+			}
+		}
+		Border {
+			Focused {
+				TopLeft = "Image sd.png"
+				Top = "Image sd.png"
+				TopRight = "Image sd.png"
+				Left = "Image sd.png"
+				Right = "Image sd.png"
+				BottomLeft = "Image btsd.png"
+				Bottom = "Image bt.png"
+				BottomRight = "Image btsd.png"
+			}
+			Unfocused {
+				TopLeft = "Image sd.png"
+				Top = "Image sd.png"
+				TopRight = "Image sd.png"
+				Left = "Image sd.png"
+				Right = "Image sd.png"
+				BottomLeft = "Image btsd.png"
+				Bottom = "Image bt.png"
+				BottomRight = "Image btsd.png"
+			}
+		}
+	} 
+}
+
+Decor = "TITLEBARLESS" {
+	Title {
+		Height = "0"
+		Pad = "0 0 0 0"
+
+		Focused = "EMPTY"
+		Unfocused = "EMPTY"
+
+		Tab {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "EMPTY"
+		}
+		FontColor {
+			Focused = "#000000"
+			FocusedSelected = "#000000"
+			Unfocused = "#000000"
+			UnfocusedSelected = "#000000"
+		}
+		Border {
+			Focused {
+				TopLeft = "Image menusd.png"
+				Top = "Image menu.png"
+				TopRight = "Image menusd.png"
+				Left = "Image sd.png"
+				Right = "Image sd.png"
+				BottomLeft = "Image menusd.png"
+				Bottom = "Image menu.png"
+				BottomRight = "Image menusd.png"
+			}
+			Unfocused {
+				TopLeft = "Image menusd.png"
+				Top = "Image menu.png"
+				TopRight = "Image menusd.png"
+				Left = "Image sd.png"
+				Right = "Image sd.png"
+				BottomLeft = "Image menusd.png"
+				Bottom = "Image menu.png"
+				BottomRight = "Image menusd.png"
+			}
+		}
+	}
+}
+Decor = "MENU" {
+	Title {
+		Height = "0"
+		Pad = "0 0 0 0"
+
+		Focused = "EMPTY"
+		Unfocused = "EMPTY"
+
+		Tab {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "EMPTY"
+		}
+		FontColor {
+			Focused = "#000000"
+			FocusedSelected = "#000000"
+			Unfocused = "#000000"
+			UnfocusedSelected = "#000000"
+		}
+		Border {
+			Focused {
+				TopLeft = "Image menusd.png"
+				Top = "Image menu.png"
+				TopRight = "Image menusd.png"
+				Left = "Image sd.png"
+				Right = "Image sd.png"
+				BottomLeft = "Image menusd.png"
+				Bottom = "Image menu.png"
+				BottomRight = "Image menusd.png"
+			}
+			Unfocused {
+				TopLeft = "Image menusd.png"
+				Top = "Image menu.png"
+				TopRight = "Image menusd.png"
+				Left = "Image sd.png"
+				Right = "Image sd.png"
+				BottomLeft = "Image menusd.png"
+				Bottom = "Image menu.png"
+				BottomRight = "Image menusd.png"
+			}
+		}
+	}
+}
+
+Decor = "STATUSWINDOW" {
+	Title {
+		Height = "0"
+		Pad = "0 0 0 0"
+		Focused = "EMPTY"
+		Unfocused = "EMPTY"
+		Tab {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "EMPTY"
+		}
+		FontColor {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+		Buttons {
+		}
+		Border {
+			Focused {
+				TopLeft = "Solid #888888 1x1"
+				Top = "Solid #888888 1x1"
+				TopRight = "Solid #888888 1x1"
+				Left = "Solid #888888 1x1"
+				Right = "Solid #888888 1x1"
+				BottomLeft = "Solid #888888 1x1"
+				Bottom = "Solid #888888 1x1"
+				BottomRight = "Solid #888888 1x1"
+			}
+			Unfocused {
+				TopLeft = "Solid #666666 1x1"
+				Top = "Solid #666666 1x1"
+				TopRight = "Solid #666666 1x1"
+				Left = "Solid #666666 1x1"
+				Right = "Solid #666666 1x1"
+				BottomLeft = "Solid #666666 1x1"
+				Bottom = "Solid #666666 1x1"
+				BottomRight = "Solid #666666 1x1"
+			}
+		}
+	}
+}
+Decor = "CMDDIALOG" {
+	Title {
+		Height = "0"
+		Pad = "0 0 0 0"
+
+		Focused = "EMPTY"
+		Unfocused = "EMPTY"
+
+		Tab {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "EMPTY"
+		}
+		FontColor {
+			Focused = "#000000"
+			FocusedSelected = "#000000"
+			Unfocused = "#000000"
+			UnfocusedSelected = "#000000"
+		}
+		Border {
+			Focused {
+				TopLeft = "Image menusd.png"
+				Top = "Image menu.png"
+				TopRight = "Image menusd.png"
+				Left = "Image sd.png"
+				Right = "Image sd.png"
+				BottomLeft = "Image menusd.png"
+				Bottom = "Image menu.png"
+				BottomRight = "Image menusd.png"
+			}
+			Unfocused {
+				TopLeft = "Image menusd.png"
+				Top = "Image menu.png"
+				TopRight = "Image menusd.png"
+				Left = "Image sd.png"
+				Right = "Image sd.png"
+				BottomLeft = "Image menusd.png"
+				Bottom = "Image menu.png"
+				BottomRight = "Image menusd.png"
+			}
+		}
+	}
+}
+}
+
+Harbour {
+	Texture = "SolidRaised #000000 #000000 #000000 0 0"
+}
+
+Menu {
+	Focused {
+		Font = "$FONT"
+		Background = "Solid #ecede8"
+		Item = "EMPTY"
+		Text = "#000000"
+		Separator = "Solid #8c8c8c 0x1"
+		Arrow = "Image arrow.png"
+	}
+	Unfocused {
+		Font = "$FONT"
+		Background = "Solid #ecede8"
+		Item = "EMPTY"
+		Text = "#000000"
+		Separator = "Solid #8c8c8c 0x1"
+		Arrow = "Image arrow.png"
+	}
+	Selected {
+		Font = "$FONT"
+		Background = "Solid #d3d5c0"
+		Item = "SolidRaised #d3d5c0 #75767a #75767a"
+		Text = "#000000"
+		Arrow = "Image arrow-fo.png"
+	}
+	Pad = "3 2 4 6"
+}
+
+CmdDialog {
+	Font = "$FONT"
+	Texture = "Solid #d3d5c0"
+	Text = "#2c2c2c"
+	Pad = "4 4 4 4"
+}
+
+Status {
+	Font = "$FONT"
+	Texture = "Solid #d3d5c0"
+	Text = "#2c2c2c"
+	Pad = "0 0 0 0"
+}
+
+Root {
+#	Command = "EMPTY"
+}
+

@@ -1,0 +1,352 @@
+# Pekdome by CharlieB
+# A port of a very old Sawfish theme by Ville Pätsi
+# http://themes.freshmeat.net/projects/moondome/
+
+$FONT = "Verdana-7.5#CENTER#1 1#XFT"
+$MENUFONT = "Verdana-7.5#LEFT#1 1#XFT"
+
+# Set $WIDTHMIN to "1000000" if you prefer full-size titlebars
+$WIDTHMIN = "1"
+
+PDecor {
+  Decor = "DEFAULT" {
+    Title {
+      Height = "20"
+      Pad = "3 0 10 11"
+
+      WidthMin = "$WIDTHMIN"
+      WidthMax = "100"
+      WidthSymetric = "true"
+
+      Focused = "Empty"
+      Unfocused = "Empty"
+
+      Tab {
+        Focused = "Image title-fo.xpm"
+        FocusedSelected = "Image title-fo.xpm"
+        Unfocused = "Image title-un.xpm"
+        UnfocusedSelected = "Image title-un.xpm"
+      }
+
+      Separator {
+        Focused = "Image sep-fo.xpm"
+        Unfocused = "Image sep-un.xpm"
+      }
+
+      Font {
+        Focused = "$FONT"
+        FocusedSelected = "$FONT"
+        Unfocused = "$FONT"
+        UnfocusedSelected = "$FONT"
+      }
+
+      FontColor {
+        Focused = "#305488"
+        FocusedSelected = "#000000"
+        Unfocused = "#707070"
+        UnfocusedSelected = "#000000"
+      }
+
+      Buttons {
+        Left {
+          Focused = "Image close-fo.xpm"
+          Unfocused = "Image close-un.xpm"
+          Pressed = "Image close-pr.xpm"
+          Button = "1" { Actions = "Close" }
+        }
+
+        Right {
+          Focused = "Image max-fo.xpm"
+          Unfocused = "Image max-un.xpm"
+          Pressed = "Image max-pr.xpm"
+          Button = "1" { Actions = "Toggle Maximized 1 1" }
+          Button = "3" { Actions = "Set Iconified" }
+        }
+      }
+
+      Border {
+        Focused {
+          TopLeft = "Image top-left.xpm"
+          TopRight = "Image top-right.xpm"
+          Top = "Image top.xpm"
+          BottomLeft = "Image bottom-left.xpm"
+          BottomRight = "Image bottom-right.xpm"
+          Bottom = "Image bottom.xpm"
+	  Left = "Image left.xpm"
+	  Right = "Image right.xpm"
+        }
+
+        Unfocused {
+          TopLeft = "Image top-left.xpm"
+          TopRight = "Image top-right.xpm"
+          Top = "Image top.xpm"
+          BottomLeft = "Image bottom-left.xpm"
+          BottomRight = "Image bottom-right.xpm"
+          Bottom = "Image bottom.xpm"
+	  Left = "Image left.xpm"
+	  Right = "Image right.xpm"
+        }
+      }
+    }
+  }
+
+  Decor = "BORDERLESS" {
+    Title {
+      Height = "20"
+      Pad = "3 0 10 11"
+
+      WidthMin = "$WIDTHMIN"
+      WidthMax = "100"
+      WidthSymetric = "true"
+
+      Focused = "Empty"
+      Unfocused = "Empty"
+
+      Tab {
+        Focused = "Image title-fo.xpm"
+        FocusedSelected = "Image title-fo.xpm"
+        Unfocused = "Image title-un.xpm"
+        UnfocusedSelected = "Image title-un.xpm"
+      }
+
+      Separator {
+        Focused = "Image sep-fo.xpm"
+        Unfocused = "Image sep-un.xpm"
+      }
+
+      Font {
+        Focused = "$FONT"
+        FocusedSelected = "$FONT"
+        Unfocused = "$FONT"
+        UnfocusedSelected = "$FONT"
+      }
+
+      FontColor {
+        Focused = "#000000"
+        FocusedSelected = "#000000"
+        Unfocused = "#000000"
+        UnfocusedSelected = "#000000"
+      }
+
+      Buttons {
+         Left {
+          Focused = "Image close-fo.xpm"
+          Unfocused = "Image close-un.xpm"
+          Pressed = "Image close-pr.xpm"
+          Button = "1" { Actions = "Close" }
+        }
+
+        Right {
+          Focused = "Image max-fo.xpm"
+          Unfocused = "Image max-un.xpm"
+          Pressed = "Image max-pr.xpm"
+          Button = "1" { Actions = "Toggle Maximized 1 1" }
+          Button = "3" { Actions = "Set Iconified" }
+        }
+      }
+
+      Border {
+        Focused {
+          TopLeft = "Empty"
+          TopRight = "Empty"
+          Top = "Empty"
+          BottomLeft = "Empty"
+          BottomRight = "Empty"
+          Bottom = "Empty"
+	  Left = "Empty"
+	  Right = "Empty"
+        }
+        Unfocused {
+          TopLeft = "Empty"
+          TopRight = "Empty"
+          Top = "Empty"
+          BottomLeft = "Empty"
+          BottomRight = "Empty"
+          Bottom = "Empty"
+	  Left = "Empty"
+	  Right = "Empty"
+        }
+
+      }
+    }
+  }
+
+  Decor = "TITLEBARLESS" {
+    Title {
+      Height = "0"
+      Pad = "0 0 0 0"
+
+      Focused = "Empty"
+      Unfocused = "Empty"
+
+      Tab {
+        Focused = "Empty"
+        FocusedSelected = "Empty"
+        Unfocused = "Empty"
+        UnfocusedSelected = "Empty"
+      }
+
+      Separator {
+        Focused = "Empty"
+        Unfocused = "Empty"
+      }
+
+      Font {
+        Focused = "Empty"
+        FocusedSelected = "Empty"
+        Unfocused = "Empty"
+        UnfocusedSelected = "Empty"
+      }
+
+      FontColor {
+        Focused = "#000000"
+        FocusedSelected = "#000000"
+        Unfocused = "#000000"
+        UnfocusedSelected = "#000000"
+      }
+
+      Buttons {
+      }
+
+      Border {
+        Focused {
+          TopLeft = "Image top-left.xpm"
+          TopRight = "Image top-right.xpm"
+          Top = "Image top.xpm"
+          BottomLeft = "Image bottom-left.xpm"
+          BottomRight = "Image bottom-right.xpm"
+          Bottom = "Image bottom.xpm"
+	  Left = "Image left.xpm"
+	  Right = "Image right.xpm"
+        }
+
+        Unfocused {
+          TopLeft = "Image top-left.xpm"
+          TopRight = "Image top-right.xpm"
+          Top = "Image top.xpm"
+          BottomLeft = "Image bottom-left.xpm"
+          BottomRight = "Image bottom-right.xpm"
+          Bottom = "Image bottom.xpm"
+	  Left = "Image left.xpm"
+	  Right = "Image right.xpm"
+        }
+      }
+    }
+  }
+
+  Decor = "MENU" {
+    Title {
+      Height = "0"
+      Pad = "0 0 0 0"
+
+      Focused = "Empty"
+      Unfocused = "Empty"
+
+      Tab {
+        Focused = "Empty"
+        FocusedSelected = "Empty"
+        Unfocused = "Empty"
+        UnfocusedSelected = "Empty"
+      }
+
+      Separator {
+        Focused = "Empty"
+        Unfocused = "Empty"
+      }
+
+      Font {
+        Focused = "$MENUFONT"
+        FocusedSelected = "$MENUFONT"
+        Unfocused = "$MENUFONT"
+        UnfocusedSelected = "$MENUFONT"
+      }
+
+      FontColor {
+        Focused = "#000000"
+        FocusedSelected = "#000000"
+        Unfocused = "#000000"
+        UnfocusedSelected = "#000000"
+      }
+
+      Buttons {
+      }
+
+      Border {
+        Focused {
+          TopLeft = "Image top-left.xpm"
+          TopRight = "Image top-right.xpm"
+          Top = "Image top.xpm"
+          BottomLeft = "Image bottom-left.xpm"
+          BottomRight = "Image bottom-right.xpm"
+          Bottom = "Image bottom.xpm"
+	  Left = "Image left.xpm"
+	  Right = "Image right.xpm"
+        }
+
+        Unfocused {
+          TopLeft = "Image top-left.xpm"
+          TopRight = "Image top-right.xpm"
+          Top = "Image top.xpm"
+          BottomLeft = "Image bottom-left.xpm"
+          BottomRight = "Image bottom-right.xpm"
+          Bottom = "Image bottom.xpm"
+	  Left = "Image left.xpm"
+	  Right = "Image right.xpm"
+        }
+      }
+    }
+  }
+}
+
+Menu {
+  Focused {
+    Font = "$MENUFONT"
+    Background = "Solid #e8ece8"
+    Item = "Empty"
+    Text = "#000000"
+    Separator = "Solid #b8bcb8 1x1"
+    Arrow = "Solid #000000 5x2"
+  }
+
+  Unfocused {
+    Font = "$MENUFONT"
+    Background = "Solid #e8ece8"
+    Item = "Empty"
+    Text = "#000000"
+    Separator = "Solid #b8bcb8 1x1"
+    Arrow = "Solid #000000 5x2"
+  }
+
+  Selected {
+    Font = "$MENUFONT"
+    Background = "Empty"
+    Item = "Solid #a8b4e0"
+    Text = "#000000"
+    Separator = "Empty"
+    Arrow = "Solid #000000 5x2"
+  }
+
+  Pad = "2 4 10 10"
+}
+
+Harbour {
+  Texture = "Solid #e8ece8"
+}
+
+CmdDialog {
+  Font = "$MENUFONT"
+  Texture = "Solid #e8ece8"
+  Text = "#000000"
+  Pad = "2 4 10 10"
+}
+
+Status {
+  Font = "$MENUFONT"
+  Texture = "Solid #e8ece8"
+  Text = "#000000"
+  Pad = "2 4 10 10"
+}
+
+Root {
+  Command = "false"
+}

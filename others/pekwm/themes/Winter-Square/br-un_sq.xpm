@@ -1,0 +1,32 @@
+/* XPM */
+static char *br-un_sq.png[] = {
+/* columns rows colors chars-per-pixel */
+"22 7 19 1",
+"  c gray32",
+". c gray78",
+"X c gray81",
+"o c #CFCFD0",
+"O c #CFD0CF",
+"+ c #CFD0D0",
+"@ c #D0CFCF",
+"# c #D0D0CF",
+"$ c #D0D0D0",
+"% c #D8D8D8",
+"& c #D8D9D8",
+"* c #E0E1E0",
+"= c #E0E1E1",
+"- c #E1E1E0",
+"; c #E1E1E1",
+": c #E0E2E0",
+"> c #E0E2E1",
+", c #E1E2E1",
+"< c #E9EAE9",
+/* pixels */
+"                      ",
+" <<<<<<<<<<<<<<<<<<<< ",
+" ,,,**,,*,,,,,,*,*,,* ",
+" %%%%%%%%%%%%&&&&&&%& ",
+" XXXXOO$X$XXXXXX$$XXX ",
+" .................... ",
+"                      "
+};

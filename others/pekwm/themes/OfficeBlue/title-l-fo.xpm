@@ -1,0 +1,30 @@
+/* XPM */
+static char *title-l-fo.png[] = {
+/* columns rows colors chars-per-pixel */
+"18 18 6 1",
+"  c black",
+". c #4B5F75",
+"X c #BAB8AB",
+"o c #B8C4DE",
+"O c #E6E6E6",
+"+ c None",
+/* pixels */
+"XXXXXXXXXXXXXXXXXX",
+"OOOOOOOOOOOOOOOOOO",
+"++++++++++++++++++",
+"++++++++++++++++++",
+"++++++++++++++++++",
+"++++++++++++++++++",
+"++oo++++++++++++++",
+"++oo.+++++++++++++",
+"+++..++oo+++++++++",
+"+++++++oo.++++++++",
+"++oo++++..++++++++",
+"++oo.+++++++++++++",
+"+++..+++++++++++++",
+"++++++++++++++++++",
+"++++++++++++++++++",
+"++++++++++++++++++",
+"OOOOOOOOOOOOOOOOOO",
+"XXXXXXXXXXXXXXXXXX"
+};

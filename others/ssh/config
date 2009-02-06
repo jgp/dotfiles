@@ -1,0 +1,16 @@
+Host eleanor
+  HostName dev-it.org
+  User botanicus
+  Port 62222
+  Compression yes
+
+Host misha
+  HostName 82.117.150.222
+  User botanicus
+  Port 52222
+  Compression yes
+
+Host solaris
+  HostName 77.93.194.146
+  User admin
+  Compression yes

@@ -1,0 +1,478 @@
+# "LightOne" theme for pekwm 0.1.4pre2
+# theme originally done by kvas for Enlightenment
+# ported to pekwm by okraits (http://www.okraits.de/)
+# Date: 23.06.2005
+
+$FONT="Sans-7#XFT"
+PDecor {
+
+Decor = "DEFAULT" {
+	Title {
+		Height = "15"
+		Pad = "1 0 5 0"
+
+		Focused = "Image win-fo.xpm"
+		Unfocused = "Image win-un.xpm"
+
+		Tab {
+			Focused = "Image win-fo.xpm"
+			FocusedSelected = "Image win-fo.xpm"
+			Unfocused = "Image win-un.xpm"
+			UnfocusedSelected = "Image win-un.xpm"
+		}
+		Separator {
+			Focused = "Image sep-fo.xpm"
+			Unfocused = "Image sep-un.xpm"
+		}
+		Font {
+			Focused = "$FONT"
+			FocusedSelected = "$FONT"
+			Unfocused = "$FONT"
+			UnfocusedSelected = "$FONT"
+		}
+		FontColor {
+			Focused = "#737373"
+			FocusedSelected = "#111111"
+			Unfocused = "#737373"
+			UnfocusedSelected = "#737373"
+		}
+		Buttons {
+                        Left {
+                                Focused = "Image tol.xpm"
+                                Unfocused = "Image tol-un.xpm"
+                                Pressed = "Image tol.xpm"
+                                Button = "1" { Actions = "EMPTY" }
+                        }
+                        Right {
+                                Focused = "Image tor.xpm"
+                                Unfocused = "Image tor-un.xpm"
+                                Pressed = "Image tor.xpm"
+                                Button = "1" { Actions = "EMPTY" }
+                        }
+			Left {
+				Focused = "Image btn-close.xpm"
+				Unfocused = "Image btn-close-un.xpm"
+				Selected = "Image btn-close.xpm"
+				Button = "1" { Actions = "Close" }
+			}
+			Right {
+				Focused = "Image btn-max.xpm"
+				Unfocused = "Image btn-max-un.xpm"
+				Selected = "Image btn-max.xpm"
+				Button = "1" { Actions = "Toggle Maximized 1 1" }
+			}
+			Right {
+				Focused = "Image btn-min.xpm"
+				Unfocused = "Image btn-min-un.xpm"
+				Selected = "Image btn-min.xpm"
+				Button = "1" { Actions = "Set Iconified" }
+			}		
+		}
+		Border {
+			Focused {
+				TopLeft = "Image bd-tol-fo.xpm"
+				Top = "Image bd-top-fo.xpm"
+				TopRight = "Image bd-tor-fo.xpm"
+				Left = "Image bd-horz-fo.xpm"
+				Right = "Image bd-horz-fo.xpm"
+				BottomLeft = "Image bd-btl-fo.xpm"
+				Bottom = "Image bd-btm-fo.xpm"
+				BottomRight = "Image bd-btr-fo.xpm"
+			}
+			Unfocused {
+				TopLeft = "Image bd-tol-un.xpm"
+				Top = "Image bd-top-un.xpm"
+				TopRight = "Image bd-tor-un.xpm"
+				Left = "Image bd-horz-un.xpm"
+				Right = "Image bd-horz-un.xpm"
+				BottomLeft = "Image bd-btl-un.xpm"
+				Bottom = "Image bd-btm-un.xpm"
+				BottomRight = "Image bd-btr-un.xpm"
+			}
+		}
+	}
+}
+
+Decor = "MENU" {
+        Title {
+                Height = "15"
+                Pad = "1 0 5 0"
+
+                Focused = "Image win-fo.xpm"
+                Unfocused = "Image win-un.xpm"
+
+                Tab {
+                        Focused = "Image win-fo.xpm"
+                        FocusedSelected = "Image win-fo.xpm"
+                        Unfocused = "Image win-un.xpm"
+                        UnfocusedSelected = "Image win-un.xpm"
+                }
+                Font {
+                        Focused = "$FONT"
+                        FocusedSelected = "$FONT"
+                        Unfocused = "$FONT"
+                        UnfocusedSelected = "$FONT"
+                }
+                FontColor {
+                        Focused = "#737373"
+                        FocusedSelected = "#111111"
+                        Unfocused = "#737373"
+                        UnfocusedSelected = "#737373"
+                }
+		Buttons {
+		}
+                Border {
+                        Focused {
+                                TopLeft = "Image bd-tol-fo.xpm"
+                                Top = "Image bd-top-fo.xpm"
+                                TopRight = "Image bd-tor-fo.xpm"
+                                Left = "Image bd-horz-fo.xpm"
+                                Right = "Image bd-horz-fo.xpm"
+                                BottomLeft = "Image bd-btl-fo.xpm"
+                                Bottom = "Image bd-btm-fo.xpm"
+                                BottomRight = "Image bd-btr-fo.xpm"
+                        }
+                        Unfocused {
+                                TopLeft = "Image bd-tol-un.xpm"
+                                Top = "Image bd-top-un.xpm"
+                                TopRight = "Image bd-tor-un.xpm"
+                                Left = "Image bd-horz-un.xpm"
+                                Right = "Image bd-horz-un.xpm"
+                                BottomLeft = "Image bd-btl-un.xpm"
+                                Bottom = "Image bd-btm-un.xpm"
+                                BottomRight = "Image bd-btr-un.xpm"
+                        }
+                }
+        }
+}
+
+Decor = "TITLEBARLESS" {
+        Title {
+                Height = "0"
+                Pad = "0 0 0 0"
+                Focused = "EMPTY"
+                Unfocused = "EMPTY"
+                Tab {
+                        Focused = "EMPTY"
+                        FocusedSelected = "EMPTY"
+                        Unfocused = "EMPTY"
+                        UnfocusedSelected = "EMPTY"
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+                }
+                Font {
+                        Focused = "EMPTY"
+                        FocusedSelected = "EMPTY"
+                        Unfocused = "EMPTY"
+                        UnfocusedSelected = "EMPTY"
+                }
+                FontColor {
+                        Focused = "EMPTY"
+                        FocusedSelected = "EMPTY"
+                        Unfocused = "EMPTY"
+                        UnfocusedSelected = "EMPTY"
+                }
+                Buttons {
+                }
+                Border {
+                        Focused {
+                                TopLeft = "Image bd-topl-fo.xpm"
+                                Top = "Image bd-topm-fo.xpm"
+                                TopRight = "Image bd-topr-fo.xpm"
+                                Left = "Image bd-horz-fo.xpm"
+                                Right = "Image bd-horz-fo.xpm"
+                                BottomLeft = "Image bd-btl-fo.xpm"
+                                Bottom = "Image bd-btm-fo.xpm"
+                                BottomRight = "Image bd-btr-fo.xpm"
+                        }
+                        Unfocused {
+                                TopLeft = "Image bd-topl-un.xpm"
+                                Top = "Image bd-topm-un.xpm"
+                                TopRight = "Image bd-topr-un.xpm"
+                                Left = "Image bd-horz-un.xpm"
+                                Right = "Image bd-horz-un.xpm"
+                                BottomLeft = "Image bd-btl-un.xpm"
+                                Bottom = "Image bd-btm-un.xpm"
+                                BottomRight = "Image bd-btr-un.xpm"
+                        }
+                }
+        }
+}
+
+Decor = "BORDERLESS" {
+        Title {
+                Height = "15"
+                Pad = "1 0 5 0"
+
+                Focused = "Image win-fo.xpm"
+                Unfocused = "Image win-un.xpm"
+
+                Tab {
+                        Focused = "Image win-fo.xpm"
+                        FocusedSelected = "Image win-fo.xpm"
+                        Unfocused = "Image win-un.xpm"
+                        UnfocusedSelected = "Image win-un.xpm"
+                }
+                Separator {
+                        Focused = "Image sep-fo.xpm"
+                        Unfocused = "Image sep-un.xpm"
+                }
+                Font {
+                        Focused = "$FONT"
+                        FocusedSelected = "$FONT"
+                        Unfocused = "$FONT"
+                        UnfocusedSelected = "$FONT"
+                }
+                FontColor {
+                        Focused = "#737373"
+                        FocusedSelected = "#111111"
+                        Unfocused = "#737373"
+                        UnfocusedSelected = "#737373"
+                }
+                Buttons {
+                        Left {
+                                Focused = "Image tol.xpm"
+                                Unfocused = "Image tol-un.xpm"
+                                Pressed = "Image tol.xpm"
+                                Button = "1" { Actions = "EMPTY" }
+                        }
+                        Right {
+                                Focused = "Image tor.xpm"
+                                Unfocused = "Image tor-un.xpm"
+                                Pressed = "Image tor.xpm"
+                                Button = "1" { Actions = "EMPTY" }
+                        }
+                        Left {
+                                Focused = "Image btn-close.xpm"
+                                Unfocused = "Image btn-close-un.xpm"
+                                Selected = "Image btn-close.xpm"
+                                Button = "1" { Actions = "Close" }
+                        }
+                        Right {
+                                Focused = "Image btn-max.xpm"
+                                Unfocused = "Image btn-max-un.xpm"
+                                Selected = "Image btn-max.xpm"
+                                Button = "1" { Actions = "Toggle Maximized 1 1" }
+                        }
+                        Right {
+                                Focused = "Image btn-min.xpm"
+                                Unfocused = "Image btn-min-un.xpm"
+                                Selected = "Image btn-min.xpm"
+                                Button = "1" { Actions = "Set Iconified" }
+                        }
+                }
+                Border {
+                        Focused {
+                                TopLeft = "EMPTY"
+                                Top = "EMPTY"
+                                TopRight = "EMPTY"
+                                Left = "EMPTY"
+                                Right = "EMPTY"
+                                BottomLeft = "EMPTY"
+                                Bottom = "EMPTY"
+                                BottomRight = "EMPTY"
+                        }
+                        Unfocused {
+                                TopLeft = "EMPTY"
+                                Top = "EMPTY"
+                                TopRight = "EMPTY"
+                                Left = "EMPTY"
+                                Right = "EMPTY"
+                                BottomLeft = "EMPTY"
+                                Bottom = "EMPTY"
+                                BottomRight = "EMPTY"
+                        }
+                }
+        }
+}
+
+Decor = "STATUSWINDOW" {
+        Title {
+                Height = "0"
+                Pad = "0 0 0 0"
+
+                Focused = "Image win-fo.xpm"
+                Unfocused = "Image win-un.xpm"
+
+                Tab {
+                        Focused = "EMPTY"
+                        FocusedSelected = "EMPTY"
+                        Unfocused = "EMPTY"
+                        UnfocusedSelected = "EMPTY"
+                }
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+                Font {
+                        Focused = "EMPTY"
+                        FocusedSelected = "EMPTY"
+                        Unfocused = "EMPTY"
+                        UnfocusedSelected = "EMPTY"
+                }
+                FontColor {
+                        Focused = "EMPTY"
+                        FocusedSelected = "EMPTY"
+                        Unfocused = "EMPTY"
+                        UnfocusedSelected = "EMPTY"
+                }
+                Buttons {
+                }
+                Border {
+                        Focused {
+                                TopLeft = "EMPTY"
+                                Top = "EMPTY"
+                                TopRight = "EMPTY"
+                                Left = "EMPTY"
+                                Right = "EMPTY"
+                                BottomLeft = "EMPTY"
+                                Bottom = "EMPTY"
+                                BottomRight = "EMPTY"
+                        }
+                        Unfocused {
+                                TopLeft = "EMPTY"
+                                Top = "EMPTY"
+                                TopRight = "EMPTY"
+                                Left = "EMPTY"
+                                Right = "EMPTY"
+                                BottomLeft = "EMPTY"
+                                Bottom = "EMPTY"
+                                BottomRight = "EMPTY"
+                        }
+                }
+        }
+}
+
+Decor = "CMDDIALOG" {
+        Title {
+                Height = "15"
+                Pad = "1 0 5 0"
+
+                Focused = "Image win-fo.xpm"
+                Unfocused = "Image win-un.xpm"
+
+                Tab {
+                        Focused = "Image win-fo.xpm"
+                        FocusedSelected = "Image win-fo.xpm"
+                        Unfocused = "Image win-un.xpm"
+                        UnfocusedSelected = "Image win-un.xpm"
+                }
+                Separator {
+                        Focused = "Image sep-fo.xpm"
+                        Unfocused = "Image sep-un.xpm"
+                }
+                Font {
+                        Focused = "$FONT"
+                        FocusedSelected = "$FONT"
+                        Unfocused = "$FONT"
+                        UnfocusedSelected = "$FONT"
+                }
+                FontColor {
+                        Focused = "#737373"
+                        FocusedSelected = "#111111"
+                        Unfocused = "#737373"
+                        UnfocusedSelected = "#737373"
+                }
+                Buttons {
+                        Left {
+                                Focused = "Image tol.xpm"
+                                Unfocused = "Image tol-un.xpm"
+                                Pressed = "Image tol.xpm"
+                                Button = "1" { Actions = "EMPTY" }
+                        }
+                        Right {
+                                Focused = "Image tor.xpm"
+                                Unfocused = "Image tor-un.xpm"
+                                Pressed = "Image tor.xpm"
+                                Button = "1" { Actions = "EMPTY" }
+                        }
+                        Left {
+                                Focused = "Image btn-close.xpm"
+                                Unfocused = "Image btn-close-un.xpm"
+                                Selected = "Image btn-close.xpm"
+                                Button = "1" { Actions = "Close" }
+                        }
+                        Right {
+                                Focused = "Image btn-min.xpm"
+                                Unfocused = "Image btn-min-un.xpm"
+                                Selected = "Image btn-min.xpm"
+                                Button = "1" { Actions = "Set Iconified" }
+                        }
+                }
+                Border {
+                        Focused {
+                                TopLeft = "Image bd-tol-fo.xpm"
+                                Top = "Image bd-top-fo.xpm"
+                                TopRight = "Image bd-tor-fo.xpm"
+                                Left = "Image bd-horz-fo.xpm"
+                                Right = "Image bd-horz-fo.xpm"
+                                BottomLeft = "Image bd-btl-fo.xpm"
+                                Bottom = "Image bd-btm-fo.xpm"
+                                BottomRight = "Image bd-btr-fo.xpm"
+                        }
+                        Unfocused {
+                                TopLeft = "Image bd-tol-un.xpm"
+                                Top = "Image bd-top-un.xpm"
+                                TopRight = "Image bd-tor-un.xpm"
+                                Left = "Image bd-horz-un.xpm"
+                                Right = "Image bd-horz-un.xpm"
+                                BottomLeft = "Image bd-btl-un.xpm"
+                                Bottom = "Image bd-btm-un.xpm"
+                                BottomRight = "Image bd-btr-un.xpm"
+                        }
+                }
+        }
+}
+}
+
+Harbour {
+   Texture = "SolidRaised #bdbdbd #eeeeee #666666 1 0"
+}
+
+Menu {
+  Focused {
+    Font = "$FONT"
+    Background = "Solid #bdbdbd"
+    Item = "SolidRaised #bdbdbd #eeeeee #666666 1 0"
+    Text = "#111111"
+    Separator = "Solid #111111 0x1"
+    Arrow = "Solid #111111 2x2"
+  }
+  Unfocused {
+    Font = "$FONT"
+    Background = "Solid #bdbdbd"
+    Item = "SolidRaised #bdbdbd #eeeeee #666666 1 0"
+    Text = "#111111"
+    Separator = "Solid #111111 0x1"
+    Arrow = "Solid #111111 2x2"
+  }
+  Selected {
+    Font = "$FONT"
+    Background = "Solid #333333"
+    Item = "SolidRaised #333333 #eeeeee #666666 1 0"
+    Text = "#ffffff"
+    Arrow = "Solid #ffffff 2x2"
+  }
+
+  Pad = "2 2 2 2"
+}
+
+CmdDialog {
+  Font = "$FONT"
+  Texture = "Solid #bdbdbd"
+  Text = "#111111"
+  Pad = "3 3 3 3"
+}
+
+Status {
+  Font = "$FONT"
+  Texture = "Solid #bdbdbd"
+  Text = "#111111"
+  Pad = "2 2 2 2"
+}
+
+Root {
+	Command = "false"
+}

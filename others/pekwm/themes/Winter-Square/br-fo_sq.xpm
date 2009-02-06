@@ -1,0 +1,32 @@
+/* XPM */
+static char *br-fo_sq.png[] = {
+/* columns rows colors chars-per-pixel */
+"22 7 19 1",
+"  c gray32",
+". c #B3BBC7",
+"X c #BAC2CF",
+"o c #BAC3CF",
+"O c #BBC2CF",
+"+ c #BBC3CF",
+"@ c #BAC2D0",
+"# c #BAC3D0",
+"$ c #BBC3D0",
+"% c #C2CAD8",
+"& c #C2CBD8",
+"* c #C9D3E0",
+"= c #C9D3E1",
+"- c #CAD3E0",
+"; c #CAD3E1",
+": c #C9D4E0",
+"> c #C9D4E1",
+", c #CAD4E1",
+"< c #D1DBE9",
+/* pixels */
+"                      ",
+" <<<<<<<<<<<<<<<<<<<< ",
+" ,,*,**,***,:,,,,,*,, ",
+" %%%%&%%%%%&%%%%&$%%& ",
+" X@XX++#@X##X++++++#@ ",
+" .................... ",
+"                      "
+};

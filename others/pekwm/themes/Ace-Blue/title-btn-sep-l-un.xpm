@@ -1,0 +1,30 @@
+/* XPM */
+static char *title-btn-sep-l-un.png[] = {
+/* columns rows colors chars-per-pixel */
+"4 16 8 1",
+"  c black",
+". c #5A6563",
+"X c #848684",
+"o c #A5A2A5",
+"O c #B3B7B5",
+"+ c #B5B2B5",
+"@ c #D6D3D6",
+"# c gray100",
+/* pixels */
+"####",
+"o ..",
+"+ OO",
+"+ OO",
+"+ OO",
+"+ OO",
+"+ OO",
+"+ OO",
+"+ OO",
+"+ OO",
+"+ OO",
+"+ OO",
+"+ OO",
+"X ..",
+"@@@@",
+"    "
+};

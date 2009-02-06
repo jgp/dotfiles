@@ -1,0 +1,197 @@
+#
+# Phase Change (www.essorant.com)
+# Ported to pekwm by p0ng (www.p0ng.cjb.net)
+#
+
+$FONT="*verdana*r*normal*10*"
+$MENU_FONT="*verdana*r*normal*10*"
+
+PDecor {
+
+Decor = "DEFAULT" {
+	Title {
+		Height = "23"
+		Pad = "2 5 5 2"
+
+		Focused = "Image title-fo.jpg"
+		Unfocused = "Image title-un.jpg"
+
+		Tab {
+			Focused = "Image title-fo.jpg"
+			FocusedSelected = "Image title-fo.jpg"
+			Unfocused = "Image title-un.jpg"
+			UnfocusedSelected = "Image title-un.jpg"
+		}
+		Separator {
+			Focused = "Image sep-fo.jpg"
+			Unfocused = "Image sep-un.jpg"
+		}
+		Font {
+			Focused = "$FONT#2 2#XFT"
+		}
+		FontColor {
+			Focused = "#ffffff"
+			FocusedSelected = "#ffffff #000000"
+			Unfocused = "#c1cbd7"
+			UnfocusedSelected = "#c1cbd7 #000000"
+		}
+                Buttons {
+                        Right {
+                                Focused = "Image btn-close-fo.jpg"
+                                Unfocused = "Image btn-close-un.jpg"
+                                Button = "1" { Actions = "Close" }
+                        }
+                        Right {
+                                Focused = "Image btn-max-fo.jpg"
+                                Unfocused = "Image btn-max-un.jpg"
+                                Button = "1" { Actions = "Toggle Maximized 1 1" }
+                        }
+                        Right {
+                                Focused = "Image btn-min-fo.jpg"
+                                Unfocused = "Image btn-min-un.jpg"
+                                Button = "1" { Actions = "Set Iconified" }
+                        }
+                        
+                }
+		Border {
+			Focused {
+				TopLeft = "Image tl-fo.jpg"
+				Top = "Image top.jpg"
+				TopRight = "Image tr-fo.jpg"
+				Left =  "Image left.jpg"
+				Right = "Image right.jpg"
+				BottomLeft = "Image bl.jpg"
+				Bottom = "Image bottom.jpg"
+				BottomRight = "Image br.jpg"
+			}
+			Unfocused {
+				TopLeft = "Image tl-un.jpg"
+				Top = "Image top.jpg"
+				TopRight = "Image tr-un.jpg"
+				Left =  "Image left.jpg"
+				Right = "Image right.jpg"
+				BottomLeft = "Image bl.jpg"
+				Bottom = "Image bottom.jpg"
+				BottomRight = "Image br.jpg"
+			}
+		}
+	}
+}
+
+Decor = "MENU" {
+	Title {
+		Height = "23"
+		Pad = "2 5 5 2"
+		
+		Focused = "Image title-fo.jpg"
+		Unfocused = "Image title-un.jpg"
+
+                Font {
+                        Focused = "$FONT#2 2#XFT"
+                }
+                FontColor {
+                        Focused = "#fff9f7"
+                        FocusedSelected = "#fffef9 #333b3e"
+                        Unfocused = "#c1cbd7"
+                        UnfocusedSelected = "#c1cbd7 #333b3e"
+                }
+		Border {
+			Focused {
+				TopLeft = "Image tl-un.jpg"
+				Top = "Image top.jpg"
+				TopRight = "Image tr-un.jpg"
+				Left =  "Image left.jpg"
+				Right = "Image right.jpg"
+				BottomLeft = "Image bl.jpg"
+				Bottom = "Image bottom.jpg"
+				BottomRight = "Image br.jpg"
+			}
+			Unfocused {
+				TopLeft = "Image tl-fo.jpg"
+				Top = "Image top.jpg"
+				TopRight = "Image tr-un.jpg"
+				Left =  "Image left.jpg"
+				Right = "Image right.jpg"
+				BottomLeft = "Image bl.jpg"
+				Bottom = "Image bottom.jpg"
+				BottomRight = "Image br.jpg"
+			}
+		}
+
+	}
+		
+} # END Decor MENU
+
+Decor = "TITLEBARLESS" {
+	Title {
+		
+		Border {
+			Focused {
+				TopLeft = "Image tl-tbls.jpg"
+				Top = "Image top-tbls.jpg"
+				TopRight = "Image tr-tbls.jpg"
+				Left =  "Image left.jpg"
+				Right = "Image right.jpg"
+				BottomLeft = "Image bl.jpg"
+				Bottom = "Image bottom.jpg"
+				BottomRight = "Image br.jpg"
+			}
+			Unfocused {
+				TopLeft = "Image tl-tbls.jpg"
+				Top = "Image top-tbls.jpg"
+				TopRight = "Image tr-tbls.jpg"
+				Left =  "Image left.jpg"
+				Right = "Image right.jpg"
+				BottomLeft = "Image bl.jpg"
+				Bottom = "Image bottom.jpg"
+				BottomRight = "Image br.jpg"
+			}
+		}
+
+	}
+
+} # END Decor TITLEBARLESS
+
+}
+
+Harbour {
+	Pixmap = "Solid #ffffff"
+}
+
+Menu {
+	Focused {
+    		Font = "$MENU_FONT"
+		Background = "Image select.jpg"
+    		Item = "Image menu.jpg"
+    		Text = "#51514f"
+  	}
+  	Unfocused {
+    		Font = "$MENU_FONT"
+    		Background = "Image select.jpg"
+    		Item = "Image menu.jpg"
+    		Text = "#51514f"
+  	}
+  	Selected {
+    		Font = "$MENU_FONT"
+    		Background = "Image select.jpg"
+    		Item = "Image select.jpg"
+    		Text = "#ffffff"
+  	}
+
+  	Pad = "2 4 20 10"
+}
+
+CmdDialog {
+ 	Font = "$FONT"
+	Texture = "Image menu.jpg"
+	Text = "#51514f"
+}
+
+Status {
+	Font = "$FONT"
+	Texture = "Image menu.jpg"
+	Text = "#51514f"
+}
+Root {
+        Command = "Esetroot -s ~/.pekwm/themes/PhaseChange/wallpaper.jpg"
+} 

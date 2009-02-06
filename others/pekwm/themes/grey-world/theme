@@ -1,0 +1,194 @@
+#   - grey-world theme for pekwm (0.1.4pre2)
+#   - modified theme by Michael Kaufmann
+#   - Originally for Sawfish by Garret: http://linuxart.com 
+#   - Pekwm Port by hewbert: http://www.hewbert.com
+#   - pekwm-dev port by sokar
+#   - modified port by Ace
+# Date 13.08.2005
+
+PDecor {
+
+Decor = "DEFAULT" {
+	Title {
+		Height = "16"
+		Pad = "1 0 5 0"
+
+		Focused = "Image title-fo.png"
+		Unfocused = "Image title-un.png"
+
+		Tab {
+			Focused = "Image title-fo.png"
+			FocusedSelected = "Image title-fo.png"
+			Unfocused = "Image title-un.png"
+			UnfocusedSelected = "Image title-un.png"
+		}
+		Separator {
+			Focused = "Image sep-fo.png"
+			Unfocused = "Image sep-un.png"
+		}
+		Font {
+			Focused = "Bitstream Vera Sans-8#XFT"
+		}
+		FontColor {
+			Focused = "#cfcfcf"
+			FocusedSelected = "#ffffff"
+			Unfocused = "#444444"
+			UnfocusedSelected = "#000000"
+		}
+		Buttons {
+			Right {
+				Focused = "Image btn-close-fo.png"
+				Unfocused = "Image btn-close-fo.png"
+				Pressed = "Image btn-close-pr.png"
+				Button = "1" { Actions = "Close" }
+				Button = "3" { Actions = "Kill" }
+			}
+			Right {
+				Focused = "Image btn-max-fo.png"
+				Unfocused = "Image btn-max-fo.png"
+				Pressed = "Image btn-max-pr.png"
+				Button = "1" { Actions = "Toggle Maximized 1 1" }
+			}
+			Right {
+				Focused = "Image title-btn-sep-r-new.png"
+				Unfocused = "Image title-btn-sep-r-new.png"
+				Button = "0" { Actions = "empty" }
+			}
+			Left {
+				Focused = "Image btn-min-fo.png"
+				Unfocused = "Image btn-min-fo.png"
+				Pressed = "Image btn-min-pr.png"
+				Button = "1" { Actions = "Set Iconified" }
+			}
+			Left {
+				Focused = "Image title-btn-sep-l-new.png"
+				Unfocused = "Image title-btn-sep-l-new.png"
+				Button = "0" { Actions = "empty" }
+			}
+		}
+		Border {
+			Focused {
+				TopLeft = "Image tl.png"
+				Top = "Image top.png"
+				TopRight = "Image tr.png"
+				Left =  "Image side.png"
+				Right = "Image side.png"
+				BottomLeft = "Image b-corner.png"
+				Bottom = "Image bottom.png"
+				BottomRight = "Image b-corner.png"
+			}
+			Unfocused {
+				TopLeft = "Image tl.png"
+				Top = "Image top.png"
+				TopRight = "Image tr.png"
+				Left = "Image side.png"
+				Right = "Image side.png"
+				BottomLeft = "Image b-corner-un.png"
+				Bottom = "Image bottom.png"
+				BottomRight = "Image b-corner-un.png"
+			}
+		}
+	}
+}
+
+Decor = "MENU" {
+	Title {
+		Height = "16"
+		Pad = "2 2 10 10"
+		
+		Focused = "Image title-fo.png"
+		Unfocused = "Image title-un.png"
+
+		Tab {
+			Focused = "Image title-fo.png"
+			FocusedSelected = "Image title-fo.png"
+			Unfocused = "Image title-un.png"
+			UnfocusedSelected = "Image title-un.png"
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "Bitstream Vera Sans-8:bold#CENTER#1 1#XFT"
+		}
+		FontColor {
+			Focused = "#cfcfcf"
+			FocusedSelected = "#ffffff"
+			Unfocused = "#444444"
+			UnfocusedSelected = "#000000"
+		}
+		Border {
+			Focused {
+				TopLeft = "Image tl.png"
+				Top = "Image top.png"
+				TopRight = "Image tr.png"
+				Left =  "Image side.png"
+				Right = "Image side.png"
+				BottomLeft = "Image b-corner.png"
+				Bottom = "Image bottom.png"
+				BottomRight = "Image b-corner.png"
+			}
+			Unfocused {
+				TopLeft = "Image tl.png"
+				Top = "Image top.png"
+				TopRight = "Image tr.png"
+				Left = "Image side.png"
+				Right = "Image side.png"
+				BottomLeft = "Image b-corner-un.png"
+				Bottom = "Image bottom.png"
+				BottomRight = "Image b-corner-un.png"
+			}
+		}
+			
+	}
+}
+
+}
+Harbour {
+  Texture = "SolidRaised #dedfde #eeeeee #a5a6a5 1 0"
+}
+
+Menu {
+	Focused {
+    		Font = "Bitstream Vera Sans-8#Left#XFT"
+		Background = "Solid #2e2c2c"
+    		Item = "Solid #2e2c2c"
+    		Text = "#cfcfcf"
+		Separator = "Solid #000000 0x2"
+		Arrow = "Solid #cfcfcf 3x3"
+  	}
+  	Unfocused {
+    		Font = "Bitstream Vera Sans-8#Left#XFT"
+    		Background = "Solid #9c9c9c"
+		Item = "Solid #9c9c9c"
+    		Text = "#000000"
+		Separator = "Solid #000000 0x2"
+		Arrow = "Solid #000000 3x3"	
+  	}
+  	Selected {
+    		Font = "Bitstream Vera Sans-8#Left#XFT"
+    		Background = "Solid #2e2c2c"
+		Item = "SolidRaised #2e2c2c #eeeeee #666666 1 0"				
+		Text = "#ffffff"
+		Separator = "EMPTY"
+		Arrow = "Solid #ffffff 4x4"
+  	}
+ 	Pad = "3 3 10 10"
+}
+
+CmdDialog {
+ 	Font = "Bitstream Vera Sans-8#Left#XFT"
+	Texture = "Solid #bbbbbb"
+	Text = "#000000"
+}
+
+Status {
+	Font = "Bitstream Vera Sans-8#Left#XFT"
+	Texture = "Solid #bbbbbb"
+	Text = "#000000"
+}
+
+Root{
+	#Command = "Esetroot -c ~/.pekwm/themes/grey-world/wallpaper.jpg"
+}

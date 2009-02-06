@@ -1,0 +1,76 @@
+#definition des couleurs ---------------------------------------------------------------
+
+#couleur titre actif
+color1=#eeeeee
+
+#couleur titre inactif
+color2=#eeeeee
+
+#couleur bordure exterieur
+color3=#798396
+
+#couleur bordure interieur
+color4=#99a6bf
+
+#couleur bordure exterieur inactif
+color3b=#999999
+
+#couleur bordure inactif
+color4b=#eeeeee
+
+#creation des bordures -----------------------------------------------------------------
+
+#titre actif
+convert -size 1x15 xc:$color1 win-fo-sel.xpm
+
+#titre inactif
+convert -size 1x15 xc:$color2 win-un-sel.xpm
+
+#---------------------------------------------------------------------------------------
+
+#haut centre
+convert -size 1x1 xc:$color3 -size 1x3 xc:$color4 -size 1x1 xc:$color3 -append b-top-c.xpm
+
+#bas centre
+cp b-top-c.xpm b-bottom-c.xpm
+
+#droit centre
+convert -rotate 90 b-top-c.xpm b-side-r.xpm
+
+#gauche centre
+cp b-side-r.xpm b-side-l.xpm
+
+#bas droit
+convert -size 3x1 xc:$color3 -size 3x4 xc:$color4 -append temp.xpm
+convert -size 1x5 xc:$color3 temp2.xpm
+convert b-top-c.xpm temp.xpm temp2.xpm -rotate 90 -append b-bottom-r.xpm
+
+#bas gauche
+convert -rotate 90 b-bottom-r.xpm b-bottom-l.xpm
+
+#haut gauche
+convert -rotate 90 b-bottom-l.xpm b-top-l.xpm
+
+#haut droit
+convert -rotate 90 b-top-l.xpm b-top-r.xpm
+
+#creation des bordures inactif --------------------------------------------------------
+
+convert -size 1x1 xc:$color3b -size 1x3 xc:$color4b -size 1x1 xc:$color3b -append b-top-c2.xpm
+
+cp b-top-c2.xpm b-bottom-c2.xpm
+
+convert -rotate 90 b-top-c2.xpm b-side-r2.xpm
+
+cp b-side-r2.xpm b-side-l2.xpm
+
+convert -size 3x1 xc:$color3b -size 3x4 xc:$color4b -append temp.xpm
+convert -size 1x5 xc:$color3b temp2.xpm
+convert b-top-c2.xpm temp.xpm temp2.xpm -rotate 90 -append b-bottom-r2.xpm
+
+convert -rotate 90 b-bottom-r2.xpm b-bottom-l2.xpm
+
+convert -rotate 90 b-bottom-l2.xpm b-top-l2.xpm
+
+convert -rotate 90 b-top-l2.xpm b-top-r2.xpm
+

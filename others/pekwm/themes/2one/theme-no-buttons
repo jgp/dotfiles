@@ -1,0 +1,222 @@
+/*
+ 2one, pekwm theme by pooh <> 20050320 for pekwm-dev-20050227.
+
+ edits:
+  20050320: shared <themes@adresh.com>
+   added missing theme structure,
+   unified indenting,
+   made statuswindow padding smaller
+*/
+
+$FONT = "Bitstream Vera Sans-8#Left#XFT"
+$MTFONT = "Bitstream Vera Sans-8:bold#Left#1 1#XFT"
+
+PDecor {
+
+Decor = "DEFAULT" {
+	Title { 
+		Height = "16"
+		Pad = "3 0 5 0"
+		Focused = "SolidRaised #545454 #333333 #333333 1x1"
+		Unfocused = "SolidRaised #505050 #a0a0a0 #000000 1x1"
+		Tab {
+			Focused = "Solid #505050"
+			FocusedSelected = "Solid #5f5f5f"
+			Unfocused = "Solid #606060"
+			UnfocusedSelected = "Solid #646464"
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "$MTFONT"
+		}
+		FontColor {
+			Focused = "#a1a1a1"
+			FocusedSelected = "#dfdfdf"
+			Unfocused = "#999999"
+			UnfocusedSelected = "#363636"
+		}
+		Buttons {
+		}
+		Border {
+			Focused {
+				TopLeft = "Solid #666666 2x2"
+				Top = "Solid #666666 2x2"
+				TopRight = "Solid #666666 2x2"
+				Left = "Solid #666666 2x2"
+				Right = "Solid #666666 2x2"
+				BottomLeft = "Solid #666666 2x2"
+				Bottom = "Solid #666666 2x2"
+				BottomRight = "Solid #666666 2x2"
+			}
+			Unfocused {
+				TopLeft = "Solid #767676 2x2"
+				Top = "Solid #767676 2x2"
+				TopRight = "Solid #767676 2x2"
+				Left = "Solid #767676 2x2"
+				Right = "Solid #767676 2x2"
+				BottomLeft = "Solid #767676 2x2"
+				Bottom = "Solid #767676 2x2"
+				BottomRight = "Solid #767676 2x2"
+			}
+		}
+	}
+}
+
+Decor = "MENU" {
+	Title {
+		Height = "14"
+		Pad = "2 0 4 0"
+		Focused = "SolidRaised #545454 #333333 #333333 1x1"
+		Unfocused = "SolidRaised #505050 #a0a0a0 #000000 1x1"
+		Tab {
+			Focused = "SolidRaised #505050 #333333 #333333 1x1"
+			FocusedSelected = "SolidRaised #5f5f5f #333333 #333333 1x1"
+			Unfocused = "SolidRaised #606060 #545454 #545454 1x1"
+			UnfocusedSelected = "SolidRaised #646464 #545454 #545454 1x1"
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "$MTFONT"
+		}
+		FontColor {
+			Focused = "#a1a1a1"
+			FocusedSelected = "#afafaf"
+			Unfocused = "#999999"
+			UnfocusedSelected = "#363636"
+		}
+		Buttons {
+		}
+		Border {
+			Focused {
+				TopLeft = "Solid #888888 2x2"
+				Top = "Solid #888888 2x2"
+				TopRight = "Solid #888888 2x2"
+				Left = "Solid #888888 2x2"
+				Right = "Solid #888888 2x2"
+				BottomLeft = "Solid #888888 2x2"
+				Bottom = "Solid #888888 2x2"
+				BottomRight = "Solid #888888 2x2"
+			}
+			Unfocused {
+				TopLeft = "Solid #666666 2x2"
+				Top = "Solid #666666 2x2"
+				TopRight = "Solid #666666 2x2"
+				Left = "Solid #666666 2x2"
+				Right = "Solid #666666 2x2"
+				BottomLeft = "Solid #666666 2x2"
+				Bottom = "Solid #666666 2x2"
+				BottomRight = "Solid #666666 2x2"
+			}
+		}
+	}
+}
+
+Decor = "STATUSWINDOW" {
+	Title {
+		Height = "0"
+		Pad = "0 0 0 0"
+		Focused = "EMPTY"
+		Unfocused = "EMPTY"
+		Tab {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "EMPTY"
+		}
+		FontColor {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+		Buttons {
+		}
+		Border {
+			Focused {
+				TopLeft = "Solid #888888 1x1"
+				Top = "Solid #888888 1x1"
+				TopRight = "Solid #888888 1x1"
+				Left = "Solid #888888 1x1"
+				Right = "Solid #888888 1x1"
+				BottomLeft = "Solid #888888 1x1"
+				Bottom = "Solid #888888 1x1"
+				BottomRight = "Solid #888888 1x1"
+			}
+			Unfocused {
+				TopLeft = "Solid #666666 1x1"
+				Top = "Solid #666666 1x1"
+				TopRight = "Solid #666666 1x1"
+				Left = "Solid #666666 1x1"
+				Right = "Solid #666666 1x1"
+				BottomLeft = "Solid #666666 1x1"
+				Bottom = "Solid #666666 1x1"
+				BottomRight = "Solid #666666 1x1"
+			}
+		}
+	}
+}
+
+# Decor = "CMDDIALOG" {}
+}
+
+Harbour {
+	Texture = "SolidRaised #000000 #000000 #000000 0 0"
+}
+
+Menu {
+	Focused {
+		Font = "$FONT"
+		Background = "Solid #909090"
+		Item = "EMPTY"
+		Text = "#000000"
+		Separator = "Solid #787878 0x1"
+		Arrow = "Solid #787878 2x2"
+	}
+	Unfocused {
+		Font = "$FONT"
+		Background = "Solid #8a8a8a"
+		Item = "EMPTY"
+		Text = "#666666"
+		Separator = "Solid #787878 0x1"
+		Arrow = "Solid #787878 2x2"
+	}
+	Selected {
+		Font = "$FONT"
+		Background = "Solid #747474"
+		Item = "EMPTY"
+		Text = "#000000"
+		Arrow = "Solid #787878 2x2"
+	}
+	Pad = "1 1 2 2"
+}
+
+CmdDialog {
+	Font = "$FONT"
+	Texture = "Solid #888888"
+	Text = "#2c2c2c"
+	Pad = "4 4 4 4"
+}
+
+Status {
+	Font = "$FONT"
+	Texture = "Solid #888888"
+	Text = "#2c2c2c"
+	Pad = "0 0 0 0"
+}
+
+Root {
+	Command = "false"
+}

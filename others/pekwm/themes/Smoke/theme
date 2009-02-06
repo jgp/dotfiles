@@ -1,0 +1,189 @@
+# port of gnome theme 'adept'
+# by matt (http://bokz.ath.cx:7000/~matt/)
+
+PDecor {
+
+Decor = "DEFAULT" {
+	Title {
+		Height = "17"
+		Pad = "2 0 0 0"
+
+		Focused = "Empty"
+		Unfocused = "Empty"
+
+		Tab {
+			Focused = "Image titlebar-focused.xpm"
+			FocusedSelected = "Image titlebar-focused.xpm"
+			Unfocused = "Image titlebar.xpm"
+			UnfocusedSelected = "Image titlebar.xpm"
+		}
+		Separator {
+			Focused = "Image seperator-focused.xpm"
+			Unfocused = "Image seperator.xpm"
+		}
+		Font {
+			Focused = "Vera-9:bold#CENTER#1 1#XFT"
+		}
+		FontColor {
+			Focused = "#ffffff #000000"
+			FocusedSelected = "#ffffff #000000"
+			Unfocused = "#dddddd #333333"
+			UnfocusedSelected = "#dddddd #333333"
+		}
+		Buttons {
+#			Left {
+#				Button = "1" { Actions = "ShowMenu Window" }
+#
+#				Focused = "Image menu.xpm"
+#				Unfocused = "Image menu.xpm"
+#				Pressed = "Image menu-clicked.xpm"
+#			}
+			Right {
+				Button = "1" { Actions = "Close" }
+
+				Focused = "Image close.xpm"
+				Unfocused = "Image close-clicked.xpm"
+				Pressed = "Image close.xpm"
+			}
+			Right {
+				Button = "1" { Actions = "Toggle Maximized True True" }
+                                
+				Focused = "Image maximize.xpm"
+				Unfocused = "Image maximize-clicked.xpm"
+				Pressed = "Image maximize.xpm"
+			}
+			Right {
+				Button = "1" { Actions = "Set Iconified" }
+                               
+				Focused = "Image iconify.xpm"
+				Unfocused = "Image iconify-clicked.xpm"
+				Pressed = "Image iconify.xpm"
+			}
+		}
+		Border {
+			Focused {
+				TopLeft = "Empty"
+				Top = "Empty"
+				TopRight = "Empty"
+				Left = "Image border_left.xpm"
+				Right = "Image border_right.xpm"
+				BottomLeft = "Image resize_left-focused.xpm"
+				Bottom = "Image resize_middle-focused.xpm"
+				BottomRight = "Image resize_right-focused.xpm"
+			}
+			Unfocused {
+				TopLeft = "Empty"
+				Top = "Empty"
+				TopRight = "Empty"
+				Left = "Image border_left.xpm"
+				Right = "Image border_right.xpm"
+				BottomLeft = "Image resize_left.xpm"
+				Bottom = "Image resize_middle.xpm"
+				BottomRight = "Image resize_right.xpm"
+			}
+		}
+	}
+}
+
+Decor = "MENU" {
+	Title {
+		Height = "17"
+		Pad = "1 0 0 0"
+
+		Focused = "Empty"
+		Unfocused = "Empty"
+
+		Tab {
+			Focused = "Solid #7b899d"
+			FocusedSelected = "Solid #7b899d"
+			Unfocused = "Solid #7b899d"
+			UnfocusedSelected = "Solid #7b899d"
+		}
+		Separator {
+			Focused = "Empty"
+			Unfocused = "Empty"
+		}
+		Font {
+			Focused = "Vera-9:bold#CENTER#1 1#XFT"
+		}
+		FontColor {
+			Focused = "#ffffff #000000"
+			FocusedSelected = "#ffffff #000000"
+			Unfocused = "#ffffff #000000"
+			UnfocusedSelected = "#ffffff #000000"
+		}
+		Border {
+			Focused {
+				TopLeft = "Solid #000000 1x1"
+				Top = "Solid #000000 1x1"
+				TopRight = "Solid #000000 1x1"
+				Left = "Solid #000000 1x1"
+				Right = "Solid #000000 1x1"
+				BottomLeft = "Solid #000000 1x1"
+				Bottom = "Solid #000000 1x1"
+				BottomRight = "Solid #000000 1x1"
+			}
+			Unfocused {
+				TopLeft = "Solid #000000 1x1"
+				Top = "Solid #000000 1x1"
+				TopRight = "Solid #000000 1x1"
+				Left = "Solid #000000 1x1"
+				Right = "Solid #000000 1x1"
+				BottomLeft = "Solid #000000 1x1"
+				Bottom = "Solid #000000 1x1"
+				BottomRight = "Solid #000000 1x1"
+			}
+		}
+	}
+}
+
+}
+
+Harbour {
+	Texture = "SolidRaised #aaaaaa #eeeeee #666666 1 0"
+}
+
+#PDecor {
+#Decor = "MENU" {
+Menu {
+	Focused {
+		Font = "Arial-9#LEFT#0 0#XFT"
+		Background = "Solid #ffffff"
+		Item = "Solid #ffffff"
+		Separator = "Empty"
+		Text = "#666666"
+	}
+	Unfocused {
+		Font = "Arial-9#LEFT#0 0#XFT"
+		Background = "Solid #ffffff"
+		Item = "Solid #ffffff"
+		Separator = "Empty"
+		Text = "#777777"
+	}
+	Selected {
+		Font = "Arial-9#LEFT#0 0#XFT"
+		Background = "Solid #f3f3f3"
+		Item = "Solid #ccd3dd"
+		Text = "#000000"
+	}
+
+	Pad = "4 4 4 4"
+}
+#} #Decor
+#} #PDecor
+
+CmdDialog {
+	Font = "Vera-9#LEFT#0 0#XFT"
+	Texture = "Solid #bbbbbb"
+	Text = "#000000"
+}
+
+Status {
+	Font = "Vera-9#LEFT#0 0#XFT"
+	Texture = "Solid #bbbbbb"
+	Text = "#000000"
+}
+
+Root {
+/*	Command = "xsetroot -solid rgb:68/68/68" */
+}

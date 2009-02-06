@@ -1,0 +1,380 @@
+# "spiff-p" theme for pekwm-0.1.4pre2
+# theme originally done by Garrett LeSage (http://linuxart.com/)
+# ported from pekwm-cvs to pekwm-0.1.4pre2 by okraits (http://www.okraits.de/)
+# Date: 19.07.2005
+
+$FONT = "Arial-8#XFT"
+
+PDecor {
+
+Decor = "DEFAULT" {
+	Title {
+		Height = "12"
+		Pad = "0 1 2 0"
+
+		Focused = "Image win-focus.xpm#Scaled"
+		Unfocused = "Image win-unfocus.xpm#Scaled"
+
+		Tab {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+		Separator {
+			Focused = "Image sep.xpm"
+			Unfocused = "Image sep.xpm"
+		}
+		Font {
+			Focused = "$FONT"
+			FocusedSelected = "$FONT"
+			Unfocused = "$FONT"
+			UnfocusedSelected = "$FONT"
+		}
+		FontColor {
+			Focused = "#c5c5c5"
+			FocusedSelected = "#e5e5e5"
+			Unfocused = "#a3a3a3"
+			UnfocusedSelected = "#b3b3b3"
+		}
+		Buttons {
+			Right {
+				Focused = "Image btn-close-fo.xpm"
+				Unfocused = "Image btn-close-un.xpm"
+				Pressed = "Image btn-close-pr.xpm"
+				Button = "1" { Actions = "Close" }
+				Button = "3" { Actions = "Kill" }
+			}
+			Right {
+				Focused = "Image btn-maximize-fo.xpm"
+				Unfocused = "Image btn-maximize-un.xpm"
+				Pressed = "Image btn-maximize-pr.xpm"
+				Button = "1" { Actions = "Toggle Maximized 1 1" }
+			}
+			Right {
+				Focused = "Image btn-iconify-fo.xpm"
+				Unfocused = "Image btn-iconify-un.xpm"
+				Pressed = "Image btn-iconify-pr.xpm"
+				Button = "1" { Actions = "Set Iconified" }
+			}
+		}
+		Border {
+			Focused {
+				TopLeft = "Image brdr-top-left.xpm"
+				Top = "Image brdr-top.xpm"
+				TopRight = "Image brdr-top-right.xpm"
+				Left = "Image brdr-left.xpm"
+				Right = "Image brdr-right.xpm"
+				BottomLeft = "Image brdr-bottom-left.xpm"
+				Bottom = "Image brdr-bottom.xpm"
+				BottomRight = "Image brdr-bottom-right.xpm"
+			}
+			Unfocused {
+				TopLeft = "Image brdr-top-left.xpm"
+				Top = "Image brdr-top.xpm"
+				TopRight = "Image brdr-top-right.xpm"
+				Left = "Image brdr-left.xpm"
+				Right = "Image brdr-right.xpm"
+				BottomLeft = "Image brdr-bottom-left.xpm"
+				Bottom = "Image brdr-bottom.xpm"
+				BottomRight = "Image brdr-bottom-right.xpm"
+			}
+		}
+	}
+}
+
+Decor = "MENU" {
+	Title {
+		Height = "12"
+		Pad = "0 1 2 0"
+
+		Focused = "Image win-focus.xpm#Scaled"
+		Unfocused = "Image win-unfocus.xpm#Scaled"
+
+		Tab {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+		Separator {
+			Focused = "Image sep.xpm"
+			Unfocused = "Image sep.xpm"
+		}
+		Font {
+			Focused = "$FONT"
+			FocusedSelected = "$FONT"
+			Unfocused = "$FONT"
+			UnfocusedSelected = "$FONT"
+		}
+		FontColor {
+			Focused = "#c5c5c5"
+			FocusedSelected = "#e5e5e5"
+			Unfocused = "#a3a3a3"
+			UnfocusedSelected = "#b3b3b3"
+		}
+		Border {
+			Focused {
+				TopLeft = "Image brdr-top-left.xpm"
+				Top = "Image brdr-top.xpm"
+				TopRight = "Image brdr-top-right.xpm"
+				Left = "Image brdr-left.xpm"
+				Right = "Image brdr-right.xpm"
+				BottomLeft = "Image brdr-bottom-left.xpm"
+				Bottom = "Image brdr-bottom.xpm"
+				BottomRight = "Image brdr-bottom-right.xpm"
+			}
+			Unfocused {
+				TopLeft = "Image brdr-top-left.xpm"
+				Top = "Image brdr-top.xpm"
+				TopRight = "Image brdr-top-right.xpm"
+				Left = "Image brdr-left.xpm"
+				Right = "Image brdr-right.xpm"
+				BottomLeft = "Image brdr-bottom-left.xpm"
+				Bottom = "Image brdr-bottom.xpm"
+				BottomRight = "Image brdr-bottom-right.xpm"
+			}
+		}
+	}
+}
+
+Decor = "TITLEBARLESS" {
+        Title {
+                Height = "0"
+                Pad = "0 0 0 0"
+
+                Focused = "EMPTY"
+                Unfocused = "EMPTY"
+
+                Tab {
+                        Focused = "EMPTY"
+                        FocusedSelected = "EMPTY"
+                        Unfocused = "EMPTY"
+                        UnfocusedSelected = "EMPTY"
+                }
+                Separator {
+                        Focused = "EMPTY"
+                        Unfocused = "EMPTY"
+                }
+                Font {
+                        Focused = "EMPTY"
+                        FocusedSelected = "EMPTY"
+                        Unfocused = "EMPTY"
+                        UnfocusedSelected = "EMPTY"
+                }
+                FontColor {
+                        Focused = "EMPTY"
+                        FocusedSelected = "EMPTY"
+                        Unfocused = "EMPTY"
+                        UnfocusedSelected = "EMPTY"
+                }
+                Buttons {
+                }
+                Border {
+                        Focused {
+                                TopLeft = "Image brdr-top-left.xpm"
+                                Top = "Image brdr-top.xpm"
+                                TopRight = "Image brdr-top-right.xpm"
+                                Left = "Image brdr-left.xpm"
+                                Right = "Image brdr-right.xpm"
+                                BottomLeft = "Image brdr-bottom-left.xpm"
+                                Bottom = "Image brdr-bottom.xpm"
+                                BottomRight = "Image brdr-bottom-right.xpm"
+                        }
+                        Unfocused {
+                                TopLeft = "Image brdr-top-left.xpm"
+                                Top = "Image brdr-top.xpm"
+                                TopRight = "Image brdr-top-right.xpm"
+                                Left = "Image brdr-left.xpm"
+                                Right = "Image brdr-right.xpm"
+                                BottomLeft = "Image brdr-bottom-left.xpm"
+                                Bottom = "Image brdr-bottom.xpm"
+                                BottomRight = "Image brdr-bottom-right.xpm"
+                        }
+                }
+        }
+}
+
+Decor = "BORDERLESS" {
+        Title {
+                Height = "12"
+                Pad = "0 1 2 0"
+
+                Focused = "Image win-focus.xpm#Scaled"
+                Unfocused = "Image win-unfocus.xpm#Scaled"
+
+                Tab {
+                        Focused = "EMPTY"
+                        FocusedSelected = "EMPTY"
+                        Unfocused = "EMPTY"
+                        UnfocusedSelected = "EMPTY"
+                }
+                Separator {
+                        Focused = "Image sep.xpm"
+                        Unfocused = "Image sep.xpm"
+                }
+                Font {
+                        Focused = "$FONT"
+                        FocusedSelected = "$FONT"
+                        Unfocused = "$FONT"
+                        UnfocusedSelected = "$FONT"
+                }
+                FontColor {
+                        Focused = "#c5c5c5"
+                        FocusedSelected = "#e5e5e5"
+                        Unfocused = "#a3a3a3"
+                        UnfocusedSelected = "#b3b3b3"
+                }
+                Buttons {
+                        Right {
+                                Focused = "Image btn-close-fo.xpm"
+                                Unfocused = "Image btn-close-un.xpm"
+                                Pressed = "Image btn-close-pr.xpm"
+                                Button = "1" { Actions = "Close" }
+                                Button = "3" { Actions = "Kill" }
+                        }
+                        Right {
+                                Focused = "Image btn-maximize-fo.xpm"
+                                Unfocused = "Image btn-maximize-un.xpm"
+                                Pressed = "Image btn-maximize-pr.xpm"
+                                Button = "1" { Actions = "Toggle Maximized 1 1" }
+                        }
+                        Right {
+                                Focused = "Image btn-iconify-fo.xpm"
+                                Unfocused = "Image btn-iconify-un.xpm"
+                                Pressed = "Image btn-iconify-pr.xpm"
+                                Button = "1" { Actions = "Set Iconified" }
+                        }
+                }
+                Border {
+                        Focused {
+                                TopLeft = "EMPTY"
+                                Top = "EMPTY"
+                                TopRight = "EMPTY"
+                                Left = "EMPTY"
+                                Right = "EMPTY"
+                                BottomLeft = "EMPTY"
+                                Bottom = "EMPTY"
+                                BottomRight = "EMPTY"
+                        }
+                        Unfocused {
+                                TopLeft = "EMPTY"
+                                Top = "EMPTY"
+                                TopRight = "EMPTY"
+                                Left = "EMPTY"
+                                Right = "EMPTY"
+                                BottomLeft = "EMPTY"
+                                Bottom = "EMPTY"
+                                BottomRight = "EMPTY"
+                        }
+                }
+        }
+}
+
+Decor = "STATUSWINDOW" {
+        Title {
+                Height = "0"
+                Pad = "0 0 0 0"
+
+                Focused = "Image win-focus.xpm#Scaled"
+                Unfocused = "Image win-unfocus.xpm#Scaled"
+
+                Tab {
+                        Focused = "EMPTY"
+                        FocusedSelected = "EMPTY"
+                        Unfocused = "EMPTY"
+                        UnfocusedSelected = "EMPTY"
+                }
+                Separator {
+                        Focused = "EMPTY"
+                        Unfocused = "EMPTY"
+                }
+                Font {
+                        Focused = "EMPTY"
+                        FocusedSelected = "EMPTY"
+                        Unfocused = "EMPTY"
+                        UnfocusedSelected = "EMPTY"
+                }
+                FontColor {
+                        Focused = "EMPTY"
+                        FocusedSelected = "EMPTY"
+                        Unfocused = "EMPTY"
+                        UnfocusedSelected = "EMPTY"
+                }
+                Buttons {
+                }
+                Border {
+                        Focused {
+                                TopLeft = "Image brdr-top-left.xpm"
+                                Top = "Image brdr-top.xpm"
+                                TopRight = "Image brdr-top-right.xpm"
+                                Left = "Image brdr-left.xpm"
+                                Right = "Image brdr-right.xpm"
+                                BottomLeft = "Image brdr-bottom-left.xpm"
+                                Bottom = "Image brdr-bottom.xpm"
+                                BottomRight = "Image brdr-bottom-right.xpm"
+                        }
+                        Unfocused {
+                                TopLeft = "Image brdr-top-left.xpm"
+                                Top = "Image brdr-top.xpm"
+                                TopRight = "Image brdr-top-right.xpm"
+                                Left = "Image brdr-left.xpm"
+                                Right = "Image brdr-right.xpm"
+                                BottomLeft = "Image brdr-bottom-left.xpm"
+                                Bottom = "Image brdr-bottom.xpm"
+                                BottomRight = "Image brdr-bottom-right.xpm"
+                        }
+                }
+        }
+}
+
+}
+
+Harbour {
+  Texture = "SolidRaised #dedfde #eeeeee #a5a6a5 1 0"
+}
+
+Menu {
+	Focused {
+		Font = "$FONT"
+		Background = "Solid #4c686d"
+		Item = "EMPTY"
+		Text = "#c5c6c5"
+		Separator = "Solid #c5c6c5 0x1"
+		Arrow = "Solid #c5c6c5 2x2"
+	}
+	Unfocused {
+		Font = "$FONT"
+		Background = "Solid #39555a"
+		Item = "EMPTY"
+		Text = "#c5c6c5"
+		Separator = "Solid #c5c6c5 0x1"
+		Arrow = "Solid #c5c6c5 2x2"
+	}
+	Selected {
+		Font = "$FONT"
+		Background = "Solid #5a797b"
+		Item = "EMPTY"
+		Text = "#ffffff"
+		Arrow = "Solid #ffffff 2x2"
+	}
+	Pad = "2 2 2 2"
+}
+
+CmdDialog {
+	Font = "$FONT"
+	Texture = "Image win-focus.xpm#Scaled"
+	Text = "#ffffff"
+	Pad = "4 4 4 4"
+}
+
+Status {
+	Font = "$FONT"
+	Texture = "Image win-focus.xpm#Scaled"
+	Text = "#ffffff"
+	Pad = "4 4 4 4"
+}
+
+Root {
+	Command = "false"
+}

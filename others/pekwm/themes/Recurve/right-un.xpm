@@ -1,0 +1,13 @@
+/* XPM */
+static char *right-un.png[] = {
+/* columns rows colors chars-per-pixel */
+"4 3 4 1",
+"  c #575B5A",
+". c #C1C1C1",
+"X c #D7D7D7",
+"o c gray100",
+/* pixels */
+".Xo ",
+".Xo ",
+".Xo "
+};

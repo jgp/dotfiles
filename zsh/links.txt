@@ -1,0 +1,36 @@
+# rake
+# function rake_task_list { reply=($(egrep -e '^task ''' Rakefile | cut -d ' ' -f 2 | tr -d "'" | sort)); }
+# compctl -K rake_task_list rake
+
+# DARM
+#setopt appendhistory autocd extendedglob nomatch
+#unsetopt beep notify
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+#zstyle :compinstall filename '/home/darm/.zshrc'
+
+#autoload -Uz compinit
+#compinit
+
+### GENWIKI ###
+#autoload -U compinit promptinit
+#compinit
+#promptinit; #prompt gentoo
+### END GENWIKI ###
+
+# http://zsh.sourceforge.net/Doc/Release/zsh_12.html#SEC40
+# http://www.root.cz/clanky/zuzo-shell/
+# http://gentoo-wiki.com/TIP_Advanced_zsh_Completion
+# http://www.unixreview.com/documents/s=9513/ur0501a/ur0501a.htm
+# http://www.rayninfo.co.uk/tips/zshtips.html
+# http://www.adamspiers.org/computing/zsh/
+# http://strcat.de/wiki/zsh/
+# http://grml.org/zsh/zsh-lovers.html
+# http://grml.org/zsh/
+# http://zshwiki.org/home/
+# http://www.faqs.org/faqs/unix-faq/shell/zsh/
+# http://www.acm.uiuc.edu/workshops/zsh/toc.html
+# http://www.aperiodic.net/phil/prompt/
+# http://technorati.com/tag/zsh
+# http://www.cs.elte.hu/zsh-manual/
+# http://sugi.nemui.org/doc/zsh/

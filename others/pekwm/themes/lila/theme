@@ -1,0 +1,448 @@
+# +----------------------------------------------------------------------+
+# | Theme Name:			Lila         			         |
+# | Porter:			Ruben Abad <ruabag@gmail.com>            |
+# | Last Modified:		2005-07-04                               |
+# | Pekwm Version:		0.1.4pre2 and comptatible                |
+# | Changes:			See ChangeLog for details                |
+# +----------------------------------------------------------------------+
+
+$FONT			= "Verdana-7:bold#Left#XFT"		// Focused titlebar font
+$MENU_FONT		= "Verdana-7#Left#XFT"		// Font for menu items
+
+
+PDecor {
+
+
+Decor = "DEFAULT" {
+	Title {
+		Height = "22"
+		Pad = "5 5 5 5"
+
+		Focused = "Image title.xpm"
+		Unfocused = "Image title-un.xpm"
+
+		WidthMin = "0"
+		WidthMax = "100"
+		WidthSymetric = "True"
+
+		Tab {
+			Focused = "Image title.xpm"
+			FocusedSelected = "Image title.xpm"
+			Unfocused = "Image title-un.xpm"
+			UnfocusedSelected = "Image title-un.xpm"
+		}
+		Separator {
+			Focused = "Image separator.xpm"
+			Unfocused = "Image separator-un.xpm"
+		}
+		Font {
+			Focused = "$FONT#1 1#Left#XFT"
+		}
+		FontColor {
+			Focused = "#ffffff"
+			FocusedSelected = "#ffffff"
+			Unfocused = "#ffffff"
+			UnfocusedSelected = "#ffffff"
+		}
+		Buttons {
+			Right {
+                                Focused = "Image close.xpm"
+                                Unfocused = "Image close-un.xpm"
+                                Pressed = "Image close.xpm"
+                                Button = "1" { Actions = "Close" }
+                        }
+			Right {
+                                Focused = "Image max.xpm"
+                                Unfocused = "Image max-un.xpm"
+                                Pressed = "Image max.xpm"
+                                Button = "1" { Actions = "Toggle Maximized 1 1" }
+                        }
+                        Right {
+                                Focused = "Image min.xpm"
+                                Unfocused = "Image min-un.xpm"
+                                Pressed = "Image min.xpm"
+                                Button = "1" { Actions = "Set Iconified" }
+                        }
+		}
+		Border {
+			Focused {
+				TopLeft = "Image bd.xpm"
+				Top = "Image bd.xpm"
+				TopRight = "Image bd.xpm"
+				Left =  "Image bd.xpm"
+				Right = "Image bd.xpm"
+				BottomLeft = "Image bd-bl.xpm"
+				Bottom = "Image bd-b.xpm"
+				BottomRight = "Image bd-br.xpm"
+			}
+			Unfocused {
+                 	        TopLeft = "Image bd-un.xpm"
+				Top = "Image bd-un.xpm"
+				TopRight = "Image bd-un.xpm"
+				Left =  "Image bd-un.xpm"
+				Right = "Image bd-un.xpm"
+				BottomLeft = "Image bd-bl-un.xpm"
+				Bottom = "Image bd-b-un.xpm"
+				BottomRight = "Image bd-br-un.xpm"
+			}
+		}
+	}
+} # Decor->DEFAULT{}
+
+Decor = "TITLEBARLESS" {
+	Title {
+		// This should be 0 for titlebarless, and all the
+		// EMPTY stuff below should remain for TITLEBARLESS.
+		Height = "0"
+		Pad = "0 0 0 0"
+		
+		Focused = "EMPTY"
+		Unfocused = "EMPTY"
+
+		Tab {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "EMPTY"
+		}
+		FontColor {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+
+		Buttons {
+		}
+		Border {
+			Focused {
+				TopLeft = "Image bd.xpm"
+				Top = "Image bd.xpm"
+				TopRight = "Image bd.xpm"
+				Left =  "Image bd.xpm"
+				Right = "Image bd.xpm"
+				BottomLeft = "Image bd.xpm"
+				Bottom = "Image bd.xpm"
+				BottomRight = "Image bd.xpm"
+			}
+			Unfocused {
+                 	        TopLeft = "Image bd-un.xpm"
+				Top = "Image bd-un.xpm"
+				TopRight = "Image bd-un.xpm"
+				Left =  "Image bd-un.xpm"
+				Right = "Image bd-un.xpm"
+				BottomLeft = "Image bd-un.xpm"
+				Bottom = "Image bd-un.xpm"
+				BottomRight = "Image bd-un.xpm"
+			}
+		}
+	}
+} # Decor->TITLEBARLESS{}
+
+Decor = "BORDERLESS" {
+	Title {
+
+		Height = "22"
+		Pad = "5 5 5 5"
+
+		Focused = "Image title.xpm"
+		Unfocused = "Image title-un.xpm"
+
+		WidthMin = "0"
+		WidthMax = "100"
+		WidthSymetric = "True"
+
+		Tab {
+			Focused = "Image title.xpm"
+			FocusedSelected = "Image title.xpm"
+			Unfocused = "Image title-un.xpm"
+			UnfocusedSelected = "Image title-un.xpm"
+		}
+		Separator {
+			Focused = "Image separator.xpm"
+			Unfocused = "Image separator-un.xpm"
+		}
+		Font {
+			Focused = "$FONT#1 1#XFT"
+		}
+		FontColor {
+			Focused = "#ffffff"
+			FocusedSelected = "#ffffff"
+			Unfocused = "#ffffff"
+			UnfocusedSelected = "#ffffff"
+		}
+		Buttons {
+			Right {
+                                Focused = "Image close.xpm"
+                                Unfocused = "Image close-un.xpm"
+                                Pressed = "Image close.xpm"
+                                Button = "1" { Actions = "Close" }
+                        }
+			Right {
+                                Focused = "Image max.xpm"
+                                Unfocused = "Image max-un.xpm"
+                                Pressed = "Image max.xpm"
+                                Button = "1" { Actions = "Toggle Maximized 1 1" }
+                        }
+                        Right {
+                                Focused = "Image min.xpm"
+                                Unfocused = "Image min-un.xpm"
+                                Pressed = "Image min.xpm"
+                                Button = "1" { Actions = "Set Iconified" }
+                        }
+		}
+		Border {
+			Focused {
+				TopLeft = "EMPTY"
+				Top = "EMPTY"
+				TopRight = "EMPTY"
+				Left =  "EMPTY"
+				Right = "EMPTY"
+				BottomLeft = "EMPTY"
+				Bottom = "EMPTY"
+				BottomRight = "EMPTY"
+			}
+			Unfocused {
+				TopLeft = "EMPTY"
+				Top = "EMPTY"
+				TopRight = "EMPTY"
+				Left =  "EMPTY"
+				Right = "EMPTY"
+				BottomLeft = "EMPTY"
+				Bottom = "EMPTY"
+				BottomRight = "EMPTY"
+			}
+		}
+	}
+} # Decor->BORDERLESS{}
+
+Decor = "MENU" {
+	Title {
+		Height = "0"
+		Pad = "0 0 0 0"
+
+		Focused = "EMPTY"
+		Unfocused = "EMPTY"
+
+		Tab {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "EMPTY"
+		}
+		FontColor {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+
+		Buttons {
+		}
+		Border {
+			Focused {
+				TopLeft = "Image bd.xpm"
+				Top = "Image bd-t-menu.xpm"
+				TopRight = "Image bd.xpm"
+				Left =  "Image bd.xpm"
+				Right = "Image bd.xpm"
+				BottomLeft = "Image bd.xpm"
+				Bottom = "Image bd-b-menu.xpm"
+				BottomRight = "Image bd.xpm"
+			}
+			Unfocused {
+                 	        TopLeft = "Image bd.xpm"
+				Top = "Image bd-t-menu.xpm"
+				TopRight = "Image bd-un.xpm"
+				Left =  "Image bd.xpm"
+				Right = "Image bd.xpm"
+				BottomLeft = "Image bd.xpm"
+				Bottom = "Image bd-b-menu.xpm"
+				BottomRight = "Image bd.xpm"
+			}
+		}
+	}
+} # Decor->MENU{}
+
+
+Decor = "STATUSWINDOW" {
+	Title {
+		Height = "0"
+		Pad = "0 0 0 0"
+		Focused = "EMPTY"
+		Unfocused = "EMPTY"
+		Tab {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "EMPTY"
+		}
+		FontColor {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+		Buttons {
+		}
+		Border {
+			Focused {
+				TopLeft = "Image bd.xpm"
+				Top = "Image bd.xpm"
+				TopRight = "Image bd.xpm"
+				Left =  "Image bd.xpm"
+				Right = "Image bd.xpm"
+				BottomLeft = "Image bd.xpm"
+				Bottom = "Image bd.xpm"
+				BottomRight = "Image bd.xpm"
+			}
+			Unfocused {
+                 	        TopLeft = "Image bd-un.xpm"
+				Top = "Image bd-un.xpm"
+				TopRight = "Image bd-un.xpm"
+				Left =  "Image bd-un.xpm"
+				Right = "Image bd-un.xpm"
+				BottomLeft = "Image bd-un.xpm"
+				Bottom = "Image bd-un.xpm"
+				BottomRight = "Image bd-un.xpm"
+			}
+		}
+	}
+} # Decor->STATUSWINDOW{}
+
+Decor = "CMDDIALOG" {
+	Title {
+		Height = "22"
+		Pad = "5 5 5 5"
+
+		Focused = "Image title.xpm"
+		Unfocused = "Image title-un.xpm"
+
+		WidthMin = "0"
+		WidthMax = "100"
+		WidthSymetric = "True"
+
+		Tab {
+			Focused = "Image title.xpm"
+			FocusedSelected = "Image title.xpm"
+			Unfocused = "Image title-un.xpm"
+			UnfocusedSelected = "Image title-un.xpm"
+		}
+		Separator {
+			Focused = "Image separator.xpm"
+			Unfocused = "Image separator-un.xpm"
+		}
+		Font {
+			Focused = "$FONT#1 1#XFT"
+		}
+		FontColor {
+			Focused = "#ffffff"
+			FocusedSelected = "#ffffff"
+			Unfocused = "#ffffff"
+			UnfocusedSelected = "#ffffff"
+		}
+		Buttons {
+			Right {
+				Focused = "Image close.xpm"
+				Unfocused = "Image close-un.xpm"
+				Pressed = "Image close.xpm"
+				Button = "1" { Actions = "Close" }
+			}
+		}
+		Border {
+			Focused {
+				TopLeft = "Image bd.xpm"
+				Top = "Image bd.xpm"
+				TopRight = "Image bd.xpm"
+				Left =  "Image bd.xpm"
+				Right = "Image bd.xpm"
+				BottomLeft = "Image bd-bl.xpm"
+				Bottom = "Image bd-b.xpm"
+				BottomRight = "Image bd-br.xpm"
+			}
+			Unfocused {
+                 	        TopLeft = "Image bd-un.xpm"
+				Top = "Image bd-un.xpm"
+				TopRight = "Image bd-un.xpm"
+				Left =  "Image bd-un.xpm"
+				Right = "Image bd-un.xpm"
+				BottomLeft = "Image bd-bl-un.xpm"
+				Bottom = "Image bd-b-un.xpm"
+				BottomRight = "Image bd-br-un.xpm"
+			}
+		}
+	}
+} # Decor->CMDDIALOG{}
+
+} # PDecor{}
+
+Harbour {
+	Texture = "Solid #756a82 1x1"
+}
+
+Menu {
+	Focused {
+    		Font = "$MENU_FONT#1 1#XFT"
+			Background = "Solid #c5b9ce"
+    		Item = "Solid #c5b9ce"
+    		Text = "#000000"
+			Separator = "Solid #000000 0x1"
+			Arrow = "Solid #000000 2x2"
+  	}
+  	Unfocused {
+    		Font = "$MENU_FONT#1 1#XFT"
+    		Background = "Solid #c5b9ce"
+    		Item = "Solid #c5b9ce"
+    		Text = "#000000"
+			Separator = "Solid #000000 0x1"
+			Arrow = "Solid #000000 2x2"
+  	}
+  	Selected {
+    		Font = "$MENU_FONT#1 1#XFT"
+    		Background = "Image menu.xpm"
+    		Item = "Image menu.xpm"
+    		Text = "#000000"
+			Arrow = "Solid #000000 2x2"
+  	}
+
+  	Pad = "2 2 2 2"
+}
+
+CmdDialog {
+ 	Font = "$MENU_FONT"
+	Texture = "Solid #c5b9ce"
+	Text = "#000000"
+	Pad = "4 4 4 4"
+}
+
+Status {
+	Font = "$MENU_FONT"
+	Texture = "Solid #c5b9ce"
+	Text = "#000000"
+	Pad = "2 2 2 2"
+}
+
+Root {
+	Command = "false"
+}

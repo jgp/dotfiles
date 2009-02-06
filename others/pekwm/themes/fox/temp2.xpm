@@ -1,0 +1,12 @@
+/* XPM */
+static char *temp2[] = {
+/* columns rows colors chars-per-pixel */
+"1 5 1 1",
+"  c gray60",
+/* pixels */
+" ",
+" ",
+" ",
+" ",
+" "
+};

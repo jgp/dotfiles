@@ -1,0 +1,21 @@
+/* XPM */
+static char *br.png[] = {
+/* columns rows colors chars-per-pixel */
+"5 5 10 1",
+"  c #555555",
+". c #847A85",
+"X c #998F9A",
+"o c gray72",
+"O c #CECECE",
+"+ c gray86",
+"@ c #DEDFDF",
+"# c #E1E1E1",
+"$ c gray92",
+"% c #F5F8FF",
+/* pixels */
+" %Oo ",
+"$#Oo ",
+"@@+o ",
+"XXX. ",
+"     "
+};

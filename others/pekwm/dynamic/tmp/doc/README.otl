@@ -1,0 +1,19 @@
+etc
+	| This directory contains pipe-menu settings.
+	| All the files here are in YAML format.
+	adminrc.yml
+	bgmenurc.yml
+	helprc.yml
+	kill.rb
+lib
+	menu.rb
+		| This is a library to print pipe-menus.
+administration.rb
+bg-gnome-menu.rb
+bgmenu.rb
+ff_bookmarks.rb
+gtk_bookmarks.rb
+help.rb
+kill.rb
+obrecent.rb
+todo.rb

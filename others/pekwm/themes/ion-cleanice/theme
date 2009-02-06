@@ -1,0 +1,191 @@
+# "ion-cleanice" theme for pekwm-0.1.4pre2
+# pekwm-dev default theme by chr1z (http://www.chr1z.de/) modified by okraits (http://www.okraits.de/)
+# Date: 04.12.2005
+
+# set up the font
+$FONT = "Bitstream Vera Sans-8#Center#XFT"
+
+####################################
+#     THEME COLOR DEFINITION       #
+####################################
+#  you can change the colors by    #
+#  editing the variables  below.   #
+####################################
+
+# borders
+$COLOR_BORDER_FOCUSED="#303030"
+$COLOR_BORDER_UNFOCUSED="#303030"
+
+# tab - FocusedSelected
+$COLOR_TAB_FS="#889898"
+$COLOR_TAB_FS_LIGHT="#f8fcf8"
+$COLOR_TAB_FS_DARK="#f8fcf8"
+# tab - Focused
+$COLOR_TAB_F="#586468"
+$COLOR_TAB_F_LIGHT="#f8fcf8"
+$COLOR_TAB_F_DARK="#f8fcf8"
+# tab - UnfocusedSelected
+$COLOR_TAB_US="#505c70"
+$COLOR_TAB_US_LIGHT="#b8bcb8"
+$COLOR_TAB_US_DARK="#b8bcb8"
+# tab - Unfocused
+$COLOR_TAB_U="#283038"
+$COLOR_TAB_U_LIGHT="#b8bcb8"
+$COLOR_TAB_U_DARK="#b8bcb8"
+
+# button - Focused
+$COLOR_BUTTON_F="#fff49a"
+$COLOR_BUTTON_F_LIGHT="#ffffff"
+$COLOR_BUTTON_F_DARK="#a49d63"
+# button - Unfocused
+$COLOR_BUTTON_U="#e5e5e5"
+$COLOR_BUTTON_U_LIGHT="#999999"
+$COLOR_BUTTON_U_DARK="#999999"
+# button - Pressed
+$COLOR_BUTTON_P="#fff49a"
+$COLOR_BUTTON_P_LIGHT="#a49d63"
+$COLOR_BUTTON_P_DARK="#ffffff"
+
+# font - Focused
+$COLOR_FONT_F="#b8bcb8"
+# font - FocusedSelected
+$COLOR_FONT_FS="#f8fcf8"
+# font - Unfocused
+$COLOR_FONT_U="#989c98"
+# font - UnfocusedSelected
+$COLOR_FONT_US="#b8bcb8"
+
+# menu - Focused
+$COLOR_MENU_F_BG="#f8fcf8"
+$COLOR_MENU_F_ITEM="#ffffff"
+$COLOR_MENU_F_SEP="#888888"
+$COLOR_MENU_F_TEXT="#111111"
+# menu - Unfocusd
+$COLOR_MENU_U_BG="#b8bcb8"
+$COLOR_MENU_U_ITEM="#cccccc"
+$COLOR_MENU_U_SEP="#303030"
+$COLOR_MENU_U_TEXT="#555555"
+# menu - Selected
+$COLOR_MENU_S_BG="Empty"
+$COLOR_MENU_S_ITEM="#bbbbbb"
+$COLOR_MENU_S_ITEM_DARK="#666666"
+$COLOR_MENU_S_ITEM_LIGHT="#666666"
+$COLOR_MENU_S_TEXT="#000000"
+
+# cmddialog
+$COLOR_CMD_BG="#ffffff"
+$COLOR_CMD_TEXT="#000000"
+
+# status
+$COLOR_STATUS_BG="#ffffff"
+$COLOR_STATUS_TEXT="#000000"
+
+# desktop background (in rgb format)
+$COLOR_XROOT="rgb:255/255/255"
+
+
+PDecor {
+
+Decor = "DEFAULT" {
+	Title {
+		Height = "17"
+		Pad = "2 0 2 0"
+
+		Focused = "Empty"
+		Unfocused = "Empty"
+
+		Tab {
+			Focused = "SolidRaised $COLOR_TAB_F $COLOR_TAB_F_LIGHT $COLOR_TAB_F_DARK 0 0 1"
+			FocusedSelected = "SolidRaised $COLOR_TAB_FS $COLOR_TAB_FS_LIGHT $COLOR_TAB_FS_DARK 0 0 1"
+			Unfocused = "SolidRaised $COLOR_TAB_U $COLOR_TAB_U_LIGHT $COLOR_TAB_U_DARK 0 0 1"
+			UnfocusedSelected = "SolidRaised $COLOR_TAB_US $COLOR_TAB_US_LIGHT $COLOR_TAB_US_DARK 0 0 1"
+		}
+		Separator {
+			Focused = "Solid #303030 1x17"
+			Unfocused = "Solid #303030 1x17"
+		}
+		Font {
+			Focused = "$FONT"
+		}
+		FontColor {
+			Focused = "$COLOR_FONT_F"
+			FocusedSelected = "$COLOR_FONT_FS"
+			Unfocused = "$COLOR_FONT_U"
+			UnfocusedSelected = "$COLOR_FONT_US"
+		}
+    Buttons {
+    }
+		Border {
+			Focused {
+				TopLeft = "Solid $COLOR_BORDER_FOCUSED 1x1"
+				Top = "Solid $COLOR_BORDER_FOCUSED 1x1"
+			  TopRight = "Solid $COLOR_BORDER_FOCUSED 1x1"
+				Left = "Solid $COLOR_BORDER_FOCUSED 1x1"
+				Right = "Solid $COLOR_BORDER_FOCUSED 1x1"
+				BottomLeft = "Solid $COLOR_BORDER_FOCUSED 1x1"
+				Bottom = "Solid $COLOR_BORDER_FOCUSED 1x1"
+				BottomRight = "Solid $COLOR_BORDER_FOCUSED 1x1"
+			}
+			Unfocused {
+				TopLeft = "Solid $COLOR_BORDER_UNFOCUSED 1x1"
+				Top = "Solid $COLOR_BORDER_UNFOCUSED 1x1"
+				TopRight = "Solid $COLOR_BORDER_UNFOCUSED 1x1"
+				Left = "Solid $COLOR_BORDER_UNFOCUSED 1x1"
+				Right = "Solid $COLOR_BORDER_UNFOCUSED 1x1"
+				BottomLeft = "Solid $COLOR_BORDER_UNFOCUSED 1x1"
+				Bottom = "Solid $COLOR_BORDER_UNFOCUSED 1x1"
+				BottomRight = "Solid $COLOR_BORDER_UNFOCUSED 1x1"
+			}
+		}
+	}
+}
+
+}
+
+Harbour {
+	Texture = "SolidRaised $COLOR_TAB_FS $COLOR_TAB_FS_HIGH $COLOR_TAB_FS_DARK 1 0"
+}
+
+Menu {
+	Focused {
+		Font = "$FONT"
+		Background = "Solid $COLOR_MENU_F_BG"
+		Item = "Solid $COLOR_MENU_F_ITEM 1 0"
+		Separator = "Solid $COLOR_MENU_F_SEP 0x2"
+		Arrow = "Solid $COLOR_MENU_F_TEXT 2x2"
+		Text = "$COLOR_MENU_F_TEXT"
+	}
+	Unfocused {
+		Font = "$FONT"
+		Background = "Solid $COLOR_MENU_U_BG"
+		Item = "Solid $COLOR_MENU_U_ITEM 1 0"
+		Separator = "Solid $COLOR_MENU_U_SEP 0x2"
+		Arrow = "Solid $COLOR_MENU_U_TEXT 2x2"
+		Text = "$COLOR_MENU_U_TEXT"
+	}
+	Selected {
+		Font = "$FONT"
+		Background = "$COLOR_MENU_S_BG"
+		Item = "SolidRaised $COLOR_MENU_S_ITEM $COLOR_MENU_S_ITEM_LIGHT $COLOR_MENU_S_ITEM_DARK 1 0"
+		Arrow = "SolidRaised $COLOR_MENU_S_TEXT $COLOR_MENU_S_TEXT $COLOR_MENU_S_TEXT 1 0"
+		Text = "$COLOR_MENU_S_TEXT"
+	}
+
+	Pad = "2 2 2 2"
+}
+
+CmdDialog {
+	Font = "$FONT"
+	Texture = "Solid $COLOR_CMD_BG"
+	Text = "$COLOR_CMD_TEXT"
+}
+
+Status {
+	Font = "$FONT"
+	Texture = "Solid $COLOR_STATUS_BG"
+	Text = "$COLOR_STATUS_TEXT"
+}
+
+Root {
+#	Command = "xsetroot -solid $COLOR_XROOT" 
+}

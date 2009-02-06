@@ -1,0 +1,192 @@
+" We're running Vim, not Vi!
+set nocompatible
+" Enable syntax highlighting
+syntax on
+" Faster response
+set ttyfast
+" Line numbering
+set number
+
+" how many tabs can be opened while using gvim -p
+set tabpagemax=100 
+
+" odsazeni po preformatovani pres '>', if ... : <Enter>
+set shiftwidth=2
+set expandtab
+" automaticke odsazovani
+set smartindent
+
+" ::: line breaking :::
+" Nezalamuj uprostred slova
+set linebreak
+" Nezalamuj radky (dokud staci obrazovka)
+set textwidth=0
+set showbreak=...
+set display=lastline
+set scrolloff=5 " kolik radek ma minimalne byt videt pred a za kursorem, nez se scrollne
+
+" ::: macros :::
+let maplocalleader = ","
+let mapleader = '\'
+
+" ::: others :::
+set wildignore=*~,*.o,*.log,*.aux,*.dvi,*.pdf
+" Suffixes that get lower priority when doing tab completion for filenames.
+" These are files we are not likely to want to edit or read.
+set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
+set confirm
+set history=500
+" ukazuj pozici kursoru (vpravo dole)
+set ruler
+set showcmd		" Show (partial) command in status line.
+"set incsearch		" Incremental search
+set hlsearch " barevne zvyrazni vsechny nalezene vyrazy
+set autowrite		" Automatically save before commands like :next and :make
+set mouse=a
+set backspace=indent,eol,start	" more powerful backspacing
+" read/write a .viminfo file, don't store more than 50 lines of registers
+set viminfo='20,\"50
+" Case sensitive searching
+set noignorecase
+" Highlighting search
+set hlsearch
+" Highlight matching brackets while typing
+set showmatch
+" We usually want 2 spaces per tab
+set tabstop=2
+set smarttab
+set shiftwidth=2
+set autoindent
+" Set our status line information
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+" always show the status line
+set laststatus=2
+" No swap file
+set noswapfile
+" No backup file
+set nobackup
+" Default encoding
+set encoding=utf-8
+" Don't save UTF BOM header
+" set nobomb
+
+if has("autocmd")
+  filetype plugin on
+
+  " ::: macros :::
+  au! BufRead,BufNewFile *.haml         setfiletype haml
+  " TODO: doesn't work
+  au! BufRead,BufNewFile *.feature      setfiletype story
+
+  autocmd BufRead,BufNewFile *.html source ~/.vim/macros/html.vim
+  autocmd BufRead,BufNewFile *.htm source ~/.vim/macros/html.vim
+  autocmd BufRead,BufNewFile *.rb source ~/.vim/macros/ruby.vim
+  autocmd BufRead,BufNewFile *.otl source ~/.vim/macros/tvo.vim
+  "autocmd BufRead,BufNewFile *.tex source ~/.vim/macros/latex.vim
+  autocmd BufRead,BufNewFile *.tex source ~/.vim/macros/context.vim
+  "autocmd BufRead,BufNewFile Makefile source ~/.vim/macros/makefile.vim
+  "autocmd BufRead,BufNewFile Rakefile source ~/.vim/macros/rakefile.vim
+  autocmd BufRead,BufNewFile Rakefile source ~/.vim/macros/ruby.vim
+  autocmd BufRead,BufNewFile *.py source ~/.vim/macros/python.vim
+
+  " Completion (http://amix.dk/blog/viewEntry/19021)
+  " http://hasno.info/2006/04/10/vim-7-ruby-omni-completion
+  " Use C-x-o to complete
+  autocmd FileType python set omnifunc=pythoncomplete#Complete
+  autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+  autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+  autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+  autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+  autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+  autocmd FileType c set omnifunc=ccomplete#Complete
+
+
+  " if you want buffer/rails/global completion you must add the following:
+  autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+  " if you want rails support add the following in addition
+  autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+  "if you want classes included in global completions add the following
+  autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+endif
+
+
+" Ctrl-s as save
+imap  :w<CR>a
+map  :w<CR>
+
+" Ctrl-a
+map  ggVG
+imap  <Esc>ggVG
+
+" F2 for set nohlsearch
+map <F2> :nohlsearch<CR>
+imap <F2> <Esc>:nohlsearch<CR>a
+map <F3> :tabdo nohlsearch<CR>
+imap <F3> <Esc>:tabdo nohlsearch<CR>a
+
+imap <LocalLeader>" ""<Esc>i
+imap <LocalLeader>' ''<Esc>i
+imap <LocalLeader>{ {}<Esc>i
+imap <LocalLeader>( ()<Esc>i
+imap <LocalLeader>[ []<Esc>i
+
+" Enable filetype-specific indenting and plugins
+filetype plugin indent on
+ 
+" FuzzyFinder plugin
+let g:fuzzy_ignore = "*.log"
+let g:fuzzy_matching_limit = 70
+ 
+" Jamis Bucks Fuzzy File Finder
+map <leader>fft :FuzzyFinderTextMate<CR>
+map <leader>ffb :FuzzyFinderBuffer<CR>
+map <leader>fftf :FuzzyFinderTaggedFile<CR>
+ 
+" FuzzyFinderTextMate
+map  :tabnew<CR>:FuzzyFinderTextMate<CR>
+vmap  <Esc>:tabnew<CR>:FuzzyFinderTextMate<CR>
+" NOTE: do not map it for insert mode, it's important for indenting (C-t vs. C-d)
+
+" Project plugin
+let g:proj_window_width=40
+ 
+" MiniBuffer plugin
+"let g:miniBufExplMapWindowNavVim = 1
+"let g:miniBufExplMapWindowNavArrows = 1
+"let g:miniBufExplMapCTabSwitchBufs = 1
+"let g:miniBufExplModSelTarget = 1
+ 
+colorscheme default
+ 
+" GUI settings
+if has("gui")
+  " Set color schema
+  colorscheme slate "torte desert slate
+endif
+ 
+" Markdown support
+augroup mkd
+  autocmd BufRead *.markdown set ai formatoptions=tcroqn2 comments=n:>
+augroup END
+ 
+" Highlight chars that go over the 80-column limit
+highlight OverLength ctermbg=red ctermfg=white guibg=red guifg=white
+match OverLength '\%81v.*'
+
+" Links
+" www.root.cz/clanky/editor-vim-efektivnejsie/
+" www.root.cz/clanky/nej-vim-pluginy-2/
+" www.root.cz/clanky/nej-vim-pluginy-3/
+" www.root.cz/clanky/outline-editory-the-vim-outliner/
+" www.root.cz/clanky/kostry-dokumentu-ve-vim/
+" www.root.cz/clanky/jak-si-prizpusobit-vim/
+" www.root.cz/clanky/vim-sedm-prvni-cast/
+" www.root.cz/clanky/outline-editory-the-vim-outliner-2/
+" www.root.cz/clanky/vim-na-plny-vykon-vimrc/
+" www.root.cz/clanky/editor-vim-efektivnejsie-po-druhykrat/
+" www.root.cz/clanky/vim-sedm-druha-cast/
+" www.root.cz/clanky/vim-na-plny-vykon-3/
+" www.root.cz/clanky/vim-na-plny-vykon-4/
+" weblog.jamisbuck.org/2008/10/10/coming-home-to-vim

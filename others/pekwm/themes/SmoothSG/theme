@@ -1,0 +1,143 @@
+Decor {
+Decor = "DEFAULT"  {
+	TitleHeight = "15"
+	TitlePadding = "2"
+
+	Font = "-*-snap-*-*-*-*-*-*-*-*-*-*-*-*" {
+		Justify = "Center"
+	}
+	Focused {
+		Text = "#aaaaaa"
+		Pixmap = "title_fo.png"
+		Separator = "sep.png"
+		Border {
+			Top = ""
+			Side = "br.png br.png"
+			Bottom = "bt.png bt.png bt.png"
+		}
+	}
+	Unfocused {
+		Text = "#aaaaaa"
+		Pixmap = "title_un.png"
+		Separator = "sep.png"
+		Border {
+			Top = ""
+			Side = "br.png br.png"
+			Bottom = "bt.png bt.png bt.png"
+		}
+	}
+	Selected { 
+		Text = "#000000"
+		Pixmap = "NONE" 
+	}
+	UnfocusedSelected { 
+		Text = "#aaaaaa"
+		Pixmap = "NONE" 
+	}
+									
+	
+	Buttons {
+	Right  { 
+		Button = "1" { Actions = "Close" }
+		Pixmaps = "close_fo.png close_un.png close_pr.png"
+	}
+	Right {
+		Button = "1" { Actions = "Toggle Maximized True True" }
+		Pixmaps = "max_fo.png max_un.png max_pr.png"
+        }
+	Right {
+		Button = "1" { Actions = "Set Iconified" }
+		Pixmaps = "min_fo.png min_un.png min_pr.png"
+	}
+	Left {
+		Button = "1" { Actions = "No Actions" }
+		Pixmaps = "left.png left.png left.png"
+	}										
+	}
+}
+
+Decor = "TERM"  {
+	TitleHeight = "15"
+	TitlePadding = "2"
+
+	Font = "-*-snap-*-*-*-*-*-*-*-*-*-*-*-*" {
+		Justify = "Center"
+	}
+	Focused {
+		Text = "#686868"
+		Pixmap = "title_fo.png"
+		Separator = "sep.png"
+		Border {
+			Top = ""
+			Side = ""
+			Bottom = "bt.png bt.png bt.png"
+		}
+	}
+	Unfocused {
+		Text = "#466f89"
+		Pixmap = "title_un.png"
+		Separator = "sep.png"
+		Border {
+			Top = ""
+			Side = ""
+			Bottom = "bt.png bt.png bt.png"
+		}
+	}
+	Selected { 
+		Text = "#333333"
+		Pixmap = "NONE" 
+	}
+	UnfocusedSelected { 
+		Text = "#224c68"
+		Pixmap = "NONE" 
+	}
+									
+	
+	Buttons {
+	Right  { 
+		Button = "1" { Actions = "Close" }
+		Pixmaps = "close_fo.png close_un.png close_pr.png"
+	}
+	Right {
+		Button = "1" { Actions = "Toggle Maximized True True" }
+		Pixmaps = "max_fo.png max_un.png max_pr.png"
+        }
+	Right {
+		Button = "1" { Actions = "Set Iconified" }
+		Pixmaps = "min_fo.png min_un.png min_pr.png"
+	}
+	Left {
+		Button = "1" { Actions = "No Actions" }
+		Pixmaps = "left.png left.png left.png"
+	}										
+	}
+}
+}
+
+Harbour {
+	Pixmap = ""
+}
+
+Menu {
+        Font = "-*-snap-*-*-*-*-*-*-*-*-*-*-*-*" {
+                Justify = "Right"
+        }
+        TitleFont = "-*-glispbold-*-*-*-*-*-*-*-*-*-*-*-*" {
+                Justify = "Center"
+                Offset = "1 1"
+        }
+        Padding = "4"
+        BorderWidth = "1"
+        BorderColor = "#c5c5c5"
+        TextColor = "#aaaaaa"
+        TextColorFocused = "#999999"
+        TextColorSelected = "#000000"
+        TextColorTitle = "#000000 #cacaca"
+        Background = "#efefef"
+        BackgroundFocused = "#f5f5f5"
+        BackgroundSelected = "#e7e7e7"
+        BackgroundTitle = "#dedede"
+}
+
+Root {
+}

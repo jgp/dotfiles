@@ -1,0 +1,197 @@
+$FONT = "Bitstream Vera Sans-8:bold#Left#1 1#XFT" 
+$MFONT = "Bitstream Vera Sans-8:#Left#XFT"
+PDecor {
+
+Decor = "DEFAULT" {
+	Title {
+		Height = "18"
+		Pad = "2 0 0 0"
+
+		Focused = "Image title.png"
+		Unfocused = "Image title-un.png"
+
+		Tab {
+			Focused = "Image title.png"
+			FocusedSelected = "Image title.png"
+			Unfocused = "Image title-un.png"
+			UnfocusedSelected = "Image title-un.png"
+		}
+		Separator {
+			Focused = "Image br.png"
+			Unfocused = "Image br.png"
+		}
+		Font {
+			Focused = "$FONT"
+		}
+		FontColor {
+			Focused = "#777777"
+			FocusedSelected = "#676767 #c0c0c0"
+			Unfocused = "#c0c0c0"
+			UnfocusedSelected = "#b0b0b0"
+		}
+		Buttons {
+			Right {
+				Focused = "Image close-fo.png"
+				Unfocused = "Image close-un.png"
+				Pressed = "Image close-pr.png"
+				Button = "1" { Actions = "Close" }
+				Button = "3" { Actions = "Kill" }
+			}
+			Right {
+				Focused = "Image max-fo.png"
+				Unfocused = "Image max-un.png"
+				Pressed = "Image max-pr.png"
+				Button = "1" { Actions = "Toggle Maximized 1 1" }
+			}
+			Right {
+				Focused = "Image min-fo.png"
+				Unfocused = "Image min-un.png"
+				Pressed = "Image min-pr.png"
+				Button = "1" { Actions = "Set Iconified" }
+			}
+			Left {
+				Focused = "Image left.png"
+				Unfocused = "Image left.png"
+				Pressed = "Image left.png"
+				Button = "1" { Actions = "NoAction" }
+			}
+		}
+		Border {
+			Focused {
+				TopLeft = "EMPTY"
+				Top = "EMPTY"
+				TopRight = "EMPTY"
+				Left = "Image br.png"
+				Right = "Image br.png"
+				BottomLeft = "Image btsd-fo.png"
+				Bottom = "Image bt-fo.png"
+				BottomRight = "Image btsd-fo.png"
+			}
+			Unfocused {
+				TopLeft = "EMPTY"
+				Top = "EMPTY"
+				TopRight = "EMPTY"
+				Left = "Image br.png"
+				Right = "Image br.png"
+				BottomLeft = "Image btsd-un.png"
+				Bottom = "Image bt-un.png"
+				BottomRight = "Image btsd-un.png"
+
+			}
+		}
+	}
+}
+
+Decor = "MENU" {
+	Title {
+		Height = "18"
+		Pad = "3 0 0 0"
+
+		Focused = "Image title.png"
+		Unfocused = "Image title-un.png"
+
+		Tab {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "$FONT"
+		}
+		FontColor {
+			Focused = "#777777"
+			FocusedSelected = "#676767 #c0c0c0"
+			Unfocused = "#c0c0c0"
+			UnfocusedSelected = "#b0b0b0"
+		}
+		Buttons {
+			Left {
+				Focused = "Image left.png"
+				Unfocused = "Image left.png"
+				Pressed = "Image left.png"
+				Button = "1" { Actions = "NoAction" }
+			}
+		}
+		Border {
+			Focused {
+				TopLeft = "Solid #878787 1x1"
+				Top = "Solid #878787 1x1"
+				TopRight = "Solid #878787 1x1"
+				Left = "Solid #878787 1x1"
+				Right = "Solid #878787 1x1"
+				BottomLeft = "Solid #878787 2x2"
+				Bottom = "Solid #878787 2x2"
+				BottomRight = "Solid #878787 2x2"
+			}
+			Unfocused {
+				TopLeft = "Solid #878787 1x1"
+				Top = "Solid #878787 1x1"
+				TopRight = "Solid #878787 1x1"
+				Left = "Solid #878787 1x1"
+				Right = "Solid #878787 1x1"
+				BottomLeft = "Solid #878787 2x2"
+				Bottom = "Solid #878787 2x2"
+				BottomRight = "Solid #878787 2x2"
+			}
+		}
+	}
+}
+
+#Decor = "STATUSWINDOW" {}
+
+# Decor = "CMDDIALOG" {}
+}
+
+Harbour {
+	Texture = "SolidRaised #000000 #000000 #000000 0 0"
+}
+
+Menu {
+	Focused {
+		Font = "$MFONT"
+		Background = "Solid #ffffff"
+		Item = "EMPTY"
+		Text = "#81807c"
+		Separator = "Solid #878787 0x1"
+		Arrow = "Solid #878787 3x3"
+	}
+	Unfocused {
+		Font = "$MFONT"
+		Background = "Solid #ffffff"
+		Item = "EMPTY"
+		Text = "#81807c"
+		Separator = "Solid #878787 0x1"
+		Arrow = "Solid #878787 3x3"
+	}
+	Selected {
+		Font = "$MFONT"
+		Background = "Solid #f3f3f3"
+		Item = "EMPTY"
+		Text = "#000000"
+		Arrow = "Solid #000000 3x3"
+	}
+	Pad = "2 1 2 2"
+}
+
+CmdDialog {
+	Font = "$FONT"
+	Texture = "Solid #888888"
+	Text = "#2c2c2c"
+	Pad = "4 4 4 4"
+}
+
+Status {
+	Font = "$FONT"
+	Texture = "Solid #e9e9e9"
+	Text = "#404040"
+	Pad = "4 4 4 4"
+}
+
+Root {
+	Command = "false"
+}

@@ -1,0 +1,12 @@
+/* XPM */
+static char *b-corner.png[] = {
+/* columns rows colors chars-per-pixel */
+"24 4 2 1",
+"  c #425463",
+". c #8094A5",
+/* pixels */
+"                        ",
+" ...................... ",
+" ...................... ",
+"                        "
+};

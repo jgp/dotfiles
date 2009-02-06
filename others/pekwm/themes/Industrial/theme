@@ -1,0 +1,118 @@
+# "Industrial" theme for pekwm (0.1.4pre1)
+# theme by Michal Karas <largon@largon.net>
+# Date: 10.05.2005
+
+# This theme is only changed version of Okraits' theme Wire
+
+$FONT="Sans-10#XFT"
+
+PDecor {
+
+Decor = "DEFAULT" {
+	Title {
+		Height = "0"
+		Pad = "0 0 0 0"
+
+		Focused = "Empty"
+		Unfocused = "Empty"
+
+		Tab {
+			Focused = "Empty"
+			FocusedSelected = "Empty"
+			Unfocused = "Empty"
+			UnfocusedSelected = "Empty"
+		}
+		Separator {
+			Focused = "Empty"
+			Unfocused = "Empty"
+		}
+		Font {
+                        Focused = "Empty"
+                        FocusedSelected = "Empty"
+                        Unfocused = "Empty"
+                        UnfocusedSelected = "Empty"
+		}
+		FontColor {
+                        Focused = "Empty"
+                        FocusedSelected = "Empty"
+                        Unfocused = "Empty"
+                        UnfocusedSelected = "Empty"
+		}
+    		Buttons {
+    		}
+                Border {
+                        Focused {
+                                TopLeft = "Solid #d9d9d9 2x2"
+                                Top = "Solid #d9d9d9 2x2"
+                                TopRight = "Solid #d9d9d9 2x2"
+                                Left = "Solid #d9d9d9 2x2"
+                                Right = "Solid #d9d9d9 2x2"
+                                BottomLeft = "Solid #d9d9d9 2x2"
+                                Bottom = "Solid #d9d9d9 2x2"
+                                BottomRight = "Solid #d9d9d9 2x2"
+                        }
+                        Unfocused {
+                                TopLeft = "Solid #f6f6f6 2x2"
+                                Top = "Solid #f6f6f6 2x2"
+                                TopRight = "Solid #f6f6f6 2x2"
+                                Left = "Solid #f6f6f6 2x2"
+                                Right = "Solid #f6f6f6 2x2"
+                                BottomLeft = "Solid #f6f6f6 2x2"
+                                Bottom = "Solid #f6f6f6 2x2"
+                                BottomRight = "Solid #f6f6f6 2x2"
+                        }
+                }
+	}
+}
+
+}
+
+Harbour {
+	Texture = "SolidRaised #202020 #202020 #202020 1 0"
+}
+
+Menu {
+	Focused {
+		Font = "$FONT"
+		Background = "Empty"
+		Item = "SolidRaised #f6f6f6 #f6f6f6 #f6f6f6 1 0"
+		Separator = "Solid #d9d9d9 0x1"
+		Arrow = "Solid #202020 3x3"
+		Text = "#202020"
+	}
+	Unfocused {
+		Font = "$FONT"
+		Background = "Empty"
+		Item = "SolidRaised #f6f6f6 #f6f6f6 #f6f6f6 1 0"
+		Separator = "Solid #d9d9d9 0x1"
+		Arrow = "Solid #202020 3x3"
+		Text = "#202020"
+	}
+	Selected {
+		Font = "$FONT"
+		Background = "Empty"
+		Item = "SolidRaised #7b96ac #7b96ac #7b96ac 1 0"
+		Arrow = "Solid #202020 3x3"
+		Text = "#f6f6f6"
+	}
+
+	Pad = "2 2 2 2"
+}
+
+CmdDialog {
+	Font = "$FONT"
+	Texture = "Solid #d9d9d9"
+	Text = "#202020"
+	Pad = "2 2 2 2"
+}
+
+Status {
+	Font = "$FONT"
+	Texture = "Solid #d9d9d9"
+	Text = "#202020"
+	Pad = "2 2 2 2"
+}
+
+Root {
+	Command = "false"
+}

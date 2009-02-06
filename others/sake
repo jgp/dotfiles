@@ -1,0 +1,598 @@
+desc 'Convert tabs to spaces. Variables: DIRECTORY'
+task 'fs:tab2spaces' do
+  require("find")
+  dir = ENV["DIRECTORY"] ||= "."
+  Dir["#{dir}/*.rb"].each do |file|
+    input = File.open(file).readlines
+    File.open(file, "w") do |output|
+      input.each do |line|
+        line.gsub!(/\t/, (" " * 2))
+        output.puts(line)
+      end
+    end
+  end
+end
+
+desc 'Remove all .svn directories. Variables: DIRECTORY'
+task 'svn:clear' do
+  require("find")
+  directories = ENV["DIRECTORY"] ||= "."
+  directories.each do |directory|
+    Find.find(directory) do |directory|
+      if directory =~ /\.svn$/ then
+        `rm -r #{directory}`
+        puts("Removing directory #{directory}/.svn")
+      end
+    end
+  end
+end
+
+desc 'Backup your ~/.sake file.'
+task 'sake:backup' do
+  (`cp -f ~/.sake ~/.sake-backup` and puts("Backupped."))
+end
+
+desc 'Print plugins managed by Piston.'
+task 'pistoned' do
+  width = 0
+  Dir["vendor/plugins/*"].each do |file|
+    new_length = file.split("/").last.length
+    width = (new_length > width) ? (new_length) : (width)
+  end
+  Dir["vendor/plugins/*"].each do |file|
+    revision = `svn propget piston:remote-revision #{file}`.strip
+    unless revision.empty? then
+      puts("#{file.split("/").last.ljust(width)}: r#{revision.ljust(6)} [#{`svn propget piston:root #{file}`.strip}]")
+    end
+  end
+  Dir["vendor/*"].each do |file|
+    unless revision = `svn propget piston:remote-revision #{file}`.strip.empty? then
+      puts("#{file.split("/").last.ljust(width)}: r#{revision.rjust(6)} [#{`svn propget piston:root #{file}`.strip}]")
+    end
+  end
+end
+
+desc 'Create YAML fixtures from your DB content'
+task 'backup:db:extract_content' => [ 'environment' ] do
+  sql = "SELECT * FROM %s"
+  ActiveRecord::Base.establish_connection(ActiveRecord::Base.configurations[RAILS_ENV])
+  ActiveRecord::Base.connection.tables.each do |table_name|
+    i = "000"
+    FileUtils.mkdir_p("#{RAILS_ROOT}/backup/#{RAILS_ENV}/build_#{BUILD_NUMBER}/fixtures/")
+    File.open("#{RAILS_ROOT}/backup/#{RAILS_ENV}/build_#{BUILD_NUMBER}/fixtures/#{table_name}.yml", "w") do |file|
+      data = ActiveRecord::Base.connection.select_all((sql % table_name))
+      nb_record = data.size
+      while (i.to_i < nb_record) do
+        file.write(data[i.to_i, 100].inject do |hash, record|
+          hash["#{table_name}_#{i.succ!}"] = record
+          hash
+        end.to_yaml[(5..-1)])
+      end
+    end
+  end
+end
+
+desc 'Dump the db schema'
+task 'backup:db:extract_schema' => [ 'environment' ] do
+  require("active_record/schema_dumper")
+  ActiveRecord::Base.establish_connection(ActiveRecord::Base.configurations[RAILS_ENV])
+  FileUtils.mkdir_p("#{RAILS_ROOT}/backup/#{RAILS_ENV}/build_#{BUILD_NUMBER}/schema/")
+  File.open("#{RAILS_ROOT}/backup/#{RAILS_ENV}/build_#{BUILD_NUMBER}/schema/schema.rb", "w") do |file|
+    ActiveRecord::SchemaDumper.dump(ActiveRecord::Base.connection, file)
+  end
+end
+
+desc 'create a backup folder containing your db schema and content data (see backup/{env}/build_{build number})'
+task 'backup:db:dump' => [ 'backup:db:extract_content', 'backup:db:extract_schema' ] do
+  # do nothing
+end
+
+desc 'load your backed up data from a previous build. rake backup:db:load BUILD=1182 or rake backup:db:load BUILD=1182 DUMP_ENV=production'
+task 'backup:db:load' => [ 'environment' ] do
+  @build = (ENV["BUILD"] or BUILD_NUMBER)
+  @env = (ENV["DUMP_ENV"] or RAILS_ENV)
+  load("#{RAILS_ROOT}/backup/#{@env}/build_#{@build}/schema/schema.rb")
+  require("active_record/fixtures")
+  Dir.glob(File.join(RAILS_ROOT, "backup/#{@env}/build_#{@build}/", "fixtures", "*.yml")).each do |fixture_file|
+    Fixtures.create_fixtures("#{RAILS_ROOT}/backup/#{@env}/build_#{@build}/fixtures", File.basename(fixture_file, ".yml"))
+  end
+end
+
+desc 'Initialises your newgem directory as a mercurial repo'
+task 'newgem:hg' do
+  puts("Initializing repository")
+  system("hg init")
+  puts("Creating default ignore file and committing")
+  File.open(".hgignore", "w") do |ig|
+    ig.puts("^doc/")
+    ig.puts("^pkg/")
+    ig.puts("^\\.config$")
+    ig.puts("^website/.+\\.html$")
+  end
+  system("hg add .hgignore")
+  system("hg commit -m \"Added ignores\"")
+  puts("Adding and commiting files.")
+  system("hg addremove -q")
+  system("hg commit -m \"Initial commit of gem files\"")
+end
+
+desc 'Creates a mercurial tag for the current release'
+task 'newgem:tag' do
+  if File.directory?(".hg") then
+    puts("Tagging #{NAME}-#{VERS}")
+    system("hg tag #{NAME}-#{VERS}")
+  else
+    puts("There is no mercurial repository here")
+  end
+end
+
+desc 'Create common validation formats'
+task 'app:copy_formats' do
+  format_class = "class Format\n  @@regex={\n          :alpha => /^[A-Za-z ]+$/,\n          :numeric => /^[0-9 ]+$/,\n          :alpha_numeric => /^[A-Za-z0-9 ]+$/,\n          :email => /A([^@ ]+)@((?:[-a-z0-9]+.)+[a-z]{2,})Z/i,\n          :username => /^[A-Za-z]+$/,\n          :password => /^(?=.*d)(?=.*([a-z]|[A-Z]))([ -~]){8,40}$/,\n          :phone => /(+)?([-._() ]?[d]{3,20}[-._() ]?){2,10}/,\n          :zip => /^d{5}$/,\n          :city => /^[A-Za-z ]+$/,\n          :state => /^[A-Z]{2}$/,\n          :url => /^(ftp|https?)://((?:[-a-z0-9]+.)+[a-z]{2,})/,\n          :ip => /^(d{1,3}.d{1,3}.d{1,3}.d{1,3})?$/,\n          :cc => /^((67d{2})|(4d{3})|(5[1-5]d{2})|(6011))(-? ?d{4}){3}|(3[4,7])d{2}-? ?d{6}-? ?d{5}$/,\n          :ccv => /^d{3}$/,\n  }\n\n  def self.method_missing(method, *args)\n          r=@@regex[method]\n          raise NoMethodError if r.nil?\n          r\n  end\nend\n"
+  File.open(File.join("lib", "format.rb"), "w") do |file|
+    file.write(format_class)
+  end
+end
+
+desc 'remove and ignore log files and tmp from subversion'
+task 'svn:remove_log_and_tmp' do
+  puts("removing log directory contents from svn")
+  system("svn remove log/*")
+  puts("ignoring log directory")
+  system("svn propset svn:ignore '*.log' log/")
+  system("svn update log/")
+  puts("removing contents of tmp sub-directorys from svn")
+  system("svn remove tmp/cache/*")
+  system("svn remove tmp/pids/*")
+  system("svn remove tmp/sessions/*")
+  system("svn remove tmp/sockets/*")
+  puts("ignoring tmp directory")
+  system("svn propset svn:ignore '*' tmp/cache")
+  system("svn propset svn:ignore '*' tmp/pids")
+  system("svn propset svn:ignore '*' tmp/sessions")
+  system("svn propset svn:ignore '*' tmp/sockets")
+  system("svn update tmp/")
+  puts("committing changes")
+  system("svn commit -m 'Removed and ignored log files and tmp'")
+end
+
+desc 'Add new files to subversion'
+task 'svn:add' do
+  system("svn status | grep '^?' | sed -e 's/? *//' | sed -e 's/ / /g' | xargs svn add")
+end
+
+desc 'Return path to a gem in cache; e.g. sake gems:find activerecord | xargs mate'
+task 'gems:find' do
+  if ARGV.last then
+    gem_path = Gem.source_index.find_name(ARGV.last).last.full_gem_path
+  else
+    gem_path = Gem.source_index.find_name("sources").last.full_gem_path.split("sources").first
+  end
+  print(gem_path)
+end
+
+desc 'Print out all the currently defined routes, with names.'
+task 'routes' => [ 'environment' ] do
+  name_col_width = ActionController::Routing::Routes.named_routes.routes.keys.sort do |a, b|
+    (a.to_s.size <=> b.to_s.size)
+  end.last.to_s.size
+  ActionController::Routing::Routes.routes.each do |route|
+    name = ActionController::Routing::Routes.named_routes.routes.index(route).to_s
+    name = name.ljust((name_col_width + 1))
+    puts("#{name}#{route}")
+  end
+end
+
+desc 'Returns the current schema version'
+task 'db:version' => [ 'environment' ] do
+  puts(("Current version: " + ActiveRecord::Migrator.current_version.to_s))
+end
+
+desc 'Rollback the database schema'
+task 'db:rollback:default' => [ 'environment' ] do
+  schema = ActiveRecord::Migrator.current_version.to_i
+  rollback = if (ENV.include?("back") and (ENV["back"].to_i <= schema)) then
+    (schema - ENV["back"].to_i)
+  else
+    (schema - 1)
+  end
+  ActiveRecord::Migrator.migrate("db/migrate/", rollback)
+  puts("schema rolled back to verison #{rollback} from #{schema}")
+end
+
+desc 'Sends STDIN or FILE=file to Pastie; USAGE: cat some_tasks.rake | sake pastie:send OR sake pastie:send FILE=some_tasks.rake'
+task 'pastie:send' do
+  require("tempfile")
+  PASTE_URL = (ENV["SAKE_PASTIE_URL"] or (ENV["PASTIE_URL"] or "http://pastie.caboo.se/pastes/create"))
+  if ENV["FILE"] then
+    text = File.open(File.expand_path(ENV["FILE"]), "r") { |f| f.read }
+  end
+  text ||= STDIN.read
+  text_file = Tempfile.open("w+")
+  (text_file << text)
+  text_file.flush
+  cmd = "    curl #{PASTE_URL}     -s -L -o /dev/null -w \"%{url_effective}\"     -H \"Expect:\"     -F \"paste[parser]=ruby\"     -F \"paste[restricted]=0\"     -F \"paste[authorization]=burger\"     -F \"paste[body]=<#{text_file.path}\"     -F \"key=\"     -F \"x=27\"     -F \"y=27\"\n"
+  out = `\n      #{cmd}\n    `
+  text_file.close(true)
+  print(out)
+end
+
+desc 'Send message from STDIN to Twitter.'
+task 'twitter:send' do
+  require("twitter")
+  twitter = Twitter::Base.new("botanicus", "2480utwio42t2wt84")
+  begin
+    twitter.post(STDIN.read.chomp)
+  rescue SocketError
+    puts("Are you sure that you are connected to the internet?")
+    exit
+  end
+end
+
+desc 'Apply a patch directly from Pastie (or absolute url)'
+task 'pastie:patch' do
+  require("open-uri")
+  pastie_url = "http://pastie.caboo.se/%s.txt"
+  patch_id = ENV["PASTE"].to_i
+  url = if (patch_id > 0) then
+    (pastie_url % patch_id)
+  else
+    (ENV["PASTE"] or ENV["PATCH"])
+  end
+  patch = open(url).read
+  File.open("patch.diff", "w+") { |f| f.puts(patch) }
+  `patch -p0 < patch.diff && rm patch.diff`
+  puts("Patched with #{url}.")
+end
+
+desc 'Configure Subversion for Rails'
+task 'svn:configure' do
+  system("svn remove log/*")
+  system("svn commit -m 'removing all log files from subversion'")
+  system("svn propset svn:ignore \"*.log\" log/")
+  system("svn update log/")
+  system("svn commit -m 'Ignoring all files in /log/ ending in .log'")
+  system("svn propset svn:ignore \"*.db\" db/")
+  system("svn update db/")
+  system("svn commit -m 'Ignoring all files in /db/ ending in .db'")
+  system("svn move config/database.yml config/database.example")
+  system("svn commit -m 'Moving database.yml to database.example to provide a template for anyone who checks out the code'")
+  system("svn propset svn:ignore \"database.yml\" config/")
+  system("svn update config/")
+  system("svn commit -m 'Ignoring database.yml'")
+end
+
+desc 'Backup Rails project (from its root directory).'
+task 'rails:backup' => [ 'log:clear', 'tmp:clear' ] do
+  require("fileutils")
+  name = File.basename(Dir.pwd)
+  time = Time.now.strftime("%Y-%m-%d-%H-%M-%S")
+  file = "#{name}-#{time}.tbz"
+  Dir.chdir("..") do
+    backup = lambda { system("tar cjpf '#{file}' '#{name}'") }
+    puts(backup.call ? ("Backupped successfully.") : ("Failed!"))
+    FileUtils.mv(file, "#{ENV["HOME"]}/Backups/Webs/")
+  end
+end
+
+desc 'Clone a copy of all 3 of the Merb repositories'
+task 'merb:clone' do
+  if File.exists?("merb") then
+    puts("./merb already exists!")
+    exit
+  end
+  require("fileutils")
+  mkdir("merb")
+  cd("merb")
+  ["core", "more", "plugins"].collect { |r| "merb-#{r}" }.each do |r|
+    sh("git clone git://github.com/wycats/#{r}.git")
+  end
+end
+
+desc 'Update your local Merb repositories.  Run from inside the top-level merb directory.'
+task 'merb:update' do
+  repos = ["core", "more", "plugins"].collect { |r| "merb-#{r}" }
+  repos.each do |r|
+    unless File.exists?(r) then
+      puts("#{r} missing ... did you use merb:clone to set this up?")
+      exit
+    end
+  end
+  repos.each do |r|
+    cd(r)
+    sh("git fetch")
+    sh("git rebase origin/master")
+    cd("..")
+  end
+end
+
+desc 'Uninstall all RubyGems related to Merb'
+task 'merb:gems:wipe' do
+  windows = PLATFORM =~ /win32|cygwin/ rescue nil
+  sudo = windows ? ("") : ("sudo")
+  gems = `gem list merb`
+  gems.split("\n").each do |line|
+    next unless line =~ /^(merb[^ ]+)/
+    sh("#{sudo} gem uninstall -a -i -x #{$1}")
+  end
+end
+
+desc 'Pull fresh copies of Merb and refresh all the gems'
+task 'merb:gems:refresh' => [ 'merb:update', 'merb:install' ] do
+  # do nothing
+end
+
+desc 'Install merb-core'
+task 'merb:install:core' do
+  cd("merb-core")
+  sh("rake install")
+  cd("..")
+end
+
+desc 'Install merb-more'
+task 'merb:install:more' do
+  cd("merb-more")
+  sh("rake install")
+  cd("..")
+end
+
+desc 'Install merb-plugins'
+task 'merb:install:plugins' do
+  cd("merb-plugins")
+  sh("rake install")
+  cd("..")
+end
+
+desc 'Install merb-core and merb-more'
+task 'merb:install' => [ 'merb:install:core', 'merb:install:more' ] do
+  # do nothing
+end
+
+desc 'Remove and reinstall Merb sake recipes'
+task 'merb:sake:refresh' do
+  ["clone", "update", "gems:wipe", "gems:refresh", "install", "install:core", "install:more", "sake:refresh"].each do |t|
+    sh("sake -u merb:#{t}")
+  end
+  sh("sake -i http://merbivore.com/merb-dev.sake")
+end
+
+task 'svn:st' do
+  puts(`svn st`)
+end
+
+task 'svn:up' do
+  puts(`svn up`)
+end
+
+task 'svn:delete' do
+  `svn st`.split(/\n/).each do |line|
+    trimmed_line = line.delete("!").lstrip
+    if line[0, 1] =~ /\!/ then
+      `svn rm #{trimmed_line}`
+      puts("removed #{trimmed_line}")
+    end
+  end
+end
+
+desc 'Run before checking in'
+task 'svn:prepare' => [ 'svn:add', 'svn:delete', 'svn:up', 'svn:st' ] do
+  # do nothing
+end
+
+desc 'Show the current version of Edgy that is installed'
+task 'edgy:self:version' => [ 'edgy:dependencies' ] do
+  puts(("-" * 80))
+  puts("Currently running on Edgy version #{EDGY_VERSION}")
+  puts(("-" * 80))
+end
+
+desc 'This updates Edgy to the latest stable version'
+task 'edgy:self:update' => [ 'edgy:dependencies' ] do
+  if (info["stable_version"] > EDGY_VERSION) then
+    puts(("-" * 80))
+    puts("SELF UPDATING: You have an old version of Edgy...upgrading from #{EDGY_VERSION} to #{info["stable_version"]}...")
+    edgy_uninstall
+    sh("sake -i http://edgy.4ninjas.org/edgy.sake")
+    puts(("-" * 80))
+    puts("UPDATE COMPLETE: Now running Edgy version #{info["stable_version"]}")
+    puts("YOU WILL NEED TO RUN YOUR COMMAND AGAIN")
+    puts(("-" * 80))
+    exit
+  end
+end
+
+desc 'This uninstalls Edgy and all associated files'
+task 'edgy:self:uninstall' => [ 'edgy:dependencies' ] do
+  puts(("-" * 80))
+  puts("SELF UNINSTALLING: We're sorry to see you go... :)")
+  clean_up
+  rm(CONFIG_FILE)
+  edgy_uninstall
+  puts(("-" * 80))
+end
+
+desc 'Show available packages'
+task 'edgy:list' => [ 'edgy:dependencies', 'edgy:self:update' ] do
+  puts(("-" * 80))
+  puts("Packages available from #{SOURCES}")
+  puts(("-" * 80))
+  max = sources.keys.map { |k| k.length }.max
+  sources.to_a.sort { |a, b| (a[0] <=> b[0]) }.each do |pkg, info|
+    puts("#{pkg.rjust(max)} | #{(info["description"] or "No description provided")}")
+  end
+end
+
+desc 'Build & install the specified packages from source'
+task 'edgy:install' => [ 'edgy:dependencies', 'edgy:self:update' ] do
+  package_count = 0
+  failure_count = 0
+  recent_builds = []
+  if ENV["packages"] then
+    packages = ENV["packages"].split(" ")
+  else
+    puts("You need to specify some packages using packages='pkg1 pkg2'")
+    exit
+  end
+  clean_up
+  packages.each do |pkg|
+    unless recent_builds.include?(pkg) then
+      package_count = (package_count + 1)
+      if install(pkg) then
+        (recent_builds << pkg)
+        log_installation(pkg)
+      else
+        failures = (failures + 1)
+      end
+    end
+  end
+  clean_up
+  puts(("-" * 80))
+  if (failure_count > 0) then
+    puts("We did the best we can but #{failure_count} out of #{package_count} package#{"s" unless (package_count == 1)} failed to install.")
+  else
+    puts("Woohoo! We're all done. #{package_count} package#{"s" unless (package_count == 1)} were installed.")
+  end
+  puts(("-" * 80))
+end
+
+desc 'Update all previously installed packages to the lastest edge revisions'
+task 'edgy:update' => [ 'edgy:dependencies', 'edgy:self:update' ] do
+  package_count = 0
+  failure_count = 0
+  recent_builds = []
+  puts(("-" * 80))
+  puts("UPDATING: #{config["installed_packages"].length} packages")
+  clean_up
+  config["installed_packages"].each do |pkg|
+    unless recent_builds.include?(pkg) then
+      package_count = (package_count + 1)
+      install(pkg) ? ((recent_builds << pkg)) : (failures = (failures + 1))
+    end
+  end
+  clean_up
+  puts(("-" * 80))
+  if (failure_count > 0) then
+    puts("We did the best we can but #{failure_count} out of #{package_count} package#{"s" unless (package_count == 1)} failed to update.")
+  else
+    puts("Woohoo! We're all done. #{package_count} package#{"s" unless (package_count == 1)} were updated.")
+  end
+  puts(("-" * 80))
+end
+
+task 'edgy:dependencies' do
+  require("fileutils")
+  require("yaml")
+  require("digest/sha1")
+  require("net/http")
+  TEMP = File.join("/tmp", "edgy")
+  SOURCES = "http://edgy.4ninjas.org/sources.yml"
+  INFO = "http://edgy.4ninjas.org/info.yml"
+  CONFIG_FILE = "#{ENV["HOME"]}/.edgyconfig"
+  EDGY_VERSION = 0.4
+  def edgy_uninstall
+    installed_commands = `sake -Tv | grep edgy:`.split("\n").map { |l| l.scan(/edgy:[\w:_]+/) }
+    sh("sake -u #{installed_commands.join(" ")} >> /dev/null")
+  end
+  def sources
+    @sources ||= load_yaml_from(SOURCES)
+  end
+  def config(reload = false)
+    @config = nil if reload
+    @config ||= load_yaml_from(CONFIG_FILE, true)
+  end
+  def save_config
+    File.open(CONFIG_FILE, "w") { |out| YAML.dump(config, out) }
+    config(true)
+  end
+  def info
+    @info ||= load_yaml_from(INFO)
+  end
+  def load_yaml_from(location, create = false)
+    if location.match(/http:\/\//) then
+      YAML.load(Net::HTTP.get(URI.parse(location)))
+    else
+      touch(location) if (create and (not File.exists?(location)))
+      (YAML.load_file(location) or {  })
+    end
+  end
+  def install(pkg)
+    puts(("-" * 80))
+    unless options = sources[pkg] then
+      puts("ERROR: #{pkg} package description not found in #{SOURCES}...skipping #{pkg}")
+      return false
+    end
+    puts("BUILDING:: #{pkg}...")
+    if options["dependencies"] then
+      dependencies = options["dependencies"].split(" ")
+      puts("#{pkg} requires #{dependencies.length} other package#{"s" unless (dependencies.length == 1)} - #{dependencies.join(", ")}")
+      dependencies.each { |dependency| install(dependency) }
+    end
+    if options["repository"] then
+      build(pkg, options["repository"], options["install_path"], options["clean"], options["command"])
+    end
+    return true
+  end
+  def build(pkg, repo, install_path = nil, clean = false, command = nil)
+    install_path ||= "./"
+    install_path = File.join(temp_dir_for(repo), install_path)
+    cd_to_temp
+    unless File.exists?(temp_dir_for(repo)) then
+      puts("CLONING:: #{pkg} from #{repo}...")
+      `git clone #{repo} #{temp_dir_for(repo)}`
+    end
+    if (clean and (gem_is_installed?(pkg) and confirm("#{pkg} recommends a clean install, would you like to remove old #{pkg} gems?"))) then
+      remove_pkg(pkg)
+    end
+    if command then
+      install_pkg_with_command(pkg, install_path, command)
+    else
+      install_pkg_with_rake(pkg, install_path)
+    end
+  end
+  def gem_is_installed?(gem_name)
+    (`gem list | grep #{gem_name}`.length > 0)
+  end
+  def remove_pkg(pkg)
+    puts("REMOVING:: uninstalling #{pkg} before attempting clean install...")
+    `gem uninstall -a #{pkg}`
+  end
+  def log_installation(pkg)
+    config["installed_packages"] ||= []
+    (config["installed_packages"] << pkg)
+    config["installed_packages"].uniq!
+    save_config
+  end
+  def install_pkg_with_rake(pkg, rake_dir)
+    cd(rake_dir)
+    puts("INSTALLING:: #{pkg} from rake file: #{rake_dir}")
+    `sudo rake install &> /dev/null`
+  end
+  def install_pkg_with_command(pkg, install_path, command)
+    cd(install_path)
+    puts("INSTALLING:: #{pkg} with custom command: #{command}")
+    `#{command} &> /dev/null`
+  end
+  def cd_to_temp
+    mkdir(TEMP) unless File.exists?(TEMP)
+    cd(TEMP)
+  end
+  def clean_up
+    cd_to_temp
+    if Dir.entries(pwd).reject { |e| e =~ /^\./ }.any? then
+      puts("\nCleaning up #{pwd}...")
+      `sudo rm -rf ./*`
+    end
+  end
+  def temp_dir_for(repo)
+    sha1 = Digest::SHA1.hexdigest(repo)
+    "#{TEMP}/#{sha1}"
+  end
+  def confirm(question)
+    return true if (config["auto_confirm"] == "all")
+    puts(("-" * 80))
+    puts("CONFIRM: #{question} (y/n)")
+    result = (STDIN.gets.strip.downcase == "y")
+    puts(("-" * 80))
+    result
+  end
+end

@@ -1,0 +1,13 @@
+/* XPM */
+static char *b-top-c2[] = {
+/* columns rows colors chars-per-pixel */
+"1 5 2 1",
+"  c gray60",
+". c #EEEEEEEEEEEE",
+/* pixels */
+" ",
+".",
+".",
+".",
+" "
+};

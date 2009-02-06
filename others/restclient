@@ -1,0 +1,4 @@
+merb:
+  url: http://localhost:4000
+rails:
+  url: http://localhost:3000

@@ -1,0 +1,281 @@
+# This is a pekwm theme file. See http://pekwm.org
+# "013Silver" by shared (themes@adresh.com)
+#
+# You can find this theme from hewphoria.com,
+# and probably from adresh.com/pekwm too.
+#
+# Took pixmaps from 0.1.3 default theme, edited them.
+# Colours based, but not similar to pwm-beos (archived at hewphoria.com.)
+#
+# Last edited 28.06.2005. Works with pekwm svn revision 43 or compatible.
+
+$MFONT = "Bitstream Vera Sans:size=8#Left#1 1#XFT"
+$FONT = "Bitstream Vera Sans:size=8#Center#1 1#XFT"
+
+PDecor {
+
+Decor = "DEFAULT" {
+	Title { 
+		Height = "14"
+		Pad = "1 0 5 5"
+
+		WidthMin = "0"
+		WidthMax = "95"
+		WidthSymetric = "true"
+
+		Focused = "SolidRaised #d8d8d8 #ffffff #000000 0 0 1x1"
+		Unfocused = "SolidRaised #a8a8a8 #efefef #000000 0 0 1x1"
+
+		Tab {
+			Focused = "SolidRaised #d8d8d8 #ffffff #000000 0 0 1x1"
+			FocusedSelected = "SolidRaised #feb048 #ffffff #000000 0 0 1x1"
+			Unfocused = "SolidRaised #a8a8a8 #efefef #000000 0 0 1x1"
+			UnfocusedSelected = "SolidRaised #d8d8d8 #ffffff #000000 0 0 1x1"
+			
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "$FONT"
+		}
+		FontColor {
+			Focused = "#000000"
+			FocusedSelected = "#000000"
+			Unfocused = "#000000"
+			UnfocusedSelected = "#000000"
+		}
+		Buttons {
+			Left {
+				Focused = "Image btn-b-left-un.xpm"
+				Unfocused = "Image btn-b-left-un.xpm"
+				Pressed = "Image btn-b-left-fo.xpm"
+				Button = "1" { Actions = "Toggle Maximized True True" }
+				Button = "2" { Actions = "Toggle Maximized False True" }
+				Button = "3" { Actions = "Toggle Maximized True False" }
+			}
+			Right {
+				Focused = "Image btn-b-right-un.xpm"
+				Unfocused = "Image btn-b-right-un.xpm"
+				Pressed = "Image btn-b-right-fo.xpm"
+				Button = "1" { Actions = "Close" }
+				Button = "3" { Actions = "Kill" }
+			}
+		}
+		Border {
+			Focused {
+				TopLeft = "Image tl.xpm"
+				Top = "Image vt.xpm"
+				TopRight = "Image tr.xpm"
+				Left = "Image sl.xpm"
+				Right = "Image sr.xpm"
+				BottomLeft = "Image bl.xpm"
+				Bottom = "Image vb.xpm"
+				BottomRight = "Image br.xpm"
+			}
+			Unfocused {
+				TopLeft = "SolidRaised #a8a8a8 #000000 #000000 0 0 1 0 1 0 5x5"
+				Top = "SolidRaised #a8a8a8 #000000 #000000 0 0 1 1 0 0 5x5"
+				TopRight = "SolidRaised #a8a8a8 #000000 #000000 0 0 1 0 0 1 5x5"
+				Left = "SolidRaised #a8a8a8 #000000 #000000 0 0 0 0 1 1 5x5"
+				Right = "SolidRaised #a8a8a8 #000000 #000000 0 0 0 0 1 1 5x5"
+				BottomLeft = "SolidRaised #a8a8a8 #000000 #000000 0 0 0 1 1 0 5x5"
+				Bottom = "SolidRaised #a8a8a8 #000000 #000000 0 0 1 1 0 0 5x5"
+				BottomRight = "SolidRaised #a8a8a8 #000000 #000000 0 0 0 1 0 1 5x5"
+			}
+		}
+	} 
+}
+
+Decor = "beos" {
+	Title { 
+		Height = "14"
+		Pad = "1 0 5 5"
+
+		WidthMin = "100"
+		WidthMax = "95"
+		WidthSymetric = "true"
+
+		Focused = "SolidRaised #d8d8d8 #ffffff #000000 0 0 1x1"
+		Unfocused = "SolidRaised #a8a8a8 #efefef #000000 0 0 1x1"
+
+		Tab {
+			Focused = "SolidRaised #d8d8d8 #ffffff #000000 0 0 1x1"
+			FocusedSelected = "SolidRaised #feb048 #ffffff #000000 0 0 1x1"
+			Unfocused = "SolidRaised #a8a8a8 #efefef #000000 0 0 1x1"
+			UnfocusedSelected = "SolidRaised #d8d8d8 #ffffff #000000 0 0 1x1"
+			
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "$FONT"
+		}
+		FontColor {
+			Focused = "#000000"
+			FocusedSelected = "#000000"
+			Unfocused = "#000000"
+			UnfocusedSelected = "#000000"
+		}
+		Buttons {
+			Left {
+				Focused = "Image btn-b-left-un.xpm"
+				Unfocused = "Image btn-b-left-un.xpm"
+				Pressed = "Image btn-b-left-fo.xpm"
+				Button = "1" { Actions = "Toggle Maximized True True" }
+				Button = "2" { Actions = "Toggle Maximized False True" }
+				Button = "3" { Actions = "Toggle Maximized True False" }
+			}
+			Right {
+				Focused = "Image btn-b-right-un.xpm"
+				Unfocused = "Image btn-b-right-un.xpm"
+				Pressed = "Image btn-b-right-fo.xpm"
+				Button = "1" { Actions = "Close" }
+				Button = "3" { Actions = "Kill" }
+			}
+		}
+		Border {
+			Focused {
+				TopLeft = "Image tl.xpm"
+				Top = "Image vt.xpm"
+				TopRight = "Image tr.xpm"
+				Left = "Image sl.xpm"
+				Right = "Image sr.xpm"
+				BottomLeft = "Image bl.xpm"
+				Bottom = "Image vb.xpm"
+				BottomRight = "Image br.xpm"
+			}
+			Unfocused {
+				TopLeft = "SolidRaised #a8a8a8 #000000 #000000 0 0 1 0 1 0 5x5"
+				Top = "SolidRaised #a8a8a8 #000000 #000000 0 0 1 1 0 0 5x5"
+				TopRight = "SolidRaised #a8a8a8 #000000 #000000 0 0 1 0 0 1 5x5"
+				Left = "SolidRaised #a8a8a8 #000000 #000000 0 0 0 0 1 1 5x5"
+				Right = "SolidRaised #a8a8a8 #000000 #000000 0 0 0 0 1 1 5x5"
+				BottomLeft = "SolidRaised #a8a8a8 #000000 #000000 0 0 0 1 1 0 5x5"
+				Bottom = "SolidRaised #a8a8a8 #000000 #000000 0 0 1 1 0 0 5x5"
+				BottomRight = "SolidRaised #a8a8a8 #000000 #000000 0 0 0 1 0 1 5x5"
+			}
+		}
+	} 
+}
+
+Decor = "MENU" {
+	Title { 
+		Height = "14"
+		Pad = "1 0 5 5"
+
+		WidthMin = "0"
+		WidthMax = "95"
+		WidthSymetric = "true"
+
+		Focused = "SolidRaised #405060 #607080 #203040 0 0 1x1"
+		Unfocused = "SolidRaised #505050 #707070 #404040 0 0 1x1"
+
+		Tab {
+			Focused = "SolidRaised #d8d8d8 #ffffff #606060 0 0 1x1"
+			FocusedSelected = "SolidRaised #feb048 #ffffff #606060 0 0 1x1"
+			Unfocused = "SolidRaised #a8a8a8 #efefef #606060 0 0 1x1"
+			UnfocusedSelected = "SolidRaised #d8d8d8 #ffffff #606060 0 0 1x1"
+			
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "$FONT"
+		}
+		FontColor {
+			Focused = "#000000"
+			FocusedSelected = "#000000"
+			Unfocused = "#000000"
+			UnfocusedSelected = "#000000"
+		}
+		Buttons {
+			Right {
+				Focused = "Image btn-b-right-fo.xpm"
+				Unfocused = "Image btn-b-right-un.xpm"
+				Pressed = "Image btn-b-right-un.xpm"
+				Button = "1" { Actions = "Close" }
+				Button = "3" { Actions = "Kill" }
+			}
+		}
+		Border {
+			Focused {
+				TopLeft = "SolidRaised #a8a8a8 #000000 #000000 0 0 1 0 1 0 1x1"
+				Top = "SolidRaised #a8a8a8 #000000 #000000 0 0 1 1 0 0 1x1"
+				TopRight = "SolidRaised #a8a8a8 #000000 #000000 0 0 1 0 0 1 1x1"
+				Left = "SolidRaised #a8a8a8 #000000 #000000 0 0 0 0 1 1 1x1"
+				Right = "SolidRaised #a8a8a8 #000000 #000000 0 0 0 0 1 1 1x1"
+				BottomLeft = "SolidRaised #a8a8a8 #000000 #000000 0 0 0 1 1 0 1x1"
+				Bottom = "SolidRaised #a8a8a8 #000000 #000000 0 0 1 1 0 0 1x1"
+				BottomRight = "SolidRaised #a8a8a8 #000000 #000000 0 0 0 1 0 1 1x1"
+			}
+			Unfocused {
+				TopLeft = "SolidRaised #a8a8a8 #000000 #000000 0 0 1 0 1 0 1x1"
+				Top = "SolidRaised #a8a8a8 #000000 #000000 0 0 1 1 0 0 1x1"
+				TopRight = "SolidRaised #a8a8a8 #000000 #000000 0 0 1 0 0 1 1x1"
+				Left = "SolidRaised #a8a8a8 #000000 #000000 0 0 0 0 1 1 1x1"
+				Right = "SolidRaised #a8a8a8 #000000 #000000 0 0 0 0 1 1 1x1"
+				BottomLeft = "SolidRaised #a8a8a8 #000000 #000000 0 0 0 1 1 0 1x1"
+				Bottom = "SolidRaised #a8a8a8 #000000 #000000 0 0 1 1 0 0 1x1"
+				BottomRight = "SolidRaised #a8a8a8 #000000 #000000 0 0 0 1 0 1 1x1"
+			}
+		}
+	} 
+}
+
+}
+
+
+Harbour {
+	Texture = "SolidRaised #d8d8d8 #ffffff #000000 1 0 1x1"
+}
+
+Menu {
+	Focused {
+		Font = "$MFONT"
+		Background = "Solid #d8d8d8 1x1"
+		Item = "EMPTY"
+		Text = "#000000"
+		Separator = "Solid #606060 0x1"
+		Arrow = "Solid #606060 2x2"
+	}
+	Unfocused {
+		Font = "$MFONT"
+		Background = "Solid #a8a8a8 1x1"
+		Item = "EMPTY"
+		Text = "#000000"
+		Separator = "Solid #606060 0x1"
+		Arrow = "Solid #606060 2x2"
+	}
+	Selected {
+		Font = "$MFONT"
+		Background = "Solid #feb048 1x1"
+		Item = "SolidRaised #feb048 #ffffff #606060 0 0 1x1"
+		Text = "#000000"
+		Arrow = "Solid #606060 2x2"
+	}
+	Pad = "2 2 4 4"
+}
+
+CmdDialog {
+	Font = "$MFONT"
+	Texture = "Solid #d8d8d8"
+	Text = "#000000"
+	Pad = "4 4 4 4"
+}
+
+Status {
+	Font = "$MFONT"
+	Texture = "Solid #d8d8d8"
+	Text = "#000000"
+	Pad = "0 0 0 0"
+}
+
+Root {
+#	Command = "EMPTY"
+}

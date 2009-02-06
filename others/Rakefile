@@ -1,0 +1,14 @@
+module FileUtils
+  def cp_rf(from, to)
+    sh("rm -rf '#{to}'")
+    sh("cp -rf '#{from}' '#{to}'")
+  end
+end
+
+desc "Copy each dotfile to the $HOME directory"
+task :install do |item|
+  Dir["*"].each do |file|
+    next if file.eql?("Rakefile")
+    cp_rf file, File.join(ENV["HOME"], ".#{file}")
+  end
+end

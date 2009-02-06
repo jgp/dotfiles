@@ -1,0 +1,467 @@
+// +------------------------------------------------------------------+
+// | Theme Name:		Steph Remix                                   |
+// | Porter:			systemx <pyavitz@gmail.com>                   |
+// | Last Modified:		2005-04-09                                    |
+// | Info:			A port of the Metacity theme Steph Remix      |
+// | Pekwm Version:		20050227 and comptatible                      |
+// | Changes:			See ChangeLog for details                     |
+// +------------------------------------------------------------------+
+
+// Fonts:
+$TAB_FO			= "Child's Play-10#CENTER#1 1#XFT"		// Focused titlebar font
+$TAB_FS			= "Child's Play-10#CENTER#1 1#XFT"		// Focused-Selected titlebar font
+$TAB_UN			= "Child's Play-10#CENTER#1 1#XFT"		// Unfocused titlebar font
+$TAB_US			= "Child's Play-10#CENTER#1 1#XFT"		// Unfocused-Selected titlebar font
+$MENU_TITLE_FONT	= "Arial-10:bold#Center#1 1#XFT"		// Font for menu title
+$MENU_FONT		= "Sans-8:bold#LEFT#0 0#XFT"		// Font for menu items
+$STATUS_FONT		= "Sans-8:bold#CENTER#0 0#XFT"		// Status window font
+$CMD_FONT		= "Sans-8:bold#CENTER#0 0#XFT"		// CMDDIALOG font
+
+
+PDecor {
+
+Decor = "DEFAULT" {
+	Title {
+		Height = "19"
+		Pad = "2 0 0 0"
+		
+		Focused = "Image title-fo.png"
+		Unfocused = "Image title-un.png"
+
+		Tab {
+			Focused = "Image title-fo.png"
+			FocusedSelected = "Image title-fo.png"
+			Unfocused = "Image title-un.png"
+			UnfocusedSelected = "Image title-un.png"
+		}
+		Separator {
+			Focused = "Image sep-fo.png"
+			Unfocused = "Image sep-un.png"
+		}
+		Font {
+			Focused = "$TAB_FO"
+			FocusedSelected = "$TAB_FS"
+			Unfocused = "$TAB_UN"
+			UnfocusedSelected = "$TAB_US"
+		}
+		FontColor {
+                        Focused = "#c9c9c9 #000000"
+                        FocusedSelected = "#ffffff #000000"
+                        Unfocused = "#c9c9c9 #000000"
+                        UnfocusedSelected = "#c9c9c9 #000000"
+		}
+		Buttons {
+			Right {
+				Focused = "Image btn-close-fo.png"
+				Unfocused = "Image btn-close-un.png"
+				Pressed = "Image btn-close-pr.png"
+				Button = "1" { Actions = "Close" }
+			}
+			Right {
+				Focused = "Image btn-max-fo.png"
+				Unfocused = "Image btn-max-un.png"
+				Pressed = "Image btn-max-pr.png"
+				Button = "1" { Actions = "Toggle Maximized True True" }
+			}
+			Right {
+				Focused = "Image btn-min-fo.png"
+				Unfocused = "Image btn-min-un.png"
+				Pressed = "Image btn-min-pr.png"
+				Button = "1" { Actions = "Set Iconified" }
+			
+			}
+			Right {
+				Focused = "Image title-right-fo.png"
+				Unfocused = "Image title-right-un.png"
+				Pressed = "Image title-decor-right.png"
+				Button = "1" { Actions = "empty" }
+			}
+
+		}
+		Border {
+			Focused {
+				TopLeft = "Image tl-fo.png"
+				Top = "Image top-fo.png"
+				TopRight = "Image tr-fo.png"
+				Left = "Image left-fo.png"
+				Right = "Image right-fo.png"
+				BottomLeft = "Image bl-fo.png"
+				BottomRight = "Image br-fo.png"
+				Bottom = "Image bottom-fo.png"
+			}
+			Unfocused {
+				TopLeft = "Image tl-un.png"
+				Top = "Image top-un.png"
+				TopRight = "Image tr-un.png"
+				Left = "Image left-un.png"
+				Right = "Image right-un.png"
+				BottomLeft = "Image bl-un.png"
+				BottomRight = "Image br-un.png"
+				Bottom = "Image bottom-un.png"
+			}
+		}
+	}
+} # Decor->DEFAULT{}
+Decor = "TITLEBARLESS" {
+	Title {
+		Height = "0"
+		Pad = "0 0 0 0"
+		
+		Focused = "EMPTY"
+		Unfocused = "EMPTY"
+
+		Tab {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "EMPTY"
+		}
+		FontColor {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+
+		Buttons {
+		}
+		Border {
+			Focused {
+				TopLeft = "Image tl-fo.png"
+				Top = "Image top-fo.png"
+				TopRight = "Image tr-fo.png"
+				Left = "Image left-fo.png"
+				Right = "Image right-fo.png"
+				BottomLeft = "Image bl-fo.png"
+				BottomRight = "Image br-fo.png"
+				Bottom = "Image bottom-fo.png"
+			}
+			Unfocused {
+				TopLeft = "Image tl-un.png"
+				Top = "Image top-un.png"
+				TopRight = "Image tr-un.png"
+				Left = "Image left-un.png"
+				Right = "Image right-un.png"
+				BottomLeft = "Image bl-un.png"
+				BottomRight = "Image br-un.png"
+				Bottom = "Image bottom-un.png"
+			}
+		}
+	}
+} # Decor->TITLEBARLESS{}
+
+
+Decor = "BORDERLESS" {
+	Title {
+		Height = "19"
+		Pad = "2 0 0 0"
+		
+		Focused = "Image title-fo.png"
+		Unfocused = "Image title-un.png"
+
+		Tab {
+			Focused = "Image title-fo.png"
+			FocusedSelected = "Image title-fo.png"
+			Unfocused = "Image title-un.png"
+			UnfocusedSelected = "Image title-un.png"
+		}
+		Separator {
+			Focused = "Image sep-fo.png"
+			Unfocused = "Image sep-un.png"
+		}
+		Font {
+			Focused = "$TAB_FO"
+			FocusedSelected = "$TAB_FS"
+			Unfocused = "$TAB_UN"
+			UnfocusedSelected = "$TAB_US"
+		}
+		FontColor {
+                        Focused = "#c9c9c9 #000000"
+                        FocusedSelected = "#ffffff #000000"
+                        Unfocused = "#000000 #c9c9c9"
+                        UnfocusedSelected = "#000000 #c9c9c9"
+		}
+		Buttons {
+
+			Right {
+				Focused = "Image btn-close-fo.png"
+				Unfocused = "Image btn-close-un.png"
+				Pressed = "Image btn-close-pr.png"
+				Button = "1" { Actions = "Close" }
+			}
+			Right {
+				Focused = "Image btn-max-fo.png"
+				Unfocused = "Image btn-max-un.png"
+				Pressed = "Image btn-max-pr.png"
+				Button = "1" { Actions = "Toggle Maximized True True" }
+			}
+			Right {
+				Focused = "Image btn-min-fo.png"
+				Unfocused = "Image btn-min-un.png"
+				Pressed = "Image btn-min-pr.png"
+				Button = "1" { Actions = "Set Iconified" }
+			}
+
+		}
+		Border {
+			Focused {
+				TopLeft = "EMPTY"
+				Top = "EMPTY"
+				TopRight = "EMPTY"
+				Left =  "EMPTY"
+				Right = "EMPTY"
+				BottomLeft = "EMPTY"
+				Bottom = "EMPTY"
+				BottomRight = "EMPTY"
+			}
+			Unfocused {
+				TopLeft = "EMPTY"
+				Top = "EMPTY"
+				TopRight = "EMPTY"
+				Left =  "EMPTY"
+				Right = "EMPTY"
+				BottomLeft = "EMPTY"
+				Bottom = "EMPTY"
+				BottomRight = "EMPTY"
+			}
+		}
+	}
+} # Decor->BORDERLESS{}
+
+Decor = "MENU" {
+	Title {
+		Height="19"
+		Pad="1 0 0 0"
+		
+		Focused = "Image title-fo.png"
+		Unfocused = "Image title-fo.png"
+
+		Tab {
+			Focused = "Image title-fo.png"
+			FocusedSelected = "Image title-fo.png"
+			Unfocused = "Image title-fo.png"
+			UnfocusedSelected = "Image title-fo.png"
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "$MENU_TITLE_FONT"
+			FocusedSelected = "$MENU_TITLE_FONT"
+			Unfocused = "$MENU_TITLE_FONT"
+			UnfocusedSelected = "$MENU_TITLE_FONT"
+		}
+		FontColor {
+                        Focused = "#c9c9c9 #000000"
+                        FocusedSelected = "#ffffff #000000"
+                        Unfocused = "#c9c9c9 #000000"
+                        UnfocusedSelected = "#ffffff #000000"
+		}
+		Buttons {
+		}
+		Border {
+			Focused {
+				TopLeft = "Image tl-fo.png"
+				Top = "Image top-fo.png"
+				TopRight = "Image tr-fo.png"
+				Left = "Image left-fo.png"
+				Right = "Image right-fo.png"
+				BottomLeft = "Image bl-fo.png"
+				BottomRight = "Image br-fo.png"
+				Bottom = "Image bottom-fo.png"
+                        }
+
+                        Unfocused {
+				TopLeft = "Image tl-fo.png"
+				Top = "Image top-fo.png"
+				TopRight = "Image tr-fo.png"
+				Left = "Image left-un.png"
+				Right = "Image right-un.png"
+				BottomLeft = "Image bl-un.png"
+				BottomRight = "Image br-un.png"
+				Bottom = "Image bottom-un.png"
+			}
+		}
+
+	}
+} # Decor->MENU{}
+
+Decor = "STATUSWINDOW" {
+	Title {
+		Height = "0"
+		Pad = "0 0 0 0"
+		Focused = "EMPTY"
+		Unfocused = "EMPTY"
+		Tab {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "EMPTY"
+		}
+		FontColor {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+		Buttons {
+		}
+		Border {
+			Focused {
+				TopLeft = "Image tl-fo.png"
+				Top = "Image top-fo.png"
+				TopRight = "Image tr-fo.png"
+				Left = "Image left-fo.png"
+				Right = "Image right-fo.png"
+				BottomLeft = "Image bl-fo.png"
+				BottomRight = "Image br-fo.png"
+				Bottom = "Image bottom-fo.png"
+                        }
+
+                        Unfocused {
+				TopLeft = "Image tl-un.png"
+				Top = "Image top-un.png"
+				TopRight = "Image tr-un.png"
+				Left = "Image left-un.png"
+				Right = "Image right-un.png"
+				BottomLeft = "Image bl-un.png"
+				BottomRight = "Image br-un.png"
+				Bottom = "Image bottom-un.png"
+			}
+		}
+
+	}
+
+} # Decor->STATUSWINDOW{}
+
+Decor = "CMDDIALOG" {
+	Title {
+		Height = "19"
+		Pad = "2 0 0 0"
+		
+		Focused = "Image title-fo.png"
+		Unfocused = "Image title-un.png"
+
+		Tab {
+			Focused = "Image title-fo.png"
+			FocusedSelected = "Image title-fo.png"
+			Unfocused = "Image title-un.png"
+			UnfocusedSelected = "Image title-un.png"
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "$TAB_FO"
+			FocusedSelected = "$TAB_FS"
+			Unfocused = "$TAB_UN"
+			UnfocusedSelected = "$TAB_US"
+		}
+		FontColor {
+                        Focused = "#c9c9c9 #000000"
+                        FocusedSelected = "#ffffff #000000"
+                        Unfocused = "#000000 #c9c9c9"
+                        UnfocusedSelected = "#000000 #c9c9c9"
+		}
+		Buttons {
+			Right {
+				Focused = "Image btn-close-fo.png"
+				Unfocused = "Image btn-close-un.png"
+				Pressed = "Image btn-close-pr.png"
+				Button = "1" { Actions = "Close" }
+			}
+		}
+		Border {
+			Focused {
+				TopLeft = "Image tl-fo.png"
+				Top = "Image top-fo.png"
+				TopRight = "Image tr-fo.png"
+				Left = "Image left-fo.png"
+				Right = "Image right-fo.png"
+				BottomLeft = "Image bl-fo.png"
+				BottomRight = "Image br-fo.png"
+				Bottom = "Image bottom-fo.png"
+                        }
+
+                        Unfocused {
+				TopLeft = "Image tl-un.png"
+				Top = "Image top-un.png"
+				TopRight = "Image tr-un.png"
+				Left = "Image left-un.png"
+				Right = "Image right-un.png"
+				BottomLeft = "Image bl-un.png"
+				BottomRight = "Image br-un.png"
+				Bottom = "Image bottom-un.png"
+			}
+		}
+
+	}
+} # Decor->CMDDIALOG{}
+
+} # PDecor{}
+
+Harbour {
+	Texture = "Solid #6C7380 #6C7380 #6C7380 #6C7380 0 0"
+}
+
+Menu {
+        Focused {
+                Font = "$MENU_FONT"
+                Background = "Solid #000000"
+                Item = "Solid #EAE8E3"
+                Arrow = "Image arrow.png"
+                Text = "#2c2c2c"
+                Separator = "Solid #000000 0x1"
+        }
+        Unfocused {
+                Font = "$MENU_FONT"
+                Background = "Solid #000000"
+                Item = "Solid #EAE8E3"
+                Arrow = "Image arrow.png"
+                Text = "#2c2c2c"
+                Separator = "Solid #000000 0x1"
+        }
+        Selected {
+                Font = "$MENU_FONT"
+                Background = "Solid #000000"
+                Item = "Image menu.png"
+                Arrow = "Image arrow-un.png"
+                Text = "#FFFFFF"
+                Separator = "Solid #FFFFFF 0x1"
+        }
+	Pad = "4 4 4 4"
+}
+
+CmdDialog {
+ 	Font = "$CMD_FONT"
+	Texture = "Image title-fo.png"
+	Text = "#ffffff"
+	Pad = "3 0 0 3"
+}
+
+Status {
+	Font = "$STATUS_FONT"
+	Texture = "Image title-fo.png"
+	Text = "#ffffff"
+	Pad = "3 0 0 3"
+}
+
+Root {
+	Command = "false"
+}

@@ -1,0 +1,197 @@
+$FONT = "Sans-8#1 1#XFT"
+PDecor {
+
+Decor = "DEFAULT" {
+	Title {
+		Height = "16"
+		Pad = "2 0 4 0"
+
+		Focused = "Image title.png#Scaled"
+		Unfocused = "Image title.png#Scaled"
+
+		Tab {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "$FONT"
+		}
+		FontColor {
+			Focused = "#c5c5c5"
+			FocusedSelected = "#ffffff #000000"
+			Unfocused = "#646663"
+			UnfocusedSelected = "#868885 #000000"
+		}
+		Buttons {
+			Right {
+				Focused = "Image tpri.png"
+				Unfocused = "Image tpri.png"
+				Pressed = "Image tpri.png"
+				Button = "1" { Actions = "NoAction" }
+			}
+			Left {
+				Focused = "Image tplf.png"
+				Unfocused = "Image tplf.png"
+				Pressed = "Image tplf.png"
+				Button = "1" { Actions = "NoAction" }
+			}
+			Right {
+				Focused = "Image max.png"
+				Unfocused = "Image max-un.png"
+				Pressed = "Image max-pr.png"
+				Button = "1" { Actions = "Toggle Maximized 1 1" }
+			}
+			Right {
+				Focused = "Image min.png"
+				Unfocused = "Image min-un.png"
+				Pressed = "Image min-pr.png"
+				Button = "1" { Actions = "Set Iconified" }
+			}
+                        Left {
+                                Focused = "Image close.png"
+                                Unfocused = "Image close-un.png"
+                                Pressed = "Image close-pr.png"
+                                Button = "1" { Actions = "Close" }
+                                Button = "3" { Actions = "Kill" }
+                        }
+		}
+		Border {
+			Focused {
+				TopLeft = "EMPTY"
+				Top = "EMPTY"
+				TopRight = "EMPTY"
+				Left = "Image brlf.png"
+				Right = "Image brri.png"
+				BottomLeft = "Image btlf.png"
+				Bottom = "Image bt.png#Scaled"
+				BottomRight = "Image btri.png"
+			}
+			Unfocused {
+				TopLeft = "EMPTY"
+				Top = "EMPTY"
+				TopRight = "EMPTY"
+				Left = "Image brlf.png"
+				Right = "Image brri.png"
+				BottomLeft = "Image btlf.png"
+				Bottom = "Image bt.png#Scaled"
+				BottomRight = "Image btri.png"
+			}
+		}
+	}
+}
+
+Decor = "MENU" {
+	Title {
+		Height = "16"
+		Pad = "2 0 4 0"
+
+		Focused = "Image title.png#Scaled"
+		Unfocused = "Image title.png#Scaled"
+
+		Tab {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "$FONT"
+		}
+		FontColor {
+			Focused = "#c5c5c5"
+			FocusedSelected = "#ffffff #000000"
+			Unfocused = "#646663"
+			UnfocusedSelected = "#868885 #000000"
+		}
+		Buttons {
+			Right {
+				Focused = "Image tpri.png"
+				Unfocused = "Image tpri.png"
+				Pressed = "Image tpri.png"
+				Button = "1" { Actions = "NoAction" }
+			}
+			Left {
+				Focused = "Image tplf.png"
+				Unfocused = "Image tplf.png"
+				Pressed = "Image tplf.png"
+				Button = "1" { Actions = "NoAction" }
+			}
+		}
+		Border {
+			Focused {
+				TopLeft = "EMPTY"
+				Top = "EMPTY"
+				TopRight = "EMPTY"
+				Left = "Image brlf.png"
+				Right = "Image brri.png"
+				BottomLeft = "Image btlf.png"
+				Bottom = "Image bt.png#Scaled"
+				BottomRight = "Image btri.png"
+			}
+			Unfocused {
+				TopLeft = "EMPTY"
+				Top = "EMPTY"
+				TopRight = "EMPTY"
+				Left = "Image brlf.png"
+				Right = "Image brri.png"
+				BottomLeft = "Image btlf.png"
+				Bottom = "Image bt.png#Scaled"
+				BottomRight = "Image btri.png"
+			}
+		}
+	}
+}
+}
+Harbour {
+	Texture = "EMPTY"
+}
+
+Menu {
+	Focused {
+		Font = "Sans-8#XFT"
+		Background = "Solid #4d4c4c"
+		Item = "EMPTY"
+		Text = "#c5c6c5"
+	}
+	Unfocused {
+		Font = "Sans-8#XFT"
+		Background = "Solid #151516"
+		Item = "EMPTY"
+		Text = "#868885"
+	}
+	Selected {
+		Font = "Sans-8#XFT"
+		Background = "Solid #151516"
+		Item = "Image title.png#Scaled"
+		Text = "#ffffff"
+	}
+	Pad = "2 0 2 2"
+}
+
+CmdDialog {
+	Font = "$FONT"
+	Texture = "Solid #888888"
+	Text = "#2c2c2c"
+	Pad = "4 4 4 4"
+}
+
+Status {
+	Font = "$FONT"
+	Texture = "Solid #888888"
+	Text = "#2c2c2c"
+	Pad = "4 4 4 4"
+}
+
+Root {
+	Command = "false"
+}

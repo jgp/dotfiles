@@ -1,0 +1,1240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_pipe_menu>"
+
+      <item label="Gentoo Forums :: View topic - The Gentoo Framebuffer, Bootsplash &amp; Grubsplash How-To">
+         <action name="Execute">
+            <execute>http://forums.gentoo.org/viewtopic.php?t=49036</execute>
+         </action>
+      </item>
+
+      <item label="MusicEffect fonts, band fonts, music fonts, rock music fonts.">
+         <action name="Execute">
+            <execute>http://musiceffect.com/fonts/</execute>
+         </action>
+      </item>
+
+      <item label="Jabbim TODO">
+         <action name="Execute">
+            <execute>http://dev.jabbim.cz/flyspray/</execute>
+         </action>
+      </item>
+
+      <item label="Bash">
+         <action name="Execute">
+            <execute>http://www.root.cz/clanky/programovani-v-bash-shellu/</execute>
+         </action>
+      </item>
+
+      <item label="GNOME.html">
+         <action name="Execute">
+            <execute>http://artax.karlin.mff.cuni.cz/~ebik/nju/linuxem/gnome/GNOME.html</execute>
+         </action>
+      </item>
+
+      <item label="Kompilace">
+         <action name="Execute">
+            <execute>http://www.root.cz/clanky/kompilujeme-ze-zdrojoveho-kodu-zakladni-schemata/</execute>
+         </action>
+      </item>
+
+      <item label="Arch news">
+         <action name="Execute">
+            <execute>http://www.archlinux.org/feeds/news/http://www.archlinux.org/feeds/news/</execute>
+         </action>
+      </item>
+
+      <item label="disk jab">
+         <action name="Execute">
+            <execute>http://disk.jabbim.cz/JID</execute>
+         </action>
+      </item>
+
+      <item label="Updates">
+         <action name="Execute">
+            <execute>http://www.archlinux.org/feeds/packages/http://www.archlinux.org/feeds/packages/</execute>
+         </action>
+      </item>
+
+      <item label="COOLHOUSING.NET - Dedicated Server, Server housing, dedikované servery, root servery, neomezený přenos dat, zahraniční konektivita">
+         <action name="Execute">
+            <execute>http://www.coolhousing.net/cz/cool-housing/327.html</execute>
+         </action>
+      </item>
+
+      <item label="wiki">
+         <action name="Execute">
+            <execute>http://en.wikipedia.org/wiki/Ruby_programming_language</execute>
+         </action>
+      </item>
+
+      <item label="Chytrexova homepage">
+         <action name="Execute">
+            <execute>http://chytrex.chytrak.cz/index.php</execute>
+         </action>
+      </item>
+
+      <item label="#2178 (Transparent background for trayicon) - Gajim - Trac">
+         <action name="Execute">
+            <execute>http://trac.gajim.org/ticket/2178</execute>
+         </action>
+      </item>
+
+      <item label="Understanding Object Oriented Programming">
+         <action name="Execute">
+            <execute>http://csis.pace.edu/~bergin/patterns/ppoop.html</execute>
+         </action>
+      </item>
+
+      <item label="Fórum Ubuntu / kopie harddisku">
+         <action name="Execute">
+            <execute>http://forum.ubuntu.cz/viewtopic.php?pid=10507#p10507</execute>
+         </action>
+      </item>
+
+      <item label="Programming in Lua">
+         <action name="Execute">
+            <execute>http://www.lua.org/pil/</execute>
+         </action>
+      </item>
+
+      <item label="LAMP - ArchWiki">
+         <action name="Execute">
+            <execute>http://wiki.archlinux.org/index.php/LAMP#Setup_MySQL_support</execute>
+         </action>
+      </item>
+
+      <item label="Zpravodaj TUGu">
+         <action name="Execute">
+            <execute>http://bulletin.cstug.cz/</execute>
+         </action>
+      </item>
+
+      <item label="TeX a PDF (1.)">
+         <action name="Execute">
+            <execute>http://www.linuxzone.cz/index.phtml?ids=6&amp;idc=505</execute>
+         </action>
+      </item>
+
+      <item label="Sazba diplomek">
+         <action name="Execute">
+            <execute>http://home.pf.jcu.cz/~edpo/pravidla/pravidla.html</execute>
+         </action>
+      </item>
+
+      <item label="BASH - I">
+         <action name="Execute">
+            <execute>http://www.abclinuxu.cz/clanky/navody/bash-i</execute>
+         </action>
+      </item>
+
+      <item label="MySQL/Ruby">
+         <action name="Execute">
+            <execute>http://www.tmtm.org/en/mysql/ruby/</execute>
+         </action>
+      </item>
+
+      <item label="Stibi: pipe-menu">
+         <action name="Execute">
+            <execute>http://www.abclinuxu.cz/blog/show/157594#21</execute>
+         </action>
+      </item>
+
+      <item label="Translate">
+         <action name="Execute">
+            <execute>http://translate.google.com/translate_t</execute>
+         </action>
+      </item>
+
+      <item label="Jak na LaTeX (Root)">
+         <action name="Execute">
+            <execute>http://www.root.cz/clanky/jak-na-latex-uvod/</execute>
+         </action>
+      </item>
+
+      <item label="vim: nastavení/úvod">
+         <action name="Execute">
+            <execute>http://wraith.iglu.cz/LP000052/s_vim/nastaveni-uvod.html</execute>
+         </action>
+      </item>
+
+      <item label="Ruby">
+         <action name="Execute">
+            <execute>http://ruby.about.com/</execute>
+         </action>
+      </item>
+
+      <item label="PPower4 Homepage">
+         <action name="Execute">
+            <execute>http://www-sp.iti.informatik.tu-darmstadt.de/software/ppower4/</execute>
+         </action>
+      </item>
+
+      <item label="Beamer">
+         <action name="Execute">
+            <execute>http://www.abclinuxu.cz/clanky/navody/beamer-latex-na-prezentace</execute>
+         </action>
+      </item>
+
+      <item label="Scripty">
+         <action name="Execute">
+            <execute>http://g-scripts.sourceforge.net/</execute>
+         </action>
+      </item>
+
+      <item label="Emacs, čeština, slovenština">
+         <action name="Execute">
+            <execute></execute>
+         </action>
+      </item>
+
+      <item label="GTK+">
+         <action name="Execute">
+            <execute>http://www.gtk.org/faq/</execute>
+         </action>
+      </item>
+
+      <item label="Knihovny GTK+">
+         <action name="Execute">
+            <execute>http://www.2k-partner.cz/bobr/article001/index.html</execute>
+         </action>
+      </item>
+
+      <item label="Netswarm Mainsite">
+         <action name="Execute">
+            <execute>http://www.netswarm.net/</execute>
+         </action>
+      </item>
+
+      <item label="PHP triky - Ukázka použití indexů">
+         <action name="Execute">
+            <execute>http://php.vrana.cz/ukazka-pouziti-indexu.php</execute>
+         </action>
+      </item>
+
+      <item label="FF extensions">
+         <action name="Execute">
+            <execute></execute>
+         </action>
+      </item>
+
+      <item label="CGI">
+         <action name="Execute">
+            <execute>http://www.ruby-doc.org/docs/ProgrammingRuby/</execute>
+         </action>
+      </item>
+
+      <item label="Rainlendar">
+         <action name="Execute">
+            <execute>http://www.rainlendar.net/cms/index.php</execute>
+         </action>
+      </item>
+
+      <item label="ArchKernel (wiki)">
+         <action name="Execute">
+            <execute>http://wiki.archlinux.org/index.php/Custom_Kernel_Compilation_with_ABS#Your_config_file</execute>
+         </action>
+      </item>
+
+      <item label="Instalace MikTeXu 2 a CSLaTeXu">
+         <action name="Execute">
+            <execute>http://www.volny.cz/paubrecht/tex/</execute>
+         </action>
+      </item>
+
+      <item label="C/C++">
+         <action name="Execute">
+            <execute>http://www.linuxsoft.cz/article_list.php?id_kategory=186</execute>
+         </action>
+      </item>
+
+      <item label="StarDict">
+         <action name="Execute">
+            <execute>http://stardict.sourceforge.net/</execute>
+         </action>
+      </item>
+
+      <item label="Objektově orientovaný jazyk Ruby">
+         <action name="Execute">
+            <execute>http://nb.vse.cz/~zelenyj/it380/eseje/xjunt04/OOJRuby.htm</execute>
+         </action>
+      </item>
+
+      <item label="Campfire">
+         <action name="Execute">
+            <execute>http://www.campfirenow.com/</execute>
+         </action>
+      </item>
+
+      <item label="Spasitel Bill">
+         <action name="Execute">
+            <execute>http://home.zcu.cz/~nosi/</execute>
+         </action>
+      </item>
+
+      <item label="MiKTeX Project Page">
+         <action name="Execute">
+            <execute>http://www.miktex.org/</execute>
+         </action>
+      </item>
+
+      <item label="LaTeX project">
+         <action name="Execute">
+            <execute>http://www.latex-project.org/</execute>
+         </action>
+      </item>
+
+      <item label="Fórum Ubuntu / jak na boot klicenky?">
+         <action name="Execute">
+            <execute>http://forum.ubuntu.cz/viewtopic.php?id=2240</execute>
+         </action>
+      </item>
+
+      <item label="Shellovy zapisnik">
+         <action name="Execute">
+            <execute>http://www.root.cz/clanky/drobnosti-ze-shelloveho-zapisniku/</execute>
+         </action>
+      </item>
+
+      <item label="Vydrz notebooku (Linux)">
+         <action name="Execute">
+            <execute>http://www.abclinuxu.cz/forum/show/88699</execute>
+         </action>
+      </item>
+
+      <item label="Příkazový řádek">
+         <action name="Execute">
+            <execute>http://www.root.cz/clanky/prikazovy-radek-pritel-nejvernejsi/</execute>
+         </action>
+      </item>
+
+      <item label="Cihar.com (stardict)">
+         <action name="Execute">
+            <execute>http://debian.cihar.com/</execute>
+         </action>
+      </item>
+
+      <item label="bbslinux.org/index.php">
+         <action name="Execute">
+            <execute>http://bbs.archlinux.org/index.php</execute>
+         </action>
+      </item>
+
+      <item label="Sedmý týden | BorBer.com">
+         <action name="Execute">
+            <execute>http://www.borber.com/blog/anglie/sedmy-tyden</execute>
+         </action>
+      </item>
+
+      <item label="Dalai lama :D">
+         <action name="Execute">
+            <execute>http://www.stallman.org/articles/yellow-hat.html</execute>
+         </action>
+      </item>
+
+      <item label="PPower4">
+         <action name="Execute">
+            <execute>http://www-sp.iti.informatik.tu-darmstadt.de/software/ppower4/</execute>
+         </action>
+      </item>
+
+      <item label="rails.vim">
+         <action name="Execute">
+            <execute>http://rails.vim.tpope.net/</execute>
+         </action>
+      </item>
+
+      <item label="RubyGems User Guide">
+         <action name="Execute">
+            <execute>http://rubygems.org/read/chapter/1</execute>
+         </action>
+      </item>
+
+      <item label="R">
+         <action name="Execute">
+            <execute>http://www.root.cz/clanky/regularni-vyrazy-2/</execute>
+         </action>
+      </item>
+
+      <item label="Nokia - Maemo Wiki">
+         <action name="Execute">
+            <execute>http://maemo.org/maemowiki/ApplicationCatalog</execute>
+         </action>
+      </item>
+
+      <item label=":-)">
+         <action name="Execute">
+            <execute>http://prfdec.natur.cuni.cz/%7Eherben/figs/vanoce06/pf2006.html</execute>
+         </action>
+      </item>
+
+      <item label="Instalace a počeštění MikTeXu">
+         <action name="Execute">
+            <execute>http://www1.cuni.cz/~svejdar/texdev/MikInst24.html</execute>
+         </action>
+      </item>
+
+      <item label="Slashdot">
+         <action name="Execute">
+            <execute>http://linux.slashdot.org/linux</execute>
+         </action>
+      </item>
+
+      <item label="convert">
+         <action name="Execute">
+            <execute>http://polishlinux.org/apps/cli-tricks-creating-image-thumbnails/</execute>
+         </action>
+      </item>
+
+      <item label="Disk ARchive (Backup and Restore) using dar and kdar(dar Frontend) -- Ubuntu Geek">
+         <action name="Execute">
+            <execute>http://www.ubuntugeek.com/disk-archive-backup-and-restore-using-dar-and-kdardar-frontend.html</execute>
+         </action>
+      </item>
+
+      <item label="Audiovizuální Centrum Silicon Hill">
+         <action name="Execute">
+            <execute>http://avc.sh.cvut.cz/archiv/index.php?id=104&amp;offset=112&amp;select=0</execute>
+         </action>
+      </item>
+
+      <item label="Qemu image (OLPC)">
+         <action name="Execute">
+            <execute>http://olpc.download.redhat.com/olpc/streams/development/latest/</execute>
+         </action>
+      </item>
+
+      <item label="Conky">
+         <action name="Execute">
+            <execute>http://conky.sourceforge.net/</execute>
+         </action>
+      </item>
+
+      <item label="Root">
+         <action name="Execute">
+            <execute>http://www.root.cz/export/mozilla-sidebar/</execute>
+         </action>
+      </item>
+
+      <item label="TeX live">
+         <action name="Execute">
+            <execute>http://www.tug.org/texlive/</execute>
+         </action>
+      </item>
+
+      <item label="TeX">
+         <action name="Execute">
+            <execute>http://www.root.cz/clanky/co-prichazi-s-texem/</execute>
+         </action>
+      </item>
+
+      <item label="Linuxzone">
+         <action name="Execute">
+            <execute>http://www.linuxzone.cz/index.phtml</execute>
+         </action>
+      </item>
+
+      <item label="Johanka - Pohádky z příkazové řádky">
+         <action name="Execute">
+            <execute>http://atrey.karlin.mff.cuni.cz/~johanka/vyuka/pohadky_unix.html</execute>
+         </action>
+      </item>
+
+      <item label="Botijo">
+         <action name="Execute">
+            <execute>http://botijo.rubyforge.org/</execute>
+         </action>
+      </item>
+
+      <item label="MusicTeX">
+         <action name="Execute">
+            <execute>http://houdik.hyperlink.cz/miktex/musixtex.html</execute>
+         </action>
+      </item>
+
+      <item label="CSTUG FAQ">
+         <action name="Execute">
+            <execute>http://www.fi.muni.cz/cstug/csfaq/</execute>
+         </action>
+      </item>
+
+      <item label="JabberPiskworky">
+         <action name="Execute">
+            <execute>http://piskworky.ic.cz/</execute>
+         </action>
+      </item>
+
+      <item label=".NET videa">
+         <action name="Execute">
+            <execute>http://videoarchiv.altairis.cz/Category/7-novinky-v-asp-net-2-0.aspx</execute>
+         </action>
+      </item>
+
+      <item label="Qemu">
+         <action name="Execute">
+            <execute>http://www.root.cz/clanky/qemu-qemulator/</execute>
+         </action>
+      </item>
+
+      <item label="Gentoo handbook">
+         <action name="Execute">
+            <execute>http://www.gentoo.org/doc/cs/handbook/handbook-x86.xml</execute>
+         </action>
+      </item>
+
+      <item label="Yeti">
+         <action name="Execute">
+            <execute>http://trific.ath.cx/</execute>
+         </action>
+      </item>
+
+      <item label="Vim 7.0">
+         <action name="Execute">
+            <execute>http://www.abclinuxu.cz/clanky/tipy/vim-7.0</execute>
+         </action>
+      </item>
+
+      <item label="Hpricot">
+         <action name="Execute">
+            <execute>http://code.whytheluckystiff.net/hpricot/wiki/HpricotBasics</execute>
+         </action>
+      </item>
+
+      <item label="Vim">
+         <action name="Execute">
+            <execute>http://www.kai.vslib.cz/~satrapa/docs/vim/</execute>
+         </action>
+      </item>
+
+      <item label="less colors">
+         <action name="Execute">
+            <execute>http://www.speedblue.org/less_color.php</execute>
+         </action>
+      </item>
+
+      <item label="rodger download">
+         <action name="Execute">
+            <execute>http://download.tuxbase.net/linjab/bot/</execute>
+         </action>
+      </item>
+
+      <item label="What is ruby?">
+         <action name="Execute">
+            <execute>http://www.rubyist.net/~slagell/ruby/index.html</execute>
+         </action>
+      </item>
+
+      <item label="Mutt">
+         <action name="Execute">
+            <execute>http://linuxbrit.co.uk/mutt/</execute>
+         </action>
+      </item>
+
+      <item label="YAML">
+         <action name="Execute">
+            <execute>http://en.wikipedia.org/wiki/YAML</execute>
+         </action>
+      </item>
+
+      <item label="Stardict (konverse slovniku)">
+         <action name="Execute">
+            <execute>http://www.abclinuxu.cz/blog/Joseho_blog/2006/5/29/134678</execute>
+         </action>
+      </item>
+
+      <item label="Zabbix">
+         <action name="Execute">
+            <execute>http://www.zabbix.com/download.php</execute>
+         </action>
+      </item>
+
+      <item label="Stardict-konvert">
+         <action name="Execute">
+            <execute>http://www.abclinuxu.cz/clanky/tipy/-nielen-anglicko-ceske-slovnikove-databazy-pre-stardict</execute>
+         </action>
+      </item>
+
+      <item label="howto:vypalovani">
+         <action name="Execute">
+            <execute>http://www.unix.kropes.cz/howto:vypalovani</execute>
+         </action>
+      </item>
+
+      <item label="ImageShack® - Hosting">
+         <action name="Execute">
+            <execute>http://imageshack.us/</execute>
+         </action>
+      </item>
+
+      <item label="Vim rozcestník">
+         <action name="Execute">
+            <execute>http://phru8648.praha12.net/vim/</execute>
+         </action>
+      </item>
+
+      <item label="ImageMagick">
+         <action name="Execute">
+            <execute>http://www.imagemagick.org/script/index.php</execute>
+         </action>
+      </item>
+
+      <item label="YAML wiki">
+         <action name="Execute">
+            <execute>http://en.wikipedia.org/wiki/YAML</execute>
+         </action>
+      </item>
+
+      <item label="sed">
+         <action name="Execute">
+            <execute>http://www.root.cz/clanky/neco-malo-o-sedu/</execute>
+         </action>
+      </item>
+
+      <item label="Linux.com | Bring back deleted files with lsof">
+         <action name="Execute">
+            <execute>http://applications.linux.com/applications/06/10/30/1652211.shtml?tid=47</execute>
+         </action>
+      </item>
+
+      <item label="Ubujabber">
+         <action name="Execute">
+            <execute>http://chat.gnulinux.cz/</execute>
+         </action>
+      </item>
+
+      <item label="Emacs Beginner&#39;s HOWTO">
+         <action name="Execute">
+            <execute>http://www.faqs.org/docs/Linux-HOWTO/Emacs-Beginner-HOWTO.html</execute>
+         </action>
+      </item>
+
+      <item label="Nenávidím Windows XP » La Trine">
+         <action name="Execute">
+            <execute>http://www.dgx.cz/trine/item/nenavidim-windows-xp</execute>
+         </action>
+      </item>
+
+      <item label="MetaPost">
+         <action name="Execute">
+            <execute>http://www.tug.org/docs/html/metapost/#1</execute>
+         </action>
+      </item>
+
+      <item label="Screen Presentations">
+         <action name="Execute">
+            <execute>http://me.in-berlin.de/~miwie/presentations/</execute>
+         </action>
+      </item>
+
+      <item label="Pálíme pod Linuxem -- PC Svět">
+         <action name="Execute">
+            <execute>http://www.pcsvet.cz/art/article.php?id=1850</execute>
+         </action>
+      </item>
+
+      <item label="Geekoviny">
+         <action name="Execute">
+            <execute>http://www.chomat.net/weblog/geekoviny/nautilus-scripts</execute>
+         </action>
+      </item>
+
+      <item label="Media-convert">
+         <action name="Execute">
+            <execute>http://media-convert.com/</execute>
+         </action>
+      </item>
+
+      <item label="Flamewiki">
+         <action name="Execute">
+            <execute>http://cs.wikipedia.org/wiki/Flame_war</execute>
+         </action>
+      </item>
+
+      <item label="Regulární výrazy">
+         <action name="Execute">
+            <execute>http://www.root.cz/clanky/regularni-vyrazy-1/</execute>
+         </action>
+      </item>
+
+      <item label="VimMate">
+         <action name="Execute">
+            <execute>http://vimmate.rubyforge.org/VimMate-0.6.2-screenshot.html</execute>
+         </action>
+      </item>
+
+      <item label="RubyForge: Ya2YAML - An UTF8 safe YAML dumper: Project Info">
+         <action name="Execute">
+            <execute>http://rubyforge.org/projects/ya2yaml/</execute>
+         </action>
+      </item>
+
+      <item label="QuickRef.org">
+         <action name="Execute">
+            <execute>http://www.quickref.org/</execute>
+         </action>
+      </item>
+
+      <item label="HA-prosper">
+         <action name="Execute">
+            <execute>http://stuwww.uvt.nl/~hendri/index.html?/~hendri/Downloads/haprosper.html&amp;mainframeha</execute>
+         </action>
+      </item>
+
+      <item label="Ruby/Gtk Tutorial">
+         <action name="Execute">
+            <execute>http://ruby-gnome.sourceforge.net/tutorial/book1.html</execute>
+         </action>
+      </item>
+
+      <item label="Ruby QuickRef">
+         <action name="Execute">
+            <execute>http://www.zenspider.com/Languages/Ruby/QuickRef.html</execute>
+         </action>
+      </item>
+
+      <item label="Murphy’s Laws of .NET">
+         <action name="Execute">
+            <execute>http://www.firoz.name/2006/05/07/murphys-laws-of-net/</execute>
+         </action>
+      </item>
+
+      <item label="muCommander">
+         <action name="Execute">
+            <execute>http://www.mucommander.com/#download</execute>
+         </action>
+      </item>
+
+      <item label="Linuxsoft: serialy">
+         <action name="Execute">
+            <execute>http://www.linuxsoft.cz/serialy/</execute>
+         </action>
+      </item>
+
+      <item label="Bin">
+         <action name="Execute">
+            <execute>http://paste.ubuntu-nl.org/</execute>
+         </action>
+      </item>
+
+      <item label="Programming for Vim editor …. a new experience .. « It’s my life">
+         <action name="Execute">
+            <execute>http://ajayfromiiit.wordpress.com/2006/06/16/programming-for-vim-editor-a-new-experience/</execute>
+         </action>
+      </item>
+
+      <item label="LinPro">
+         <action name="Execute">
+            <execute>http://www.linpro.cz/</execute>
+         </action>
+      </item>
+
+      <item label="Konfigurace Apache">
+         <action name="Execute">
+            <execute>http://www.root.cz/clanky/maly-pruvodce-konfiguraci-apache/</execute>
+         </action>
+      </item>
+
+      <item label="Buridanův geneticky modifikovaný osel | Jojin&amp;HedgeHog na cestě za komiksovým osvícením">
+         <action name="Execute">
+            <execute>http://www.bugemos.com/</execute>
+         </action>
+      </item>
+
+      <item label="AntiM$">
+         <action name="Execute">
+            <execute>http://www.alt-f4.cz/</execute>
+         </action>
+      </item>
+
+      <item label="YAML.rb">
+         <action name="Execute">
+            <execute>http://yaml4r.sourceforge.net/cookbook/#collections</execute>
+         </action>
+      </item>
+
+      <item label="RX: parser v Ruby">
+         <action name="Execute">
+            <execute>http://pcimprich.blog.root.cz/0612/rx-parser-v-ruby</execute>
+         </action>
+      </item>
+
+      <item label="www.pragma-ade.com">
+         <action name="Execute">
+            <execute>http://www.pragma-ade.com/</execute>
+         </action>
+      </item>
+
+      <item label="TeX-LaTeX-Linux">
+         <action name="Execute">
+            <execute>http://mat.fsv.cvut.cz/zindulka/tex.html</execute>
+         </action>
+      </item>
+
+      <item label="Lego Robot">
+         <action name="Execute">
+            <execute>http://code.vyvojar.cz/doku.php?id=soutez</execute>
+         </action>
+      </item>
+
+      <item label="TYPOkvítek">
+         <action name="Execute">
+            <execute>http://typokvitek.com/typokv-offer-cz.html</execute>
+         </action>
+      </item>
+
+      <item label="(La)TeX navigator">
+         <action name="Execute">
+            <execute>http://math.feld.cvut.cz/ltnavig/</execute>
+         </action>
+      </item>
+
+      <item label="Powerful Vim">
+         <action name="Execute">
+            <execute>http://docs.cs.byu.edu/docs/vi_intro/3.php</execute>
+         </action>
+      </item>
+
+      <item label="Beryl - ArchWiki">
+         <action name="Execute">
+            <execute>http://wiki.archlinux.org/index.php/Beryl</execute>
+         </action>
+      </item>
+
+      <item label="ConTeXt wiki">
+         <action name="Execute">
+            <execute>http://wiki.contextgarden.net/Main_Page</execute>
+         </action>
+      </item>
+
+      <item label="CSTUG -- Domovská stránka">
+         <action name="Execute">
+            <execute>http://www.cstug.cz/</execute>
+         </action>
+      </item>
+
+      <item label="vim">
+         <action name="Execute">
+            <execute>http://www.burdell.org/articles/vim/</execute>
+         </action>
+      </item>
+
+      <item label="Top 12 Ruby on Rails Tutorials">
+         <action name="Execute">
+            <execute>http://www.digitalmediaminute.com/article/1816/top-ruby-on-rails-tutorials</execute>
+         </action>
+      </item>
+
+      <item label="PERL od A po Z - Root.cz">
+         <action name="Execute">
+            <execute>http://www.root.cz/clanky/perl-od-a-po-z/</execute>
+         </action>
+      </item>
+
+      <item label="Uvod do programovani pod OS UNIX">
+         <action name="Execute">
+            <execute>http://artus.smnd.sk/anino/programming/c/dobias/</execute>
+         </action>
+      </item>
+
+      <item label="Scorched 3D - A 3D Remake Of Scorched Earth">
+         <action name="Execute">
+            <execute>http://www.scorched3d.co.uk/index.php</execute>
+         </action>
+      </item>
+
+      <item label="gDesklets">
+         <action name="Execute">
+            <execute>http://gdesklets.gnomedesktop.org/</execute>
+         </action>
+      </item>
+
+      <item label="ibota">
+         <action name="Execute">
+            <execute>http://dev.jabbim.cz/websvn/listing.php?repname=ibota&amp;path=%2Ftrunk%2Fconf%2F&amp;rev=0&amp;sc=0</execute>
+         </action>
+      </item>
+
+      <item label="jEdit - Plugin Central - All Plugins">
+         <action name="Execute">
+            <execute>http://plugins.jedit.org/list.php</execute>
+         </action>
+      </item>
+
+      <item label="XML">
+         <action name="Execute">
+            <execute>http://www.linuxsoft.cz/article.php?id_article=168</execute>
+         </action>
+      </item>
+
+      <item label="Přechod na Linux Kernel 2.6 - Root.cz">
+         <action name="Execute">
+            <execute>http://www.root.cz/clanky/prechod-na-linux-kernel-2-6/</execute>
+         </action>
+      </item>
+
+      <item label="lesspipe">
+         <action name="Execute">
+            <execute>http://www-zeuthen.desy.de/~friebel/unix/lesspipe.html</execute>
+         </action>
+      </item>
+
+      <item label="LinuxEXPRES (download)">
+         <action name="Execute">
+            <execute>http://pdf.linuxexpres.cz/download.py/licence?hash=0e167359b7d8e17aa2860c62841b971e</execute>
+         </action>
+      </item>
+
+      <item label="mibo&#39;s gnulinux">
+         <action name="Execute">
+            <execute>http://www.gnulinux.cz/</execute>
+         </action>
+      </item>
+
+      <item label="MiKTeX">
+         <action name="Execute">
+            <execute>http://houdik.hyperlink.cz/miktex/</execute>
+         </action>
+      </item>
+
+      <item label="CTAN">
+         <action name="Execute">
+            <execute>http://www.ctan.org/tex-archive/macros/latex/contrib/powerdot/</execute>
+         </action>
+      </item>
+
+      <item label="TeX-fanatik">
+         <action name="Execute">
+            <execute>http://trific.ath.cx/tex,mf/</execute>
+         </action>
+      </item>
+
+      <item label="Lin-TeX">
+         <action name="Execute">
+            <execute>http://math.feld.cvut.cz/olsak/</execute>
+         </action>
+      </item>
+
+      <item label="Test regulárních výrazů">
+         <action name="Execute">
+            <execute>http://www.regexp.cz/</execute>
+         </action>
+      </item>
+
+      <item label="Bash - Wikiknihy">
+         <action name="Execute">
+            <execute>http://cs.wikibooks.org/wiki/Bash</execute>
+         </action>
+      </item>
+
+      <item label="Xterm">
+         <action name="Execute">
+            <execute>http://dickey.his.com/xterm/xterm.faq.html</execute>
+         </action>
+      </item>
+
+      <item label="Jak se naučit programovat">
+         <action name="Execute">
+            <execute>http://www.freenetpages.co.uk/hp/alan.gauld/czech3/index.html</execute>
+         </action>
+      </item>
+
+      <item label="MPlayer - Multimediální přehrávač">
+         <action name="Execute">
+            <execute>http://www.mplayerhq.hu/DOCS/HTML-single/cs/MPlayer.html</execute>
+         </action>
+      </item>
+
+      <item label="Rammstein Czech Fanarea">
+         <action name="Execute">
+            <execute>http://www.rammsteinfan.cz/</execute>
+         </action>
+      </item>
+
+      <item label="Encyklopedie Navajo">
+         <action name="Execute">
+            <execute>http://navajo.cz/</execute>
+         </action>
+      </item>
+
+      <item label="Makeindex">
+         <action name="Execute">
+            <execute>http://icebearsoft.euweb.cz/xslt-indexing/</execute>
+         </action>
+      </item>
+
+      <item label="Vim documentation: if_ruby">
+         <action name="Execute">
+            <execute>http://www.vim.org/htmldoc/if_ruby.html</execute>
+         </action>
+      </item>
+
+      <item label="Regularni vyrazy">
+         <action name="Execute">
+            <execute>http://www.kit.vslib.cz/~satrapa/docs/regvyr/cast6.html</execute>
+         </action>
+      </item>
+
+      <item label="zhar.net : Programming Projects">
+         <action name="Execute">
+            <execute>http://zhar.net/projects/</execute>
+         </action>
+      </item>
+
+      <item label="FreeRIDE">
+         <action name="Execute">
+            <execute>http://rubyforge.org/frs/?group_id=31</execute>
+         </action>
+      </item>
+
+      <item label="SLAX na USB">
+         <action name="Execute">
+            <execute>http://www.abclinuxu.cz/clanky/navody/slax-na-usb</execute>
+         </action>
+      </item>
+
+      <item label="DesktopBSD: Home">
+         <action name="Execute">
+            <execute>http://www.desktopbsd.net/index.php?id=31</execute>
+         </action>
+      </item>
+
+      <item label="Ohákování">
+         <action name="Execute">
+            <execute>http://nlp.fi.muni.cz/cz_accent/index.php</execute>
+         </action>
+      </item>
+
+      <item label="wiki-zmeny">
+         <action name="Execute">
+            <execute>http://wiki.ubuntu.cz/RecentChanges</execute>
+         </action>
+      </item>
+
+      <item label="ABZ">
+         <action name="Execute">
+            <execute>http://slovnik-cizich-slov.abz.cz/</execute>
+         </action>
+      </item>
+
+      <item label="Instalace MiKTeXu">
+         <action name="Execute">
+            <execute>http://orion2.kel.vslib.cz/kel/MiKTeX_install.html</execute>
+         </action>
+      </item>
+
+      <item label="LinGuru">
+         <action name="Execute">
+            <execute>http://www.cs.usfca.edu/~parrt/course/601/lectures/unix.util.html</execute>
+         </action>
+      </item>
+
+      <item label="SLiM Themes HowTo">
+         <action name="Execute">
+            <execute>http://slim.berlios.de/themes_howto.php</execute>
+         </action>
+      </item>
+
+      <item label="Jabbim Live! | Jabber? A co jiného dnes?">
+         <action name="Execute">
+            <execute>http://live.jabbim.cz/</execute>
+         </action>
+      </item>
+
+      <item label="WordPress">
+         <action name="Execute">
+            <execute>http://wordpress.org/</execute>
+         </action>
+      </item>
+
+      <item label="ronny@ubuntu: ~$">
+         <action name="Execute">
+            <execute>http://ronny.rammsteinfan.cz/?t=autor</execute>
+         </action>
+      </item>
+
+      <item label="Windows 2000 Source Code">
+         <action name="Execute">
+            <execute>http://www.baltimoremd.com/content/win2000source.html</execute>
+         </action>
+      </item>
+
+      <item label="LaTeX manual">
+         <action name="Execute">
+            <execute>http://www.cstug.cz/latex/lm/frames.html</execute>
+         </action>
+      </item>
+
+      <item label="RadRails">
+         <action name="Execute">
+            <execute>http://www.radrails.org/</execute>
+         </action>
+      </item>
+
+      <item label="Cx&#39;s T-shirts">
+         <action name="Execute">
+            <execute>http://dum8d0g.xf.cz/trixa/preview/</execute>
+         </action>
+      </item>
+
+      <item label="Disk jabber">
+         <action name="Execute">
+            <execute>http://disk.jabber.cz/JID</execute>
+         </action>
+      </item>
+
+      <item label="Compiz">
+         <action name="Execute">
+            <execute>http://wiki.cchtml.com/index.php/Xgl-Compiz-Dapper</execute>
+         </action>
+      </item>
+
+      <item label="Minitermy">
+         <action name="Execute">
+            <execute>http://www.abclinuxu.cz/forum/show/131470</execute>
+         </action>
+      </item>
+
+      <item label="Why’s (Poignant) Guide to Ruby :: Expansion Pak #1. The Tiger’s Vest (with a Basic Introduction to Irb)">
+         <action name="Execute">
+            <execute>http://poignantguide.net/ruby/expansion-pak-1.html</execute>
+         </action>
+      </item>
+
+      <item label="Awk">
+         <action name="Execute">
+            <execute>http://www.abclinuxu.cz/blog/miblog/2005/8/13/97743</execute>
+         </action>
+      </item>
+
+      <item label="JJMacey - LINUX VIDEOS">
+         <action name="Execute">
+            <execute>http://www.jjmacey.net/linux-videos.html</execute>
+         </action>
+      </item>
+
+      <item label="Ghostscript I.">
+         <action name="Execute">
+            <execute>http://www.linuxzone.cz/index.phtml?ids=6&amp;idc=694</execute>
+         </action>
+      </item>
+
+      <item label="dockapps.org">
+         <action name="Execute">
+            <execute>http://dockapps.org/</execute>
+         </action>
+      </item>
+
+      <item label="Nebojte se velblouda!">
+         <action name="Execute">
+            <execute>http://www.root.cz/clanky/nebojte-se-velblouda/</execute>
+         </action>
+      </item>
+
+      <item label="[howto] Gnome 6.06 - HOWTO: Terminal as the desktop background. - Ubuntu Forums">
+         <action name="Execute">
+            <execute>http://ubuntuforums.org/showthread.php?t=202249</execute>
+         </action>
+      </item>
+
+      <item label="Multi gnome terminal">
+         <action name="Execute">
+            <execute>http://multignometerm.sourceforge.net/web/download.shtml</execute>
+         </action>
+      </item>
+
+      <item label="Netlab Jabber Server - CZ">
+         <action name="Execute">
+            <execute>http://njs.netlab.cz/cz/help</execute>
+         </action>
+      </item>
+
+      <item label="Ruby/GTK">
+         <action name="Execute">
+            <execute>http://ruby-gnome2.sourceforge.jp/hiki.cgi?Ruby%2FGTK</execute>
+         </action>
+      </item>
+
+      <item label="PasteBin">
+         <action name="Execute">
+            <execute>http://rafb.net/paste/</execute>
+         </action>
+      </item>
+
+      <item label="Gnuplot (root)">
+         <action name="Execute">
+            <execute>http://www.root.cz/serialy/gnuplot/</execute>
+         </action>
+      </item>
+
+      <item label="Platon.SK: Návod na nastavenie škálovania frekvencie procesora">
+         <action name="Execute">
+            <execute>http://platon.sk/article.php?skalovanie-frekvencie-procesora</execute>
+         </action>
+      </item>
+
+      <item label="Using the Ruby MySQL Module">
+         <action name="Execute">
+            <execute>http://www.kitebird.com/articles/ruby-mysql.html</execute>
+         </action>
+      </item>
+
+      <item label="SSH Tunneling">
+         <action name="Execute">
+            <execute>http://www.cryptofest.cz/2003/slajdy/sshtunel/ssh.html</execute>
+         </action>
+      </item>
+
+      <item label="Pipemeter">
+         <action name="Execute">
+            <execute>http://spamaps.org/pipemeter.php</execute>
+         </action>
+      </item>
+
+      <item label="Howto: Linux write (burn) data to DVD or DVD/RW | nixCraft">
+         <action name="Execute">
+            <execute>http://www.cyberciti.biz/tips/howto-linux-write-burn-data-to-dvd-or-dvdrw.html</execute>
+         </action>
+      </item>
+
+      <item label="MobilMania.cz - Nokia 770: kouzelný svět Linuxu v mobilním počítači">
+         <action name="Execute">
+            <execute>http://www.mobilmania.cz/Titulni-strana/Nokia-770-kouzelny-svet-Linuxu-v-mobilnim-pocitaci/Instalace-vyvojoveho-prostredi-Maemo/sc-21-sr-1-a-1110476-ch-1029599/default.aspx</execute>
+         </action>
+      </item>
+
+      <item label="PDFscreen">
+         <action name="Execute">
+            <execute>http://sarovar.org/projects/pdfscreen</execute>
+         </action>
+      </item>
+
+      <item label="Configuration of GRUB">
+         <action name="Execute">
+            <execute>http://www.8ung.at/spblinux/grub.htm</execute>
+         </action>
+      </item>
+
+      <item label="RAA">
+         <action name="Execute">
+            <execute>http://raa.ruby-lang.org/index.html#search</execute>
+         </action>
+      </item>
+
+      <item label="xorg.conf: monitor">
+         <action name="Execute">
+            <execute>http://forum.ubuntu.cz/viewtopic.php?id=4153</execute>
+         </action>
+      </item>
+
+      <item label="Paleni CD z prikazove radky">
+         <action name="Execute">
+            <execute>http://www.abclinuxu.cz/blog/sarimuv_koutek/2005/2/7/75997</execute>
+         </action>
+      </item>
+
+      <item label="Download - WW2D">
+         <action name="Execute">
+            <execute>http://ww2d.csoft.net/index.php?title=Download</execute>
+         </action>
+      </item>
+
+</openbox_pipe_menu>

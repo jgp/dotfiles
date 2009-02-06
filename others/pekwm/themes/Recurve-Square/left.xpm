@@ -1,0 +1,14 @@
+/* XPM */
+static char *left[] = {
+/* columns rows colors chars-per-pixel */
+"4 4 4 1",
+"  c #575B66",
+". c #C0C0C0",
+"X c #D8D8D8",
+"o c gray100",
+/* pixels */
+" oX.",
+" oX.",
+" oX.",
+" oX."
+};

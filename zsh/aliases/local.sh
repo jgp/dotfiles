@@ -1,0 +1,105 @@
+publish() {
+  help() {
+    echo "=== Help ==="
+    echo "publish add CV.pdf"
+    echo "publish rm CV.pdf"
+    echo "publish list"
+    echo "publish run 'command'"
+  }
+  case $1 in
+  add)
+    scp -r $* solaris:/home/webs/static/public > /dev/null
+    echo "http://public.botablog.cz/$file" ;;
+  ls|list)
+    ssh static@solaris ls -l /home/webs/static/public ;;
+  rm|del|delete)
+    ssh static@solaris rm -rf /home/webs/static/public/$2 ;;
+  run)
+    ssh static@solaris rm -rf /home/webs/static/public/$2 ;;
+  *)
+    help ;;
+  esac
+}
+
+# mac sleeping
+alias sleep_hdd="sudo pmset -a hibernatemode 1"
+alias sleep_ram="sudo pmset -a hibernatemode 0"
+alias sleep_combined="sudo pmset -a hibernatemode 3"
+
+# mv, cp, rm
+alias cp='cp -i'
+alias mv='mv -i'
+alias rmr="rm -r"
+alias rmf="rm -f"
+alias rmrf="rm -rf"
+
+# df, du
+alias df='df -h'
+du() {
+  for item in $* ; do
+    /usr/bin/du -h $item | tail -1
+  done
+}
+
+# ls
+#alias ls='ls -GFh'
+alias ls='ls -FhG'
+alias ll='ls -GlhF'
+alias la='ls -GAF'
+alias lx='ls -lXB' # sorted by type
+alias lk='ls -lSr' # sorted by size
+alias lc='ls -lcr' # sorted by date of last change
+
+# cd
+alias .='cd .' # reload (e.g.: you're in app/current)
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+# gem
+alias gi="sudo gem install"
+alias gu="sudo gem uninstall"
+alias gem_all="gem query --remote"
+alias gem_search="gem query --remote --name-matches"
+
+# editors
+alias emacs='emacs -nw'
+alias gvim='gvim -p'
+e() { (test "$#" -eq 0) && $EDITOR . || $EDITOR $@ }
+
+# shells
+alias xterm='uxterm'
+alias rxvt='urxvt +sb'
+alias urxvt='urxvt +sb'
+
+# git
+alias gs="git status"
+alias gci="git commit -a -m"
+alias gom="git push origin master"
+
+# grep
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+
+# irb
+alias irb="irb --readline -r irb/completion"
+alias irb1.9="/usr/local/bin/irb1.9 --readline -r irb/completion"
+
+# others
+alias ghist='history | egrep'
+alias ghist="cat ~/.history | egrep"
+alias nettest='ping -c 3 www.google.com'
+alias append="cat >> "
+alias unpack="for archiv in ./*.tar.* ; do tar xf $archiv ; done"
+# kdyz chci otevrit vice konsoli v jedne slozce
+alias mcd='pwd > ~/.dirclip' # vyvolam v puvodni
+alias rcd='cd $(cat ~/.dirclip); pwd' # vyvolam v novem okne
+alias last="tail -n 1"
+alias first="head -n 1"
+alias reload='cd `pwd`'
+alias ...='cd ../..'
+alias "."="cd ." # reload
+alias dus='du -sh * | sort -rn | head'
+alias d='ls -d */' # vypis adresare
+alias re="ruby -e"
+alias rpe="ruby -pe"

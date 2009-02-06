@@ -1,0 +1,14 @@
+/* XPM */
+static char *left.png[] = {
+/* columns rows colors chars-per-pixel */
+"1 7 1 1",
+"  c gray32",
+/* pixels */
+" ",
+" ",
+" ",
+" ",
+" ",
+" ",
+" "
+};

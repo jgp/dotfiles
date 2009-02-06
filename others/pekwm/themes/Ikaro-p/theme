@@ -1,0 +1,87 @@
+Decor {     
+            
+	Decor = "DEFAULT" {
+		TitleHeight = "20"
+		TitlePadding = "4"
+
+	    Font = "Bitstream Vera Sans-10:bold#XFT" {
+	    	  Justify = "Center"
+		  Offset = "1 1"
+		}
+		Focused {
+			Text = "#666666"
+			Pixmap = "title.png"
+			Separator = ""
+			Border {
+				Top = "tplf.png tp.png tpri.png"
+				Side = "tp.png tp.png"
+				Bottom = "tp.png tp.png tp.png"
+			}
+		}
+		Selected {
+			Text = "#313131 #cacaca"
+			Pixmap = "title.png"
+		}
+		Unfocused {
+			Text = "#aaaaaa"
+			Pixmap = "title.png"
+			Separator = ""
+		
+			Border {
+				Top = "tplf.png tp.png tpri.png"
+				Side = "tp.png tp.png"
+				Bottom = "tp.png tp.png tp.png"
+			}
+		}
+		UnfocusedSelected {
+			Text = "#696d78 #babac2"
+			Pixmap = "title-un.png"
+		}
+									
+		Buttons {
+			Left {
+				Button = "1" { Actions = "Close" }
+				Pixmaps = "close.png close-un.png close.png"
+			}
+			Left {
+				Button = "1" { Actions = "Set iconified" }
+				Pixmaps = "min.png min-un.png min.png"
+			}
+			Left {
+				Button = "1" { Actions = "Toggle Maximized" }
+				Pixmaps = "max.png max-un.png max.png"
+			}
+			Right {
+				Pixmaps = "title.png title.png title.png"
+			}
+			Right {
+				Pixmaps = "title.png title.png title.png"
+			}
+	} 
+}
+} 
+
+Harbour {
+}
+
+Menu {
+  TitleFont = "Bitstream Vera Sans-10:bold#XFT" {
+    Justify = "Left"
+    Offset = "1 1"
+  }
+  Font = "Bitstream Vera Sans-9:bold#XFT" {
+    Justify = "Left"
+    Offset = "1 1"
+  }
+	Padding = "3"
+	BorderWidth = "1"
+	TextColor = "#313131 #cacbcd"
+	TextColorFocused = "#313131 #cacbcd"
+	TextColorSelected = "#313131 #cacbcd"
+	TextColorTitle = "#313131 #cacbcd"
+	Background = "#ebecf0"
+	BackgroundFocused = "#ebecf0"
+	BackgroundSelected = "#f5f5f5"
+	BackgroundTitle = "#f1f1f1"
+	BorderColor = "#cccccc"
+}

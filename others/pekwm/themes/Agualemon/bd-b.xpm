@@ -1,0 +1,12 @@
+/* XPM */
+static char *bd-b.png[] = {
+/* columns rows colors chars-per-pixel */
+"5 4 2 1",
+"  c #ACACAC",
+". c #F6F6F6",
+/* pixels */
+".....",
+".....",
+".....",
+"     "
+};

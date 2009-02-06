@@ -1,0 +1,8 @@
+/* XPM */
+static char *top.png[] = {
+/* columns rows colors chars-per-pixel */
+"5 1 1 1",
+"  c #555555",
+/* pixels */
+"     "
+};

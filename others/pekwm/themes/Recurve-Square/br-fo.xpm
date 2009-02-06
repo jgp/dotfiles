@@ -1,0 +1,22 @@
+/* XPM */
+static char *br-fo[] = {
+/* columns rows colors chars-per-pixel */
+"4 4 12 1",
+"  c #3A576C",
+". c #3C576B",
+"X c #3A586C",
+"o c #3C586B",
+"O c #3E586C",
+"+ c #40586B",
+"@ c #3A6482",
+"# c #5081A3",
+"$ c #5986A7",
+"% c #699DC1",
+"& c #73A3C6",
+"* c #7EAACA",
+/* pixels */
+"@$*+",
+"##&O",
+"&%%.",
+"oo X"
+};

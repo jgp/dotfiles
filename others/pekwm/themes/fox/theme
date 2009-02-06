@@ -1,0 +1,232 @@
+# -------------------------------------------------------- 
+# Theme:			fox
+# Author:			Phileas Fox
+# Pekwm Versions:	0.1.4pre1 and compatible
+# Created:			May 07 2005
+# Modified:			May 07 2005
+# -------------------------------------------------------- 
+
+PDecor {
+
+Decor = "DEFAULT" {
+	Title {
+		Height = "15"
+		Pad = "0 0 0 0"
+
+		Focused = "Empty"
+		Unfocused = "Empty"
+
+		Tab {
+			Focused = "Image win-fo-sel.xpm"
+			FocusedSelected = "Image win-fo-sel.xpm"
+			Unfocused = "Image win-un-sel.xpm"
+			UnfocusedSelected = "Image win-un-sel.xpm"
+		}
+		Separator {
+			Focused = "Image sep-fo.xpm"
+			Unfocused = "Image sep-un.xpm"
+		}
+		Font {
+			Focused = "Vera-9#CENTER#1 1#XFT"
+			Unfocused = "Vera-9:bold#CENTER#1 1#XFT"
+			FocusedSelected = "Vera-9:bold#CENTER#1 1#XFT"
+			UnfocusedSelected = "Vera-9:bold#CENTER#1 1#XFT"
+
+		}
+		FontColor {
+			Focused = "#777777 #eeeeee"
+			FocusedSelected = "#777777 #eeeeee"
+			Unfocused = "#777777 #eeeeee"
+			UnfocusedSelected = "#777777 #eeeeee"
+		}
+		
+		Border {
+			Focused {
+				TopLeft = "Image b-top-l.xpm"
+				Top = "Image b-top-c.xpm"
+				TopRight = "Image b-top-r.xpm"
+				Left = "Image b-side-l.xpm"
+				Right = "Image b-side-r.xpm"
+				BottomLeft = "Image b-bottom-l.xpm"
+				Bottom = "Image b-bottom-c.xpm"
+				BottomRight = "Image b-bottom-r.xpm"
+			}
+			Unfocused {
+				TopLeft = "Image b-top-l2.xpm"
+				Top = "Image b-top-c2.xpm"
+				TopRight = "Image b-top-r2.xpm"
+				Left = "Image b-side-l2.xpm"
+				Right = "Image b-side-r2.xpm"
+				BottomLeft = "Image b-bottom-l2.xpm"
+				Bottom = "Image b-bottom-c2.xpm"
+				BottomRight = "Image b-bottom-r2.xpm"
+			}
+		}
+	}
+}
+
+Decor = "MENU" {
+	Title {
+		Height = "17"
+		Pad = "1 0 0 0"
+
+		Focused = "Empty"
+		Unfocused = "Empty"
+
+		Tab {
+			Focused = "Image win-fo-sel.xpm"
+			FocusedSelected = "Image win-fo-sel.xpm"
+			Unfocused = "Image win-un-sel.xpm"
+			UnfocusedSelected = "Image win-un-sel.xpm"
+		}
+		Separator {
+			Focused = "Image sep-fo.xpm"
+			Unfocused = "Image sep-un.xpm"
+		}
+		Font {
+			Focused = "Vera-9#CENTER#1 #XFT"
+			Unfocused = "Vera-9:bold#CENTER#1 1#XFT"
+			FocusedSelected = "Vera-9:bold#CENTER#1 1#XFT"
+			UnfocusedSelected = "Vera-9:bold#CENTER#1 1#XFT"
+
+		}
+		FontColor {
+			Focused = "#777777 #eeeeee"
+			FocusedSelected = "#777777 #eeeeee"
+			Unfocused = "#777777 #eeeeee"
+			UnfocusedSelected = "#777777 #eeeeee"
+		}
+		Border {
+			Focused {
+				TopLeft = "Image b-top-l.xpm"
+				Top = "Image b-top-c.xpm"
+				TopRight = "Image b-top-r.xpm"
+				Left = "Image b-side-l.xpm"
+				Right = "Image b-side-r.xpm"
+				BottomLeft = "Image b-bottom-l.xpm"
+				Bottom = "Image b-bottom-c.xpm"
+				BottomRight = "Image b-bottom-r.xpm"
+			}
+			Unfocused {
+				TopLeft = "Image b-top-l2.xpm"
+				Top = "Image b-top-c2.xpm"
+				TopRight = "Image b-top-r2.xpm"
+				Left = "Image b-side-l2.xpm"
+				Right = "Image b-side-r2.xpm"
+				BottomLeft = "Image b-bottom-l2.xpm"
+				Bottom = "Image b-bottom-c2.xpm"
+				BottomRight = "Image b-bottom-r2.xpm"
+			}
+		}
+	}
+}
+
+
+Decor = "STATUSWINDOW" {
+	Title {
+		Height = "0"
+		Pad = "0 0 0 0"
+
+		Focused = "Empty"
+		Unfocused = "Empty"
+
+		Tab {
+			Focused = "Image win-fo-sel.xpm"
+			FocusedSelected = "Image win-fo-sel.xpm"
+			Unfocused = "Image win-un-sel.xpm"
+			UnfocusedSelected = "Image win-un-sel.xpm"
+		}
+		Separator {
+			Focused = "Image sep-fo.xpm"
+			Unfocused = "Image sep-un.xpm"
+		}
+		Font {
+			Focused = "Vera-9:bold#CENTER#1 1#XFT"
+			Unfocused = "Vera-9:bold#CENTER#1 1#XFT"
+			FocusedSelected = "Vera-9:bold#CENTER#1 1#XFT"
+			UnfocusedSelected = "Vera-9:bold#CENTER#1 1#XFT"
+		}
+		FontColor {
+			Focused = "#777777 #eeeeee"
+			FocusedSelected = "#777777 #eeeeee"
+			Unfocused = "#777777 #eeeeee"
+			UnfocusedSelected = "#777777 #eeeeee"
+		}
+		Border {
+			Focused {
+				TopLeft = "Image b-top-l.xpm"
+				Top = "Image b-top-c.xpm"
+				TopRight = "Image b-top-r.xpm"
+				Left = "Image b-side-l.xpm"
+				Right = "Image b-side-r.xpm"
+				BottomLeft = "Image b-bottom-l.xpm"
+				Bottom = "Image b-bottom-c.xpm"
+				BottomRight = "Image b-bottom-r.xpm"
+			}
+			Unfocused {
+				TopLeft = "Image b-top-l2.xpm"
+				Top = "Image b-top-c2.xpm"
+				TopRight = "Image b-top-r2.xpm"
+				Left = "Image b-side-l2.xpm"
+				Right = "Image b-side-r2.xpm"
+				BottomLeft = "Image b-bottom-l2.xpm"
+				Bottom = "Image b-bottom-c2.xpm"
+				BottomRight = "Image b-bottom-r2.xpm"
+			}
+		}
+	}
+}	
+
+} # END PDecor
+
+
+Harbour {
+	Texture = "SolidRaised #aaaaaa #eeeeee #666666 1 0"
+}
+
+Menu {
+	Focused {
+		Font = "Arial-9#LEFT#0 0#XFT"
+		Background = "Solid #eeeeee"
+		Item = "Solid #eeeeee"
+		Separator = "Empty"
+		Text = "#777777"
+		Arrow = "Solid #000000 5x5"
+	}
+	Unfocused {
+		Font = "Arial-9#LEFT#0 0#XFT"
+		Background = "Solid #eeeeee"
+		Item = "Solid #eeeeee"
+		Separator = "Empty"
+		Text = "#777777"
+		Arrow = "Solid #000000 5x5"
+	}
+	Selected {
+		Font = "Arial-9#LEFT#0 0#XFT"
+		Background = "Solid #eeeeee"
+		Item = "Solid #99a6bf"
+		Text = "#eeeeee"
+		Arrow = "Solid #000000 5x5"
+	}
+
+	Pad = "4 4 4 4"
+}
+
+CmdDialog {
+	Font = "Vera-9#LEFT#0 0#XFT"
+	Texture = "Solid #bbbbbb"
+	Text = "#000000"
+	Pad = "3 3 3 3"
+}
+
+Status {
+	Font = "Vera-9#LEFT#0 0#XFT"
+	Texture = "Solid #bbbbbb"
+	Text = "#000000"
+	Pad = "0 0 0 0"
+}
+
+Root {
+	Command = "xsetroot -solid rgb:68/68/68"
+	#Command = "Esetroot ~/photos/wallpapers/monstre.png"
+}

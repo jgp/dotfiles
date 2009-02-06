@@ -1,0 +1,156 @@
+# "m0nst4" theme for pekwm dev snapshot (pekwm-dev-20050227)
+# theme originally done by chr1z (http://www.chr1z.de/)
+# ported to pekwm by okraits (http://www.okraits.de/)
+# Date: 02.03.2005
+
+$FONT = "-*-nu.de-*-*-*-*-*-*-*-*-*-*-*-*"
+
+PDecor {
+
+Decor = "DEFAULT" {
+	Title {
+		Height = "14"
+		Pad = "0 0 4 0"
+
+		Focused = "Image win-fo.xpm"
+		Unfocused = "Image win-un.xpm"
+
+		Tab {
+			Focused = "Image win-fo.xpm"
+			FocusedSelected = "Image win-fo.xpm"
+			Unfocused = "Image win-un.xpm"
+			UnfocusedSelected = "Image win-un.xpm"
+		}
+		Separator {
+			Focused = "Image sep-focus.xpm"
+			Unfocused = "Image sep-unfocus.xpm"
+		}
+		Font {
+			Focused = "$FONT#Left"
+		}
+		FontColor {
+			Focused = "#888888"
+			FocusedSelected = "#ff8d02"
+			Unfocused = "#888888"
+			UnfocusedSelected = "#888888"
+		}
+		Buttons {
+			Right {
+				Focused = "Image btn-close.xpm"
+				Unfocused = "Image btn-close-un.xpm"
+				Selected = "Image btn-close.xpm"
+				Button = "1" { Actions = "Close" }
+				Button = "3" { Actions = "Kill" }
+			}
+			Right {
+				Focused = "Image btn-max.xpm"
+				Unfocused = "Image btn-max-un.xpm"
+				Selected = "Image btn-max.xpm"
+				Button = "1" { Actions = "Toggle Maximized 1 1" }
+			}
+			Right {
+				Focused = "Image btn-min.xpm"
+				Unfocused = "Image btn-min-un.xpm"
+				Selected = "Image btn-min.xpm"
+				Button = "1" { Actions = "Set Iconified" }
+			}		
+		}
+		Border {
+			Focused {
+				TopLeft = "Image bd-tol-fo.xpm"
+				Top = "Image bd-top-fo.xpm"
+				TopRight = "Image bd-tor-fo.xpm"
+				Left = "Image bd-horz-fo.xpm"
+				Right = "Image bd-horz-fo.xpm"
+				BottomLeft = "Image bd-btl-fo.xpm"
+				Bottom = "Image bd-btm-fo.xpm"
+				BottomRight = "Image bd-btr-fo.xpm"
+			}
+			Unfocused {
+				TopLeft = "Image bd-tol-un.xpm"
+				Top = "Image bd-top-un.xpm"
+				TopRight = "Image bd-tor-un.xpm"
+				Left = "Image bd-horz-un.xpm"
+				Right = "Image bd-horz-un.xpm"
+				BottomLeft = "Image bd-btl-un.xpm"
+				Bottom = "Image bd-btm-un.xpm"
+				BottomRight = "Image bd-btr-un.xpm"
+			}
+		}
+	}
+}
+
+Decor = "TITLEBARLESS" {
+        Title {
+
+                Border {
+                        Focused {
+                                TopLeft = "Image bd-btl-fo.xpm"
+                                Top = "Image bd-btm-fo.xpm"
+                                TopRight = "Image bd-btr-fo.xpm"
+                                Left = "Image bd-horz-fo.xpm"
+                                Right = "Image bd-horz-fo.xpm"
+                                BottomLeft = "Image bd-btl-fo.xpm"
+                                Bottom = "Image bd-btm-fo.xpm"
+                                BottomRight = "Image bd-btr-fo.xpm"
+                        }
+                        Unfocused {
+                                TopLeft = "Image bd-btl-un.xpm"
+                                Top = "Image bd-btm-un.xpm"
+                                TopRight = "Image bd-btr-un.xpm"
+                                Left = "Image bd-horz-un.xpm"
+                                Right = "Image bd-horz-un.xpm"
+                                BottomLeft = "Image bd-btl-un.xpm"
+                                Bottom = "Image bd-btm-un.xpm"
+                                BottomRight = "Image bd-btr-un.xpm"
+                        }
+                }
+        }
+}
+
+}
+
+Harbour {
+  Texture = "SolidRaised #383838 #000000 #545454 1 0"
+}
+
+Menu {
+  Focused {
+    Font = "$FONT"
+    Background = "Solid #383838"
+    Item = "SolidRaised #383838 #000000 #666666 1 0"
+    Text = "#aaaaaa"
+  }
+  Unfocused {
+    Font = "$FONT"
+    Background = "Solid #383838"
+    Item = "SolidRaised #383838 #000000 #666666 1 0"
+    Text = "#aaaaaa"
+  }
+  Selected {
+    Font = "$FONT"
+    Background = "Solid #ff8d02"
+    Item = "SolidRaised #ff8d02 #000000 #666666 1 0"
+    Text = "#000000"
+  }
+
+  Pad = "2 2 2 2"
+}
+
+CmdDialog {
+  Font = "$FONT"
+  Texture = "Solid #383838"
+  Text = "#aaaaaa"
+  Pad = "0 0 0 0"
+}
+
+Status {
+  Font = "$FONT"
+  Texture = "Solid #383838"
+  Text = "#aaaaaa"
+  Pad = "0 0 0 0"
+}
+
+Root {
+	Command = "false"
+}

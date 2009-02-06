@@ -1,0 +1,160 @@
+# You can use quotes and escape ('\') in parameters
+
+# When using more than one client (interface) 
+# at a time, do the share the playlist?
+SyncPlaylist        = yes
+SavePlaylist        = yes
+MusicDir            = "/home/botanicus/data/music"
+StartInMusicDir     = yes
+ShowHiddenFiles     = no
+Repeat              = no
+Shuffle             = yes
+AutoNext            = yes
+
+# The key bindings are in the keymap file.
+Fastdir1  = "/home/botanicus/data/music/Cimrman"
+Fastdir2  = "/home/botanicus/data/music/"
+Fastdir3  = "/home/botanicus/data/music/"
+Fastdir4  = "/home/botanicus/data/music/"
+Fastdir5  = "/home/botanicus/data/music/"
+Fastdir6  = "/home/botanicus/data/music/"
+Fastdir7  = "/home/botanicus/data/music/"
+Fastdir8  = "/home/botanicus/data/music/"
+Fastdir9  = "/home/botanicus/data/music/"
+Fastdir10 = "/home/botanicus/data/music/"
+
+# Hide file name extensions
+HideFileExtension   = no
+
+# Show file format in menu.
+ShowFormat      = yes   
+
+# Show file titles (title, author, album) instead of file names.
+ReadTags      = yes
+
+# How to sort? FileName is the only option for now.
+Sort         = FileName
+
+# Absolutely or relative towards /usr/share/moc/themes/ or ~/.moc/themes/
+Theme         = nightly_theme
+
+# Show errors in the streams, for example 
+# CRC errors or broken frames in mp3 files
+ShowStreamErrors   = no
+
+# Ignore CRC errors in MP3 files. Most players 
+# do that, so the default value is set to yes.
+Mp3IgnoreCRCErrors   = yes
+
+# Default FormatString
+# %n - Track number
+# %a - Artist
+# %A - Album
+# %t - Title
+# %(X:TRUE:FALSE) - ternary expression:
+#           if X exists, do TRUE, otherwaise
+#           FALSE. '\' - escape character 
+#           (must be double, because of 
+#           config interpreter). man zshmisc for more info.
+FormatString      = "%(n:%n :)%(a:%a - :)%(t:%t:)"
+
+# Output buffer size in kilobytes. Minimum value is 128KB. */
+OutputBuffer      = 2048
+
+# Input buffer size in kilobytes. Minimum value is 32KB. */
+InputBuffer      = 512
+
+# How much to fill the input buffer before playing (in kilobytes)?
+# This can't be more than InputBuffer value.
+# Remember that for network streams beside the positive effect this also causes
+# delay between what you can hear and what is broadcasted.
+Prebuffering      = 64
+
+# Use this HTTP proxy server for internet streams. If not set, the
+# environmential variables http_proxy and ALL_PROXY will be used if present.
+#HTTPProxy      = my_proxy:port
+
+# OSS, ALSA, JACK; it's possible enter more drivers separated by a coma. The first working driver will be used.
+SoundDriver      = ALSA
+
+# Jack output settings
+#JackOutLeft      = "alsa_pcm:playback_1"
+#JackOutRight      = "alsa_pcm:playback_2"
+
+# ALSA mixer device
+AlsaMixer       = PCM
+
+# Second ALSA mixer device
+AlsaMixer2      = Master
+
+# ALSA output device
+AlsaDevice      = default
+
+# Show file time in menu. Possible options: yes, no, IfAvailable - show the
+# time only when it was read before (often works faster)
+ShowTime      = IfAvailable
+
+# The theme used when running on on xterm
+# XTermTheme      = transparent-background
+
+# pid file, socket, and state files
+MOCDir      = /tmp/moc
+
+# Use mmap() to read files (currently used for reading mp3). mmap() is much
+# slower on NFS.
+UseMmap         = yes
+
+# Perform character set conversion using iconv() to tags and file names
+# read from playlist files. This option has format: FROM:TO.
+# To get list of supported sets use the iconv -l command.
+
+# Just strip non-ASCII chars
+#TagsIconv      = ASCII:ASCII
+
+# Usefull for Poles: Convert from Windows encoding to ISO
+#TagsIconv      = WINDOWS-1250:ISO-8859-2
+
+# Strip non-ASCII chars from file names
+#FileNamesIconv      = ASCII:ASCII
+
+
+# Choose a keymap file (relative to ~/.moc/ or absolute path)
+# Example keymap with description is included (keymap.example).
+#Keymap         = /home/shaika-dzari/.moc/keymap
+
+# Use ASCII characters instead of graphic for drawing lines. This helps on
+# some terminals.
+ASCIILines      = no
+
+
+# How fast to seek? Number of seconds per key stroke.
+#SeekTime      = 1
+
+# Resample method to use. There are few methods of resampling sound supported
+# by libresamplerate. The default is the fastest (linear). Better description
+# is here: http://www.mega-nerd.com/libsamplerate/api_misc.html#Converters
+#
+# High quality (based on bandlimited interpolation), but slow methods:
+#
+# SincBestQuality - really slow (I know you probably have an xx GHz processor,
+#         but it's not enough to not see this in the top output :)
+#         The worst case Signal-to-Noise Ratio is 97dB.
+# SincMediumQuality - much faster
+# SincFastest - the fastest bandlimited interpolation
+#
+# Poor quality, but much faster methods:
+#
+# ZeroOrderHold - really poor quality, but it's really fast
+# Linear - a bit better and a bit slower
+#
+#ResampleMethod      = Linear
+
+# Always use this sample rate when opening the audio device (and resample the
+# sound is necessary). When set to 0 the device is opened with the file's rate.
+#ForceSampleRate   = 48000
+
+# Use realtime priority for output buffer thread. This will prevent gaps while
+# playing even with heavy load. The user which runs MOC must have permissions
+# to set such a priority. This could be dangerous, because it is possible that
+# a bug in MOC will freeze your computer.
+#UseRealtimePriority   = no

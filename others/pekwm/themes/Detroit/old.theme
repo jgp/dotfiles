@@ -1,0 +1,289 @@
+# Detroit2 (hacked) Port
+# stonedbeaver <stonedbeaver@gmail.com>
+# Last Modified Wed Mar 2 18:45:51 CET 2005
+
+# Ported from CVS-version to pekwm-DEV-version.
+# This theme is for pekwm-DEV.
+
+$FONT = "Verdana-10#Left#1 1#XFT"
+$MTFONT = "Verdana-10#Left#1 1#XFT"
+
+
+PDecor {
+
+  Decor = "DEFAULT" {
+    Title {
+      Height = "20"
+      Pad = "2 2 2 2"
+
+      Focused = "Image title.png"
+      Unfocused = "Image title.png"
+
+      Tab {
+        Focused = "Image title.png"
+        FocusedSelected = "Image title.png"
+        Unfocused = "Image title.png"
+        UnfocusedSelected = "Image title.png"
+      }
+
+      Separator {
+        Focused = "Image sep.png"
+        Unfocused = "Image sep-un.png"
+      }
+
+      Font {
+        Focused = "$MTFONT"
+      }
+
+      FontColor {
+        Focused = "#c0c0c0"
+        FocusedSelected = "#000000"
+        Unfocused = "#c0c0c0"
+        UnfocusedSelected = "#686868"
+      }
+
+      Buttons {
+
+        # Close button
+        Right {
+          Focused = "Image btn-close.png"
+          Unfocused = "Image btn-un.png"
+          Pressed = "Image btn-close-pr.png"
+          Button = "1" { Actions = "Close" }
+        }
+
+        # Maximize button
+        Right {
+          Focused = "Image btn-max-fo.png"
+          Unfocused = "Image btn-un.png"
+          Pressed = "Image btn-max-pr.png"
+          Button = "1" { Actions = "Toggle Maximized True True" }
+        }
+
+        # Iconify button
+        Right {
+          Focused = "Image btn-min-fo.png"
+          Unfocused = "Image btn-un.png"
+          Pressed = "Image btn-min-pr.png"
+          Button = "1" { Actions = "Set Iconified" }
+        }
+
+        # Menu button
+        Left {
+          Focused = "Image btn-mnu-fo.png"
+          Unfocused = "Image btn-un.png"
+          Pressed = "Image btn-mnu-pr.png"
+          Button = "1" { Actions = "ShowMenu Window" }
+        }
+      }
+    
+      Border {
+        Focused {
+          TopLeft = "Image tl.png"
+          Top = "Image top.png"
+          TopRight = "Image tr.png"
+          Left = "Image left.png"
+          Right = "Image right.png"
+          BottomLeft = "Image bl.png"
+          Bottom = "Image bottom.png"
+          BottomRight = "Image br.png"
+        }
+        Unfocused {
+          TopLeft = "Image tl.png"
+          Top = "Image top.png"
+          TopRight = "Image tr.png"
+          Left = "Image left.png"
+          Right = "Image right.png"
+          BottomLeft = "Image bl.png"
+          Bottom = "Image bottom.png"
+          BottomRight = "Image br.png"
+        }
+      }  
+    }
+  } # End Decor DEFAULT
+
+  Decor = "MENU" {
+    Title {
+      Height = "20"
+      Pad = "2 2 2 2"
+
+      Focused = "EMPTY"
+      Unfocused = "EMPTY"
+
+      Tab {
+        Focused = "Image title.png"
+        FocusedSelected = "Image title.png"
+        Unfocused = "Image title.png"
+        UnfocusedSelected = "Image title.png"
+      }
+
+      Seperator {
+        Focused = "EMPTY"
+        Unfocused = "EMPTY"
+      }
+
+      Font {
+        Focused = "$MTFONT"
+      }
+
+      FontColor {
+        Focused = "#2c2c2c"
+        FocusedSelected = "#2c2c2c"
+        Unfocused = "#2c2c2c"
+        UnfocusedSelected = "#2c2c2c"
+      }
+
+      Border {
+        Focused {
+          TopLeft = "Image tl.png"
+          Top = "Image top.png"
+          TopRight = "Image tr.png"
+          Left = "Image left.png"
+          Right = "Image right.png"
+          BottomLeft = "Image bl.png"
+          Bottom = "Image bottom.png"
+          BottomRight = "Image br.png"
+        }
+        Unfocused {
+          TopLeft = "Image tl.png"
+          Top = "Image top.png"
+          TopRight = "Image tr.png"
+          Left = "Image left.png"
+          Right = "Image right.png"
+          BottomLeft = "Image bl.png"
+          Bottom = "Image bottom.png"
+          BottomRight = "Image br.png"
+        }
+      }  
+    }
+  } # END Decor MENU
+  
+  Decor = "STATUSWINDOW" {
+    Title {
+	  Height = "0"
+	  Pad = "0 0 0 0"
+	  
+      Focused = "EMPTY"
+	  Unfocused = "EMPTY"
+	
+      Tab {
+		Focused = "EMPTY"
+		FocusedSelected = "EMPTY"
+		Unfocused = "EMPTY"
+		UnfocusedSelected = "EMPTY"
+	  }
+	  
+      Separator {
+		Focused = "EMPTY"
+		Unfocused = "EMPTY"
+	  }
+	  
+      Font {
+	    Focused = "EMPTY"
+	  }
+	  
+      FontColor {
+		Focused = "EMPTY"
+		FocusedSelected = "EMPTY"
+		Unfocused = "EMPTY"
+	    UnfocusedSelected = "EMPTY"
+      }
+
+      Border {
+        Focused {
+          TopLeft = "Image tl-tbl.png"
+          Top = "Image top-tbl.png"
+          TopRight = "Image tr-tbl.png"
+          Left = "Image left.png"
+          Right = "Image right.png"
+          BottomLeft = "Image bl.png"
+          Bottom = "Image bottom.png"
+          BottomRight = "Image br.png"
+        }
+        Unfocused {
+          TopLeft = "Image tl-tbl.png"
+          Top = "Image top-tbl.png"
+          TopRight = "Image tr-tbl.png"
+          Left = "Image left.png"
+          Right = "Image right.png"
+          BottomLeft = "Image bl.png"
+          Bottom = "Image bottom.png"
+          BottomRight = "Image br.png"
+        }
+      }  
+    }
+  } # END Decor STATUSWINDOW
+  
+  Decor = "TITLEBARLESS" {
+    Title {  
+      Border {
+        Focused {
+          TopLeft = "Image tl-tbl.png"
+          Top = "Image top-tbl.png"
+          TopRight = "Image tr-tbl.png"
+          Left = "Image left.png"
+          Right = "Image right.png"
+          BottomLeft = "Image bl.png"
+          Bottom = "Image bottom.png"
+          BottomRight = "Image br.png"
+        }
+        Unfocused {
+          TopLeft = "Image tl-tbl.png"
+          Top = "Image top-tbl.png"
+          TopRight = "Image tr-tbl.png"
+          Left = "Image left.png"
+          Right = "Image right.png"
+          BottomLeft = "Image bl.png"
+          Bottom = "Image bottom.png"
+          BottomRight = "Image br.png"
+        }
+      }  
+    }
+  } # END Decor TITLEBARLESS
+} # END PDecor
+
+# I don't use the harbour, so I've no idea how this looks, sorry.
+Harbour {
+	Texture = "Image harbour.png"
+}
+
+Menu {
+	Focused {
+		Font = "$FONT"
+		Background = "Solid #eeeeee"
+		Item = "EMPTY"
+		Text = "#2c2c2c"
+		Separator = "Solid #888888 0x1"
+		Arrow = "EMPTY"
+	}
+	Unfocused {
+		Font = "$FONT"
+		Background = "Solid #eeeeee"
+		Item = "EMPTY"
+		Text = "#2c2c2c"
+		Separator = "Solid #888888 0x1"
+		Arrow = "EMPTY"
+	}
+	Selected {
+		Font = "$FONT"
+		Background = "Solid #c3c3c3"
+		Item = "EMPTY"
+		Text = "#2c2c2c"
+		Arrow = "EMPTY"
+	}
+	Pad = "2 2 2 2"
+}
+
+CmdDialog {
+	Font = "$FONT"
+	Texture = "Solid #eeeeee"
+	Text = "#2c2c2c"
+	Pad = "0 0 0 0"
+}
+
+Status {
+	Font = "$FONT"
+	Texture = "Solid #eeeeee"
+	Text = "#2c2c2c"
+	Pad = "0 0 0 0"
+}

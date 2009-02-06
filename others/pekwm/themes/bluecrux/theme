@@ -1,0 +1,278 @@
+# bluecrux for pekwm 0.1.4 DEV
+# Created 2005-08-24 by Justin "hermit" Rebelo <justin.rebelo@gmail.com>
+
+# CHANGES:
+# changed colour scheme from purple to blue (yummy...)
+# moved close button to left side because I rarely use it
+# moved maximize button to right corner
+# added iconify and shade buttons
+
+# CREDITS:
+# Based on 0.1.3 default pekwm theme by Christoph Strake (www.chr1z.de)
+# Included CRUX wallpaper created by Matt Housh (jaeger.morpheus.net)
+# Used with permission.
+
+
+# MFONT is the menu font while FONT is the titlebar font.
+$MFONT = "Verdana-8:Normal#LEFT#1 #XFT"
+$FONT = "Verdana-8:Bold#CENTER#1 #XFT"
+
+$DBLUE = "#142436"
+$MBLUE = "#355176"
+$LBLUE = "#56739a"
+
+PDecor {
+
+Decor = "DEFAULT" {
+	Title {
+		Height = "14"
+		Pad = "0 0 5 5"
+
+		WidthMin = "0"
+		WidthMax = "100"
+		WidthSymetric = "true"
+
+		Focused = "Image win-fo.xpm"
+		Unfocused = "Image win-un.xpm"
+
+		Tab {
+			Focused = "Image win-fo.xpm"
+			FocusedSelected = "Image win-fo-sel.xpm"
+			Unfocused = "Image win-un.xpm"
+			UnfocusedSelected = "Image win-un-sel.xpm"
+		}
+		Separator {
+			Focused = "Image sep-fo.xpm"
+			Unfocused = "Image sep-un.xpm"
+		}
+		Font {
+			Focused = "$FONT"
+		}
+		FontColor {
+			Focused = "#a0a0a0"
+			FocusedSelected = "#f0f0f0"
+			Unfocused = "#a0a0a0"
+			UnfocusedSelected = "#d1d1d1"
+		}
+		Buttons {
+			Left {
+				# close button
+				Focused = "Image btn-close-fo.xpm"
+				Unfocused = "Image btn-close-un.xpm"
+				Pressed = "Image btn-close-pr.xpm"
+				Button = "1" { Actions = "Close" }
+			}
+			Right {
+				# maximize button
+				Focused = "Image btn-max-fo.xpm"
+				Unfocused = "Image btn-max-un.xpm"
+				Pressed = "Image btn-max-pr.xpm"
+				Button = "1" { Actions = "Toggle Maximized True True" }
+				Button = "2" { Actions = "Toggle Maximized True False" }
+				Button = "3" { Actions = "Toggle Maximized False True" }
+			}
+			Right {
+				# iconify button
+				Focused = "Image btn-icon-fo.xpm"
+				Unfocused = "Image btn-icon-un.xpm"
+				Pressed = "Image btn-icon-pr.xpm"
+				Button = "1" { Actions = "Toggle Iconified" }
+			}
+			Right {
+				# shade button
+				Focused = "Image btn-shade-fo.xpm"
+				Unfocused = "Image btn-shade-un.xpm"
+				Pressed = "Image btn-shade-pr.xpm"
+				Button = "1" { Actions = "Toggle Shaded" }
+			}
+		}
+
+		Border {
+			Focused {
+				TopLeft = "Image b-top-l.xpm"
+				Top = "Image b-top-c.xpm"
+				TopRight = "Image b-top-r.xpm"
+				Left = "Image b-side-l.xpm"
+				Right = "Image b-side-r.xpm"
+				BottomLeft = "Image b-bottom-l.xpm"
+				Bottom = "Image b-bottom-c.xpm"
+				BottomRight = "Image b-bottom-r.xpm"
+			}
+			Unfocused {
+				TopLeft = "Image b-top-l.xpm"
+				Top = "Image b-top-c.xpm"
+				TopRight = "Image b-top-r.xpm"
+				Left = "Image b-side-l.xpm"
+				Right = "Image b-side-r.xpm"
+				BottomLeft = "Image b-bottom-l.xpm"
+				Bottom = "Image b-bottom-c.xpm"
+				BottomRight = "Image b-bottom-r.xpm"
+			}
+		}
+	}
+}
+
+Decor = "MENU" {
+	Title {
+		Height = "14"
+		Pad = "0 0 3 3"
+		WidthMin = "0"
+		WidthMax = "100"
+		WidthSymetric = "true"
+		Focused = "Solid $DBLUE 1x1"
+		Unfocused = "Solid $DBLUE 1x1"
+		Tab {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "$MFONT"
+		}
+		FontColor {
+			Focused = "#d1c5d8"
+			FocusedSelected = "#d1c5d8"
+			Unfocused = "#d1c5d8"
+			UnfocusedSelected = "#d1c5d8"
+		}
+		Buttons {
+		}
+		Border {
+			Focused {
+				TopLeft = "Solid $DBLUE 2x2"
+				Top = "Solid $DBLUE 2x2"
+				TopRight = "Solid $DBLUE 2x2"
+				Left = "Solid $DBLUE 2x2"
+				Right = "Solid $DBLUE 2x2"
+				BottomLeft = "Solid $DBLUE 2x2"
+				Bottom = "Solid $DBLUE 2x2"
+				BottomRight = "Solid $DBLUE 2x2"
+			}
+			Unfocused {
+				TopLeft = "Solid $DBLUE 2x2"
+				Top = "Solid $DBLUE 2x2"
+				TopRight = "Solid $DBLUE 2x2"
+				Left = "Solid $DBLUE 2x2"
+				Right = "Solid $DBLUE 2x2"
+				BottomLeft = "Solid $DBLUE 2x2"
+				Bottom = "Solid $DBLUE 2x2"
+				BottomRight = "Solid $DBLUE 2x2"
+			}
+		}
+	}
+}
+
+Decor = "STATUSWINDOW" {
+	Title {
+		Height = "14"
+		Pad = "2 0 3 3"
+		WidthMin = "0"
+		WidthMax = "100"
+		WidthSymetric = "true"
+		Focused = "Solid #362b3a 1x1"
+		Unfocused = "Solid #362b3a 1x1"
+		Tab {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "$MFONT"
+		}
+		FontColor {
+			Focused = "#d1c5d8"
+			FocusedSelected = "#d1c5d8"
+			Unfocused = "#d1c5d8"
+			UnfocusedSelected = "#d1c5d8"
+		}
+		Buttons {
+		}
+		Border {
+			Focused {
+				TopLeft = "Solid $DBLUE 2x2"
+				Top = "Solid $DBLUE 2x2"
+				TopRight = "Solid $DBLUE 2x2"
+				Left = "Solid $DBLUE 2x2"
+				Right = "Solid $DBLUE 2x2"
+				BottomLeft = "Solid $DBLUE 2x2"
+				Bottom = "Solid $DBLUE 2x2"
+				BottomRight = "Solid $DBLUE 2x2"
+			}
+			Unfocused {
+				TopLeft = "Solid $DBLUE 2x2"
+				Top = "Solid $DBLUE 2x2"
+				TopRight = "Solid $DBLUE 2x2"
+				Left = "Solid $DBLUE 2x2"
+				Right = "Solid $DBLUE 2x2"
+				BottomLeft = "Solid $DBLUE 2x2"
+				Bottom = "Solid $DBLUE 2x2"
+				BottomRight = "Solid $DBLUE 2x2"
+			}
+		}
+	}
+}
+
+# Decor = "TITLEBARLESS" {}
+# Decor = "BORDERLESS" {}
+# Decor = "CMDDIALOG" {}
+}
+
+Harbour {
+	Texture = "SolidRaised #a0a0a0 #d1d1d1 #d1d1d1 1 0 1x1"
+}
+
+Menu {
+	Focused {
+		Font = "$MFONT"
+		Background = "Solid $MBLUE 1x1""
+		Item = "EMPTY"
+		Text = "#ffffff"
+		Separator = "Solid $DBLUE 0x2"
+		Arrow = "Solid $DBLUE 4x4"
+	}
+	Unfocused {
+		Font = "$MFONT"
+		Background = "Solid $MBLUE 1x1""
+		Item = "EMPTY"
+		Text = "#ffffff"
+		Separator = "Solid $DBLUE 0x2"
+		Arrow = "Solid $DBLUE 4x4"
+	}
+	Selected {
+		Font = "$MFONT"
+		Background = "Solid $LBLUE 1x1"
+		Item = "EMPTY"
+		Text = "#000000"
+		Arrow = "Solid $DBLUE 4x4"
+	}
+	Pad = "3 3 3 3"
+}
+
+CmdDialog {
+	Font = "$MFONT"
+	Texture = "Solid #62456d"
+	Text = "#ffffff"
+	Pad = "4 4 4 4"
+}
+
+Status {
+	Font = "$MFONT"
+	Texture = "Solid #62456d"
+	Text = "#ffffff"
+	Pad = "0 0 0 0"
+}
+
+Root {
+#	Command = "xsetroot -solid rgb:68/68/68""
+	Command = "feh --bg-center ~/.pekwm/themes/bluecurve/wallpaper.png"
+}

@@ -1,0 +1,215 @@
+# minimal2 - PekWM dev theme (for pekwm-dev-20050209) by xPOULET <xpoulet@wanadoo.fr>
+# available at http://hewphoria.com/
+#
+# original theme from FluxBox
+#
+# Theme is labeled for pekwm-dev-20050209.
+#
+# In short that means it works attleast with the mentioned theme
+# snapshot. Usually it should work fine with newer pekwm-dev releases,
+# but if you notice it not working after an update, check in for a
+# new version of the theme.
+#
+# Last modified 20050329.
+#
+
+$FONT = "-*-snap-*-*-*-*-*-*-*-*-*-*-*-*" 
+$MFONT = "-*-snap-*-*-*-*-*-*-*-*-*-*-*-*"
+
+$COLOR_XROOT="rgb:73/82/8c"
+
+
+PDecor {
+
+Decor = "DEFAULT" {
+	Title {
+		Height = "16"
+		Pad = "3 0 0 0"
+
+		Focused = "Image title.png"
+		Unfocused = "Image title-un.png"
+
+		Tab {
+			Focused = "Image title.png"
+			FocusedSelected = "Image title.png"
+			Unfocused = "Image title-un.png"
+			UnfocusedSelected = "Image title-un.png"
+		}
+		Separator {
+			Focused = "Image br.png"
+			Unfocused = "Image br.png"
+		}
+		Font {
+			Focused = "$FONT#CENTER"
+		}
+		FontColor {
+			Focused = "#376187"
+			FocusedSelected = "#ffffff #c0c0c0"
+			Unfocused = "#c0c0c0"
+			UnfocusedSelected = "#bdbebd"
+		}
+		Buttons {
+			Right {
+				Focused = "Image close-fo.png"
+				Unfocused = "Image close-un.png"
+				Pressed = "Image close-pr.png"
+				Button = "1" { Actions = "Close" }
+				Button = "3" { Actions = "Kill" }
+			}
+			Right {
+				Focused = "Image max-fo.png"
+				Unfocused = "Image max-un.png"
+				Pressed = "Image max-pr.png"
+				Button = "1" { Actions = "Toggle Maximized 1 1" }
+				Button = "2" { Actions = "Toggle Maximized 0 1" }
+				Button = "3" { Actions = "Toggle Maximized 1 0" }
+			}
+			Right {
+				Focused = "Image min-fo-low.png"
+				Unfocused = "Image min-un-low.png"
+				Pressed = "Image min-pr-low.png"
+				Button = "1" { Actions = "Set Iconified" }
+			}
+			Left {
+				Focused = "Image left.png"
+				Unfocused = "Image left-un.png"
+				Pressed = "Image left.png"
+				Button = "1" { Actions = "NoAction" }
+			}
+		}
+		Border {
+			Focused {
+				TopLeft = "EMPTY"
+				Top = "EMPTY"
+				TopRight = "EMPTY"
+				Left = "Image br.png"
+				Right = "Image br.png"
+				BottomLeft = "Image btsd-fo.png"
+				Bottom = "Image bt-fo.png"
+				BottomRight = "Image btsd-fo.png"
+			}
+			Unfocused {
+				TopLeft = "EMPTY"
+				Top = "EMPTY"
+				TopRight = "EMPTY"
+				Left = "Image br.png"
+				Right = "Image br.png"
+				BottomLeft = "Image btsd-un.png"
+				Bottom = "Image bt-un.png"
+				BottomRight = "Image btsd-un.png"
+
+			}
+		}
+	}
+}
+
+Decor = "MENU" {
+	Title {
+		Height = "16"
+		Pad = "3 0 0 0"
+
+		Focused = "Image title-menu.png"
+		Unfocused = "Image title-menu.png"
+
+		Tab {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "$FONT#CENTER"
+		}
+		FontColor {
+			Focused = "#ffffff"
+			FocusedSelected = "#ffffff #ffffff"
+			Unfocused = "#ffffff"
+			UnfocusedSelected = "#ffffff"
+		}
+		Buttons {
+			Left {
+				Focused = "EMPTY"
+				Unfocused = "EMPTY"
+				Pressed = "EMPTY"
+				Button = "1" { Actions = "NoAction" }
+			}
+		}
+		Border {
+			Focused {
+				TopLeft = "Solid #000000 1x1"
+				Top = "Solid #000000 1x1"
+				TopRight = "Solid #000000 1x1"
+				Left = "Solid #000000 1x1"
+				Right = "Solid #000000 1x1"
+				BottomLeft = "Solid #000000 1x1"
+				Bottom = "Solid #000000 1x1"
+				BottomRight = "Solid #000000 1x1"
+			}
+			Unfocused {
+				TopLeft = "Solid #000000 1x1"
+				Top = "Solid #000000 1x1"
+				TopRight = "Solid #000000 1x1"
+				Left = "Solid #000000 1x1"
+				Right = "Solid #000000 1x1"
+				BottomLeft = "Solid #000000 1x1"
+				Bottom = "Solid #000000 1x1"
+				BottomRight = "Solid #000000 1x1"
+			}
+		}
+	}
+}
+
+#Decor = "STATUSWINDOW" {}
+
+# Decor = "CMDDIALOG" {}
+}
+
+Harbour {
+	Texture = "SolidRaised #000000 #000000 #000000 0 0"
+}
+
+Menu {
+	Focused {
+		Font = "$MFONT#LEFT"
+		Background = "Solid #4a82b5"
+		Item = "EMPTY"
+		Text = "#ffffff"
+		Separator = "Solid #000000 0x1"
+		Arrow = "Solid #000000 3x3"
+	}
+	Unfocused {
+		Font = "$MFONT#LEFT"
+		Background = "Solid #4a82b5"
+		Item = "EMPTY"
+		Text = "#ffffff"
+		Separator = "Solid #000000 0x1"
+		Arrow = "Solid #000000 3x3"
+	}
+	Selected {
+		Font = "$MFONT#LEFT"
+		Background = "Solid #ffa600"
+		Item = "EMPTY"
+		Text = "#000000"
+		Arrow = "Solid #000000 3x3"
+	}
+	Pad = "2 1 2 2"
+}
+
+CmdDialog {
+	Font = "$FONT#CENTER"
+	Texture = "Solid #4a82b5"
+	Text = "#000000"
+	Pad = "4 4 4 4"
+}
+
+Status {
+	Font = "$FONT#CENTER"
+	Texture = "Solid #4a82b5"
+	Text = "#000000"
+	Pad = "4 4 4 4"
+}
+

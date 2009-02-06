@@ -1,0 +1,15 @@
+/* XPM */
+static char *right.png[] = {
+/* columns rows colors chars-per-pixel */
+"5 5 4 1",
+"  c #555555",
+". c gray72",
+"X c #CECECE",
+"o c #F5F8FF",
+/* pixels */
+" oX. ",
+" oX. ",
+" oX. ",
+" oX. ",
+" oX. "
+};

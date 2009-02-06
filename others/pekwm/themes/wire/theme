@@ -1,0 +1,116 @@
+# "wire" theme for pekwm dev snapshot (pekwm-dev-20050227)
+# theme by Oliver Kraitschy (http://www.okraits.de/)
+# Date: 05.04.2005
+
+$FONT="Sans-7#XFT"
+
+PDecor {
+
+Decor = "DEFAULT" {
+	Title {
+		Height = "0"
+		Pad = "0 0 0 0"
+
+		Focused = "Empty"
+		Unfocused = "Empty"
+
+		Tab {
+			Focused = "Empty"
+			FocusedSelected = "Empty"
+			Unfocused = "Empty"
+			UnfocusedSelected = "Empty"
+		}
+		Separator {
+			Focused = "Empty"
+			Unfocused = "Empty"
+		}
+		Font {
+                        Focused = "Empty"
+                        FocusedSelected = "Empty"
+                        Unfocused = "Empty"
+                        UnfocusedSelected = "Empty"
+		}
+		FontColor {
+                        Focused = "Empty"
+                        FocusedSelected = "Empty"
+                        Unfocused = "Empty"
+                        UnfocusedSelected = "Empty"
+		}
+    		Buttons {
+    		}
+                Border {
+                        Focused {
+                                TopLeft = "Solid #aaaaaa 1x1"
+                                Top = "Solid #aaaaaa 1x1"
+                                TopRight = "Solid #aaaaaa 1x1"
+                                Left = "Solid #aaaaaa 1x1"
+                                Right = "Solid #aaaaaa 1x1"
+                                BottomLeft = "Solid #aaaaaa 1x1"
+                                Bottom = "Solid #aaaaaa 1x1"
+                                BottomRight = "Solid #aaaaaa 1x1"
+                        }
+                        Unfocused {
+                                TopLeft = "Solid #555555 1x1"
+                                Top = "Solid #555555 1x1"
+                                TopRight = "Solid #555555 1x1"
+                                Left = "Solid #555555 1x1"
+                                Right = "Solid #555555 1x1"
+                                BottomLeft = "Solid #555555 1x1"
+                                Bottom = "Solid #555555 1x1"
+                                BottomRight = "Solid #555555 1x1"
+                        }
+                }
+	}
+}
+
+}
+
+Harbour {
+	Texture = "SolidRaised #111111 #111111 #111111 1 0"
+}
+
+Menu {
+	Focused {
+		Font = "$FONT"
+		Background = "Empty"
+		Item = "SolidRaised #111111 #111111 #111111 1 0"
+		Separator = "Solid #aaaaaa 0x1"
+		Arrow = "Solid #aaaaaa 2x2"
+		Text = "#aaaaaa"
+	}
+	Unfocused {
+		Font = "$FONT"
+		Background = "Empty"
+		Item = "SolidRaised #111111 #111111 #111111 1 0"
+                Separator = "Solid #aaaaaa 0x1"
+                Arrow = "Solid #aaaaaa 2x2"
+		Text = "#aaaaaa"
+	}
+	Selected {
+		Font = "$FONT"
+		Background = "Empty"
+		Item = "SolidRaised #aaaaaa #aaaaaa #aaaaaa 1 0"
+		Arrow = "SolidRaised #111111 #111111 #111111 1 0"
+		Text = "#111111"
+	}
+
+	Pad = "2 2 2 2"
+}
+
+CmdDialog {
+	Font = "$FONT"
+	Texture = "Solid #111111"
+	Text = "#aaaaaa"
+	Pad = "2 2 2 2"
+}
+
+Status {
+	Font = "$FONT"
+	Texture = "Solid #111111"
+	Text = "#aaaaaa"
+	Pad = "2 2 2 2"
+}
+
+Root {
+	Command = "false"
+}

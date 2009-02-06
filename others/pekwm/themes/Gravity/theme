@@ -1,0 +1,224 @@
+/*
+Gravity, pekwm theme by cored <> 20050509 for pekwm-dev-20050227.
+
+*/
+
+$FONT = "Verdana-9#Left#XFT"
+$BFONT = "Verdana-9:bold#Left#XFT"
+
+PDecor {
+
+Decor = "DEFAULT" {
+	Title { 
+		Height = "16"
+		Pad = "2 0 2 0"
+		Focused = "SolidRaised  #e6e7e1 #e6e7e1 #e6e7e1 2x2"
+		Unfocused = "SolidRaised #ffffff #ffffff #ffffff 2x2"
+		Tab {
+			Focused = "Solid #e6e7e1"
+			FocusedSelected = "Solid #e6e7e1"
+			Unfocused = "Solid #ffffff"
+			UnfocusedSelected = "Solid #ffffff"
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "$BFONT"
+			FocusedSelected = "$BFONT"
+			Unfocused = "$BFONT"
+			UnfocusedSelected = "$BFONT"
+		}
+		FontColor {
+			Focused = "#8e8e8e"
+			FocusedSelected = "#8e8e8e"
+			Unfocused = "#8e8e8e"
+			UnfocusedSelected = "#8e8e8e"
+		}
+		Border {
+			Focused {
+				TopLeft = "Solid #e6e7e1 3x3"
+				Top = "Solid #e6e7e1 3x3"
+				TopRight = "Solid #e6e7e1 3x3"
+				Left = "Solid #e6e7e1 3x3"
+				Right = "Solid #e6e7e1 3x3"
+				BottomLeft = "Solid #e6e7e1 3x3"
+				Bottom = "Solid #e6e7e1 3x3"
+				BottomRight = "Solid #e6e7e1 3x3"
+			}
+			Unfocused {
+				TopLeft = "Solid #e6e7e1 3x3"
+				Top = "Solid #e6e7e1 3x3"
+				TopRight = "Solid #e6e7e1 3x3"
+				Left = "Solid #e6e7e1 3x3"
+				Right = "Solid #e6e7e1 3x3"
+				BottomLeft = "Solid #e6e7e1 3x3"
+				Bottom = "Solid #e6e7e1 3x3"
+				BottomRight = "Solid #e6e7e1 3x3"
+			}
+		}
+	}
+}
+
+Decor = "MENU" {
+	Title {
+		Height = "14"
+		Pad = "2 0 4 0"
+		Focused = "SolidRaised #ffffff #ffffff #ffffff 2x2"
+		Unfocused = "SolidRaised #8e8e8e #8e8e8e #8e8e8e 2x2"
+		Tab {
+			Focused = "SolidRaised #e6e7e1 #e6e7e1 #e6e7e1 2x2"
+			FocusedSelected = "SolidRaised #e6e7e1 #e6e7e1 #e6e7e1 2x2"
+			Unfocused = "SolidRaised #e6e7e1 #e6e7e1 #e6e7e1 2x2"
+			UnfocusedSelected = "SolidRaised #e6e7e1 #e6e7e1 #e6e7e1 2x2"
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "$BFONT"
+			FontSelected = "$BFONT"
+			Unfocused = "$BFONT"
+			UnfocusedSelected = "$BFONT"
+		}
+		FontColor {
+			Focused = "#8e8e8e"
+			FocusedSelected = "#8e8e8e"
+			Unfocused = "#999999"
+			UnfocusedSelected = "#363636"
+		}
+		Buttons {
+		}
+		Border {
+			Focused {
+				TopLeft = "Solid #e6e7e1 2x2"
+				Top = "Solid #e6e7e1 2x2"
+				TopRight = "Solid #e6e7e1 2x2"
+				Left = "Solid #e6e7e1 2x2"
+				Right = "Solid #e6e7e1 2x2"
+				BottomLeft = "Solid #e6e7e1 2x2"
+				Bottom = "Solid #e6e7e1 2x2"
+				BottomRight = "Solid #e6e7e1 2x2"
+			}
+			Unfocused {
+				TopLeft = "Solid #e6e7e1 2x2"
+				Top = "Solid #e6e7e1 2x2"
+				TopRight = "Solid #e6e7e1 2x2"
+				Left = "Solid #e6e7e1 2x2"
+				Right = "Solid #e6e7e1 2x2"
+				BottomLeft = "Solid #e6e7e1 2x2"
+				Bottom = "Solid #e6e7e1 2x2"
+				BottomRight = "Solid #e6e7e1 2x2"
+			}
+		}
+	}
+}
+
+Decor = "STATUSWINDOW" {
+	Title {
+		Height = "0"
+		Pad = "0 0 0 0"
+		Focused = "EMPTY"
+		Unfocused = "EMPTY"
+		Tab {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+		Separator {
+			Focused = "EMPTY"
+			Unfocused = "EMPTY"
+		}
+		Font {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+		FontColor {
+			Focused = "EMPTY"
+			FocusedSelected = "EMPTY"
+			Unfocused = "EMPTY"
+			UnfocusedSelected = "EMPTY"
+		}
+		Buttons {
+		}
+		Border {
+			Focused {
+				TopLeft = "Solid #888888 1x1"
+				Top = "Solid #888888 1x1"
+				TopRight = "Solid #888888 1x1"
+				Left = "Solid #888888 1x1"
+				Right = "Solid #888888 1x1"
+				BottomLeft = "Solid #888888 1x1"
+				Bottom = "Solid #888888 1x1"
+				BottomRight = "Solid #888888 1x1"
+			}
+			Unfocused {
+				TopLeft = "Solid #666666 1x1"
+				Top = "Solid #666666 1x1"
+				TopRight = "Solid #666666 1x1"
+				Left = "Solid #666666 1x1"
+				Right = "Solid #666666 1x1"
+				BottomLeft = "Solid #666666 1x1"
+				Bottom = "Solid #666666 1x1"
+				BottomRight = "Solid #666666 1x1"
+			}
+		}
+	}
+}
+
+# Decor = "CMDDIALOG" {}
+}
+
+Harbour {
+	Texture = "SolidRaised #000000 #000000 #000000 0 0"
+}
+
+Menu {
+	Focused {
+		Font = "$FONT"
+		Background = "Solid #ffffff"
+		Item = "EMPTY"
+		Text = "#000000"
+		Separator = "Solid #e6e7e1 0x1"
+		Arrow = "Solid #ffffff 0x0"
+	}
+	Unfocused {
+		Font = "$FONT"
+		Background = "Solid #ffffff"
+		Item = "EMPTY"
+		Text = "#666666"
+		Separator = "Solid #e6e7e1 0x1"
+		Arrow = "Solid #ffffff 0x0"
+	}
+	Selected {
+		Font = "$FONT"
+		Background = "Solid #e6e7e1"
+		Item = "EMPTY"
+		Text = "#8e8e8e"
+		Arrow = "Solid #ffffff 0x0"
+	}
+	Pad = "1 1 2 2"
+}
+
+CmdDialog {
+	Font = "$FONT"
+	Texture = "Solid #888888"
+	Text = "#2c2c2c"
+	Pad = "4 4 4 4"
+}
+
+Status {
+	Font = "$FONT"
+	Texture = "Solid #888888"
+	Text = "#2c2c2c"
+	Pad = "0 0 0 0"
+}
+
+Root {
+	Command = "false"
+}

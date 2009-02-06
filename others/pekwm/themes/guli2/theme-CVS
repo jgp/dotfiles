@@ -1,0 +1,84 @@
+Decor {
+
+        Decor = "DEFAULT" {
+                TitleHeight = "16"
+                TitlePadding = "4"
+
+            Font = "Bitstream Vera Sans-8:bold#XFT" {
+                  Justify = "Center"
+		  Offset = "1 1"
+                }
+                Focused {
+                        Text = "#6d7276"
+                        Pixmap = "title.png"
+                        Separator = ""
+                        Border {
+                                Top = ""
+                                Side = "br.png br.png"
+                                Bottom = "br.png br.png br.png"
+                        }
+                }
+                Selected {
+                        Text = "#3d4246 #afb4b8"
+                        Pixmap = "title.png"
+                }
+                Unfocused {
+                        Text = "#606467"
+                        Pixmap = "title.png"
+                        Separator = ""
+
+                        Border {
+                                Top = ""
+                                Side = "br.png br.png"
+                                Bottom = "br.png br.png br.png"
+                        }
+                }
+                UnfocusedSelected {
+                        Text = "#505457 #ffffff"
+                        Pixmap = "title.png"
+                }
+                Buttons {
+                        Right {
+                                Button = "1" { Actions = "Close" }
+                                Pixmaps = "close.png close_pressed.png close_pressed.png"
+                        }
+                        Right {
+	                        Button = "1" { Actions = "Toggle Maximized True True" }
+                                Pixmaps = "maximize.png maximize_pressed.png maximize_pressed.png"
+                        }
+                        Right {
+	                        Button = "1" { Actions = "Set Iconified" }
+                                Pixmaps = "minimize.png minimize_pressed.png minimize_pressed.png"
+                        }
+			Left {
+				Button = "1" { Actions = "ShowMenu Window" }
+				Pixmaps = "menu.png menu_pressed.png menu_pressed.png"
+			}
+        }
+}
+}
+Harbour {
+}
+
+Menu {
+  TitleFont = "Bitstream Vera Sans-9:bold#XFT" {
+    Justify = "Center"
+    Offset = "-1 -1"
+  }
+  Font = "Bitstream Vera Sans-8:bold#XFT" {
+    Justify = "Left"
+  }
+        Padding = "3"
+        BorderWidth = "1"
+        TextColor = "#4d5256"
+        TextColorFocused = "#333333"
+        TextColorSelected = "#ffffff"
+        TextColorTitle = "#333333 #ffffff"
+        Background = "#ffffff"
+        BackgroundFocused = "#ffffff"
+        BackgroundSelected = "#4a4a4a"
+        BackgroundTitle = "#f8f8f8"
+        BorderColor = "#808082"
+}
+
+

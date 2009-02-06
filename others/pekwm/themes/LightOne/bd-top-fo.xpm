@@ -1,0 +1,9 @@
+/* XPM */
+static char * bd_top_fo_xpm[] = {
+"10 1 5 1",
+" 	c #EEECED",
+".	c #EDEBEC",
+"+	c #ECEAEB",
+"@	c #EFEDEE",
+"#	c #F0EEEF",
+" .+@ +#+++"};
