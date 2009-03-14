@@ -6,16 +6,21 @@ publish() {
     echo "publish list"
     echo "publish run 'command'"
   }
-  case $1 in
+  command=$1 && shift
+  case $command in
   add)
-    scp -r $* solaris:/home/webs/static/public > /dev/null
-    echo "http://public.botablog.cz/$file" ;;
+    for file in $* ; do
+      scp -r "$file" static@solaris:/webs/static/public.botablog.cz > /dev/null
+      echo "http://public.botablog.cz/$(basename $file)"
+    done ;;
   ls|list)
-    ssh static@solaris ls -l /home/webs/static/public ;;
+    ssh static@solaris ls -l /webs/static/public.botablog.cz ;;
   rm|del|delete)
-    ssh static@solaris rm -rf /home/webs/static/public/$2 ;;
+    for file in $* ; do
+      ssh static@solaris rm -rf /webs/static/public.botablog.cz/$file
+    done ;;
   run)
-    ssh static@solaris rm -rf /home/webs/static/public/$2 ;;
+    ssh static@solaris "cd /webs/static/public.botablog.cz && $*" ;;
   *)
     help ;;
   esac
@@ -75,7 +80,8 @@ alias urxvt='urxvt +sb'
 # git
 alias gs="git status"
 alias gci="git commit -a -m"
-alias gom="git push origin master"
+branch="git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'"
+alias gom='git push origin $(branch)'
 
 # grep
 alias grep='grep --color=auto'

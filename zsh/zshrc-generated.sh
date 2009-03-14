@@ -381,7 +381,7 @@ export SVN_EDITOR="mate -w"
 export GIT_EDITOR="mate -w"
 
 # == RUBY == #
-export RUBYOPT="rubygems"
+export RUBYOPT="rubygems rdebugable"
 
 # == SHELL == #
 export CDPATH="$HOME/data/projects"
