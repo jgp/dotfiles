@@ -22,3 +22,6 @@
   pl = pull
   ps = push
   om = push origin master
+[github]
+	user = botanicus
+	token = 61406e72c9977e7ae0e193128dbfe20

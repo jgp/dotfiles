@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env ruby1.8
 
 # Tim Riley <tr@slackzone.org> 2005/10/03
 # http://tr.openmonkey.com/pages/openbox

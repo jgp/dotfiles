@@ -5,6 +5,17 @@ require "easyruby"
 require "wirble"
 require "what_methods"
 
+# http://sketches.rubyforge.org/
+require "sketches"
+Sketches.config :editor => :mate
+
+# http://quotedprintable.com/2007/6/9/irb-history-and-completion
+require 'irb/completion'
+require 'irb/ext/save-history'
+ARGV.concat [ "--readline", "--prompt-mode", "simple" ]
+IRB.conf[:SAVE_HISTORY] = 10000
+IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
+
 # TODO: add to easyruby
 class Hash
   def inspect

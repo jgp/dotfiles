@@ -4,3 +4,6 @@ escape() {
     do echo $arg | sed -E "s/^(.+)\$/'\\1'/"
   done
 }
+
+# math 1 + 1
+math() { echo $(($*)); }

@@ -1,3 +1,4 @@
+source /etc/profile
 # bindkey -v                 # editor jako vi
 bindkey -e                 # editor jako emacs
 bindkey ' ' magic-space      # mezerník rozbaluje odkazy na historii
@@ -51,6 +52,20 @@ zstyle ':completion:*' cache-path ~/.cache
 
 setopt autocd
 
+# TODO: nefunguje se STDIN (roura)
+escape() {
+  for arg in $@
+    do echo $arg | sed -E "s/^(.+)\$/'\\1'/"
+  done
+}
+
+# math 1 + 1
+math() { echo $(($*)); }
+
+# file-save RUBYLIB $RUBYLIB rubylib
+file-save() { echo "export $1='$2'" > ~/.cache/$3 }
+file-load() { [[ -f source ~/.cache/$1 ]] && source ~/.cache/$1 }
+
 LS() {
 	/bin/ls | awk '{ print "mv", $1, $1 }' > LS
 }
@@ -90,59 +105,6 @@ kill_merb() {
   kill -9 $id
 }
 
-# TODO: nefunguje se STDIN (roura)
-escape() {
-  for arg in $@
-    do echo $arg | sed -E "s/^(.+)\$/'\\1'/"
-  done
-}
-
-# file-save RUBYLIB $RUBYLIB rubylib
-file-save() { echo "export $1='$2'" > ~/.cache/$3 }
-file-load() { [[ -f source ~/.cache/$1 ]] && source ~/.cache/$1 }
-
-test_executable() {
-  # If file exists => it's locally, not somewhere in $PATH
-  # existuje a je spustitelny: eval
-  # neexistuje a jakoby neni spustitelny: eval
-  (test -f $1 && test -x $1) && eval $(interpret $1) || mate $1
-}
-
-interpret() {
-  interpret=$(head -1 $1 | sed -E 's/^#!(.+)$/\1/')
-  echo "$interpret '$1'"
-}
-
-edit() {
-  return "mate '$1'"
-  # TODO
-  # test -f $1 && return $EDITOR
-  # template=$CONF/ZSH/templates # etc
-  # cp $template $1
-}
-
-# web
-# for suffix in com org cz
-#   do alias -s $suffix="open -a opera"
-# done
-alias -s {com,org,cz}="open -a opera"
-
-# NOTE: pretty bad idea
-# scripts
-# for suffix in sh rb pl py
-#   do alias -s $suffix="test_executable '$filename'"
-# done
-#alias -s {sh,rb,pl,py}="test_executable '$filename'"
-# textmate
-# for suffix in htm html js css haml erb rhtml rjs txt tex c cpp ru sql
-#   do alias -s $suffix="eval edit '$filename'"
-# done
-
-alias -s {htm,html,js,css,haml,erb,rhtml,rjs,txt,tex,c,cpp,ru,sql}="mate '$filename'"
-
-# /Applications
-alias -s app="open"
-
 alias -g ERR="> /dev/null"
 alias -g QUIET="2> /dev/null"
 alias -g T="tail -f"
@@ -162,16 +124,21 @@ publish() {
     echo "publish list"
     echo "publish run 'command'"
   }
-  case $1 in
+  command=$1 && shift
+  case $command in
   add)
-    scp -r $* solaris:/home/webs/static/public > /dev/null
-    echo "http://public.botablog.cz/$file" ;;
+    for file in $* ; do
+      scp -r "$file" static@solaris:/webs/static/public.botablog.cz > /dev/null
+      echo "http://public.botablog.cz/$(basename $file)"
+    done ;;
   ls|list)
-    ssh static@solaris ls -l /home/webs/static/public ;;
+    ssh static@solaris ls -l /webs/static/public.botablog.cz ;;
   rm|del|delete)
-    ssh static@solaris rm -rf /home/webs/static/public/$2 ;;
+    for file in $* ; do
+      ssh static@solaris rm -rf /webs/static/public.botablog.cz/$file
+    done ;;
   run)
-    ssh static@solaris rm -rf /home/webs/static/public/$2 ;;
+    ssh static@solaris "cd /webs/static/public.botablog.cz && $*" ;;
   *)
     help ;;
   esac
@@ -231,7 +198,8 @@ alias urxvt='urxvt +sb'
 # git
 alias gs="git status"
 alias gci="git commit -a -m"
-alias gom="git push origin master"
+branch="git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'"
+alias gom='git push origin $(branch)'
 
 # grep
 alias grep='grep --color=auto'
@@ -260,71 +228,47 @@ alias d='ls -d */' # vypis adresare
 alias re="ruby -e"
 alias rpe="ruby -pe"
 
-
-
-function _mategem {
-    reply=($(ls "$(gem environment gemdir)/gems"))
-}
-compctl -K _mategem mategem.sh
-
-# Project
-# project Get
-# project Get --ruby
-function _project_types { reply=($(ls ~/Config/Projects/General | sed 's/\.rb$//' | sed 's/^/--/')) }
-compctl -K _project_types project.rb
-
-function _projects { reply=($(ruby -rterminal/helper -e 'puts Helper.completion')) }
-# projit config/projects/general/*.rb => paths
-compctl -K _projects project.rb
-# compctl -K projects -K _project_types project
-
-compdef _gnu_generic irb
-compdef _gnu_generic rake
-compdef _gnu_generic merb
-compdef _gnu_generic merb-gen
-compdef _gnu_generic thor
-
-_thor() {
-  compadd thor list | awk '{ print $1 }'
+test_executable() {
+  # If file exists => it's locally, not somewhere in $PATH
+  # existuje a je spustitelny: eval
+  # neexistuje a jakoby neni spustitelny: eval
+  (test -f $1 && test -x $1) && eval $(interpret $1) || mate $1
 }
 
-compdef _thor thor
-
-_rake_does_task_list_need_generating () {
-  if [ ! -f .rake_tasks ]; then return 0;
-  else
-    accurate=$(stat -f%m .rake_tasks)
-    changed=$(stat -f%m Rakefile)
-    return $(expr $accurate '>=' $changed)
-  fi
+interpret() {
+  interpret=$(head -1 $1 | sed -E 's/^#!(.+)$/\1/')
+  echo "$interpret '$1'"
 }
 
-_rake () {
-  if [ -f Rakefile ]; then
-    if _rake_does_task_list_need_generating; then
-      echo "\nGenerating .rake_tasks..." > /dev/stderr
-      rake --silent --tasks | cut -d " " -f 2 > .rake_tasks
-    fi
-    compadd `cat .rake_tasks`
-  fi
+edit() {
+  return "mate '$1'"
+  # TODO
+  # test -f $1 && return $EDITOR
+  # template=$CONF/ZSH/templates # etc
+  # cp $template $1
 }
 
-compdef _rake rake
+# web
+# for suffix in com org cz
+#   do alias -s $suffix="open -a opera"
+# done
+alias -s {com,org,cz}="open -a opera"
 
+# NOTE: pretty bad idea
+# scripts
+# for suffix in sh rb pl py
+#   do alias -s $suffix="test_executable '$filename'"
+# done
+#alias -s {sh,rb,pl,py}="test_executable '$filename'"
+# textmate
+# for suffix in htm html js css haml erb rhtml rjs txt tex c cpp ru sql
+#   do alias -s $suffix="eval edit '$filename'"
+# done
 
+alias -s {htm,html,js,css,haml,erb,rhtml,rjs,txt,tex,c,cpp,ru,sql}="mate '$filename'"
 
-_gems()         { gem list $1 | awk '{ print $1 }' | egrep -v "^$|^\*+$" }
-_gem_commands() { gem help commands | awk '{ print $1 }' }
-_remote_gem()   { _gems --remote }
-_local_gem()    { _gems --local }
-
-compdef _remote_gem "gem install"
-
-for command in _gem_commands ; do
-  compdef _gnu_generic "gem $command"
-done
-
-# print -z foo
+# /Applications
+alias -s app="open"
 
 # To use, save as .cap_completion.zsh in your home dir, and add "source ~/.cap_completion.zsh" to your .zshrc file
 # 99% of this is ripped straight from http://weblog.rubyonrails.com/2006/3/9/fast-rake-task-completion-for-zsh
@@ -351,6 +295,93 @@ _cap () {
 
 compdef _cap cap
 
+function _mategem {
+    reply=($(ls "$(gem environment gemdir)/gems"))
+}
+compctl -K _mategem mategem.sh
+
+# Project
+# project Get
+# project Get --ruby
+function _project_types { reply=($(ls ~/Config/Projects/General | sed 's/\.rb$//' | sed 's/^/--/')) }
+compctl -K _project_types project.rb
+
+function _projects { reply=($(ruby -rterminal/helper -e 'puts Helper.completion')) }
+# projit config/projects/general/*.rb => paths
+compctl -K _projects project.rb
+# compctl -K projects -K _project_types project
+
+compdef _gnu_generic irb
+compdef _gnu_generic rake
+compdef _gnu_generic merb
+compdef _gnu_generic merb-gen
+compdef _gnu_generic thor
+
+_gems()         { gem list $1 | awk '{ print $1 }' | egrep -v "^$|^\*+$" }
+_gem_commands() { gem help commands | awk '{ print $1 }' }
+_remote_gem()   { _gems --remote }
+_local_gem()    { _gems --local }
+
+compdef _remote_gem "gem install"
+
+for command in _gem_commands ; do
+  compdef _gnu_generic "gem $command"
+done
+
+# print -z foo
+
+
+
+
+
+_rake_does_task_list_need_generating () {
+  if [ ! -f .rake_tasks ]; then return 0;
+  else
+    accurate=$(stat -f%m .rake_tasks)
+    changed=$(stat -f%m Rakefile)
+    return $(expr $accurate '>=' $changed)
+  fi
+}
+
+_rake () {
+  if [ -f Rakefile ]; then
+    if _rake_does_task_list_need_generating; then
+      echo "\nGenerating .rake_tasks..." > /dev/stderr
+      rake --silent --tasks | cut -d " " -f 2 > .rake_tasks
+    fi
+    compadd `cat .rake_tasks`
+  fi
+}
+
+compdef _rake rake
+
+_thor() {
+  compadd thor list | awk '{ print $1 }'
+}
+
+compdef _thor thor
+
+export SHELL="/bin/zsh"
+
+export EDITOR="mate"
+export CVSEDITOR="mate -w"
+export SVN_EDITOR="mate -w"
+export GIT_EDITOR="mate -w"
+
+# The less pager supports editing the file being viewed by pressing v. To setup TextMate to be used with less, you need to setup the LESSEDIT variable
+export LESSEDIT='mate -l %lm %f'
+
+# == RUBY == #
+export RUBYOPT="rubygems"
+
+# == SHELL == #
+export CDPATH="$HOME/data/projects"
+export MANPATH=/opt/local/share/man:$MANPATH
+
+# == GREP == #
+export GREP_OPTIONS='--color=auto' 
+export GREP_COLOR='1;36'
+
 path-add()        { path+=("$@") }
 path-del()        { for i ("$@") { path[(r)$i]=() } }
 path-clear()      { path=() }
@@ -372,24 +403,6 @@ rubylib-clear
 
 projects=~/data/projects/sources
 test -d $projects && rubylib-add $projects/**/lib
-
-export SHELL="/bin/zsh"
-
-export EDITOR="mate"
-export CVSEDITOR="mate -w"
-export SVN_EDITOR="mate -w"
-export GIT_EDITOR="mate -w"
-
-# == RUBY == #
-export RUBYOPT="rubygems rdebugable"
-
-# == SHELL == #
-export CDPATH="$HOME/data/projects"
-export MANPATH=/opt/local/share/man:$MANPATH
-
-# == GREP == #
-export GREP_OPTIONS='--color=auto' 
-export GREP_COLOR='1;36'
 
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'

@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env ruby1.8
 
 gtk = File.open("#{ENV['HOME']}/.gtk-bookmarks")
 

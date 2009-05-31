@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env ruby1.8
 #
 # bgmenu.rb -- a background menu for openbox3
 #           -- by Tim Riley <tr@slackzone.org>

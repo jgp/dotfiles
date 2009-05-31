@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env ruby1.8
 
 # USAGE
 # Create the configuration file ~/.config/openbox/bgmenurc
