@@ -6,5 +6,5 @@ rubylib-clear()  { rubylib=() }
 
 rubylib-clear
 
-projects=~/data/projects/sources
+projects=~/Projects/sources
 test -d $projects && rubylib-add $projects/**/lib
