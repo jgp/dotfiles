@@ -1,15 +1,49 @@
 require "pathname"
+require "rake/clean"
+
+dotzshrc = File.join(ENV["HOME"], ".zshrc")
+
+CLEAN.include("zshrc", "*.patch")
 
 desc "Build dotfiles and copy them to the $HOME directory"
-task :install => "zshrc-generated.sh" do |item|
-  cp "zshrc-generated.sh", File.join(ENV["HOME"], ".zshrc")
+task :install => [:clean, "patch:generate", "zshrc"] do
+  puts "Installing ~/.zshrc ..."
+  cp "zshrc", "#{dotzshrc}-#{Time.now.strftime("%m%d%H%S")}" # the clean generated zshrc without changes added by merge
+  cp "zshrc", dotzshrc
+  Rake::Task["patch:apply"].invoke
+  if File.exist?("changes.patch")
+    puts "\n\n=== Diff ==="
+    puts File.read("changes.patch")
+  end
+end
+
+namespace :patch do
+  task :generate do
+    puts "Generating patch ..."
+    versions = Dir["#{ENV["HOME"]}/.zshrc-*"]
+    previous = versions.sort.last
+    if previous
+      sh "diff #{previous} #{ENV["HOME"]}/.zshrc > changes.patch; true"
+    end
+  end
+
+  desc "Merge changes made in ~/.zshrc back into generated zshrc"
+  task :apply do
+    puts "Applying patch ..."
+    versions = Dir["#{ENV["HOME"]}/.zshrc-*"] || Array.new
+    previous = versions.sort[-2]
+    if previous
+      p sh("patch #{ENV["HOME"]}/.zshrc changes.patch")
+    end
+  end
 end
 
 desc "Build all the files to the one big zshrc"
-file "zshrc-generated.sh" => (FileList["**/*.sh"] - ["zshrc-generated.sh"]) do
+file "zshrc" => (FileList["**/*.sh"] - ["zshrc"]) do
+  puts "Generating zshrc ..."
   dirs = %w{setup functions aliases completion environment prompt}
   files = dirs.map { |dir| Dir["#{dir}/*.sh"] }.flatten
-  File.open("zshrc-generated.sh", "w") do |output|
+  File.open("zshrc", "w") do |output|
     output.puts("source /etc/profile")
     files.each do |file|
       #filename = Pathname.new(file).relative_path_from(Pathname.new(Dir.pwd))
