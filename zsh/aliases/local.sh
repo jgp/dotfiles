@@ -78,8 +78,20 @@ alias rxvt='urxvt +sb'
 alias urxvt='urxvt +sb'
 
 # git
-alias gs="git status"
-alias gci="git commit -a -m"
+alias gst="git status"
+
+alias gc="git commit"
+alias gcm="git commit -m"
+alias gcv="git commit -v"
+alias gcam="git commit -a -m"
+alias gcav="git commit -a -v"
+
+alias gd="git diff"
+alias gdm="git diff | mate"
+alias gl="git log"
+alias gb="git branch"
+alias gco="git checkout"
+alias gp="git push"
 branch="git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'"
 alias gom='git push origin $(branch)'
 
