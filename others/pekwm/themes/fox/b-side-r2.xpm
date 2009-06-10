@@ -1,9 +1,0 @@
-/* XPM */
-static char *b-side-r2[] = {
-/* columns rows colors chars-per-pixel */
-"5 1 2 1",
-"  c gray60",
-". c #EEEEEEEEEEEE",
-/* pixels */
-" ... "
-};

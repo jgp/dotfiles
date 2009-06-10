@@ -1,8 +1,0 @@
-/* XPM */
-static char *bd-t.png[] = {
-/* columns rows colors chars-per-pixel */
-"4 1 1 1",
-"  c #AAAAAA",
-/* pixels */
-"    "
-};

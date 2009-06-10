@@ -1,9 +1,0 @@
-/* XPM */
-static char *b-side-r[] = {
-/* columns rows colors chars-per-pixel */
-"5 1 2 1",
-"  c #797983839696",
-". c #9999A6A6BFBF",
-/* pixels */
-" ... "
-};
