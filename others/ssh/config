@@ -5,9 +5,9 @@ Host eleanor
   Compression yes
 
 Host misha
-  HostName 82.117.150.222
+  HostName misha.tresnovec.net
   User botanicus
-  Port 52222
+  Port 22
   Compression yes
 
 Host solaris

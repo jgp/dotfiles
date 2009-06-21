@@ -1,22 +1,27 @@
-require "time"
-require "rubygems"
-require "yaml"
-require "easyruby"
-require "wirble"
-require "what_methods"
+# encoding: utf-8
 
-# http://sketches.rubyforge.org/
-require "sketches"
+require "yaml"
+
+def try_require(library)
+  require library
+rescue LoadError
+  puts "Feature #{library} isn't available."
+end
+
+try_require "what_methods"
+
+# http://sketches.rubyforge.org
+try_require "sketches"
 Sketches.config :editor => :mate
 
 # http://quotedprintable.com/2007/6/9/irb-history-and-completion
 require 'irb/completion'
 require 'irb/ext/save-history'
+
 ARGV.concat [ "--readline", "--prompt-mode", "simple" ]
 IRB.conf[:SAVE_HISTORY] = 10000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
 
-# TODO: add to easyruby
 class Hash
   def inspect
     output = Array.new
@@ -27,10 +32,6 @@ class Hash
   end
 end
 
-# http://pablotron.org/software/wirble/
-Wirble.init
-# Wirble.colorize
-
 # setup logger to console in Rails
 require 'logger'
 if ENV.include?('RAILS_ENV') && !Object.const_defined?('RAILS_DEFAULT_LOGGER')
@@ -40,6 +41,8 @@ end
 def ri(*names)
   system(%{ri #{names.map {|name| name.to_s}.join(" ")}})
 end
+
+$VERBOSE = true
 
 # ANSI COLORS
 C = {
