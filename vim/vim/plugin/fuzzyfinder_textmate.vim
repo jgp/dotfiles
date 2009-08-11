@@ -27,12 +27,6 @@ function! InstantiateTextMateMode() "{{{
 ruby << RUBY
   $LOAD_PATH << "#{ENV['HOME']}/.vim/ruby"
 
-  begin
-    require 'rubygems'
-    gem 'fuzzy_file_finder'
-  rescue LoadError
-  end
-
   $LOAD_PATH << File.expand_path('~/.vim/lib/fuzzy_file_finder/lib')
   require 'fuzzy_file_finder'
 RUBY

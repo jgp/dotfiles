@@ -1,11 +1,13 @@
-" We're running Vim, not Vi!
+" Basic setup
 set nocompatible
-" Enable syntax highlighting
 syntax on
+set number
+set encoding=utf-8
+" Don't save UTF BOM header
+" set nobomb
+
 " Faster response
 set ttyfast
-" Line numbering
-set number
 
 " how many tabs can be opened while using gvim -p
 set tabpagemax=100 
@@ -65,10 +67,6 @@ set laststatus=2
 set noswapfile
 " No backup file
 set nobackup
-" Default encoding
-set encoding=utf-8
-" Don't save UTF BOM header
-" set nobomb
 
 if has("autocmd")
   filetype plugin on
