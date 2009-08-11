@@ -1,16 +1,49 @@
-# TODO: merge task
+require "rake/clean"
 
-module FileUtils
-  def cp_rf(from, to)
-    sh("rm -rf '#{to}'")
-    sh("cp -rf '#{from}' '#{to}'")
+dotvim   = File.join(ENV["HOME"], ".vim")
+dotvimrc = File.join(ENV["HOME"], ".vimrc")
+
+CLEAN.include("*.patch")
+
+desc "Build dotfiles and copy them to the $HOME directory"
+task :install => ["install:vimrc", "install:vim"]
+
+namespace :install do
+  task :vim => :clean do
+    puts "Installing ~/.vim ..."
+    rm_rf "#{ENV["HOME"]}/.vim"
+    cp_r "vim", "#{ENV["HOME"]}/.vim"
+  end
+
+  task :vimrc => [:clean, "patch:generate"] do
+    puts "Installing ~/.vimrc ..."
+    cp "vimrc", "#{dotvimrc}-#{Time.now.strftime("%m%d%H%S")}" # the clean generated vimrc without changes added by merge
+    cp "vimrc", dotvimrc
+    Rake::Task["patch:apply"].invoke
+    if File.exist?("changes.patch")
+      puts "\n\n=== Diff ==="
+      puts File.read("changes.patch")
+    end
   end
 end
 
-desc "Copy each dotfile to the $HOME directory"
-task :install do |item|
-  Dir["*"].each do |file|
-    next if file.eql?("Rakefile")
-    cp_rf file, File.join(ENV["HOME"], ".#{file}")
+namespace :patch do
+  task :generate do
+    puts "Generating patch ..."
+    versions = Dir["#{ENV["HOME"]}/.vimrc-*"]
+    previous = versions.sort.last
+    if previous
+      sh "diff #{previous} #{ENV["HOME"]}/.vimrc > changes.patch; true"
+    end
+  end
+
+  desc "Merge changes made in ~/.vimrc back into generated vimrc"
+  task :apply do
+    puts "Applying patch ..."
+    versions = Dir["#{ENV["HOME"]}/.vimrc-*"] || Array.new
+    previous = versions.sort[-2]
+    if previous
+      p sh("patch #{ENV["HOME"]}/.vimrc changes.patch")
+    end
   end
 end
