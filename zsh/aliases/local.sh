@@ -70,6 +70,7 @@ alias gem_search="gem query --remote --name-matches"
 # editors
 alias emacs='emacs -nw'
 alias gvim='gvim -p'
+alias mvim='mvim -p'
 e() { (test "$#" -eq 0) && $EDITOR . || $EDITOR $@ }
 
 # shells
