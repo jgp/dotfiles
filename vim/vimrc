@@ -10,7 +10,7 @@ set encoding=utf-8
 set ttyfast
 
 " how many tabs can be opened while using gvim -p
-set tabpagemax=100 
+set tabpagemax=120
 
 " odsazeni po preformatovani pres '>', if ... : <Enter>
 set shiftwidth=2
@@ -172,6 +172,8 @@ augroup END
 " Highlight chars that go over the 80-column limit
 highlight OverLength ctermbg=red ctermfg=white guibg=red guifg=white
 match OverLength '\%81v.*'
+
+source ~/.vim/macros/generic.vim
 
 " Links
 " www.root.cz/clanky/editor-vim-efektivnejsie/
