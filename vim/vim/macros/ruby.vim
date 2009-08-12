@@ -10,63 +10,7 @@
 
 " ====== DEFINITIONS ======"
 
-" def
-imap def<Tab> def <Esc>oend<Up><End>
-
 imap <LocalLeader># #{}<Esc>i
-imap do<Tab> do \|item\|<Enter>end<Esc>O
-
-" class basic
-imap <LocalLeader>dc <Esc>Iclass <Esc>oend<Esc>O
-
-" class with initialize
-imap <LocalLeader>di <Esc>Iclass <Esc>o<CR>def initialize<CR>end<CR><CR>end<Esc>2kO
-
-" module
-imap <LocalLeader>dm <Esc>Imodule <Esc>oend<Esc>O
-
-
-" ===== CONDITIONS ===== "
-
-" if
-imap if<Tab> if <Esc>oend<Esc>O
-
-" if + else
-imap <LocalLeader>ie <Esc>Iif <Esc>oelse<Esc>oend<Esc>kO
-
-" if + elsif + else
-imap <LocalLeader>ia <Esc>Iif <Esc>oelse<Esc>oend<Esc>kO
-
-
-" ===== CYCLES ===== "
-
-" case
-imap <LocalLeader>cc <Esc>Icase <Esc>oend<Esc>Owhen 
-
-" do
-imap <LocalLeader>cd do<Esc>oend<Esc>O
-
-" each
-imap <LocalLeader>ee .each do \|foo\|<Esc>oend<Esc>O
-
-" each_index
-imap <LocalLeader>ei .each_index do \|foo\|<Esc>oend<Esc>O
-
-" times
-imap <LocalLeader>ctb .times {}<Esc>i
-imap <LocalLeader>cta .times do<CR>end<Esc>O
-
-" step
-
-" upto
-
-" 3.upto(5)
-
-" downto
-
-" while
-
-" until
 
 " files
 imap <LocalLeader>fl <Esc>IFile(<Esc>A) do \|file\|<CR>end<Esc>O
