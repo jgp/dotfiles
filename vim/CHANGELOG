@@ -1,11 +1,5 @@
 [ 11/8/2009 ]
 - updated fuzzy file finder
-- updated Cucumber support from http://github.com/tpope/vim-cucumber
-- updated Haml support from http://github.com/tpope/vim-haml
-- updated Rails support from http://github.com/tpope/vim-rails
-- added Git support from http://github.com/tpope/vim-git
-- added Vim Surround from http://github.com/tpope/vim-surround
-- added Vim Pastie from http://github.com/tpope/vim-pastie
-- added SpeedDating from http://github.com/tpope/vim-speeddating
-- added Vim Abolish from http://github.com/tpope/vim-abolish
-- added Vim Unimpaired from http://github.com/tpope/vim-unimpaired
+- updated Cucumber, Haml and Rails support
+- added Git support, Vim Surround, Vim Pastie, SpeedDating, Abolish,
+Unimpaired and NERD Tree
