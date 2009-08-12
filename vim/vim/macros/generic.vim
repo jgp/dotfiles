@@ -1,7 +1,7 @@
 " How to define new ex commands: http://www.vim.org/htmldoc/usr_40.html#40.2
-command RmSelf call RemoveCurrentFile()
+command! RmSelf call RemoveCurrentFile()
 
-function RemoveCurrentFile()
+function! RemoveCurrentFile()
   !rm "%"
   bd
 endfunction
