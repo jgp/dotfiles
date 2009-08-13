@@ -6,6 +6,10 @@ let st = g:snip_start_tag
 let et = g:snip_end_tag
 let cd = g:snip_elem_delim
 
+" require
+exec "Snippet r require \"".st."library".et."\"".st.et
+exec "Snippet rr require_relative \"".st."library".et."\"".st.et
+
 " class, module, def
 exec "Snippet c class ".st."className".et."<CR>".st.et."<CR>end".st.et
 exec "Snippet m module ".st."className".et."<CR>".st.et."<CR>end".st.et
@@ -30,7 +34,7 @@ exec "Snippet fwo File.open(\"".st."path".et."\", \"w\") do |file|<CR>".st.et."<
 
 " IO operations
 exec "Snippet p puts ".st.et
-exec "Snippet r raise ".st."value".et.".inspect".st.et
+exec "Snippet ri raise ".st."value".et.".inspect".st.et
 exec "Snippet dbg logger.debug \"".st."desc".et.": #{".st."value".et.".inspect}\"".st.et
 
 " Array.new, Hash.new
