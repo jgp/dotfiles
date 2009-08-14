@@ -29,10 +29,7 @@ function zls() {
    du -h `tar -tzf $1`
 }
 
-password() { grep -i -E $1 /Users/botanicus/Documents/Others/Passwords.txt }
-
-kill_merb() {
-  id=$(ps aux | grep merb | grep work | awk '{ print $2 }')
-  echo "Killing $id ..."
-  kill -9 $id
+function path-grep() {
+  dirs=${PATH//:/\ }
+  find $(echo $dirs) | egrep $1
 }
