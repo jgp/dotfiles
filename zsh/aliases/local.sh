@@ -40,11 +40,7 @@ alias rmrf="rm -rf"
 
 # df, du
 alias df='df -h'
-du() {
-  for item in $* ; do
-    /usr/bin/du -h $item | tail -1
-  done
-}
+alias du='du -h --max-depth=1'
 
 # ls
 #alias ls='ls -GFh'

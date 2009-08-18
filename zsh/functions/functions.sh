@@ -33,3 +33,7 @@ function path-grep() {
   dirs=${PATH//:/\ }
   find $(echo $dirs) | egrep $1
 }
+
+function grep-files() {
+  egrep $@ | sed -E 's/:.+$//' | sort -ru
+}
