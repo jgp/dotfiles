@@ -29,7 +29,7 @@ set scrolloff=5 " kolik radek ma minimalne byt videt pred a za kursorem, nez se 
 
 " ::: macros :::
 let maplocalleader = ","
-let mapleader = '\'
+let mapleader = ':'
 
 " ::: others :::
 set wildignore=*~,*.o,*.log,*.aux,*.dvi,*.pdf
@@ -37,12 +37,9 @@ set wildignore=*~,*.o,*.log,*.aux,*.dvi,*.pdf
 " These are files we are not likely to want to edit or read.
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 set confirm
-set history=500
-" ukazuj pozici kursoru (vpravo dole)
-set ruler
+set history=1000
 set showcmd		" Show (partial) command in status line.
 "set incsearch		" Incremental search
-set hlsearch " barevne zvyrazni vsechny nalezene vyrazy
 set autowrite		" Automatically save before commands like :next and :make
 set mouse=a
 set backspace=indent,eol,start	" more powerful backspacing
@@ -60,7 +57,7 @@ set smarttab
 set shiftwidth=2
 set autoindent
 " Set our status line information
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 " always show the status line
 set laststatus=2
 " No swap file
@@ -68,19 +65,21 @@ set noswapfile
 " No backup file
 set nobackup
 
+set showcmd " if you start to type a command, you'll see it in status line (left right)
+
+set exrc " source ./.vimrc
+
 if has("autocmd")
   filetype plugin on
 
   " ::: macros :::
   au! BufRead,BufNewFile *.haml         setfiletype haml
-  " TODO: doesn't work
-  au! BufRead,BufNewFile *.feature      setfiletype story
+  au! BufRead,BufNewFile *.feature      setfiletype cucumber
 
   autocmd BufRead,BufNewFile *.html source ~/.vim/macros/html.vim
-  autocmd BufRead,BufNewFile *.htm source ~/.vim/macros/html.vim
   autocmd BufRead,BufNewFile *.rb source ~/.vim/macros/ruby.vim
+  autocmd BufRead,BufNewFile *.thor source ~/.vim/macros/thor.vim
   autocmd BufRead,BufNewFile *.otl source ~/.vim/macros/tvo.vim
-  "autocmd BufRead,BufNewFile *.tex source ~/.vim/macros/latex.vim
   autocmd BufRead,BufNewFile *.tex source ~/.vim/macros/context.vim
   "autocmd BufRead,BufNewFile Makefile source ~/.vim/macros/makefile.vim
   "autocmd BufRead,BufNewFile Rakefile source ~/.vim/macros/rakefile.vim
@@ -100,7 +99,6 @@ if has("autocmd")
   autocmd FileType css set omnifunc=csscomplete#CompleteCSS
   autocmd FileType c set omnifunc=ccomplete#Complete
 
-
   " if you want buffer/rails/global completion you must add the following:
   autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
   " if you want rails support add the following in addition
@@ -110,25 +108,15 @@ if has("autocmd")
 endif
 
 
-" Ctrl-s as save
-imap  :w<CR>a
-map  :w<CR>
-
 " Ctrl-a
-map  ggVG
-imap  <Esc>ggVG
+"map  ggVG
+"imap  <Esc>ggVG
 
 " F2 for set nohlsearch
 map <F2> :nohlsearch<CR>
 imap <F2> <Esc>:nohlsearch<CR>a
 map <F3> :tabdo nohlsearch<CR>
 imap <F3> <Esc>:tabdo nohlsearch<CR>a
-
-imap <LocalLeader>" ""<Esc>i
-imap <LocalLeader>' ''<Esc>i
-imap <LocalLeader>{ {}<Esc>i
-imap <LocalLeader>( ()<Esc>i
-imap <LocalLeader>[ []<Esc>i
 
 " Enable filetype-specific indenting and plugins
 filetype plugin indent on
@@ -137,14 +125,10 @@ filetype plugin indent on
 let g:fuzzy_ignore = "*.log"
 let g:fuzzy_matching_limit = 70
  
-" Jamis Bucks Fuzzy File Finder
-map <leader>fft :FuzzyFinderTextMate<CR>
-map <leader>ffb :FuzzyFinderBuffer<CR>
-map <leader>fftf :FuzzyFinderTaggedFile<CR>
- 
 " FuzzyFinderTextMate
-map  :tabnew<CR>:FuzzyFinderTextMate<CR>
-vmap  <Esc>:tabnew<CR>:FuzzyFinderTextMate<CR>
+" TODO: cmd-t, not ctrl
+"map  :tabnew<CR>:FuzzyFinderTextMate<CR>
+"vmap  <Esc>:tabnew<CR>:FuzzyFinderTextMate<CR>
 " NOTE: do not map it for insert mode, it's important for indenting (C-t vs. C-d)
 
 " Project plugin
@@ -174,6 +158,14 @@ highlight OverLength ctermbg=red ctermfg=white guibg=red guifg=white
 match OverLength '\%81v.*'
 
 source ~/.vim/macros/generic.vim
+
+helptags ~/.vim/doc
+
+" higlight tabs
+syntax match Tab /\t/
+highlight Tab guibg=red ctermbg=red
+
+autocmd BufNewFile,BufRead Thorfile,Rakefile,Capfile setfiletype ruby
 
 " Links
 " www.root.cz/clanky/editor-vim-efektivnejsie/
