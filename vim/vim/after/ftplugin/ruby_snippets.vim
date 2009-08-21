@@ -10,11 +10,21 @@ let cd = g:snip_elem_delim
 exec "Snippet r require \"".st."library".et."\"".st.et
 exec "Snippet rr require_relative \"".st."library".et."\"".st.et
 
+" attributes
+exec "Snippet ar attr_reader :".st.et
+exec "Snippet aw attr_writer :".st.et
+exec "Snippet arw attr_accessor :".st.et
+exec "Snippet car cattr_reader :".st.et
+exec "Snippet caw cattr_writer :".st.et
+exec "Snippet carw cattr_accessor :".st.et
+
 " class, module, def
 exec "Snippet c class ".st."className".et."<CR>".st.et."<CR>end".st.et
+exec "Snippet cs class << self<CR>".st.et."<CR>end".st.et
 exec "Snippet m module ".st."className".et."<CR>".st.et."<CR>end".st.et
 exec "Snippet d def ".st."methodName".et."<CR>".st.et."<CR>end".st.et
-exec "Snippet begin begin<CR>".st.et."<CR>rescue ".st."Exception".et." => ".st."e".et."<CR>".st.et."<CR>end".st.et
+exec "Snippet bg begin<CR>".st.et."<CR>rescue<CR>".st.et."<CR>end".st.et
+exec "Snippet bge begin<CR>".st.et."<CR>rescue ".st."Exception".et." => ".st."e".et."<CR>".st.et."<CR>end".st.et
 
 " { and do
 exec "Snippet { { |".st."item".et."| ".st."".et. " }".st.et.st.et
@@ -57,3 +67,10 @@ exec "Snippet when when ".st."condition".et."".st.et
 " others
 exec "Snippet : :".st."key".et." => \"".st."value".et."\"".st.et."".st.et
 exec "Snippet # #{".st."variable".et."}".st.et
+exec "Snippet eof <<-EOF<CR>".st.et."<CR>EOF".st.et
+
+" File
+" basename, dirname
+" File.exist? File.directory? File.file? File.executable? File.zero?
+" File.symlink? File.writable? File.readable? File.owned? File.grpowned?
+" Dir.exist? Dir[]
