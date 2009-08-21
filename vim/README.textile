@@ -1,0 +1,14 @@
+h2. Plugins
+
+- snippetsEmu: http://www.vim.org/scripts/script.php?script_id=1318
+- fuzzy file finder
+- Cucumber support: http://github.com/tpope/vim-cucumber
+- Haml support: http://github.com/tpope/vim-haml
+- Rails support: http://github.com/tpope/vim-rails
+- Git support: http://github.com/tpope/vim-git
+- Vim Surround: http://github.com/tpope/vim-surround
+- Vim Pastie: http://github.com/tpope/vim-pastie
+- SpeedDating: http://github.com/tpope/vim-speeddating
+- Vim Abolish: http://github.com/tpope/vim-abolish
+- Vim Unimpaired: http://github.com/tpope/vim-unimpaired
+- NERD Tree: http://github.com/scrooloose/nerdtree
