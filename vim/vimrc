@@ -165,8 +165,6 @@ helptags ~/.vim/doc
 syntax match Tab /\t/
 highlight Tab guibg=red ctermbg=red
 
-autocmd BufNewFile,BufRead Thorfile,Rakefile,Capfile setfiletype ruby
-
 " Links
 " www.root.cz/clanky/editor-vim-efektivnejsie/
 " www.root.cz/clanky/nej-vim-pluginy-2/
