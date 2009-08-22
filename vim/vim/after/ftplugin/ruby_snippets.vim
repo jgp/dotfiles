@@ -68,6 +68,8 @@ exec "Snippet when when ".st."condition".et."".st.et
 exec "Snippet : :".st."key".et." => \"".st."value".et."\"".st.et."".st.et
 exec "Snippet # #{".st."variable".et."}".st.et
 exec "Snippet eof <<-EOF<CR>".st.et."<CR>EOF".st.et
+exec "Snippet env #!/usr/bin/env ruby1.9<CR># encoding: utf-8"
+exec "Snippet enc # encoding: utf-8"
 
 " File
 " basename, dirname
