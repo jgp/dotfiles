@@ -58,8 +58,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 # gem
-alias gem="gem --no-user-install --no-rdoc --no-ri --no-wrappers --no-test --env-shebang"
-alias gi="sudo gem install"
+alias gi="sudo gem install --no-user-install --no-rdoc --no-ri --no-wrappers --no-test --env-shebang"
 alias gu="sudo gem uninstall"
 alias gem_all="gem query --remote"
 alias gem_search="gem query --remote --name-matches"
