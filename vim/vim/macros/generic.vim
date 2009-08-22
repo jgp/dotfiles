@@ -7,3 +7,8 @@ function! RemoveCurrentFile()
 endfunction
 
 "command RmSelf !rm "%"
+
+" Shrink more than one blank lines to one in VIM
+function RmExtraBlankLines() {
+  %v/./,/./-j
+}
