@@ -28,8 +28,8 @@ set display=lastline
 set scrolloff=5 " kolik radek ma minimalne byt videt pred a za kursorem, nez se scrollne
 
 " ::: macros :::
-let maplocalleader = ","
-let mapleader = ':'
+"let maplocalleader = ","
+"let mapleader = ':'
 
 " ::: others :::
 set wildignore=*~,*.o,*.log,*.aux,*.dvi,*.pdf
@@ -165,6 +165,7 @@ helptags ~/.vim/doc
 syntax match Tab /\t/
 highlight Tab guibg=red ctermbg=red
 
+command Reload "source $MYVIMRC"
 " Links
 " www.root.cz/clanky/editor-vim-efektivnejsie/
 " www.root.cz/clanky/nej-vim-pluginy-2/
