@@ -9,6 +9,6 @@ endfunction
 "command RmSelf !rm "%"
 
 " Shrink more than one blank lines to one in VIM
-function RmExtraBlankLines() {
+function RmExtraBlankLines()
   %v/./,/./-j
-}
+endfunction
