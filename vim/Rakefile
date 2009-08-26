@@ -48,6 +48,13 @@ namespace :patch do
   end
 end
 
+# regenerate tags file
+task :tags do
+  Dir.chdir("vim/doc") do
+    sh "ctags *"
+  end
+end
+
 task :vimball => ["vimball:install", "vimball:merge"]
 namespace :vimball do
   task :install do
