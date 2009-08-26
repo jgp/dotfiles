@@ -47,3 +47,33 @@ namespace :patch do
     end
   end
 end
+
+task :vimball => ["vimball:install", "vimball:merge"]
+namespace :vimball do
+  task :install do
+    if ENV["VIMBALL"].nil?
+      abort "You have to setup VIMBALL environment variable first!"
+    end
+    rm_rf File.join(ENV["HOME"], ".vim")
+    sh "vim -e -c 'source #{ENV["VIMBALL"]}'"
+  end
+
+  task :merge do
+    require "find"
+    Find.find(File.join(ENV["HOME"], ".vim")) do |file|
+      next if File.directory?(file)
+      original = file.dup
+      file[ENV["HOME"] + "/."] = ""
+      mkdir_p(File.dirname(file)) unless File.directory?(File.dirname(file))
+      if File.exist?(file)
+        puts "Warning: appending to #{file}"
+        File.open(file, "a") do |file|
+          file.puts(File.read(original))
+        end
+      else
+        mv original, file
+      end
+      rm_rf File.join(ENV["HOME"], ".vim")
+    end
+  end
+end
