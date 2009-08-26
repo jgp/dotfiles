@@ -12,3 +12,4 @@ h2. Plugins
 - Vim Abolish: http://github.com/tpope/vim-abolish
 - Vim Unimpaired: http://github.com/tpope/vim-unimpaired
 - NERD Tree: http://github.com/scrooloose/nerdtree
+- Vim Ruby http://github.com/vim-ruby/vim-ruby
