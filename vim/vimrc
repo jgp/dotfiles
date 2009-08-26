@@ -164,6 +164,8 @@ helptags ~/.vim/doc
 " higlight tabs
 syntax match Tab /\t/
 highlight Tab guibg=red ctermbg=red
+" turn off folding
+set foldlevel=1
 
 command Reload "source $MYVIMRC"
 " Links
