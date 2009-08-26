@@ -1,6 +1,7 @@
 h2. Plugins
 
 - snippetsEmu: http://www.vim.org/scripts/script.php?script_id=1318
+- snipMate: http://www.vim.org/scripts/script.php?script_id=2540
 - fuzzy file finder
 - Cucumber support: http://github.com/tpope/vim-cucumber
 - Haml support: http://github.com/tpope/vim-haml
