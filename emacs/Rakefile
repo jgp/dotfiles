@@ -1,0 +1,22 @@
+desc "Copy ~/.emacs and ~/.emacs.d to dotfiles"
+task :copy do
+  sh "rm -rf emacs.d; true"
+  sh "rm emacs; true"
+  sh "cp -R ~/.emacs.d emacs.d"
+  sh "cp ~/.emacs emacs"
+end
+
+desc "Build dotfiles and copy them to the $HOME directory"
+task :install do
+  Dir["*"].each do |item|
+    if File.directory?(item)
+      Dir.chdir(item) do
+        puts "~ Entering into directory #{item} ..."
+        if File.exist?("Rakefile")
+          sh "rake install" rescue puts("Copying files from #{item} failed.")
+        end
+        puts
+      end
+    end
+  end
+end
