@@ -1,9 +1,14 @@
 # encoding: utf-8
 
-require "yaml"
+ARGV.concat [ "--readline", "--prompt-mode", "simple" ]
 
-def try_require(library)
+# http://quotedprintable.com/2007/6/9/irb-history-and-completion
+require 'irb/completion'
+require 'irb/ext/save-history'
+
+def try_require(library, &block)
   require library
+  block.call
 rescue LoadError
   puts "Feature #{library} isn't available."
 end
@@ -11,14 +16,10 @@ end
 try_require "what_methods"
 
 # http://sketches.rubyforge.org
-try_require "sketches"
-Sketches.config :editor => :mate
+try_require "sketches" do
+  Sketches.config :editor => :mate
+end
 
-# http://quotedprintable.com/2007/6/9/irb-history-and-completion
-require 'irb/completion'
-require 'irb/ext/save-history'
-
-ARGV.concat [ "--readline", "--prompt-mode", "simple" ]
 IRB.conf[:SAVE_HISTORY] = 10000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
 
@@ -30,16 +31,6 @@ class Hash
     end
     return "{#{output.join(", ")}}"
   end
-end
-
-# setup logger to console in Rails
-require 'logger'
-if ENV.include?('RAILS_ENV') && !Object.const_defined?('RAILS_DEFAULT_LOGGER')
-  Object.const_set('RAILS_DEFAULT_LOGGER', Logger.new(STDOUT))
-end
-
-def ri(*names)
-  system(%{ri #{names.map {|name| name.to_s}.join(" ")}})
 end
 
 $VERBOSE = true
