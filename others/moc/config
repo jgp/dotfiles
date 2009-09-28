@@ -4,7 +4,7 @@
 # at a time, do the share the playlist?
 SyncPlaylist        = yes
 SavePlaylist        = yes
-MusicDir            = "~/Music"
+MusicDir            = "~/music"
 StartInMusicDir     = yes
 ShowHiddenFiles     = no
 Repeat              = no
@@ -12,16 +12,16 @@ Shuffle             = yes
 AutoNext            = yes
 
 # The key bindings are in the keymap file.
-Fastdir1  = "~/Music/Cimrman"
-Fastdir2  = "~/Music/"
-Fastdir3  = "~/Music/"
-Fastdir4  = "~/Music/"
-Fastdir5  = "~/Music/"
-Fastdir6  = "~/Music/"
-Fastdir7  = "~/Music/"
-Fastdir8  = "~/Music/"
-Fastdir9  = "~/Music/"
-Fastdir10 = "~/Music/"
+Fastdir1  = "~/music/Cimrman"
+Fastdir2  = "~/music/"
+Fastdir3  = "~/music/"
+Fastdir4  = "~/music/"
+Fastdir5  = "~/music/"
+Fastdir6  = "~/music/"
+Fastdir7  = "~/music/"
+Fastdir8  = "~/music/"
+Fastdir9  = "~/music/"
+Fastdir10 = "~/music/"
 
 # Hide file name extensions
 HideFileExtension   = no
