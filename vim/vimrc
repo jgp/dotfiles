@@ -167,7 +167,7 @@ highlight Tab guibg=red ctermbg=red
 " turn off folding
 set foldlevel=1
 
-command Reload "source $MYVIMRC"
+"command Reload "source $MYVIMRC"
 " Links
 " www.root.cz/clanky/editor-vim-efektivnejsie/
 " www.root.cz/clanky/nej-vim-pluginy-2/
