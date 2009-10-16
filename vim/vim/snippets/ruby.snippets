@@ -1,38 +1,34 @@
-snippet #!
+snippet !env
 	#!/usr/bin/env ruby1.9
 	# encoding: utf-8
 
+
 snippet enc
 	# encoding: utf-8
+
 
 snippet end
 	__END__
 
 snippet #
 	#{${1:item}}
-
 snippet p
 	puts 
-
 snippet bg
 	begin
 	rescue
 	end
-
 snippet begin
 	begin
 	rescue ${1:Exception} => ${2:exception}
 	end
-
 snippet csi
 	send(:include, ${1:module})
-
 # require
 snippet r
 	require "${1}"${2}
 snippet rr
 	require_relative "${1}"${2}
-
 # loops
 snippet case
 	case ${1:object}
@@ -67,10 +63,8 @@ snippet until
 	until ${1:condition}
 		${2}
 	end
-
 snippet {
 	{ |${1:item}| $2 }
-
 # methods, classes, modules
 snippet d
 	def ${1:method_name}
@@ -102,7 +96,6 @@ snippet m module .. end
 	module ${1:`substitute(Filename(), '^.', '\u&', '')`}
 		${2}
 	end
-
 # attributes
 snippet ar
 	attr_reader :${1:attr_names}
@@ -110,17 +103,14 @@ snippet aw
 	attr_writer :${1:attr_names}
 snippet arw
 	attr_accessor :${1:attr_names}
-
 snippet car
 	cattr_reader :${1:attr_names}
 snippet caw
 	cattr_writer :${1:attr_names}
 snippet carw
 	cattr_accessor :${1:attr_names}
-
 snippet am
 	alias_method :${1:new_name}, :${2:old_name}
-
 # bin files
 snippet usai
 	if ARGV.${1}
@@ -130,7 +120,6 @@ snippet usau
 	unless ARGV.${1}
 		abort "Usage: #{$PROGRAM_NAME} ${2:ARGS_GO_HERE}"${3}
 	end
-
 # array, hash
 snippet array
 	Array.new(${1:10}) { |${2:i}| ${3} }
@@ -140,7 +129,6 @@ snippet a
 	Array.new
 snippet h
 	Hash.new
-
 # files
 snippet fj
 	File.join(${1:ENV["HOME"]}, $2)
