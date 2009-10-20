@@ -70,7 +70,7 @@ def remove_old_backups(homepath)
 end
 
 # === Backup Tasks === #
-desc "Backup your original dotfiles in your home (#{FILES.inspect})"
+desc "Backup your original dotfiles in your home"
 task :backup do
   mkdir "../backups"
   Dir.chdir("../backups") do
