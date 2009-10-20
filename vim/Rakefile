@@ -1,12 +1,15 @@
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), "..", "lib"))
 
-require "dotfiles"
 require "rake/clean"
+require "dotfiles/tasks"
 
 dotvim   = File.join(ENV["HOME"], ".vim")
 dotvimrc = File.join(ENV["HOME"], ".vimrc")
 
 CLEAN.include("*.patch")
+
+FILES  = FileList["vimrc", "vim/**/*"]
+BACKUP = FILES # so will consider everything as editable file
 
 task :install => ["install:vimrc", "install:vim"]
 

@@ -1,39 +1,30 @@
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), "..", "lib"))
 
-require "dotfiles"
+require "pathname"
 require "rake/clean"
+require "dotfiles/tasks"
 
 dotzshrc = File.join(ENV["HOME"], ".zshrc")
 
 CLEAN.include("zshrc", "*.patch")
 
-desc "Build dotfiles and copy them to the $HOME directory"
-task :install => [:clean, "patch:generate", "zshrc"] do
-  puts "Installing ~/.zshrc ..."
-  cp "zshrc", "#{dotzshrc}-#{Time.now.strftime("%m%d%H%S")}" # the clean generated zshrc without changes added by merge
-  cp "zshrc", dotzshrc
-  Rake::Task["patch:apply"].invoke
-  if File.exist?("changes.patch")
-    puts "\n\n=== Diff ==="
-    puts File.read("changes.patch")
-  end
-end
+FILES  = FileList["zshrc"]
+BACKUP = FILES # so will consider everything as editable file
 
 desc "Build all the files to the one big zshrc"
 file "zshrc" => (FileList["**/*.sh"] - ["zshrc"]) do
   puts "Generating zshrc ..."
-  dirs = %w{setup functions aliases completion environment prompt}
-  files = dirs.map { |dir| Dir["#{dir}/*.sh"] }.flatten
-  if File.exist?("platforms/#{platform}")
-    files.push "platforms/#{platform}"
+  files = FileList["{setup,functions,aliases,completion,environment,prompt}/**/*.sh"]
+  if File.exist?("platforms/#{platform}.sh")
+    files.push "platforms/#{platform}.sh"
   else
-    warn "There is no platform file for you platform (expected platforms/#{platform})"
+    warn "There is no platform file for you platform (expected platforms/#{platform}.sh)"
   end
   File.open("zshrc", "w") do |output|
     output.puts("source /etc/profile")
     files.each do |file|
-      #filename = Pathname.new(file).relative_path_from(Pathname.new(Dir.pwd))
-      #output.puts("### #{filename.to_s.upcase} ###")
+      filename = Pathname.new(File.expand_path(file)).relative_path_from(Pathname.new(File.expand_path(Dir.pwd)))
+      output.puts("### #{filename.to_s.upcase} ###")
       output.puts(File.read(file))
       output.puts
     end
