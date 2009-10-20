@@ -1,3 +1,21 @@
 h1. About
 
 Just my configuration files for Git, Ruby, ZSH, Vim etc.
+
+h1. Installation
+
+<pre>
+rake backup    # backup all your original dotfiles from your home
+rake setup     # create config.yml
+vim config.yml # comment out what you aren't interested in
+rake install   # install subprojects specified in the config.yml
+</pre>
+
+h2. One Project Installation
+
+<pre>
+cd zsh
+rake install
+</pre>
+
+h1. Tasks

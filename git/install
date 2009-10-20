@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), "..", "lib"))
+
+require "dotfiles"
+require "highline"
+
+def name
+  @name ||= HighLine.ask("[Git Setup] Your name: ")
+end
+
+def email
+  @email ||= HighLine.ask("[Git Setup] Your email: ")
+end
+
+sh "git config --global user.name '#{name}'"
+sh "git config --global user.email '#{email}'"

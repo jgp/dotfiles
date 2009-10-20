@@ -1,3 +1,6 @@
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), "..", "lib"))
+
+require "dotfiles"
 require "rake/clean"
 
 dotvim   = File.join(ENV["HOME"], ".vim")
@@ -5,7 +8,6 @@ dotvimrc = File.join(ENV["HOME"], ".vimrc")
 
 CLEAN.include("*.patch")
 
-desc "Build dotfiles and copy them to the $HOME directory"
 task :install => ["install:vimrc", "install:vim"]
 
 namespace :install do

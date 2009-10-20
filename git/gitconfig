@@ -1,0 +1,23 @@
+# http://tech.puredanger.com/2008/05/17/git-ignore-files
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+[merge]
+  tool = opendiff
+[core]
+  excludesfile = .gitexcludes
+	editor = mate -w
+[apply]
+  whitespace = nowarn
+[alias]
+  s = status
+  ci = commit -a -m
+  co = checkout
+  br = branch
+  bra = branch -a
+  pl = pull
+  ps = push
+  om = push origin master

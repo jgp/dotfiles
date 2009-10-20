@@ -1,2 +1,8 @@
+lib: install tasks
 IRB history
-OS X directory with TextMate settings etc
+Oh my ZSH
+another dotfiles
+what about put scripts here, which will solve git-tools syncing
+TextMate
+ZSH: works with platforms
+Remove old zshrc backup
