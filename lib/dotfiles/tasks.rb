@@ -46,33 +46,25 @@ end
 
 def generate_patch(file, homepath)
   puts "Generating patch ..."
-  versions = Dir["#{homepath}-*"]
-  previous = versions.sort.last
-  if previous
-    sh "diff #{previous} #{homepath} > changes.patch; true"
-  end
+  sh "diff '#{file}' '#{homepath}' > changes.patch; true"
 end
 
 # Merge changes made in ~/.zshrc back into generated zshrc
-def apply_patch(patch, homepath)
+def apply_patch(patch, file)
   if File.exist?("changes.patch")
     puts "\n\n=== Diff ==="
     puts File.read("changes.patch")
   end
   if agree("Would you like to apply this patch?")
     puts "Applying patch ..."
-    versions = Dir["#{homepath}"] || Array.new
-    previous = versions.sort[-2]
-    if previous
-      p sh("patch #{homepath} changes.patch")
-    end
+    p sh("patch #{file} changes.patch")
   else
     abort "Patch skipped, exiting"
   end
 end
 
 def remove_old_backups(homepath)
-  Dir["#{homepath}-*"].sort.reverse[4..-1].each do |path|
+  (Dir["#{homepath}-*"].sort.reverse[4..-1] || Array.new).each do |path|
     rm path
   end
 end
@@ -96,7 +88,7 @@ task :install => :preinstall do |item|
     copy_to_dotfile(file) do |homepath|
       backup_dotfile(homepath)
       path = generate_patch(file, homepath)
-      apply_patch(path, homepath)
+      apply_patch(path, file)
       remove_old_backups(homepath)
     end
   end

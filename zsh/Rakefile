@@ -4,13 +4,19 @@ require "pathname"
 require "rake/clean"
 require "dotfiles/tasks"
 
-dotzshrc = File.join(ENV["HOME"], ".zshrc")
-
 CLEAN.include("zshrc", "*.patch")
 
 FILES  = FileList["zshrc"]
-BACKUP = FILES # so will consider everything as editable file
+BACKUP = FileList["zshrc"]
 
+# === Helpers === #
+def relative_path(file)
+  file = Pathname.new(File.expand_path(file))
+  current = Pathname.new(File.expand_path(Dir.pwd))
+  file.relative_path_from(current)
+end
+
+# === Tasks === #
 desc "Build all the files to the one big zshrc"
 file "zshrc" => (FileList["**/*.sh"] - ["zshrc"]) do
   puts "Generating zshrc ..."
@@ -21,9 +27,9 @@ file "zshrc" => (FileList["**/*.sh"] - ["zshrc"]) do
     warn "There is no platform file for you platform (expected platforms/#{platform}.sh)"
   end
   File.open("zshrc", "w") do |output|
-    output.puts("source /etc/profile")
+    output.puts("source /etc/profile\n\n")
     files.each do |file|
-      filename = Pathname.new(File.expand_path(file)).relative_path_from(Pathname.new(File.expand_path(Dir.pwd)))
+      filename = relative_path(file)
       output.puts("### #{filename.to_s.upcase} ###")
       output.puts(File.read(file))
       output.puts
