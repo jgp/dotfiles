@@ -102,12 +102,14 @@ task :install => :preinstall do |item|
       end
     end
   end
+  Rake::Task[:postinstall].invoke
 end
 
 namespace :install do
   desc "Copy each dotfile to the $HOME directory"
   task :force => :preinstall do |item|
     FILES.each { |file| copy_to_dotfile file }
+    Rake::Task[:postinstall].invoke
   end
 end
 
@@ -119,3 +121,13 @@ end
 # on clean for all of the projects, since most of them doesn't have the task
 desc "Run preinstall hooks if any"
 task :preinstall #=> :clean
+
+desc "Run postinstall hooks if any"
+task :postinstall do
+  if File.executable?("install")
+    puts "Running ./install task"
+    sh "./install"
+  else
+    warn "There is no install file with executable permission"
+  end
+end
