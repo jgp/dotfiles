@@ -5,7 +5,7 @@ require "dotfiles/tasks"
 
 NAME   = "ssh"
 FILES  = FileList["ssh/*"]
-BACKUP = ["~/.ssh"]
+BACKUP = ["~/.ssh"] # TODO: this is better approach than BACKUP = FILES. BTW ~/something won't work I guess
 
 task :postinstall do
   puts "Don't forget to copy your public & private keys!"
