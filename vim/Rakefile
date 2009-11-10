@@ -5,6 +5,7 @@ require "dotfiles/tasks"
 
 CLEAN.include("*.patch")
 
+NAME   = "vim"
 FILES  = FileList["vimrc", "vim/**/*"]
 BACKUP = FileList["vimrc"]
 
