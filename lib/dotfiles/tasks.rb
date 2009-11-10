@@ -93,7 +93,11 @@ task :install => :preinstall do |item|
       path = generate_patch(file, homepath)
       apply_patch(path, file)
       remove_old_backups(homepath)
-      sh "git co #{file}" # reset
+      # ensure you are in the dotfiles root, otherwise
+      # it just won't work because the paths are relatives
+      Dir.chdir(File.join(Dir.pwd, "..")) do
+        sh "git checkout #{file}" # reset
+      end
     end
   end
 end

@@ -6,6 +6,7 @@ require "dotfiles/tasks"
 
 CLEAN.include("zshrc", "*.patch")
 
+NAME   = "zsh"
 FILES  = FileList["zshrc"]
 BACKUP = FileList["zshrc"]
 
