@@ -6,9 +6,11 @@ Project_GetFname	project.txt	/^        Project_GetFname(line('.')) function.$/
 _DoFoldOrOpenEntry	project.txt	/^		call {s:sid}_DoFoldOrOpenEntry('', 'e')$/
 bang	abolish.txt	/^With a bang (:Abolish!) the abbreviation is also a/
 both	rails.txt	/^			model, controller, or both (as with :Rintegrati/
+executed	snipMate.txt	/^Snippets can also contain Vim script commands that/
 increment	visincr.txt	/^			default increment (#) is 1$/
 itself	abolish.txt	/^License: Same terms as Vim itself (see |license|)$/
-translation	snippets_emu.txt	/^Panos Laganakos - Greek translation (coming soon)$/
+name	ft-ruby-omni.txt	/^ 4. After ':' or ':foo'              Symbol name (/
+redrawing	ft-ruby-syntax.txt	/^experience slow redrawing (or you are on a termina/
 trees	NERD_tree.txt	/^    - fix a bug where secondary nerd trees (netrw /
 variations	abolish.txt	/^ I: Disable case variations (box, Box, BOX)$/
 vimgrep	abolish.txt	/^Both an external grepprg and vimgrep (via grepprg=/
