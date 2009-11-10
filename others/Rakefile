@@ -1,0 +1,12 @@
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), "..", "lib"))
+
+require "rake/clean"
+require "dotfiles/tasks"
+
+NAME   = "ssh"
+FILES  = FileList["ssh/*"]
+BACKUP = ["~/.ssh"]
+
+task :postinstall do
+  puts "Don't forget to copy your public & private keys!"
+end

@@ -6,5 +6,3 @@ require "dotfiles/tasks"
 NAME   = "git"
 FILES  = ["gitconfig", "gitexcludes"]
 BACKUP = FILES
-
-# TODO: ./install script
