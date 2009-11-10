@@ -5,6 +5,7 @@ path-clear()      { path=() }
 # PATH
 path-add /opt/local/bin
 path-add /Developer/usr/bin
+path-add ~/.scripts
 projects=~/data/projects/sources
 test -d $projects && path-add $projects/**/bin
 test -d $projects/scripts && path-add $projects/scripts
