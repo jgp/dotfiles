@@ -3,14 +3,19 @@
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), "..", "lib"))
 
 require "dotfiles"
-require "highline"
+
+begin
+  require "highline/import"
+rescue LoadError
+  abort "You have to install highline at first!"
+end
 
 def name
-  @name ||= HighLine.ask("[Git Setup] Your name: ")
+  @name ||= ask("[Git Setup] Your name: ")
 end
 
 def email
-  @email ||= HighLine.ask("[Git Setup] Your email: ")
+  @email ||= ask("[Git Setup] Your email: ")
 end
 
 sh "git config --global user.name '#{name}'"
