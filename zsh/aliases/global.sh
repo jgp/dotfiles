@@ -5,3 +5,5 @@ alias -g LAST="| tail -1"
 alias -g FIRST="| head -1"
 
 alias -g FILES="**/*(.)"
+alias -g HIDDEN="**/.*(.)"
+alias -g RB="**/*.rb"

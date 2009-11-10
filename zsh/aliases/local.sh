@@ -1,31 +1,3 @@
-publish() {
-  help() {
-    echo "=== Help ==="
-    echo "publish add CV.pdf"
-    echo "publish rm CV.pdf"
-    echo "publish list"
-    echo "publish run 'command'"
-  }
-  command=$1 && shift
-  case $command in
-  add)
-    for file in $* ; do
-      scp -r "$file" static@tagadab:/webs/static/static.101ideas.cz > /dev/null
-      echo "http://static.101ideas.cz/$(basename $file)"
-    done ;;
-  ls|list)
-    ssh static@tagadab ls -l /webs/static/static.101ideas.cz ;;
-  rm|del|delete)
-    for file in $* ; do
-      ssh static@tagadab rm -rf /webs/static/static.101ideas.cz/$file
-    done ;;
-  run)
-    ssh static@tagadab "cd /webs/static/static.101ideas.cz && $*" ;;
-  *)
-    help ;;
-  esac
-}
-
 # mac sleeping
 alias sleep_hdd="sudo pmset -a hibernatemode 1"
 alias sleep_ram="sudo pmset -a hibernatemode 0"

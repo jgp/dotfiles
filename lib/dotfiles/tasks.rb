@@ -32,6 +32,7 @@ end
 def copy_to_dotfile(file, &block)
   homepath = File.join(ENV["HOME"], ".#{file}")
   unless File.exist?(homepath)
+    mkdir_p File.dirname(homepath) unless File.directory?(File.dirname(homepath))
     copy file, homepath
   else
     if File.file?(file) && ! File.read(file).eql?(File.read(homepath))
@@ -73,6 +74,7 @@ end
 # === Backup Tasks === #
 desc "Backup your original dotfiles in your home"
 task :backup do
+  abort "No FILES specified" if FILES.empty?
   mkdir "../backups" unless File.directory?("../backups")
   Dir.chdir("../backups") do
     # Example: tar cjpf ruby-1257873231.tbz ~/.{irbrc,gemrc}
