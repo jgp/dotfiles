@@ -109,5 +109,11 @@ namespace :install do
   end
 end
 
+# NOTE: This task is important because we have two install tasks
+# install and install:force (and we can have more of them in the
+# future), and we want to ensure the preinstall will run before
+
+# Anyway this is just an example how it works, preinstall shouldn't depends
+# on clean for all of the projects, since most of them doesn't have the task
 desc "Run preinstall hooks if any"
 task :preinstall #=> :clean
