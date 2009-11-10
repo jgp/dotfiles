@@ -1,2 +1,6 @@
+# Done
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), "..", "lib"))
 require "dotfiles/tasks"
+
+NAME  = "ruby"
+FILES = ["gemrc", "irbrc"]

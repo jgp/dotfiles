@@ -5,3 +5,5 @@ require "dotfiles/tasks"
 
 FILES  = ["gitconfig", "gitexcludes"]
 BACKUP = FILES
+
+# TODO: ./install script

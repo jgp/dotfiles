@@ -25,6 +25,7 @@ def copy(from, to)
   end
 end
 
+# Use relative paths!
 # copy_to_dotfile "zshrc"
 # copy_to_dotfile "vim/macros"
 # copy_to_dotfile "zshrc" { |file| generate_patch(file) }
@@ -72,9 +73,10 @@ end
 # === Backup Tasks === #
 desc "Backup your original dotfiles in your home"
 task :backup do
-  mkdir "../backups"
+  mkdir "../backups" unless File.directory?("../backups")
   Dir.chdir("../backups") do
-    sh "tar cjpf #{NAME}-#{Time.now.to_i}.tbz ~/.#{FILES}"
+    # Example: tar cjpf ruby-1257873231.tbz ~/.{irbrc,gemrc}
+    sh "tar cjpf #{NAME}-#{Time.now.to_i}.tbz ~/.{#{FILES.join(",")}}"
     puts "Backup done"
   end
 end
@@ -103,4 +105,4 @@ namespace :install do
 end
 
 desc "Run preinstall hooks if any"
-task :preinstall => :clean
+task :preinstall #=> :clean
