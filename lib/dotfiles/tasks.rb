@@ -47,7 +47,7 @@ def backup_dotfile(path)
 end
 
 def generate_patch(file, homepath)
-  puts "Generating patch ..."
+  puts "Generating patch #{file} - #{homepath} ..."
   sh "diff '#{file}' '#{homepath}' > changes.patch; true"
 end
 
@@ -92,14 +92,13 @@ task :install => :preinstall do |item|
   FILES.each do |file|
     copy_to_dotfile(file) do |homepath|
       backup_dotfile(homepath)
-      path = generate_patch(file, homepath)
-      apply_patch(path, file)
+      patch = generate_patch(file, Dir["#{homepath}-*"].sort.last) # we are going to use last backup file
+      apply_patch(patch, file)
       remove_old_backups(homepath)
-      # ensure you are in the dotfiles root, otherwise
-      # it just won't work because the paths are relatives
-      Dir.chdir(File.join(Dir.pwd, "..")) do
-        sh "git checkout #{file}" # reset
-      end
+      # NOTE: you may tend to apply the patch to your local file in dotfiles
+      # repository and then run git checkout on the file. However it's bad idea
+      # since it will reset all your local changes on this file, so you have to
+      # have commited everything before the installation
     end
   end
   Rake::Task[:postinstall].invoke
@@ -127,7 +126,5 @@ task :postinstall do
   if File.executable?("install")
     puts "Running ./install task"
     sh "./install"
-  else
-    warn "There is no install file with executable permission"
   end
 end
