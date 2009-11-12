@@ -5,6 +5,7 @@ Just my configuration files for Git, Ruby, ZSH, Vim etc.
 h1. Updating from botanicus/dotfiles
 
 <pre>
+# in your jgp/dotfiles clone
 git remote add botanicus git@github.com:botanicus/dotfiles.git
 git fetch
 git rebase botanicus/master
@@ -13,6 +14,7 @@ git rebase botanicus/master
 h1. Installation
 
 <pre>
+# in your jgp/dotfiles clone
 rake backup    # backup all your original dotfiles from your home
 rake setup     # create config.yml
 vim config.yml # comment out what you aren't interested in
