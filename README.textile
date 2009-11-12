@@ -2,6 +2,14 @@ h1. About
 
 Just my configuration files for Git, Ruby, ZSH, Vim etc.
 
+h1. Updating from botanicus/dotfiles
+
+<pre>
+git remote add botanicus git@github.com:botanicus/dotfiles.git
+git fetch
+git rebase botanicus/master
+</pre>
+
 h1. Installation
 
 <pre>
